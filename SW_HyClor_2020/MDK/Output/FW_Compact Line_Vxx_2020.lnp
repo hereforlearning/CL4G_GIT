@@ -1,0 +1,19 @@
+--cpu Cortex-M0+
+".\output\startup_hc32l136.o"
+".\output\system_hc32l136.o"
+".\output\ctrl.o"
+".\output\keypad.o"
+".\output\main.o"
+".\output\mcu.o"
+".\output\ddl.o"
+".\output\flash.o"
+".\output\gpio.o"
+".\output\interrupts_hc32l136.o"
+".\output\sysctrl.o"
+".\output\bt.o"
+".\output\adc.o"
+".\output\timer3.o"
+--strict --scatter ".\output\FW_Compact Line_Vxx_2020.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\FW_Compact Line_Vxx_2020.map" -o ".\output\FW_Compact Line_Vxx_2020.axf"

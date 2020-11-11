@@ -1,0 +1,6 @@
+--cpu Cortex-M0+ -g --apcs=interwork 
+-I.\RTE\_Hy-Clor
+-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include
+-IC:\Keil_v5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include
+--pd "__UVISION_VERSION SETA 526" --pd "_RTE_ SETA 1"
+--list .\listings\startup_hc32l136.lst --xref -o .\output\startup_hc32l136.o --depend .\output\startup_hc32l136.d "startup_hc32l136.s"

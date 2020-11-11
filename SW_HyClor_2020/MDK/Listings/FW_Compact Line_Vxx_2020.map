@@ -1,0 +1,1979 @@
+Component: ARM Compiler 5.06 update 6 (build 750) Tool: armlink [4d35ed]
+
+==============================================================================
+
+Section Cross References
+
+    startup_hc32l136.o(STACK) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_hc32l136.o(HEAP) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_hc32l136.o(RESET) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_hc32l136.o(RESET) refers to startup_hc32l136.o(STACK) for __initial_sp
+    startup_hc32l136.o(RESET) refers to startup_hc32l136.o(.text) for Reset_Handler
+    startup_hc32l136.o(RESET) refers to interrupts_hc32l136.o(i.HardFault_Handler) for HardFault_Handler
+    startup_hc32l136.o(RESET) refers to interrupts_hc32l136.o(i.IRQ000_Handler) for IRQ000_Handler
+    startup_hc32l136.o(RESET) refers to interrupts_hc32l136.o(i.IRQ001_Handler) for IRQ001_Handler
+    startup_hc32l136.o(RESET) refers to interrupts_hc32l136.o(i.IRQ002_Handler) for IRQ002_Handler
+    startup_hc32l136.o(RESET) refers to interrupts_hc32l136.o(i.IRQ003_Handler) for IRQ003_Handler
+    startup_hc32l136.o(RESET) refers to interrupts_hc32l136.o(i.IRQ004_Handler) for IRQ004_Handler
+    startup_hc32l136.o(RESET) refers to interrupts_hc32l136.o(i.IRQ005_Handler) for IRQ005_Handler
+    startup_hc32l136.o(RESET) refers to interrupts_hc32l136.o(i.IRQ006_Handler) for IRQ006_Handler
+    startup_hc32l136.o(RESET) refers to interrupts_hc32l136.o(i.IRQ007_Handler) for IRQ007_Handler
+    startup_hc32l136.o(RESET) refers to interrupts_hc32l136.o(i.IRQ008_Handler) for IRQ008_Handler
+    startup_hc32l136.o(RESET) refers to interrupts_hc32l136.o(i.IRQ009_Handler) for IRQ009_Handler
+    startup_hc32l136.o(RESET) refers to interrupts_hc32l136.o(i.IRQ010_Handler) for IRQ010_Handler
+    startup_hc32l136.o(RESET) refers to interrupts_hc32l136.o(i.IRQ011_Handler) for IRQ011_Handler
+    startup_hc32l136.o(RESET) refers to interrupts_hc32l136.o(i.IRQ012_Handler) for IRQ012_Handler
+    startup_hc32l136.o(RESET) refers to interrupts_hc32l136.o(i.IRQ013_Handler) for IRQ013_Handler
+    startup_hc32l136.o(RESET) refers to interrupts_hc32l136.o(i.IRQ014_Handler) for IRQ014_Handler
+    startup_hc32l136.o(RESET) refers to interrupts_hc32l136.o(i.IRQ015_Handler) for IRQ015_Handler
+    startup_hc32l136.o(RESET) refers to interrupts_hc32l136.o(i.IRQ016_Handler) for IRQ016_Handler
+    startup_hc32l136.o(RESET) refers to interrupts_hc32l136.o(i.IRQ017_Handler) for IRQ017_Handler
+    startup_hc32l136.o(RESET) refers to interrupts_hc32l136.o(i.IRQ018_Handler) for IRQ018_Handler
+    startup_hc32l136.o(RESET) refers to interrupts_hc32l136.o(i.IRQ019_Handler) for IRQ019_Handler
+    startup_hc32l136.o(RESET) refers to interrupts_hc32l136.o(i.IRQ020_Handler) for IRQ020_Handler
+    startup_hc32l136.o(RESET) refers to interrupts_hc32l136.o(i.IRQ021_Handler) for IRQ021_Handler
+    startup_hc32l136.o(RESET) refers to interrupts_hc32l136.o(i.IRQ022_Handler) for IRQ022_Handler
+    startup_hc32l136.o(RESET) refers to interrupts_hc32l136.o(i.IRQ023_Handler) for IRQ023_Handler
+    startup_hc32l136.o(RESET) refers to interrupts_hc32l136.o(i.IRQ024_Handler) for IRQ024_Handler
+    startup_hc32l136.o(RESET) refers to interrupts_hc32l136.o(i.IRQ025_Handler) for IRQ025_Handler
+    startup_hc32l136.o(RESET) refers to interrupts_hc32l136.o(i.IRQ026_Handler) for IRQ026_Handler
+    startup_hc32l136.o(RESET) refers to interrupts_hc32l136.o(i.IRQ027_Handler) for IRQ027_Handler
+    startup_hc32l136.o(RESET) refers to interrupts_hc32l136.o(i.IRQ028_Handler) for IRQ028_Handler
+    startup_hc32l136.o(RESET) refers to interrupts_hc32l136.o(i.IRQ029_Handler) for IRQ029_Handler
+    startup_hc32l136.o(RESET) refers to interrupts_hc32l136.o(i.IRQ030_Handler) for IRQ030_Handler
+    startup_hc32l136.o(RESET) refers to interrupts_hc32l136.o(i.IRQ031_Handler) for IRQ031_Handler
+    startup_hc32l136.o(.text) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_hc32l136.o(.text) refers to system_hc32l136.o(i.SystemInit) for SystemInit
+    startup_hc32l136.o(.text) refers to __main.o(!!!main) for __main
+    startup_hc32l136.o(.text) refers to startup_hc32l136.o(HEAP) for Heap_Mem
+    startup_hc32l136.o(.text) refers to startup_hc32l136.o(STACK) for Stack_Mem
+    system_hc32l136.o(i.SystemCoreClockUpdate) refers to sysctrl.o(i.Sysctrl_GetHClkFreq) for Sysctrl_GetHClkFreq
+    system_hc32l136.o(i.SystemCoreClockUpdate) refers to system_hc32l136.o(.data) for SystemCoreClock
+    system_hc32l136.o(i.SystemInit) refers to system_hc32l136.o(i.SystemCoreClockUpdate) for SystemCoreClockUpdate
+    ctrl.o(i.BoostModeHandler) refers to ctrl.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    ctrl.o(i.BoostModeHandler) refers to ctrl.o(i.LEDControl) for LEDControl
+    ctrl.o(i.BoostModeHandler) refers to ctrl.o(i.LEDFlashSetting) for LEDFlashSetting
+    ctrl.o(i.BoostModeHandler) refers to ctrl.o(i.GetModelRatingCurrent) for GetModelRatingCurrent
+    ctrl.o(i.BoostModeHandler) refers to ctrl.o(i.CalculateThresholdLimit) for CalculateThresholdLimit
+    ctrl.o(i.BoostModeHandler) refers to ctrl.o(i.CellCurrentOutput) for CellCurrentOutput
+    ctrl.o(i.BoostModeHandler) refers to ctrl.o(i.CellOutputCurrentAdjust) for CellOutputCurrentAdjust
+    ctrl.o(i.BoostModeHandler) refers to ctrl.o(.data) for bPermanentBoostMode
+    ctrl.o(i.CalculateConvertValue) refers to aeabi_sdiv.o(.text) for __aeabi_uidivmod
+    ctrl.o(i.CalculateConvertValue) refers to ctrl.o(.data) for ucGainValue
+    ctrl.o(i.CalculateThresholdLimit) refers to aeabi_sdiv.o(.text) for __aeabi_uidivmod
+    ctrl.o(i.CalculateThresholdLimit) refers to ctrl.o(.data) for ucMaxDisplayCurrent
+    ctrl.o(i.CalibrateParameter) refers to aeabi_sdiv.o(.text) for __aeabi_uidivmod
+    ctrl.o(i.CalibrateParameter) refers to ctrl.o(.data) for uiCurrentADC
+    ctrl.o(i.CellCurrentCycleOutput) refers to mcu.o(i.PWMStart) for PWMStart
+    ctrl.o(i.CellCurrentCycleOutput) refers to mcu.o(i.PWMStop) for PWMStop
+    ctrl.o(i.CellCurrentCycleOutput) refers to gpio.o(i.Gpio_SetIO) for Gpio_SetIO
+    ctrl.o(i.CellCurrentCycleOutput) refers to ctrl.o(.data) for bOutputFlag
+    ctrl.o(i.CellCurrentLED) refers to ctrl.o(i.LEDControl) for LEDControl
+    ctrl.o(i.CellCurrentOutput) refers to mcu.o(i.PWMStop) for PWMStop
+    ctrl.o(i.CellCurrentOutput) refers to gpio.o(i.Gpio_SetIO) for Gpio_SetIO
+    ctrl.o(i.CellCurrentOutput) refers to mcu.o(i.PWMStart) for PWMStart
+    ctrl.o(i.CellCurrentOutput) refers to ctrl.o(.data) for bProtectFlag
+    ctrl.o(i.CellOutputCalibration) refers to gpio.o(i.Gpio_SetIO) for Gpio_SetIO
+    ctrl.o(i.CellOutputCalibration) refers to mcu.o(i.PWMStart) for PWMStart
+    ctrl.o(i.CellOutputCalibration) refers to mcu.o(i.PWMStop) for PWMStop
+    ctrl.o(i.CellOutputCalibration) refers to ctrl.o(.data) for ucCellCurrent
+    ctrl.o(i.CellOutputControl) refers to ctrl.o(i.GetModelRatingCurrent) for GetModelRatingCurrent
+    ctrl.o(i.CellOutputControl) refers to ctrl.o(i.Delay_ms) for Delay_ms
+    ctrl.o(i.CellOutputControl) refers to ctrl.o(i.CellCurrentLED) for CellCurrentLED
+    ctrl.o(i.CellOutputControl) refers to ctrl.o(i.CalculateThresholdLimit) for CalculateThresholdLimit
+    ctrl.o(i.CellOutputControl) refers to ctrl.o(.data) for ucCellCurrent
+    ctrl.o(i.CellOutputCurrentAdjust) refers to ctrl.o(i.SerivceReset) for SerivceReset
+    ctrl.o(i.CellOutputCurrentAdjust) refers to ctrl.o(i.LEDControl) for LEDControl
+    ctrl.o(i.CellOutputCurrentAdjust) refers to ctrl.o(i.Delay_ms) for Delay_ms
+    ctrl.o(i.CellOutputCurrentAdjust) refers to ctrl.o(i.LEDFlashSetting) for LEDFlashSetting
+    ctrl.o(i.CellOutputCurrentAdjust) refers to ctrl.o(i.CellCurrentOutput) for CellCurrentOutput
+    ctrl.o(i.CellOutputCurrentAdjust) refers to aeabi_sdiv.o(.text) for __aeabi_uidivmod
+    ctrl.o(i.CellOutputCurrentAdjust) refers to ctrl.o(i.LEDDisplayHexValue) for LEDDisplayHexValue
+    ctrl.o(i.CellOutputCurrentAdjust) refers to ctrl.o(i.CellCurrentLED) for CellCurrentLED
+    ctrl.o(i.CellOutputCurrentAdjust) refers to ctrl.o(i.SaveCellCurrent) for SaveCellCurrent
+    ctrl.o(i.CellOutputCurrentAdjust) refers to ctrl.o(.data) for ucBoostStatus
+    ctrl.o(i.CellPolarityControl) refers to gpio.o(i.Gpio_ReadOutputIO) for Gpio_ReadOutputIO
+    ctrl.o(i.CellPolarityControl) refers to gpio.o(i.Gpio_SetIO) for Gpio_SetIO
+    ctrl.o(i.CellPolarityControl) refers to ctrl.o(i.Delay_ms) for Delay_ms
+    ctrl.o(i.CellPolarityControl) refers to gpio.o(i.Gpio_ClrIO) for Gpio_ClrIO
+    ctrl.o(i.CellPolarityControl) refers to ctrl.o(i.Deley_us) for Deley_us
+    ctrl.o(i.CellPolarityControl) refers to ctrl.o(i.LEDFlashSetting) for LEDFlashSetting
+    ctrl.o(i.CellPolarityControl) refers to ctrl.o(i.LEDControl) for LEDControl
+    ctrl.o(i.CellPolarityControl) refers to ctrl.o(.data) for ucCellPolarity
+    ctrl.o(i.CellPolarityControl) refers to ctrl.o(.bss) for ucData
+    ctrl.o(i.CellPolarityReverse) refers to ctrl.o(i.Eeprom_ReadBytes) for Eeprom_ReadBytes
+    ctrl.o(i.CellPolarityReverse) refers to ctrl.o(.bss) for ucData
+    ctrl.o(i.CellPolarityReverse) refers to ctrl.o(.data) for ucSaveType
+    ctrl.o(i.CellRealCurrentDisplay) refers to ctrl.o(i.LEDDisplayHexValue) for LEDDisplayHexValue
+    ctrl.o(i.CellRealCurrentDisplay) refers to aeabi_sdiv.o(.text) for __aeabi_uidivmod
+    ctrl.o(i.CellRealCurrentDisplay) refers to ctrl.o(i.CellCurrentLED) for CellCurrentLED
+    ctrl.o(i.CellRealCurrentDisplay) refers to ctrl.o(.data) for uiLEDFlashStatus
+    ctrl.o(i.CellReverseForPCBTest) refers to ctrl.o(i.SaveTestModeFlag) for SaveTestModeFlag
+    ctrl.o(i.CellReverseForPCBTest) refers to ctrl.o(.data) for bTestModeFlag
+    ctrl.o(i.CheckWaterFlow) refers to gpio.o(i.Gpio_GetInputIO) for Gpio_GetInputIO
+    ctrl.o(i.CheckWaterFlow) refers to ctrl.o(.data) for bProtectFlag
+    ctrl.o(i.CheckWaterSaltLevel) refers to ctrl.o(i.LEDFlashSetting) for LEDFlashSetting
+    ctrl.o(i.CheckWaterSaltLevel) refers to ctrl.o(i.LEDControl) for LEDControl
+    ctrl.o(i.CheckWaterSaltLevel) refers to ctrl.o(.data) for uiStdL
+    ctrl.o(i.ChlorBoostProcess) refers to ctrl.o(i.CalculateConvertValue) for CalculateConvertValue
+    ctrl.o(i.ChlorBoostProcess) refers to ctrl.o(i.SaveCalValueByDirection) for SaveCalValueByDirection
+    ctrl.o(i.ChlorBoostProcess) refers to ctrl.o(i.LEDFlashSetting) for LEDFlashSetting
+    ctrl.o(i.ChlorBoostProcess) refers to ctrl.o(i.LEDControl) for LEDControl
+    ctrl.o(i.ChlorBoostProcess) refers to ctrl.o(.data) for bCalibrateMode
+    ctrl.o(i.ClearRunningData) refers to ctrl.o(.bss) for ucData
+    ctrl.o(i.ComboKeyProcess) refers to ctrl.o(i.FactoryReset) for FactoryReset
+    ctrl.o(i.ComboKeyProcess) refers to ctrl.o(i.LEDControl) for LEDControl
+    ctrl.o(i.ComboKeyProcess) refers to ctrl.o(i.Delay_ms) for Delay_ms
+    ctrl.o(i.ComboKeyProcess) refers to ctrl.o(i.LEDFlashSetting) for LEDFlashSetting
+    ctrl.o(i.ComboKeyProcess) refers to ctrl.o(i.ChlorBoostProcess) for ChlorBoostProcess
+    ctrl.o(i.ComboKeyProcess) refers to ctrl.o(.data) for bResetMode
+    ctrl.o(i.CurrentADCProcess) refers to mcu.o(i.ADCStop) for ADCStop
+    ctrl.o(i.CurrentADCProcess) refers to mcu.o(i.StopTimer1) for StopTimer1
+    ctrl.o(i.CurrentADCProcess) refers to ctrl.o(.data) for ucADCCounter
+    ctrl.o(i.CurrentADCProcess) refers to mcu.o(.data) for u16AdcRestult0
+    ctrl.o(i.DataRangeCheck) refers to ctrl.o(i.Eeprom_ReadBytes) for Eeprom_ReadBytes
+    ctrl.o(i.DataRangeCheck) refers to ctrl.o(.bss) for ucData
+    ctrl.o(i.DataRangeCheck) refers to ctrl.o(.data) for Version
+    ctrl.o(i.Delay_ms) refers to ddl.o(i.delay1ms) for delay1ms
+    ctrl.o(i.Deley_us) refers to ddl.o(i.delay10us) for delay10us
+    ctrl.o(i.EepromDataCheck) refers to ctrl.o(i.DataRangeCheck) for DataRangeCheck
+    ctrl.o(i.EepromDataCheck) refers to ctrl.o(i.SaveDataToArea) for SaveDataToArea
+    ctrl.o(i.EepromDataCheck) refers to ctrl.o(i.Eeprom_ReadBytes) for Eeprom_ReadBytes
+    ctrl.o(i.EepromDataCheck) refers to ctrl.o(i.ClearRunningData) for ClearRunningData
+    ctrl.o(i.EepromDataCheck) refers to ctrl.o(i.UpdateRunningData) for UpdateRunningData
+    ctrl.o(i.EepromDataCheck) refers to ctrl.o(i.SetToDefault) for SetToDefault
+    ctrl.o(i.EepromDataCheck) refers to ctrl.o(i.SWVersionDisplay) for SWVersionDisplay
+    ctrl.o(i.EepromDataCheck) refers to ctrl.o(i.UpdateUserData) for UpdateUserData
+    ctrl.o(i.EepromDataCheck) refers to ctrl.o(.data) for Version
+    ctrl.o(i.EepromDataCheck) refers to ctrl.o(.bss) for ucData
+    ctrl.o(i.Eeprom_WriteBytes) refers to flash.o(i.Flash_Init) for Flash_Init
+    ctrl.o(i.Eeprom_WriteBytes) refers to flash.o(i.Flash_SectorErase) for Flash_SectorErase
+    ctrl.o(i.Eeprom_WriteBytes) refers to flash.o(i.Flash_WriteByte) for Flash_WriteByte
+    ctrl.o(i.Eeprom_WriteBytes) refers to ctrl.o(i.FlashInt) for FlashInt
+    ctrl.o(i.FactoryReset) refers to ctrl.o(i.SerivceReset) for SerivceReset
+    ctrl.o(i.FactoryReset) refers to ctrl.o(i.ClearRunningData) for ClearRunningData
+    ctrl.o(i.FactoryReset) refers to ctrl.o(i.SaveDataToArea) for SaveDataToArea
+    ctrl.o(i.FactoryReset) refers to ctrl.o(i.UpdateRunningData) for UpdateRunningData
+    ctrl.o(i.FactoryReset) refers to ctrl.o(.bss) for ucData
+    ctrl.o(i.FlashInt) refers to flash.o(i.Flash_GetIntFlag) for Flash_GetIntFlag
+    ctrl.o(i.FlashInt) refers to flash.o(i.Flash_ClearIntFlag) for Flash_ClearIntFlag
+    ctrl.o(i.FlashInt) refers to flash.o(i.Flash_DisableIrq) for Flash_DisableIrq
+    ctrl.o(i.GetCellRealCurrent) refers to aeabi_sdiv.o(.text) for __aeabi_uidivmod
+    ctrl.o(i.GetCellRealCurrent) refers to ctrl.o(.data) for bStopOutputFlag
+    ctrl.o(i.GetModelRatingCurrent) refers to ctrl.o(.data) for bPermanentBoostMode
+    ctrl.o(i.LEDALLControl) refers to gpio.o(i.Gpio_SetIO) for Gpio_SetIO
+    ctrl.o(i.LEDALLControl) refers to gpio.o(i.Gpio_ClrIO) for Gpio_ClrIO
+    ctrl.o(i.LEDControl) refers to gpio.o(i.Gpio_SetIO) for Gpio_SetIO
+    ctrl.o(i.LEDControl) refers to gpio.o(i.Gpio_ClrIO) for Gpio_ClrIO
+    ctrl.o(i.LEDDisplayHexValue) refers to ctrl.o(i.LEDControl) for LEDControl
+    ctrl.o(i.LEDFlashDisplay) refers to ctrl.o(i.LEDControl) for LEDControl
+    ctrl.o(i.LEDFlashDisplay) refers to ctrl.o(.data) for uiLEDFlashStatus
+    ctrl.o(i.LEDFlashSetting) refers to ctrl.o(i.LEDControl) for LEDControl
+    ctrl.o(i.LEDFlashSetting) refers to ctrl.o(.data) for uiLEDFlashStatus
+    ctrl.o(i.MainTimerHandler) refers to ctrl.o(i.CellCurrentCycleOutput) for CellCurrentCycleOutput
+    ctrl.o(i.MainTimerHandler) refers to ctrl.o(.data) for ucTimer0Counter
+    ctrl.o(i.ModelChangeLED) refers to ctrl.o(i.CellCurrentLED) for CellCurrentLED
+    ctrl.o(i.ModelChangeLED) refers to ctrl.o(i.LEDControl) for LEDControl
+    ctrl.o(i.ModelChangeLED) refers to ctrl.o(.data) for ucModelNumber
+    ctrl.o(i.ModelSelectKeyProcess) refers to ctrl.o(i.ModelChangeLED) for ModelChangeLED
+    ctrl.o(i.ModelSelectKeyProcess) refers to ctrl.o(i.SaveModelNumber) for SaveModelNumber
+    ctrl.o(i.ModelSelectKeyProcess) refers to ctrl.o(.data) for ucModelNumber
+    ctrl.o(i.PowerOffLED) refers to ctrl.o(i.LEDALLControl) for LEDALLControl
+    ctrl.o(i.PowerOffLED) refers to ctrl.o(.data) for uiLEDFlashStatus
+    ctrl.o(i.PowerOnInitialize) refers to keypad.o(i.KeyVariableInitial) for KeyVariableInitial
+    ctrl.o(i.PowerOnInitialize) refers to ctrl.o(i.Delay_ms) for Delay_ms
+    ctrl.o(i.PowerOnInitialize) refers to ctrl.o(i.EepromDataCheck) for EepromDataCheck
+    ctrl.o(i.PowerOnInitialize) refers to ctrl.o(i.LEDALLControl) for LEDALLControl
+    ctrl.o(i.PowerOnInitialize) refers to ctrl.o(i.PowerupFunctionModeSelect) for PowerupFunctionModeSelect
+    ctrl.o(i.PowerOnInitialize) refers to ctrl.o(i.CellReverseForPCBTest) for CellReverseForPCBTest
+    ctrl.o(i.PowerOnInitialize) refers to ctrl.o(i.CellPolarityControl) for CellPolarityControl
+    ctrl.o(i.PowerOnInitialize) refers to ctrl.o(i.CellOutputControl) for CellOutputControl
+    ctrl.o(i.PowerOnInitialize) refers to ctrl.o(.data) for ucSecondCounter
+    ctrl.o(i.PowerOnLED) refers to ctrl.o(i.ReverseLEDDisplay) for ReverseLEDDisplay
+    ctrl.o(i.PowerOnLED) refers to ctrl.o(i.Delay_ms) for Delay_ms
+    ctrl.o(i.PowerupFunctionModeSelect) refers to keypad.o(i.KeyScanStatus) for KeyScanStatus
+    ctrl.o(i.PowerupFunctionModeSelect) refers to ctrl.o(i.LEDFlashSetting) for LEDFlashSetting
+    ctrl.o(i.PowerupFunctionModeSelect) refers to ctrl.o(i.ModelChangeLED) for ModelChangeLED
+    ctrl.o(i.PowerupFunctionModeSelect) refers to ctrl.o(i.SaveCellReverseSetting) for SaveCellReverseSetting
+    ctrl.o(i.PowerupFunctionModeSelect) refers to ctrl.o(i.CellCurrentLED) for CellCurrentLED
+    ctrl.o(i.PowerupFunctionModeSelect) refers to ctrl.o(i.LEDALLControl) for LEDALLControl
+    ctrl.o(i.PowerupFunctionModeSelect) refers to ctrl.o(i.SWVersionDisplay) for SWVersionDisplay
+    ctrl.o(i.PowerupFunctionModeSelect) refers to ctrl.o(i.Delay_ms) for Delay_ms
+    ctrl.o(i.PowerupFunctionModeSelect) refers to keypad.o(i.KeyDetect) for KeyDetect
+    ctrl.o(i.PowerupFunctionModeSelect) refers to ctrl.o(i.ModelSelectKeyProcess) for ModelSelectKeyProcess
+    ctrl.o(i.PowerupFunctionModeSelect) refers to ctrl.o(i.ReverseTimeSettingKeyProcess) for ReverseTimeSettingKeyProcess
+    ctrl.o(i.PowerupFunctionModeSelect) refers to ctrl.o(i.RunningTimeKeyProcess) for RunningTimeKeyProcess
+    ctrl.o(i.PowerupFunctionModeSelect) refers to ctrl.o(i.RunningLEDDisplay) for RunningLEDDisplay
+    ctrl.o(i.PowerupFunctionModeSelect) refers to ctrl.o(i.LEDFlashDisplay) for LEDFlashDisplay
+    ctrl.o(i.PowerupFunctionModeSelect) refers to ctrl.o(i.PowerOffLED) for PowerOffLED
+    ctrl.o(i.PowerupFunctionModeSelect) refers to ctrl.o(i.LEDControl) for LEDControl
+    ctrl.o(i.PowerupFunctionModeSelect) refers to ctrl.o(i.PowerOnLED) for PowerOnLED
+    ctrl.o(i.PowerupFunctionModeSelect) refers to ctrl.o(.data) for ucFunctionMode
+    ctrl.o(i.PowerupFunctionModeSelect) refers to keypad.o(.data) for g_bKeyDetect
+    ctrl.o(i.ProcessHandler) refers to ctrl.o(i.CheckWaterFlow) for CheckWaterFlow
+    ctrl.o(i.ProcessHandler) refers to ctrl.o(i.CalibrateParameter) for CalibrateParameter
+    ctrl.o(i.ProcessHandler) refers to ctrl.o(i.WaterFlowFaultProcess) for WaterFlowFaultProcess
+    ctrl.o(i.ProcessHandler) refers to ctrl.o(i.SaveTestModeFlag) for SaveTestModeFlag
+    ctrl.o(i.ProcessHandler) refers to ctrl.o(i.CellCurrentLED) for CellCurrentLED
+    ctrl.o(i.ProcessHandler) refers to ctrl.o(i.CellCurrentOutput) for CellCurrentOutput
+    ctrl.o(i.ProcessHandler) refers to ctrl.o(i.ReadCellPolarity) for ReadCellPolarity
+    ctrl.o(i.ProcessHandler) refers to ctrl.o(i.CellPolarityControl) for CellPolarityControl
+    ctrl.o(i.ProcessHandler) refers to ctrl.o(i.CellPolarityReverse) for CellPolarityReverse
+    ctrl.o(i.ProcessHandler) refers to ctrl.o(i.SaveCellReverseTime) for SaveCellReverseTime
+    ctrl.o(i.ProcessHandler) refers to ctrl.o(i.SaveCellRunningTime) for SaveCellRunningTime
+    ctrl.o(i.ProcessHandler) refers to ctrl.o(i.SaveCellRunningMinutes) for SaveCellRunningMinutes
+    ctrl.o(i.ProcessHandler) refers to ctrl.o(i.GetModelRatingCurrent) for GetModelRatingCurrent
+    ctrl.o(i.ProcessHandler) refers to ctrl.o(i.CalculateThresholdLimit) for CalculateThresholdLimit
+    ctrl.o(i.ProcessHandler) refers to ctrl.o(i.CellOutputCurrentAdjust) for CellOutputCurrentAdjust
+    ctrl.o(i.ProcessHandler) refers to ctrl.o(i.BoostModeHandler) for BoostModeHandler
+    ctrl.o(i.ProcessHandler) refers to ctrl.o(i.CellRealCurrentDisplay) for CellRealCurrentDisplay
+    ctrl.o(i.ProcessHandler) refers to ctrl.o(i.SaveEventProcess) for SaveEventProcess
+    ctrl.o(i.ProcessHandler) refers to ctrl.o(i.GetCellRealCurrent) for GetCellRealCurrent
+    ctrl.o(i.ProcessHandler) refers to ctrl.o(i.CheckWaterSaltLevel) for CheckWaterSaltLevel
+    ctrl.o(i.ProcessHandler) refers to ctrl.o(i.CellOutputCalibration) for CellOutputCalibration
+    ctrl.o(i.ProcessHandler) refers to ctrl.o(i.LEDFlashDisplay) for LEDFlashDisplay
+    ctrl.o(i.ProcessHandler) refers to ctrl.o(.data) for bOneSecondFlag
+    ctrl.o(i.ReadCellCurrentSetting) refers to ctrl.o(i.Eeprom_ReadBytes) for Eeprom_ReadBytes
+    ctrl.o(i.ReadCellCurrentSetting) refers to ctrl.o(.data) for ucCellCurrent
+    ctrl.o(i.ReadCellPolarity) refers to ctrl.o(i.Eeprom_ReadBytes) for Eeprom_ReadBytes
+    ctrl.o(i.ReadCellPolarity) refers to ctrl.o(.data) for ucCellPolarity
+    ctrl.o(i.ReadCellReverseSetting) refers to ctrl.o(i.Eeprom_ReadBytes) for Eeprom_ReadBytes
+    ctrl.o(i.ReadCellReverseSetting) refers to ctrl.o(.data) for ucCellReverseSetting
+    ctrl.o(i.ReadCellReverseTime) refers to ctrl.o(i.Eeprom_ReadBytes) for Eeprom_ReadBytes
+    ctrl.o(i.ReadCellReverseTime) refers to ctrl.o(.data) for ucCellReverseTime
+    ctrl.o(i.ReadCellRunningTime) refers to ctrl.o(i.Eeprom_ReadBytes) for Eeprom_ReadBytes
+    ctrl.o(i.ReadCellRunningTime) refers to ctrl.o(.data) for ucRunningMins
+    ctrl.o(i.ReadCurrentCalValue) refers to ctrl.o(i.Eeprom_ReadBytes) for Eeprom_ReadBytes
+    ctrl.o(i.ReadCurrentCalValue) refers to ctrl.o(.data) for ucFCurrentCalValue
+    ctrl.o(i.ReadModelNumber) refers to ctrl.o(i.Eeprom_ReadBytes) for Eeprom_ReadBytes
+    ctrl.o(i.ReadModelNumber) refers to ctrl.o(.data) for ucModelNumber
+    ctrl.o(i.ReadPermanentBoostMode) refers to ctrl.o(i.Eeprom_ReadBytes) for Eeprom_ReadBytes
+    ctrl.o(i.ReadPermanentBoostMode) refers to ctrl.o(.data) for bPermanentBoostMode
+    ctrl.o(i.ReadTestModeFlag) refers to ctrl.o(i.Eeprom_ReadBytes) for Eeprom_ReadBytes
+    ctrl.o(i.ReadTestModeFlag) refers to ctrl.o(.data) for bTestModeFlag
+    ctrl.o(i.ReverseLEDDisplay) refers to ctrl.o(i.LEDControl) for LEDControl
+    ctrl.o(i.ReverseLEDDisplay) refers to ctrl.o(.data) for ucCellReverseSetting
+    ctrl.o(i.ReverseTimeSettingKeyProcess) refers to ctrl.o(i.CellCurrentLED) for CellCurrentLED
+    ctrl.o(i.ReverseTimeSettingKeyProcess) refers to ctrl.o(i.SaveCellReverseSetting) for SaveCellReverseSetting
+    ctrl.o(i.ReverseTimeSettingKeyProcess) refers to ctrl.o(.data) for bFastRevserseMode
+    ctrl.o(i.RunningLEDDisplay) refers to ctrl.o(i.LEDALLControl) for LEDALLControl
+    ctrl.o(i.RunningLEDDisplay) refers to ctrl.o(i.Delay_ms) for Delay_ms
+    ctrl.o(i.RunningLEDDisplay) refers to ctrl.o(i.LEDControl) for LEDControl
+    ctrl.o(i.RunningLEDDisplay) refers to ctrl.o(.data) for ucFunctionMode
+    ctrl.o(i.RunningTimeKeyProcess) refers to ctrl.o(i.LEDALLControl) for LEDALLControl
+    ctrl.o(i.RunningTimeKeyProcess) refers to ctrl.o(i.SaveCellRunningTime) for SaveCellRunningTime
+    ctrl.o(i.RunningTimeKeyProcess) refers to ctrl.o(.data) for ucDigit
+    ctrl.o(i.SWVersionDisplay) refers to ctrl.o(i.LEDControl) for LEDControl
+    ctrl.o(i.SWVersionDisplay) refers to ctrl.o(i.Delay_ms) for Delay_ms
+    ctrl.o(i.SWVersionDisplay) refers to ctrl.o(.data) for ucVersionNum
+    ctrl.o(i.SaveCalValueByDirection) refers to ctrl.o(.data) for ucCellPolarity
+    ctrl.o(i.SaveCalValueByDirection) refers to ctrl.o(.bss) for ucData
+    ctrl.o(i.SaveCellCurrent) refers to ctrl.o(.data) for ucCellCurrent
+    ctrl.o(i.SaveCellCurrent) refers to ctrl.o(.bss) for ucData
+    ctrl.o(i.SaveCellPolarity) refers to ctrl.o(.data) for ucCellPolarity
+    ctrl.o(i.SaveCellPolarity) refers to ctrl.o(.bss) for ucData
+    ctrl.o(i.SaveCellReverseSetting) refers to ctrl.o(i.SaveDataToArea) for SaveDataToArea
+    ctrl.o(i.SaveCellReverseSetting) refers to ctrl.o(.data) for ucCellReverseSetting
+    ctrl.o(i.SaveCellReverseSetting) refers to ctrl.o(.bss) for ucData
+    ctrl.o(i.SaveCellReverseTime) refers to ctrl.o(.data) for ucCellReverseTime
+    ctrl.o(i.SaveCellReverseTime) refers to ctrl.o(.bss) for ucData
+    ctrl.o(i.SaveCellRunningMinutes) refers to ctrl.o(.data) for ucRunningMins
+    ctrl.o(i.SaveCellRunningMinutes) refers to ctrl.o(.bss) for ucData
+    ctrl.o(i.SaveCellRunningTime) refers to ctrl.o(.data) for ucRunningHours
+    ctrl.o(i.SaveCellRunningTime) refers to ctrl.o(.bss) for ucData
+    ctrl.o(i.SaveCurrentCalValue) refers to ctrl.o(.data) for ucFCurrentCalValue
+    ctrl.o(i.SaveCurrentCalValue) refers to ctrl.o(.bss) for ucData
+    ctrl.o(i.SaveDataToArea) refers to mcu.o(i.ALLStop) for ALLStop
+    ctrl.o(i.SaveDataToArea) refers to flash.o(i.Flash_Init) for Flash_Init
+    ctrl.o(i.SaveDataToArea) refers to flash.o(i.Flash_SectorErase) for Flash_SectorErase
+    ctrl.o(i.SaveDataToArea) refers to flash.o(i.Flash_WriteByte) for Flash_WriteByte
+    ctrl.o(i.SaveDataToArea) refers to mcu.o(i.ALLStart) for ALLStart
+    ctrl.o(i.SaveDataToArea) refers to ctrl.o(i.FlashInt) for FlashInt
+    ctrl.o(i.SaveEventProcess) refers to ctrl.o(i.SaveDataToArea) for SaveDataToArea
+    ctrl.o(i.SaveEventProcess) refers to ctrl.o(.data) for ucSaveType
+    ctrl.o(i.SaveEventProcess) refers to ctrl.o(.bss) for ucData
+    ctrl.o(i.SaveModelNumber) refers to ctrl.o(i.SaveDataToArea) for SaveDataToArea
+    ctrl.o(i.SaveModelNumber) refers to ctrl.o(.data) for ucModelNumber
+    ctrl.o(i.SaveModelNumber) refers to ctrl.o(.bss) for ucData
+    ctrl.o(i.SavePermanentBoostMode) refers to ctrl.o(.data) for bPermanentBoostMode
+    ctrl.o(i.SavePermanentBoostMode) refers to ctrl.o(.bss) for ucData
+    ctrl.o(i.SaveTestModeFlag) refers to ctrl.o(.data) for bTestModeFlag
+    ctrl.o(i.SaveTestModeFlag) refers to ctrl.o(.bss) for ucData
+    ctrl.o(i.SerivceReset) refers to ctrl.o(i.SetToDefault) for SetToDefault
+    ctrl.o(i.SerivceReset) refers to ctrl.o(i.SaveDataToArea) for SaveDataToArea
+    ctrl.o(i.SerivceReset) refers to ctrl.o(i.UpdateUserData) for UpdateUserData
+    ctrl.o(i.SerivceReset) refers to ctrl.o(.bss) for ucData
+    ctrl.o(i.SerivceReset) refers to ctrl.o(.data) for ucBoostStatus
+    ctrl.o(i.SetToDefault) refers to ctrl.o(.data) for Version
+    ctrl.o(i.SetToDefault) refers to ctrl.o(.bss) for ucData
+    ctrl.o(i.SpecialSecretCodeProcess) refers to ctrl.o(i.LEDFlashSetting) for LEDFlashSetting
+    ctrl.o(i.SpecialSecretCodeProcess) refers to ctrl.o(i.LEDALLControl) for LEDALLControl
+    ctrl.o(i.SpecialSecretCodeProcess) refers to ctrl.o(i.CellCurrentOutput) for CellCurrentOutput
+    ctrl.o(i.SpecialSecretCodeProcess) refers to ctrl.o(.data) for bCalibrateMode
+    ctrl.o(i.UpdateRunningData) refers to ctrl.o(.bss) for ucData
+    ctrl.o(i.UpdateRunningData) refers to ctrl.o(.data) for ucRunningMins
+    ctrl.o(i.UpdateUserData) refers to ctrl.o(.bss) for ucData
+    ctrl.o(i.UpdateUserData) refers to ctrl.o(.data) for ucModelNumber
+    ctrl.o(i.WaterFlowFaultProcess) refers to ctrl.o(i.LEDFlashSetting) for LEDFlashSetting
+    ctrl.o(i.WaterFlowFaultProcess) refers to ctrl.o(i.CellCurrentOutput) for CellCurrentOutput
+    ctrl.o(i.WaterFlowFaultProcess) refers to ctrl.o(i.LEDControl) for LEDControl
+    ctrl.o(i.WaterFlowFaultProcess) refers to ctrl.o(.data) for bProtectFlag
+    keypad.o(i.KeyDetect) refers to keypad.o(i.KeyScanStatus) for KeyScanStatus
+    keypad.o(i.KeyDetect) refers to keypad.o(.data) for g_ucKeyCounter
+    keypad.o(i.KeyDetectTimer) refers to keypad.o(.data) for g_ucKeyCounter
+    keypad.o(i.KeyHandler) refers to keypad.o(i.KeyDetect) for KeyDetect
+    keypad.o(i.KeyHandler) refers to ctrl.o(i.CellOutputCurrentAdjust) for CellOutputCurrentAdjust
+    keypad.o(i.KeyHandler) refers to ctrl.o(i.ComboKeyProcess) for ComboKeyProcess
+    keypad.o(i.KeyHandler) refers to ctrl.o(i.SpecialSecretCodeProcess) for SpecialSecretCodeProcess
+    keypad.o(i.KeyHandler) refers to keypad.o(.data) for g_bKeyDetect
+    keypad.o(i.KeyScanStatus) refers to keypad.o(i.ReadKey) for ReadKey
+    keypad.o(i.KeyVariableInitial) refers to keypad.o(.data) for g_ucKeyCounter
+    keypad.o(i.ReadKey) refers to gpio.o(i.Gpio_GetInputIO) for Gpio_GetInputIO
+    main.o(i.main) refers to mcu.o(i.MCU_Initialize) for MCU_Initialize
+    main.o(i.main) refers to ctrl.o(i.PowerOnInitialize) for PowerOnInitialize
+    main.o(i.main) refers to keypad.o(i.KeyHandler) for KeyHandler
+    main.o(i.main) refers to ctrl.o(i.ProcessHandler) for ProcessHandler
+    mcu.o(i.ADCStart) refers to adc.o(i.Adc_SGL_Start) for Adc_SGL_Start
+    mcu.o(i.ADCStart) refers to mcu.o(.data) for stcAdcIrqFlag
+    mcu.o(i.ADCStop) refers to adc.o(i.Adc_SGL_Stop) for Adc_SGL_Stop
+    mcu.o(i.ALLStart) refers to bt.o(i.Bt_M0_Run) for Bt_M0_Run
+    mcu.o(i.ALLStart) refers to mcu.o(i.PWMStart) for PWMStart
+    mcu.o(i.ALLStart) refers to gpio.o(i.Gpio_SetIO) for Gpio_SetIO
+    mcu.o(i.ALLStart) refers to interrupts_hc32l136.o(i.EnableNvic) for EnableNvic
+    mcu.o(i.ALLStop) refers to adc.o(i.Adc_SGL_Stop) for Adc_SGL_Stop
+    mcu.o(i.ALLStop) refers to bt.o(i.Bt_M0_Stop) for Bt_M0_Stop
+    mcu.o(i.ALLStop) refers to mcu.o(i.PWMStop) for PWMStop
+    mcu.o(i.ALLStop) refers to gpio.o(i.Gpio_SetIO) for Gpio_SetIO
+    mcu.o(i.AdcContIrqCallback) refers to adc.o(i.Adc_GetSglResult) for Adc_GetSglResult
+    mcu.o(i.AdcContIrqCallback) refers to ctrl.o(i.CurrentADCProcess) for CurrentADCProcess
+    mcu.o(i.AdcContIrqCallback) refers to mcu.o(.data) for u16AdcRestult0
+    mcu.o(i.Gpio_IRQHandler) refers to gpio.o(i.Gpio_GetIrqStatus) for Gpio_GetIrqStatus
+    mcu.o(i.Gpio_IRQHandler) refers to gpio.o(i.Gpio_ClearIrq) for Gpio_ClearIrq
+    mcu.o(i.Gpio_IRQHandler) refers to gpio.o(i.Gpio_SetIO) for Gpio_SetIO
+    mcu.o(i.Gpio_IRQHandler) refers to timer3.o(i.Tim3_M0_Cnt16Set) for Tim3_M0_Cnt16Set
+    mcu.o(i.Gpio_IRQHandler) refers to timer3.o(i.Tim3_M0_ARRSet) for Tim3_M0_ARRSet
+    mcu.o(i.Gpio_IRQHandler) refers to timer3.o(i.Tim3_M0_Run) for Tim3_M0_Run
+    mcu.o(i.Gpio_IRQHandler) refers to mcu.o(i.StartTimer1) for StartTimer1
+    mcu.o(i.Gpio_IRQHandler) refers to mcu.o(i.ADCStart) for ADCStart
+    mcu.o(i.Gpio_IRQHandler) refers to ctrl.o(.data) for bStopOutputFlag
+    mcu.o(i.Init_ADC) refers to ddl.o(i.ddl_memclr) for ddl_memclr
+    mcu.o(i.Init_ADC) refers to gpio.o(i.Gpio_SetAnalogMode) for Gpio_SetAnalogMode
+    mcu.o(i.Init_ADC) refers to gpio.o(i.Gpio_Init) for Gpio_Init
+    mcu.o(i.Init_ADC) refers to sysctrl.o(i.Sysctrl_SetPeripheralGate) for Sysctrl_SetPeripheralGate
+    mcu.o(i.Init_ADC) refers to adc.o(i.Adc_Enable) for Adc_Enable
+    mcu.o(i.Init_ADC) refers to ddl.o(i.delay100us) for delay100us
+    mcu.o(i.Init_ADC) refers to adc.o(i.Adc_Init) for Adc_Init
+    mcu.o(i.Init_ADC) refers to adc.o(i.Adc_ConfigSglMode) for Adc_ConfigSglMode
+    mcu.o(i.Init_ADC) refers to adc.o(i.Adc_ConfigSglChannel) for Adc_ConfigSglChannel
+    mcu.o(i.Init_ADC) refers to interrupts_hc32l136.o(i.EnableNvic) for EnableNvic
+    mcu.o(i.Init_ADC) refers to adc.o(i.Adc_EnableIrq) for Adc_EnableIrq
+    mcu.o(i.Init_ADC) refers to adc.o(i.Adc_ConfigIrq) for Adc_ConfigIrq
+    mcu.o(i.Init_ADC) refers to mcu.o(.data) for stcAdcIrqFlag
+    mcu.o(i.Init_ADC) refers to mcu.o(i.AdcContIrqCallback) for AdcContIrqCallback
+    mcu.o(i.Init_IOPorts) refers to ddl.o(i.ddl_memclr) for ddl_memclr
+    mcu.o(i.Init_IOPorts) refers to sysctrl.o(i.Sysctrl_SetPeripheralGate) for Sysctrl_SetPeripheralGate
+    mcu.o(i.Init_IOPorts) refers to gpio.o(i.Gpio_Init) for Gpio_Init
+    mcu.o(i.Init_IOPorts) refers to gpio.o(i.Gpio_ClearIrq) for Gpio_ClearIrq
+    mcu.o(i.Init_IOPorts) refers to gpio.o(i.Gpio_EnableIrq) for Gpio_EnableIrq
+    mcu.o(i.Init_IOPorts) refers to gpio.o(i.Gpio_SetIO) for Gpio_SetIO
+    mcu.o(i.Init_IOPorts) refers to gpio.o(i.Gpio_ClrIO) for Gpio_ClrIO
+    mcu.o(i.Init_OscFrequency) refers to flash.o(i.Flash_WaitCycle) for Flash_WaitCycle
+    mcu.o(i.Init_OscFrequency) refers to sysctrl.o(i.Sysctrl_SetRCHTrim) for Sysctrl_SetRCHTrim
+    mcu.o(i.Init_OscFrequency) refers to sysctrl.o(i.Sysctrl_ClkInit) for Sysctrl_ClkInit
+    mcu.o(i.Init_Timer) refers to ddl.o(i.ddl_memclr) for ddl_memclr
+    mcu.o(i.Init_Timer) refers to sysctrl.o(i.Sysctrl_SetPeripheralGate) for Sysctrl_SetPeripheralGate
+    mcu.o(i.Init_Timer) refers to bt.o(i.Bt_Mode0_Init) for Bt_Mode0_Init
+    mcu.o(i.Init_Timer) refers to bt.o(i.Bt_M0_ARRSet) for Bt_M0_ARRSet
+    mcu.o(i.Init_Timer) refers to bt.o(i.Bt_M0_Cnt16Set) for Bt_M0_Cnt16Set
+    mcu.o(i.Init_Timer) refers to bt.o(i.Bt_ClearIntFlag) for Bt_ClearIntFlag
+    mcu.o(i.Init_Timer) refers to bt.o(i.Bt_Mode0_EnableIrq) for Bt_Mode0_EnableIrq
+    mcu.o(i.Init_Timer) refers to interrupts_hc32l136.o(i.EnableNvic) for EnableNvic
+    mcu.o(i.Init_Timer) refers to bt.o(i.Bt_M0_Run) for Bt_M0_Run
+    mcu.o(i.Init_Timer) refers to timer3.o(i.Tim3_Mode0_Init) for Tim3_Mode0_Init
+    mcu.o(i.Init_Timer) refers to timer3.o(i.Tim3_M0_Cnt16Set) for Tim3_M0_Cnt16Set
+    mcu.o(i.Init_Timer) refers to timer3.o(i.Tim3_M0_ARRSet) for Tim3_M0_ARRSet
+    mcu.o(i.Init_Timer) refers to timer3.o(i.Tim3_ClearIntFlag) for Tim3_ClearIntFlag
+    mcu.o(i.Init_Timer) refers to mcu.o(i.Tim0Int) for Tim0Int
+    mcu.o(i.Init_Timer) refers to mcu.o(i.Tim1Int) for Tim1Int
+    mcu.o(i.Init_Timer) refers to mcu.o(i.Tim3Int) for Tim3Int
+    mcu.o(i.Init_Timer) refers to ctrl.o(.data) for uiPWMPeriod
+    mcu.o(i.MCUStopOutput) refers to mcu.o(i.PWMStop) for PWMStop
+    mcu.o(i.MCUStopOutput) refers to mcu.o(i.ADCStop) for ADCStop
+    mcu.o(i.MCUStopOutput) refers to mcu.o(i.StopTimer1) for StopTimer1
+    mcu.o(i.MCUStopOutput) refers to gpio.o(i.Gpio_ClrIO) for Gpio_ClrIO
+    mcu.o(i.MCU_Initialize) refers to mcu.o(i.Init_OscFrequency) for Init_OscFrequency
+    mcu.o(i.MCU_Initialize) refers to mcu.o(i.Init_IOPorts) for Init_IOPorts
+    mcu.o(i.MCU_Initialize) refers to mcu.o(i.Init_Timer) for Init_Timer
+    mcu.o(i.MCU_Initialize) refers to mcu.o(i.Init_ADC) for Init_ADC
+    mcu.o(i.MCU_Initialize) refers to ddl.o(i.delay10us) for delay10us
+    mcu.o(i.PWMStart) refers to timer3.o(i.Tim3_ClearIntFlag) for Tim3_ClearIntFlag
+    mcu.o(i.PWMStart) refers to timer3.o(i.Tim3_Mode0_EnableIrq) for Tim3_Mode0_EnableIrq
+    mcu.o(i.PWMStart) refers to interrupts_hc32l136.o(i.EnableNvic) for EnableNvic
+    mcu.o(i.PWMStop) refers to timer3.o(i.Tim3_ClearIntFlag) for Tim3_ClearIntFlag
+    mcu.o(i.PWMStop) refers to timer3.o(i.Tim3_Mode0_DisableIrq) for Tim3_Mode0_DisableIrq
+    mcu.o(i.PWMStop) refers to interrupts_hc32l136.o(i.EnableNvic) for EnableNvic
+    mcu.o(i.PWMStop) refers to timer3.o(i.Tim3_M0_Stop) for Tim3_M0_Stop
+    mcu.o(i.PWMStop) refers to gpio.o(i.Gpio_ClearIrq) for Gpio_ClearIrq
+    mcu.o(i.StartTimer1) refers to bt.o(i.Bt_M0_Run) for Bt_M0_Run
+    mcu.o(i.StopTimer1) refers to bt.o(i.Bt_M0_Stop) for Bt_M0_Stop
+    mcu.o(i.Tim0Int) refers to bt.o(i.Bt_GetIntFlag) for Bt_GetIntFlag
+    mcu.o(i.Tim0Int) refers to keypad.o(i.KeyDetectTimer) for KeyDetectTimer
+    mcu.o(i.Tim0Int) refers to ctrl.o(i.MainTimerHandler) for MainTimerHandler
+    mcu.o(i.Tim0Int) refers to bt.o(i.Bt_ClearIntFlag) for Bt_ClearIntFlag
+    mcu.o(i.Tim1Int) refers to bt.o(i.Bt_GetIntFlag) for Bt_GetIntFlag
+    mcu.o(i.Tim1Int) refers to mcu.o(i.ADCStart) for ADCStart
+    mcu.o(i.Tim1Int) refers to bt.o(i.Bt_ClearIntFlag) for Bt_ClearIntFlag
+    mcu.o(i.Tim3Int) refers to timer3.o(i.Tim3_GetIntFlag) for Tim3_GetIntFlag
+    mcu.o(i.Tim3Int) refers to gpio.o(i.Gpio_ReadOutputIO) for Gpio_ReadOutputIO
+    mcu.o(i.Tim3Int) refers to gpio.o(i.Gpio_ClrIO) for Gpio_ClrIO
+    mcu.o(i.Tim3Int) refers to timer3.o(i.Tim3_M0_Cnt16Set) for Tim3_M0_Cnt16Set
+    mcu.o(i.Tim3Int) refers to timer3.o(i.Tim3_M0_ARRSet) for Tim3_M0_ARRSet
+    mcu.o(i.Tim3Int) refers to gpio.o(i.Gpio_SetIO) for Gpio_SetIO
+    mcu.o(i.Tim3Int) refers to timer3.o(i.Tim3_ClearIntFlag) for Tim3_ClearIntFlag
+    ddl.o(.rev16_text) refers (Special) to use_no_semi_2.o(.text) for __use_no_semihosting
+    ddl.o(.revsh_text) refers (Special) to use_no_semi_2.o(.text) for __use_no_semihosting
+    ddl.o(i.DDL_WAIT_LOOP_HOOK) refers (Special) to use_no_semi_2.o(.text) for __use_no_semihosting
+    ddl.o(i.Debug_Output) refers (Special) to use_no_semi_2.o(.text) for __use_no_semihosting
+    ddl.o(i.Debug_UartInit) refers (Special) to use_no_semi_2.o(.text) for __use_no_semihosting
+    ddl.o(i.Log2) refers (Special) to use_no_semi_2.o(.text) for __use_no_semihosting
+    ddl.o(i.__backspace) refers (Special) to use_no_semi_2.o(.text) for __use_no_semihosting
+    ddl.o(i._sys_exit) refers (Special) to use_no_semi_2.o(.text) for __use_no_semihosting
+    ddl.o(i._ttywrch) refers (Special) to use_no_semi_2.o(.text) for __use_no_semihosting
+    ddl.o(i.ddl_memclr) refers (Special) to use_no_semi_2.o(.text) for __use_no_semihosting
+    ddl.o(i.delay100us) refers (Special) to use_no_semi_2.o(.text) for __use_no_semihosting
+    ddl.o(i.delay100us) refers to aeabi_sdiv.o(.text) for __aeabi_uidivmod
+    ddl.o(i.delay100us) refers to system_hc32l136.o(.data) for SystemCoreClock
+    ddl.o(i.delay10us) refers (Special) to use_no_semi_2.o(.text) for __use_no_semihosting
+    ddl.o(i.delay10us) refers to aeabi_sdiv.o(.text) for __aeabi_uidivmod
+    ddl.o(i.delay10us) refers to system_hc32l136.o(.data) for SystemCoreClock
+    ddl.o(i.delay1ms) refers (Special) to use_no_semi_2.o(.text) for __use_no_semihosting
+    ddl.o(i.delay1ms) refers to aeabi_sdiv.o(.text) for __aeabi_uidivmod
+    ddl.o(i.delay1ms) refers to system_hc32l136.o(.data) for SystemCoreClock
+    ddl.o(i.fputc) refers (Special) to use_no_semi_2.o(.text) for __use_no_semihosting
+    ddl.o(i.fputc) refers to ddl.o(i.Debug_Output) for Debug_Output
+    ddl.o(.data) refers (Special) to use_no_semi_2.o(.text) for __use_no_semihosting
+    flash.o(i.EfRam_IRQHandler) refers to flash.o(.data) for pfnFlashCallback
+    flash.o(i.Flash_Init) refers to flash.o(.data) for pfnFlashCallback
+    gpio.o(i.Gpio_DisableIrq) refers to gpio.o(i._GpioEnableIrq) for _GpioEnableIrq
+    gpio.o(i.Gpio_EnableIrq) refers to gpio.o(i._GpioEnableIrq) for _GpioEnableIrq
+    interrupts_hc32l136.o(i.EnableNvic) refers to interrupts_hc32l136.o(i.__NVIC_SetPriority) for __NVIC_SetPriority
+    interrupts_hc32l136.o(i.IRQ000_Handler) refers to mcu.o(i.Gpio_IRQHandler) for Gpio_IRQHandler
+    interrupts_hc32l136.o(i.IRQ001_Handler) refers to mcu.o(i.Gpio_IRQHandler) for Gpio_IRQHandler
+    interrupts_hc32l136.o(i.IRQ002_Handler) refers to mcu.o(i.Gpio_IRQHandler) for Gpio_IRQHandler
+    interrupts_hc32l136.o(i.IRQ003_Handler) refers to mcu.o(i.Gpio_IRQHandler) for Gpio_IRQHandler
+    interrupts_hc32l136.o(i.IRQ005_Handler) refers to timer3.o(i.Tim3_IRQHandler) for Tim3_IRQHandler
+    interrupts_hc32l136.o(i.IRQ014_Handler) refers to bt.o(i.Tim_IRQHandler) for Tim_IRQHandler
+    interrupts_hc32l136.o(i.IRQ015_Handler) refers to bt.o(i.Tim_IRQHandler) for Tim_IRQHandler
+    interrupts_hc32l136.o(i.IRQ016_Handler) refers to bt.o(i.Tim_IRQHandler) for Tim_IRQHandler
+    interrupts_hc32l136.o(i.IRQ024_Handler) refers to adc.o(i.Adc_IRQHandler) for Adc_IRQHandler
+    interrupts_hc32l136.o(i.IRQ030_Handler) refers (Weak) to flash.o(i.EfRam_IRQHandler) for EfRam_IRQHandler
+    sysctrl.o(i.Sysctrl_ClkDeInit) refers to sysctrl.o(i.Sysctrl_SetRCHTrim) for Sysctrl_SetRCHTrim
+    sysctrl.o(i.Sysctrl_ClkDeInit) refers to sysctrl.o(i.Sysctrl_ClkSourceEnable) for Sysctrl_ClkSourceEnable
+    sysctrl.o(i.Sysctrl_ClkDeInit) refers to sysctrl.o(i.Sysctrl_SysClkSwitch) for Sysctrl_SysClkSwitch
+    sysctrl.o(i.Sysctrl_ClkDeInit) refers to sysctrl.o(i.Sysctrl_SetHCLKDiv) for Sysctrl_SetHCLKDiv
+    sysctrl.o(i.Sysctrl_ClkDeInit) refers to sysctrl.o(i.Sysctrl_SetPCLKDiv) for Sysctrl_SetPCLKDiv
+    sysctrl.o(i.Sysctrl_ClkInit) refers to ctrl.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    sysctrl.o(i.Sysctrl_ClkInit) refers to sysctrl.o(i.Sysctrl_XTHDriverConfig) for Sysctrl_XTHDriverConfig
+    sysctrl.o(i.Sysctrl_ClkInit) refers to sysctrl.o(i.Sysctrl_SetXTHStableTime) for Sysctrl_SetXTHStableTime
+    sysctrl.o(i.Sysctrl_ClkInit) refers to sysctrl.o(i.Sysctrl_SetRCLStableTime) for Sysctrl_SetRCLStableTime
+    sysctrl.o(i.Sysctrl_ClkInit) refers to sysctrl.o(i.Sysctrl_XTLDriverConfig) for Sysctrl_XTLDriverConfig
+    sysctrl.o(i.Sysctrl_ClkInit) refers to sysctrl.o(i.Sysctrl_SetXTLStableTime) for Sysctrl_SetXTLStableTime
+    sysctrl.o(i.Sysctrl_ClkInit) refers to sysctrl.o(i.Sysctrl_SetPLLStableTime) for Sysctrl_SetPLLStableTime
+    sysctrl.o(i.Sysctrl_ClkInit) refers to sysctrl.o(i.Sysctrl_ClkSourceEnable) for Sysctrl_ClkSourceEnable
+    sysctrl.o(i.Sysctrl_ClkInit) refers to sysctrl.o(i.Sysctrl_SysClkSwitch) for Sysctrl_SysClkSwitch
+    sysctrl.o(i.Sysctrl_ClkInit) refers to sysctrl.o(i.Sysctrl_SetHCLKDiv) for Sysctrl_SetHCLKDiv
+    sysctrl.o(i.Sysctrl_ClkInit) refers to sysctrl.o(i.Sysctrl_SetPCLKDiv) for Sysctrl_SetPCLKDiv
+    sysctrl.o(i.Sysctrl_ClkSourceEnable) refers to sysctrl.o(i._SysctrlUnlock) for _SysctrlUnlock
+    sysctrl.o(i.Sysctrl_ClkSourceEnable) refers to ctrl.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    sysctrl.o(i.Sysctrl_GetHClkFreq) refers to rt_memcpy.o(.emb_text) for __aeabi_memcpy4
+    sysctrl.o(i.Sysctrl_GetHClkFreq) refers to ctrl.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    sysctrl.o(i.Sysctrl_GetHClkFreq) refers to sysctrl.o(.constdata) for .constdata
+    sysctrl.o(i.Sysctrl_GetPClkFreq) refers to sysctrl.o(i.Sysctrl_GetHClkFreq) for Sysctrl_GetHClkFreq
+    sysctrl.o(i.Sysctrl_SetFunc) refers to sysctrl.o(i._SysctrlUnlock) for _SysctrlUnlock
+    sysctrl.o(i.Sysctrl_SetFunc) refers to ctrl.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    sysctrl.o(i.Sysctrl_SetHCLKDiv) refers to sysctrl.o(i._SysctrlUnlock) for _SysctrlUnlock
+    sysctrl.o(i.Sysctrl_SetPCLKDiv) refers to sysctrl.o(i._SysctrlUnlock) for _SysctrlUnlock
+    sysctrl.o(i.Sysctrl_SetRCHTrim) refers to ctrl.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    sysctrl.o(i.Sysctrl_SetRTCAdjustClkFreq) refers to sysctrl.o(i._SysctrlUnlock) for _SysctrlUnlock
+    sysctrl.o(i.Sysctrl_SysClkSwitch) refers to sysctrl.o(i._SysctrlUnlock) for _SysctrlUnlock
+    sysctrl.o(i.Sysctrl_SysClkSwitch) refers to system_hc32l136.o(i.SystemCoreClockUpdate) for SystemCoreClockUpdate
+    bt.o(i.Bt_Mode0_Init) refers to bt.o(.data) for pfnTim0Callback
+    bt.o(i.Bt_Mode1_Init) refers to bt.o(.data) for pfnTim0Callback
+    bt.o(i.Bt_Mode23_Init) refers to bt.o(.data) for pfnTim0Callback
+    bt.o(i.Tim_IRQHandler) refers to bt.o(.data) for pfnTim0Callback
+    adc.o(i.Adc_ConfigIrq) refers to adc.o(.bss) for stcAdcIrqCalbaks
+    adc.o(i.Adc_ConfigSqrChannel) refers to ctrl.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    adc.o(i.Adc_IRQHandler) refers to adc.o(.bss) for stcAdcIrqCalbaks
+    timer3.o(i.Tim3_IRQHandler) refers to timer3.o(.data) for pfnTim3Callback
+    timer3.o(i.Tim3_Mode0_Init) refers to timer3.o(.data) for pfnTim3Callback
+    timer3.o(i.Tim3_Mode1_Init) refers to timer3.o(.data) for pfnTim3Callback
+    timer3.o(i.Tim3_Mode23_DisableIrq) refers to ctrl.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    timer3.o(i.Tim3_Mode23_EnableIrq) refers to ctrl.o(i.__ARM_common_switch8) for __ARM_common_switch8
+    timer3.o(i.Tim3_Mode23_Init) refers to timer3.o(.data) for pfnTim3Callback
+    use_no_semi_2.o(.text) refers (Special) to use_no_semi.o(.text) for __use_no_semihosting_swi
+    rt_memcpy.o(.text) refers to rt_memcpy.o(.emb_text) for __aeabi_memcpy4
+    __main.o(!!!main) refers to __rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for __rt_entry_li
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for __rt_entry_main
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000C) for __rt_entry_postli_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000009) for __rt_entry_postsh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000002) for __rt_entry_presh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for __rt_entry_sh
+    aeabi_idiv0_sigfpe.o(.text) refers to rt_div0.o(.text) for __rt_div0
+    __rtentry2.o(.ARM.Collect$$rtentry$$00000008) refers to boardinit2.o(.text) for _platform_post_stackheap_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) refers to libinit.o(.ARM.Collect$$libinit$$00000000) for __rt_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) refers to boardinit3.o(.text) for _platform_post_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to main.o(i.main) for main
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to exit.o(.text) for exit
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000001) for .ARM.Collect$$rtentry$$00000001
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000008) for .ARM.Collect$$rtentry$$00000008
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for .ARM.Collect$$rtentry$$0000000A
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) for .ARM.Collect$$rtentry$$0000000B
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for .ARM.Collect$$rtentry$$0000000D
+    __rtentry4.o(.ARM.Collect$$rtentry$$00000004) refers to sys_stackheap_outer.o(.text) for __user_setup_stackheap
+    __rtentry4.o(.ARM.exidx) refers to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for .ARM.Collect$$rtentry$$00000004
+    rt_div0.o(.text) refers to defsig_fpe_outer.o(.text) for __rt_SIGFPE
+    sys_stackheap_outer.o(.text) refers to libspace.o(.text) for __user_perproc_libspace
+    sys_stackheap_outer.o(.text) refers to startup_hc32l136.o(.text) for __user_initial_stackheap
+    sys_stackheap_outer.o(__vectab_stack_and_reset_area) refers to tempstk.o(.text) for __temporary_stack_top
+    sys_stackheap_outer.o(__vectab_stack_and_reset_area) refers to __main.o(!!!main) for __main
+    exit.o(.text) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for __rt_exit
+    defsig_fpe_outer.o(.text) refers to defsig_fpe_inner.o(.text) for __rt_SIGFPE_inner
+    defsig_fpe_outer.o(.text) refers to defsig_exit.o(.text) for __sig_exit
+    defsig_fpe_formal.o(.text) refers to rt_raise.o(.text) for __rt_raise
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002E) for __rt_lib_init_alloca_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002C) for __rt_lib_init_argv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001B) for __rt_lib_init_atexit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000021) for __rt_lib_init_clock_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000032) for __rt_lib_init_cpp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000030) for __rt_lib_init_exceptions_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000002) for __rt_lib_init_fp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001F) for __rt_lib_init_fp_trap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000023) for __rt_lib_init_getenv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000A) for __rt_lib_init_heap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000011) for __rt_lib_init_lc_collate_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000013) for __rt_lib_init_lc_ctype_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000015) for __rt_lib_init_lc_monetary_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000017) for __rt_lib_init_lc_numeric_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000019) for __rt_lib_init_lc_time_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000004) for __rt_lib_init_preinit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000E) for __rt_lib_init_rand_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000033) for __rt_lib_init_return
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001D) for __rt_lib_init_signal_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000025) for __rt_lib_init_stdio_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000C) for __rt_lib_init_user_alloc_1
+    libspace.o(.text) refers to libspace.o(.bss) for __libspace_start
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for .ARM.Collect$$rtexit$$00000000
+    rt_raise.o(.text) refers to __raise.o(.text) for __raise
+    rt_raise.o(.text) refers to ddl.o(i._sys_exit) for _sys_exit
+    defsig_exit.o(.text) refers to ddl.o(i._sys_exit) for _sys_exit
+    defsig_fpe_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    libinit2.o(.ARM.Collect$$libinit$$00000010) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000012) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000014) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000016) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000018) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000026) refers to argv_veneer.o(.text) for __ARM_argv_veneer
+    libinit2.o(.ARM.Collect$$libinit$$00000027) refers to argv_veneer.o(.text) for __ARM_argv_veneer
+    rtexit2.o(.ARM.Collect$$rtexit$$00000003) refers to libshutdown.o(.ARM.Collect$$libshutdown$$00000000) for __rt_lib_shutdown
+    rtexit2.o(.ARM.Collect$$rtexit$$00000004) refers to ddl.o(i._sys_exit) for _sys_exit
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000001) for .ARM.Collect$$rtexit$$00000001
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for .ARM.Collect$$rtexit$$00000003
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for .ARM.Collect$$rtexit$$00000004
+    __raise.o(.text) refers to defsig.o(CL$$defsig) for __default_signal_handler
+    defsig_general.o(.text) refers to ddl.o(i._ttywrch) for _ttywrch
+    defsig.o(CL$$defsig) refers to defsig_fpe_inner.o(.text) for __rt_SIGFPE_inner
+    defsig.o(CL$$defsig) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    _get_argv_nomalloc.o(.text) refers (Special) to hrguard.o(.text) for __heap_region$guard
+    _get_argv_nomalloc.o(.text) refers to defsig_rtmem_outer.o(.text) for __rt_SIGRTMEM
+    _get_argv_nomalloc.o(.text) refers to sys_command.o(.text) for _sys_command_string
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000002) for __rt_lib_shutdown_cpp_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000007) for __rt_lib_shutdown_fp_trap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F) for __rt_lib_shutdown_heap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000010) for __rt_lib_shutdown_return
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A) for __rt_lib_shutdown_signal_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000004) for __rt_lib_shutdown_stdio_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C) for __rt_lib_shutdown_user_alloc_1
+    sys_command.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_command.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    defsig_abrt_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtred_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtmem_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtmem_outer.o(.text) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    defsig_rtmem_outer.o(.text) refers to defsig_exit.o(.text) for __sig_exit
+    defsig_rtmem_formal.o(.text) refers to rt_raise.o(.text) for __rt_raise
+    defsig_stak_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_pvfn_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_cppl_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_segv_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_other.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing system_hc32l136.o(.rev16_text), (4 bytes).
+    Removing system_hc32l136.o(.revsh_text), (4 bytes).
+    Removing ctrl.o(.rev16_text), (4 bytes).
+    Removing ctrl.o(.revsh_text), (4 bytes).
+    Removing ctrl.o(i.Eeprom_WriteBytes), (64 bytes).
+    Removing ctrl.o(i.ReadCellCurrentSetting), (20 bytes).
+    Removing ctrl.o(i.ReadCellReverseSetting), (20 bytes).
+    Removing ctrl.o(i.ReadCellReverseTime), (20 bytes).
+    Removing ctrl.o(i.ReadCellRunningTime), (56 bytes).
+    Removing ctrl.o(i.ReadCurrentCalValue), (32 bytes).
+    Removing ctrl.o(i.ReadModelNumber), (20 bytes).
+    Removing ctrl.o(i.ReadPermanentBoostMode), (20 bytes).
+    Removing ctrl.o(i.ReadTestModeFlag), (20 bytes).
+    Removing ctrl.o(i.SaveCellPolarity), (36 bytes).
+    Removing ctrl.o(i.SaveCurrentCalValue), (44 bytes).
+    Removing ctrl.o(i.SavePermanentBoostMode), (36 bytes).
+    Removing keypad.o(.rev16_text), (4 bytes).
+    Removing keypad.o(.revsh_text), (4 bytes).
+    Removing mcu.o(.rev16_text), (4 bytes).
+    Removing mcu.o(.revsh_text), (4 bytes).
+    Removing mcu.o(i.MCUStopOutput), (136 bytes).
+    Removing ddl.o(.rev16_text), (4 bytes).
+    Removing ddl.o(.revsh_text), (4 bytes).
+    Removing ddl.o(i.DDL_WAIT_LOOP_HOOK), (2 bytes).
+    Removing ddl.o(i.Debug_Output), (2 bytes).
+    Removing ddl.o(i.Debug_UartInit), (2 bytes).
+    Removing ddl.o(i.Log2), (24 bytes).
+    Removing ddl.o(i.__backspace), (4 bytes).
+    Removing ddl.o(i._ttywrch), (2 bytes).
+    Removing ddl.o(i.fputc), (26 bytes).
+    Removing ddl.o(.data), (4 bytes).
+    Removing flash.o(.rev16_text), (4 bytes).
+    Removing flash.o(.revsh_text), (4 bytes).
+    Removing flash.o(i.EfRam_IRQHandler), (24 bytes).
+    Removing flash.o(i.Flash_ChipErase), (172 bytes).
+    Removing flash.o(i.Flash_EnableIrq), (168 bytes).
+    Removing flash.o(i.Flash_Lock), (68 bytes).
+    Removing flash.o(i.Flash_Unlock), (68 bytes).
+    Removing flash.o(i.Flash_WriteHalfWord), (200 bytes).
+    Removing flash.o(i.Flash_WriteWord), (200 bytes).
+    Removing gpio.o(.rev16_text), (4 bytes).
+    Removing gpio.o(.revsh_text), (4 bytes).
+    Removing gpio.o(i.Gpio_ClrPort), (16 bytes).
+    Removing gpio.o(i.Gpio_DisableIrq), (24 bytes).
+    Removing gpio.o(i.Gpio_GetInputData), (16 bytes).
+    Removing gpio.o(i.Gpio_SetAfMode), (20 bytes).
+    Removing gpio.o(i.Gpio_SetClrPort), (16 bytes).
+    Removing gpio.o(i.Gpio_SetPort), (16 bytes).
+    Removing gpio.o(i.Gpio_SfExtClkConfig), (28 bytes).
+    Removing gpio.o(i.Gpio_SfHClkOutputConfig), (60 bytes).
+    Removing gpio.o(i.Gpio_SfIrPolConfig), (36 bytes).
+    Removing gpio.o(i.Gpio_SfIrqModeConfig), (28 bytes).
+    Removing gpio.o(i.Gpio_SfPClkOutputConfig), (60 bytes).
+    Removing gpio.o(i.Gpio_SfPcaConfig), (60 bytes).
+    Removing gpio.o(i.Gpio_SfSsnConfig), (60 bytes).
+    Removing gpio.o(i.Gpio_SfTimCConfig), (40 bytes).
+    Removing gpio.o(i.Gpio_SfTimEConfig), (40 bytes).
+    Removing gpio.o(i.Gpio_SfTimGConfig), (40 bytes).
+    Removing gpio.o(i.Gpio_WriteOutputIO), (56 bytes).
+    Removing interrupts_hc32l136.o(.rev16_text), (4 bytes).
+    Removing interrupts_hc32l136.o(.revsh_text), (4 bytes).
+    Removing sysctrl.o(.rev16_text), (4 bytes).
+    Removing sysctrl.o(.revsh_text), (4 bytes).
+    Removing sysctrl.o(i.Sysctrl_ClkDeInit), (72 bytes).
+    Removing sysctrl.o(i.Sysctrl_GetPClkFreq), (32 bytes).
+    Removing sysctrl.o(i.Sysctrl_GetPeripheralGate), (20 bytes).
+    Removing sysctrl.o(i.Sysctrl_SetFunc), (216 bytes).
+    Removing sysctrl.o(i.Sysctrl_SetPLLFreq), (276 bytes).
+    Removing sysctrl.o(i.Sysctrl_SetRCLTrim), (80 bytes).
+    Removing sysctrl.o(i.Sysctrl_SetRTCAdjustClkFreq), (44 bytes).
+    Removing sysctrl.o(i.Sysctrl_SetXTHFreq), (32 bytes).
+    Removing bt.o(.rev16_text), (4 bytes).
+    Removing bt.o(.revsh_text), (4 bytes).
+    Removing bt.o(i.Bt_ClearAllIntFlag), (76 bytes).
+    Removing bt.o(i.Bt_M0_Cnt16Get), (64 bytes).
+    Removing bt.o(i.Bt_M0_Cnt32Get), (56 bytes).
+    Removing bt.o(i.Bt_M0_Cnt32Set), (72 bytes).
+    Removing bt.o(i.Bt_M0_EnTOG_Output), (36 bytes).
+    Removing bt.o(i.Bt_M1_Cnt16Get), (64 bytes).
+    Removing bt.o(i.Bt_M1_Cnt16Set), (96 bytes).
+    Removing bt.o(i.Bt_M1_Input_Config), (152 bytes).
+    Removing bt.o(i.Bt_M1_PWC_CapValueGet), (64 bytes).
+    Removing bt.o(i.Bt_M1_PWC_Edge_Sel), (132 bytes).
+    Removing bt.o(i.Bt_M1_Run), (28 bytes).
+    Removing bt.o(i.Bt_M1_Stop), (28 bytes).
+    Removing bt.o(i.Bt_M23_ARRSet), (48 bytes).
+    Removing bt.o(i.Bt_M23_BrakeInput_Config), (192 bytes).
+    Removing bt.o(i.Bt_M23_CCR_Get), (40 bytes).
+    Removing bt.o(i.Bt_M23_CCR_Set), (60 bytes).
+    Removing bt.o(i.Bt_M23_Cnt16Get), (24 bytes).
+    Removing bt.o(i.Bt_M23_Cnt16Set), (32 bytes).
+    Removing bt.o(i.Bt_M23_DT_Config), (52 bytes).
+    Removing bt.o(i.Bt_M23_ETRInput_Config), (60 bytes).
+    Removing bt.o(i.Bt_M23_EnDMA), (112 bytes).
+    Removing bt.o(i.Bt_M23_EnPWM_Output), (56 bytes).
+    Removing bt.o(i.Bt_M23_EnSwBk), (32 bytes).
+    Removing bt.o(i.Bt_M23_EnSwTrig), (32 bytes).
+    Removing bt.o(i.Bt_M23_EnSwTrigCapCmpA), (28 bytes).
+    Removing bt.o(i.Bt_M23_EnSwTrigCapCmpB), (28 bytes).
+    Removing bt.o(i.Bt_M23_EnSwUev), (32 bytes).
+    Removing bt.o(i.Bt_M23_GateFuncSel), (76 bytes).
+    Removing bt.o(i.Bt_M23_MasterSlave_Set), (96 bytes).
+    Removing bt.o(i.Bt_M23_OCRefClr), (60 bytes).
+    Removing bt.o(i.Bt_M23_PortInput_Config), (144 bytes).
+    Removing bt.o(i.Bt_M23_PortOutput_Config), (184 bytes).
+    Removing bt.o(i.Bt_M23_Run), (28 bytes).
+    Removing bt.o(i.Bt_M23_SetValidPeriod), (32 bytes).
+    Removing bt.o(i.Bt_M23_Stop), (28 bytes).
+    Removing bt.o(i.Bt_M23_TrigADC_Config), (92 bytes).
+    Removing bt.o(i.Bt_Mode0_DisableIrq), (28 bytes).
+    Removing bt.o(i.Bt_Mode1_DisableIrq), (60 bytes).
+    Removing bt.o(i.Bt_Mode1_EnableIrq), (64 bytes).
+    Removing bt.o(i.Bt_Mode1_Init), (356 bytes).
+    Removing bt.o(i.Bt_Mode23_DisableIrq), (112 bytes).
+    Removing bt.o(i.Bt_Mode23_EnableIrq), (124 bytes).
+    Removing bt.o(i.Bt_Mode23_Init), (620 bytes).
+    Removing adc.o(.rev16_text), (4 bytes).
+    Removing adc.o(.revsh_text), (4 bytes).
+    Removing adc.o(i.Adc_ClrAccResult), (20 bytes).
+    Removing adc.o(i.Adc_ClrHtIrqState), (20 bytes).
+    Removing adc.o(i.Adc_ClrJqrIrqState), (20 bytes).
+    Removing adc.o(i.Adc_ClrLtIrqState), (20 bytes).
+    Removing adc.o(i.Adc_ClrRegIrqState), (20 bytes).
+    Removing adc.o(i.Adc_ClrSglIrqState), (20 bytes).
+    Removing adc.o(i.Adc_ClrSqrIrqState), (20 bytes).
+    Removing adc.o(i.Adc_ConfigDmaTrig), (48 bytes).
+    Removing adc.o(i.Adc_ConfigJqrChannel), (132 bytes).
+    Removing adc.o(i.Adc_ConfigJqrMode), (96 bytes).
+    Removing adc.o(i.Adc_ConfigSqrChannel), (440 bytes).
+    Removing adc.o(i.Adc_ConfigSqrMode), (128 bytes).
+    Removing adc.o(i.Adc_DeInit), (264 bytes).
+    Removing adc.o(i.Adc_Disable), (20 bytes).
+    Removing adc.o(i.Adc_DisableIrq), (44 bytes).
+    Removing adc.o(i.Adc_ExtTrigCfg), (72 bytes).
+    Removing adc.o(i.Adc_GetAccResult), (28 bytes).
+    Removing adc.o(i.Adc_GetIrqState), (68 bytes).
+    Removing adc.o(i.Adc_GetJqrResult), (36 bytes).
+    Removing adc.o(i.Adc_GetSqrResult), (36 bytes).
+    Removing adc.o(i.Adc_JQR_Start), (20 bytes).
+    Removing adc.o(i.Adc_JQR_Stop), (20 bytes).
+    Removing adc.o(i.Adc_PollHTBusyState), (16 bytes).
+    Removing adc.o(i.Adc_PollJqrBusyState), (16 bytes).
+    Removing adc.o(i.Adc_PollLtBusyState), (16 bytes).
+    Removing adc.o(i.Adc_PollRegBusyState), (16 bytes).
+    Removing adc.o(i.Adc_PollSglBusyState), (16 bytes).
+    Removing adc.o(i.Adc_PollSqrBusyState), (16 bytes).
+    Removing adc.o(i.Adc_SQR_Start), (20 bytes).
+    Removing adc.o(i.Adc_SQR_Stop), (20 bytes).
+    Removing adc.o(i.Adc_SetAlign), (32 bytes).
+    Removing adc.o(i.Adc_SetVref), (84 bytes).
+    Removing adc.o(i.Adc_ThresholdCfg), (208 bytes).
+    Removing timer3.o(.rev16_text), (4 bytes).
+    Removing timer3.o(.revsh_text), (4 bytes).
+    Removing timer3.o(i.Tim3_ClearAllIntFlag), (188 bytes).
+    Removing timer3.o(i.Tim3_M0_Cnt16Get), (16 bytes).
+    Removing timer3.o(i.Tim3_M0_Cnt32Get), (12 bytes).
+    Removing timer3.o(i.Tim3_M0_Cnt32Set), (20 bytes).
+    Removing timer3.o(i.Tim3_M0_EnTOG_Output), (36 bytes).
+    Removing timer3.o(i.Tim3_M1_Cnt16Get), (16 bytes).
+    Removing timer3.o(i.Tim3_M1_Cnt16Set), (28 bytes).
+    Removing timer3.o(i.Tim3_M1_Input_Config), (172 bytes).
+    Removing timer3.o(i.Tim3_M1_PWC_CapValueGet), (16 bytes).
+    Removing timer3.o(i.Tim3_M1_PWC_Edge_Sel), (152 bytes).
+    Removing timer3.o(i.Tim3_M1_Run), (24 bytes).
+    Removing timer3.o(i.Tim3_M1_Stop), (20 bytes).
+    Removing timer3.o(i.Tim3_M23_ARRSet), (48 bytes).
+    Removing timer3.o(i.Tim3_M23_BrakeInput_Config), (300 bytes).
+    Removing timer3.o(i.Tim3_M23_CCR_Get), (96 bytes).
+    Removing timer3.o(i.Tim3_M23_CCR_Set), (168 bytes).
+    Removing timer3.o(i.Tim3_M23_Cnt16Get), (16 bytes).
+    Removing timer3.o(i.Tim3_M23_Cnt16Set), (28 bytes).
+    Removing timer3.o(i.Tim3_M23_DT_Config), (56 bytes).
+    Removing timer3.o(i.Tim3_M23_ETRInput_Config), (60 bytes).
+    Removing timer3.o(i.Tim3_M23_EnDMA), (216 bytes).
+    Removing timer3.o(i.Tim3_M23_EnPWM_Output), (56 bytes).
+    Removing timer3.o(i.Tim3_M23_EnSwBk), (24 bytes).
+    Removing timer3.o(i.Tim3_M23_EnSwTrig), (24 bytes).
+    Removing timer3.o(i.Tim3_M23_EnSwTrigCapCmpA), (76 bytes).
+    Removing timer3.o(i.Tim3_M23_EnSwTrigCapCmpB), (76 bytes).
+    Removing timer3.o(i.Tim3_M23_EnSwUev), (24 bytes).
+    Removing timer3.o(i.Tim3_M23_GateFuncSel), (84 bytes).
+    Removing timer3.o(i.Tim3_M23_MasterSlave_Set), (104 bytes).
+    Removing timer3.o(i.Tim3_M23_OCRefClr), (60 bytes).
+    Removing timer3.o(i.Tim3_M23_PortInput_Config), (544 bytes).
+    Removing timer3.o(i.Tim3_M23_PortOutput_Config), (692 bytes).
+    Removing timer3.o(i.Tim3_M23_Run), (24 bytes).
+    Removing timer3.o(i.Tim3_M23_SetValidPeriod), (28 bytes).
+    Removing timer3.o(i.Tim3_M23_Stop), (20 bytes).
+    Removing timer3.o(i.Tim3_M23_TrigADC_Config), (188 bytes).
+    Removing timer3.o(i.Tim3_Mode1_DisableIrq), (60 bytes).
+    Removing timer3.o(i.Tim3_Mode1_EnableIrq), (64 bytes).
+    Removing timer3.o(i.Tim3_Mode1_Init), (116 bytes).
+    Removing timer3.o(i.Tim3_Mode23_DisableIrq), (188 bytes).
+    Removing timer3.o(i.Tim3_Mode23_EnableIrq), (204 bytes).
+    Removing timer3.o(i.Tim3_Mode23_Init), (204 bytes).
+
+195 unused section(s) (total 13374 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    RESET                                    0x00000000   Section      192  startup_hc32l136.o(RESET)
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_copy.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry2.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry4.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_idiv0_sigfpe.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_idiv0.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_div0.o ABSOLUTE
+    ../clib/angel/scatterp.s                 0x00000000   Number         0  __scatter.o ABSOLUTE
+    ../clib/angel/startup.s                  0x00000000   Number         0  __main.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi_2.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  libspace.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  tempstk.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  no_argv.o ABSOLUTE
+    ../clib/division.s                       0x00000000   Number         0  aeabi_sdiv_div0.o ABSOLUTE
+    ../clib/division.s                       0x00000000   Number         0  aeabi_sdiv.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  hrguard.o ABSOLUTE
+    ../clib/heapaux.c                        0x00000000   Number         0  heapauxi.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
+    ../clib/memcpset.c                       0x00000000   Number         0  rt_memcpy.o ABSOLUTE
+    ../clib/memcpset.c                       0x00000000   Number         0  rt_memcpy.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
+    ../clib/signal.s                         0x00000000   Number         0  defsig.o ABSOLUTE
+    ../clib/stdlib.c                         0x00000000   Number         0  exit.o ABSOLUTE
+    ../fplib/cfplib/fpinit.c                 0x00000000   Number         0  fpinit.o ABSOLUTE
+    ..\SRC\driver\src\adc.c                  0x00000000   Number         0  adc.o ABSOLUTE
+    ..\SRC\driver\src\bt.c                   0x00000000   Number         0  bt.o ABSOLUTE
+    ..\SRC\driver\src\ddl.c                  0x00000000   Number         0  ddl.o ABSOLUTE
+    ..\SRC\driver\src\flash.c                0x00000000   Number         0  flash.o ABSOLUTE
+    ..\SRC\driver\src\gpio.c                 0x00000000   Number         0  gpio.o ABSOLUTE
+    ..\SRC\driver\src\interrupts_hc32l136.c  0x00000000   Number         0  interrupts_hc32l136.o ABSOLUTE
+    ..\SRC\driver\src\sysctrl.c              0x00000000   Number         0  sysctrl.o ABSOLUTE
+    ..\SRC\driver\src\timer3.c               0x00000000   Number         0  timer3.o ABSOLUTE
+    ..\SRC\hyclor\src\ctrl.c                 0x00000000   Number         0  ctrl.o ABSOLUTE
+    ..\SRC\hyclor\src\keypad.c               0x00000000   Number         0  keypad.o ABSOLUTE
+    ..\SRC\hyclor\src\main.c                 0x00000000   Number         0  main.o ABSOLUTE
+    ..\SRC\hyclor\src\mcu.c                  0x00000000   Number         0  mcu.o ABSOLUTE
+    ..\SRC\mcu\common\system_hc32l136.c      0x00000000   Number         0  system_hc32l136.o ABSOLUTE
+    ..\\SRC\\driver\\src\\adc.c              0x00000000   Number         0  adc.o ABSOLUTE
+    ..\\SRC\\driver\\src\\bt.c               0x00000000   Number         0  bt.o ABSOLUTE
+    ..\\SRC\\driver\\src\\ddl.c              0x00000000   Number         0  ddl.o ABSOLUTE
+    ..\\SRC\\driver\\src\\flash.c            0x00000000   Number         0  flash.o ABSOLUTE
+    ..\\SRC\\driver\\src\\gpio.c             0x00000000   Number         0  gpio.o ABSOLUTE
+    ..\\SRC\\driver\\src\\interrupts_hc32l136.c 0x00000000   Number         0  interrupts_hc32l136.o ABSOLUTE
+    ..\\SRC\\driver\\src\\sysctrl.c          0x00000000   Number         0  sysctrl.o ABSOLUTE
+    ..\\SRC\\driver\\src\\timer3.c           0x00000000   Number         0  timer3.o ABSOLUTE
+    ..\\SRC\\hyclor\\src\\ctrl.c             0x00000000   Number         0  ctrl.o ABSOLUTE
+    ..\\SRC\\hyclor\\src\\keypad.c           0x00000000   Number         0  keypad.o ABSOLUTE
+    ..\\SRC\\hyclor\\src\\mcu.c              0x00000000   Number         0  mcu.o ABSOLUTE
+    ..\\SRC\\mcu\\common\\system_hc32l136.c  0x00000000   Number         0  system_hc32l136.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    startup_hc32l136.s                       0x00000000   Number         0  startup_hc32l136.o ABSOLUTE
+    !!!main                                  0x000000c0   Section        8  __main.o(!!!main)
+    !!!scatter                               0x000000c8   Section       60  __scatter.o(!!!scatter)
+    !!handler_copy                           0x00000104   Section       26  __scatter_copy.o(!!handler_copy)
+    !!handler_zi                             0x00000120   Section       28  __scatter_zi.o(!!handler_zi)
+    .ARM.Collect$$libinit$$00000000          0x0000013c   Section        2  libinit.o(.ARM.Collect$$libinit$$00000000)
+    .ARM.Collect$$libinit$$00000002          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000002)
+    .ARM.Collect$$libinit$$00000004          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000004)
+    .ARM.Collect$$libinit$$0000000A          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000A)
+    .ARM.Collect$$libinit$$0000000C          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000C)
+    .ARM.Collect$$libinit$$0000000E          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000E)
+    .ARM.Collect$$libinit$$00000011          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000011)
+    .ARM.Collect$$libinit$$00000013          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000013)
+    .ARM.Collect$$libinit$$00000015          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000015)
+    .ARM.Collect$$libinit$$00000017          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000017)
+    .ARM.Collect$$libinit$$00000019          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000019)
+    .ARM.Collect$$libinit$$0000001B          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001B)
+    .ARM.Collect$$libinit$$0000001D          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001D)
+    .ARM.Collect$$libinit$$0000001F          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001F)
+    .ARM.Collect$$libinit$$00000021          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000021)
+    .ARM.Collect$$libinit$$00000023          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000023)
+    .ARM.Collect$$libinit$$00000025          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000025)
+    .ARM.Collect$$libinit$$0000002C          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000002C)
+    .ARM.Collect$$libinit$$0000002E          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000002E)
+    .ARM.Collect$$libinit$$00000030          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000030)
+    .ARM.Collect$$libinit$$00000032          0x0000013e   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000032)
+    .ARM.Collect$$libinit$$00000033          0x0000013e   Section        2  libinit2.o(.ARM.Collect$$libinit$$00000033)
+    .ARM.Collect$$libshutdown$$00000000      0x00000140   Section        2  libshutdown.o(.ARM.Collect$$libshutdown$$00000000)
+    .ARM.Collect$$libshutdown$$00000002      0x00000142   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000002)
+    .ARM.Collect$$libshutdown$$00000004      0x00000142   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000004)
+    .ARM.Collect$$libshutdown$$00000007      0x00000142   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000007)
+    .ARM.Collect$$libshutdown$$0000000A      0x00000142   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A)
+    .ARM.Collect$$libshutdown$$0000000C      0x00000142   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C)
+    .ARM.Collect$$libshutdown$$0000000F      0x00000142   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F)
+    .ARM.Collect$$libshutdown$$00000010      0x00000142   Section        2  libshutdown2.o(.ARM.Collect$$libshutdown$$00000010)
+    .ARM.Collect$$rtentry$$00000000          0x00000144   Section        0  __rtentry.o(.ARM.Collect$$rtentry$$00000000)
+    .ARM.Collect$$rtentry$$00000002          0x00000144   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$00000002)
+    .ARM.Collect$$rtentry$$00000004          0x00000144   Section        6  __rtentry4.o(.ARM.Collect$$rtentry$$00000004)
+    .ARM.Collect$$rtentry$$00000009          0x0000014a   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$00000009)
+    .ARM.Collect$$rtentry$$0000000A          0x0000014a   Section        4  __rtentry2.o(.ARM.Collect$$rtentry$$0000000A)
+    .ARM.Collect$$rtentry$$0000000C          0x0000014e   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000C)
+    .ARM.Collect$$rtentry$$0000000D          0x0000014e   Section        8  __rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
+    .ARM.Collect$$rtexit$$00000000           0x00000156   Section        2  rtexit.o(.ARM.Collect$$rtexit$$00000000)
+    .ARM.Collect$$rtexit$$00000002           0x00000158   Section        0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
+    .ARM.Collect$$rtexit$$00000003           0x00000158   Section        4  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
+    .ARM.Collect$$rtexit$$00000004           0x0000015c   Section        6  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
+    .emb_text                                0x00000164   Section       56  rt_memcpy.o(.emb_text)
+    .text                                    0x0000019c   Section       88  startup_hc32l136.o(.text)
+    .text                                    0x000001f4   Section        2  use_no_semi_2.o(.text)
+    .text                                    0x000001f6   Section      346  aeabi_sdiv.o(.text)
+    .text                                    0x00000350   Section        0  heapauxi.o(.text)
+    .text                                    0x00000356   Section        2  use_no_semi.o(.text)
+    .text                                    0x00000358   Section       62  sys_stackheap_outer.o(.text)
+    .text                                    0x00000396   Section        0  exit.o(.text)
+    .text                                    0x000003a8   Section        8  libspace.o(.text)
+    i.ADCStart                               0x000003b0   Section        0  mcu.o(i.ADCStart)
+    i.ADCStop                                0x000003c4   Section        0  mcu.o(i.ADCStop)
+    i.ALLStart                               0x000003cc   Section        0  mcu.o(i.ALLStart)
+    i.ALLStop                                0x000003f2   Section        0  mcu.o(i.ALLStop)
+    i.AdcContIrqCallback                     0x00000414   Section        0  mcu.o(i.AdcContIrqCallback)
+    i.Adc_ConfigIrq                          0x00000430   Section        0  adc.o(i.Adc_ConfigIrq)
+    i.Adc_ConfigSglChannel                   0x000004a4   Section        0  adc.o(i.Adc_ConfigSglChannel)
+    i.Adc_ConfigSglMode                      0x000004c8   Section        0  adc.o(i.Adc_ConfigSglMode)
+    i.Adc_Enable                             0x000004f4   Section        0  adc.o(i.Adc_Enable)
+    i.Adc_EnableIrq                          0x00000508   Section        0  adc.o(i.Adc_EnableIrq)
+    i.Adc_GetSglResult                       0x00000520   Section        0  adc.o(i.Adc_GetSglResult)
+    i.Adc_IRQHandler                         0x0000053c   Section        0  adc.o(i.Adc_IRQHandler)
+    i.Adc_Init                               0x00000630   Section        0  adc.o(i.Adc_Init)
+    i.Adc_SGL_Start                          0x000006c0   Section        0  adc.o(i.Adc_SGL_Start)
+    i.Adc_SGL_Stop                           0x000006d4   Section        0  adc.o(i.Adc_SGL_Stop)
+    i.BoostModeHandler                       0x000006e8   Section        0  ctrl.o(i.BoostModeHandler)
+    i.Bt_ClearIntFlag                        0x00000878   Section        0  bt.o(i.Bt_ClearIntFlag)
+    i.Bt_GetIntFlag                          0x00000894   Section        0  bt.o(i.Bt_GetIntFlag)
+    i.Bt_M0_ARRSet                           0x000008b0   Section        0  bt.o(i.Bt_M0_ARRSet)
+    i.Bt_M0_Cnt16Set                         0x00000910   Section        0  bt.o(i.Bt_M0_Cnt16Set)
+    i.Bt_M0_Run                              0x00000970   Section        0  bt.o(i.Bt_M0_Run)
+    i.Bt_M0_Stop                             0x0000098c   Section        0  bt.o(i.Bt_M0_Stop)
+    i.Bt_Mode0_EnableIrq                     0x000009a8   Section        0  bt.o(i.Bt_Mode0_EnableIrq)
+    i.Bt_Mode0_Init                          0x000009c4   Section        0  bt.o(i.Bt_Mode0_Init)
+    i.CalculateConvertValue                  0x00000bf4   Section        0  ctrl.o(i.CalculateConvertValue)
+    i.CalculateThresholdLimit                0x00000c2c   Section        0  ctrl.o(i.CalculateThresholdLimit)
+    i.CalibrateParameter                     0x00000c64   Section        0  ctrl.o(i.CalibrateParameter)
+    i.CellCurrentCycleOutput                 0x00000c9c   Section        0  ctrl.o(i.CellCurrentCycleOutput)
+    i.CellCurrentLED                         0x00000d30   Section        0  ctrl.o(i.CellCurrentLED)
+    i.CellCurrentOutput                      0x00000d6c   Section        0  ctrl.o(i.CellCurrentOutput)
+    i.CellOutputCalibration                  0x00000e38   Section        0  ctrl.o(i.CellOutputCalibration)
+    i.CellOutputControl                      0x00001040   Section        0  ctrl.o(i.CellOutputControl)
+    i.CellOutputCurrentAdjust                0x00001090   Section        0  ctrl.o(i.CellOutputCurrentAdjust)
+    i.CellPolarityControl                    0x0000125c   Section        0  ctrl.o(i.CellPolarityControl)
+    i.CellPolarityReverse                    0x00001304   Section        0  ctrl.o(i.CellPolarityReverse)
+    i.CellRealCurrentDisplay                 0x00001338   Section        0  ctrl.o(i.CellRealCurrentDisplay)
+    i.CellReverseForPCBTest                  0x000013c0   Section        0  ctrl.o(i.CellReverseForPCBTest)
+    i.CheckWaterFlow                         0x0000140c   Section        0  ctrl.o(i.CheckWaterFlow)
+    i.CheckWaterSaltLevel                    0x00001448   Section        0  ctrl.o(i.CheckWaterSaltLevel)
+    i.ChlorBoostProcess                      0x000014cc   Section        0  ctrl.o(i.ChlorBoostProcess)
+    i.ClearRunningData                       0x0000153c   Section        0  ctrl.o(i.ClearRunningData)
+    i.ComboKeyProcess                        0x00001554   Section        0  ctrl.o(i.ComboKeyProcess)
+    i.CurrentADCProcess                      0x000015d4   Section        0  ctrl.o(i.CurrentADCProcess)
+    i.DataRangeCheck                         0x00001634   Section        0  ctrl.o(i.DataRangeCheck)
+    i.Delay_ms                               0x00001700   Section        0  ctrl.o(i.Delay_ms)
+    i.Deley_us                               0x0000170c   Section        0  ctrl.o(i.Deley_us)
+    i.EepromDataCheck                        0x00001718   Section        0  ctrl.o(i.EepromDataCheck)
+    i.Eeprom_ReadBytes                       0x00001834   Section        0  ctrl.o(i.Eeprom_ReadBytes)
+    i.EnableNvic                             0x00001840   Section        0  interrupts_hc32l136.o(i.EnableNvic)
+    i.FactoryReset                           0x000018c0   Section        0  ctrl.o(i.FactoryReset)
+    i.FlashInt                               0x000018e4   Section        0  ctrl.o(i.FlashInt)
+    i.Flash_ClearIntFlag                     0x00001914   Section        0  flash.o(i.Flash_ClearIntFlag)
+    i.Flash_DisableIrq                       0x00001990   Section        0  flash.o(i.Flash_DisableIrq)
+    i.Flash_GetIntFlag                       0x00001a38   Section        0  flash.o(i.Flash_GetIntFlag)
+    i.Flash_Init                             0x00001a64   Section        0  flash.o(i.Flash_Init)
+    i.Flash_SectorErase                      0x00001d1c   Section        0  flash.o(i.Flash_SectorErase)
+    i.Flash_WaitCycle                        0x00001ddc   Section        0  flash.o(i.Flash_WaitCycle)
+    i.Flash_WriteByte                        0x00001e58   Section        0  flash.o(i.Flash_WriteByte)
+    i.GetCellRealCurrent                     0x00001f18   Section        0  ctrl.o(i.GetCellRealCurrent)
+    i.GetModelRatingCurrent                  0x00002084   Section        0  ctrl.o(i.GetModelRatingCurrent)
+    i.Gpio_ClearIrq                          0x00002108   Section        0  gpio.o(i.Gpio_ClearIrq)
+    i.Gpio_ClrIO                             0x00002124   Section        0  gpio.o(i.Gpio_ClrIO)
+    i.Gpio_EnableIrq                         0x00002140   Section        0  gpio.o(i.Gpio_EnableIrq)
+    i.Gpio_GetInputIO                        0x00002158   Section        0  gpio.o(i.Gpio_GetInputIO)
+    i.Gpio_GetIrqStatus                      0x0000216c   Section        0  gpio.o(i.Gpio_GetIrqStatus)
+    i.Gpio_IRQHandler                        0x00002180   Section        0  mcu.o(i.Gpio_IRQHandler)
+    i.Gpio_Init                              0x000021d8   Section        0  gpio.o(i.Gpio_Init)
+    i.Gpio_ReadOutputIO                      0x00002310   Section        0  gpio.o(i.Gpio_ReadOutputIO)
+    i.Gpio_SetAnalogMode                     0x00002324   Section        0  gpio.o(i.Gpio_SetAnalogMode)
+    i.Gpio_SetIO                             0x00002340   Section        0  gpio.o(i.Gpio_SetIO)
+    i.HardFault_Handler                      0x0000235c   Section        0  interrupts_hc32l136.o(i.HardFault_Handler)
+    i.IRQ000_Handler                         0x0000236c   Section        0  interrupts_hc32l136.o(i.IRQ000_Handler)
+    i.IRQ001_Handler                         0x00002376   Section        0  interrupts_hc32l136.o(i.IRQ001_Handler)
+    i.IRQ002_Handler                         0x00002380   Section        0  interrupts_hc32l136.o(i.IRQ002_Handler)
+    i.IRQ003_Handler                         0x0000238a   Section        0  interrupts_hc32l136.o(i.IRQ003_Handler)
+    i.IRQ004_Handler                         0x00002394   Section        0  interrupts_hc32l136.o(i.IRQ004_Handler)
+    i.IRQ005_Handler                         0x0000239e   Section        0  interrupts_hc32l136.o(i.IRQ005_Handler)
+    i.IRQ006_Handler                         0x000023a8   Section        0  interrupts_hc32l136.o(i.IRQ006_Handler)
+    i.IRQ007_Handler                         0x000023b2   Section        0  interrupts_hc32l136.o(i.IRQ007_Handler)
+    i.IRQ008_Handler                         0x000023bc   Section        0  interrupts_hc32l136.o(i.IRQ008_Handler)
+    i.IRQ009_Handler                         0x000023c6   Section        0  interrupts_hc32l136.o(i.IRQ009_Handler)
+    i.IRQ010_Handler                         0x000023d0   Section        0  interrupts_hc32l136.o(i.IRQ010_Handler)
+    i.IRQ011_Handler                         0x000023da   Section        0  interrupts_hc32l136.o(i.IRQ011_Handler)
+    i.IRQ012_Handler                         0x000023e4   Section        0  interrupts_hc32l136.o(i.IRQ012_Handler)
+    i.IRQ013_Handler                         0x000023ee   Section        0  interrupts_hc32l136.o(i.IRQ013_Handler)
+    i.IRQ014_Handler                         0x000023f8   Section        0  interrupts_hc32l136.o(i.IRQ014_Handler)
+    i.IRQ015_Handler                         0x00002402   Section        0  interrupts_hc32l136.o(i.IRQ015_Handler)
+    i.IRQ016_Handler                         0x0000240c   Section        0  interrupts_hc32l136.o(i.IRQ016_Handler)
+    i.IRQ017_Handler                         0x00002416   Section        0  interrupts_hc32l136.o(i.IRQ017_Handler)
+    i.IRQ018_Handler                         0x00002420   Section        0  interrupts_hc32l136.o(i.IRQ018_Handler)
+    i.IRQ019_Handler                         0x0000242a   Section        0  interrupts_hc32l136.o(i.IRQ019_Handler)
+    i.IRQ020_Handler                         0x00002434   Section        0  interrupts_hc32l136.o(i.IRQ020_Handler)
+    i.IRQ021_Handler                         0x0000243e   Section        0  interrupts_hc32l136.o(i.IRQ021_Handler)
+    i.IRQ022_Handler                         0x00002448   Section        0  interrupts_hc32l136.o(i.IRQ022_Handler)
+    i.IRQ023_Handler                         0x00002452   Section        0  interrupts_hc32l136.o(i.IRQ023_Handler)
+    i.IRQ024_Handler                         0x0000245c   Section        0  interrupts_hc32l136.o(i.IRQ024_Handler)
+    i.IRQ025_Handler                         0x00002466   Section        0  interrupts_hc32l136.o(i.IRQ025_Handler)
+    i.IRQ026_Handler                         0x00002470   Section        0  interrupts_hc32l136.o(i.IRQ026_Handler)
+    i.IRQ027_Handler                         0x0000247a   Section        0  interrupts_hc32l136.o(i.IRQ027_Handler)
+    i.IRQ028_Handler                         0x00002484   Section        0  interrupts_hc32l136.o(i.IRQ028_Handler)
+    i.IRQ029_Handler                         0x0000248e   Section        0  interrupts_hc32l136.o(i.IRQ029_Handler)
+    i.IRQ030_Handler                         0x00002498   Section        0  interrupts_hc32l136.o(i.IRQ030_Handler)
+    i.IRQ031_Handler                         0x000024a2   Section        0  interrupts_hc32l136.o(i.IRQ031_Handler)
+    i.Init_ADC                               0x000024ac   Section        0  mcu.o(i.Init_ADC)
+    i.Init_IOPorts                           0x00002574   Section        0  mcu.o(i.Init_IOPorts)
+    i.Init_OscFrequency                      0x000026f2   Section        0  mcu.o(i.Init_OscFrequency)
+    i.Init_Timer                             0x00002710   Section        0  mcu.o(i.Init_Timer)
+    i.KeyDetect                              0x00002840   Section        0  keypad.o(i.KeyDetect)
+    i.KeyDetectTimer                         0x00002960   Section        0  keypad.o(i.KeyDetectTimer)
+    i.KeyHandler                             0x00002978   Section        0  keypad.o(i.KeyHandler)
+    i.KeyScanStatus                          0x000029e0   Section        0  keypad.o(i.KeyScanStatus)
+    i.KeyVariableInitial                     0x00002a10   Section        0  keypad.o(i.KeyVariableInitial)
+    i.LEDALLControl                          0x00002a64   Section        0  ctrl.o(i.LEDALLControl)
+    i.LEDControl                             0x00002b30   Section        0  ctrl.o(i.LEDControl)
+    i.LEDDisplayHexValue                     0x00002cd4   Section        0  ctrl.o(i.LEDDisplayHexValue)
+    i.LEDFlashDisplay                        0x00002d08   Section        0  ctrl.o(i.LEDFlashDisplay)
+    i.LEDFlashSetting                        0x00002d7c   Section        0  ctrl.o(i.LEDFlashSetting)
+    i.MCU_Initialize                         0x00002dac   Section        0  mcu.o(i.MCU_Initialize)
+    i.MainTimerHandler                       0x00002dc8   Section        0  ctrl.o(i.MainTimerHandler)
+    i.ModelChangeLED                         0x00002e28   Section        0  ctrl.o(i.ModelChangeLED)
+    i.ModelSelectKeyProcess                  0x00002e58   Section        0  ctrl.o(i.ModelSelectKeyProcess)
+    i.PWMStart                               0x00002eb4   Section        0  mcu.o(i.PWMStart)
+    i.PWMStop                                0x00002ed6   Section        0  mcu.o(i.PWMStop)
+    i.PowerOffLED                            0x00002f04   Section        0  ctrl.o(i.PowerOffLED)
+    i.PowerOnInitialize                      0x00002f18   Section        0  ctrl.o(i.PowerOnInitialize)
+    i.PowerOnLED                             0x00002f58   Section        0  ctrl.o(i.PowerOnLED)
+    i.PowerupFunctionModeSelect              0x00002f84   Section        0  ctrl.o(i.PowerupFunctionModeSelect)
+    i.ProcessHandler                         0x00003164   Section        0  ctrl.o(i.ProcessHandler)
+    i.ReadCellPolarity                       0x000033cc   Section        0  ctrl.o(i.ReadCellPolarity)
+    i.ReadKey                                0x000033e0   Section        0  keypad.o(i.ReadKey)
+    i.ReverseLEDDisplay                      0x00003408   Section        0  ctrl.o(i.ReverseLEDDisplay)
+    i.ReverseTimeSettingKeyProcess           0x00003444   Section        0  ctrl.o(i.ReverseTimeSettingKeyProcess)
+    i.RunningLEDDisplay                      0x000034b0   Section        0  ctrl.o(i.RunningLEDDisplay)
+    i.RunningTimeKeyProcess                  0x00003574   Section        0  ctrl.o(i.RunningTimeKeyProcess)
+    i.SWVersionDisplay                       0x00003658   Section        0  ctrl.o(i.SWVersionDisplay)
+    i.SaveCalValueByDirection                0x00003750   Section        0  ctrl.o(i.SaveCalValueByDirection)
+    i.SaveCellCurrent                        0x00003794   Section        0  ctrl.o(i.SaveCellCurrent)
+    i.SaveCellReverseSetting                 0x000037b8   Section        0  ctrl.o(i.SaveCellReverseSetting)
+    i.SaveCellReverseTime                    0x000037e4   Section        0  ctrl.o(i.SaveCellReverseTime)
+    i.SaveCellRunningMinutes                 0x00003808   Section        0  ctrl.o(i.SaveCellRunningMinutes)
+    i.SaveCellRunningTime                    0x0000382c   Section        0  ctrl.o(i.SaveCellRunningTime)
+    i.SaveDataToArea                         0x0000386c   Section        0  ctrl.o(i.SaveDataToArea)
+    i.SaveEventProcess                       0x000038f8   Section        0  ctrl.o(i.SaveEventProcess)
+    i.SaveModelNumber                        0x0000398c   Section        0  ctrl.o(i.SaveModelNumber)
+    i.SaveTestModeFlag                       0x000039b8   Section        0  ctrl.o(i.SaveTestModeFlag)
+    i.SerivceReset                           0x000039dc   Section        0  ctrl.o(i.SerivceReset)
+    i.SetToDefault                           0x00003a1c   Section        0  ctrl.o(i.SetToDefault)
+    i.SpecialSecretCodeProcess               0x00003a58   Section        0  ctrl.o(i.SpecialSecretCodeProcess)
+    i.StartTimer1                            0x00003b44   Section        0  mcu.o(i.StartTimer1)
+    i.StopTimer1                             0x00003b4e   Section        0  mcu.o(i.StopTimer1)
+    i.Sysctrl_ClkInit                        0x00003b58   Section        0  sysctrl.o(i.Sysctrl_ClkInit)
+    i.Sysctrl_ClkSourceEnable                0x00003bc4   Section        0  sysctrl.o(i.Sysctrl_ClkSourceEnable)
+    i.Sysctrl_GetHClkFreq                    0x00003d04   Section        0  sysctrl.o(i.Sysctrl_GetHClkFreq)
+    i.Sysctrl_SetHCLKDiv                     0x00003e78   Section        0  sysctrl.o(i.Sysctrl_SetHCLKDiv)
+    i.Sysctrl_SetPCLKDiv                     0x00003ea4   Section        0  sysctrl.o(i.Sysctrl_SetPCLKDiv)
+    i.Sysctrl_SetPLLStableTime               0x00003ed0   Section        0  sysctrl.o(i.Sysctrl_SetPLLStableTime)
+    i.Sysctrl_SetPeripheralGate              0x00003ef4   Section        0  sysctrl.o(i.Sysctrl_SetPeripheralGate)
+    i.Sysctrl_SetRCHTrim                     0x00003f30   Section        0  sysctrl.o(i.Sysctrl_SetRCHTrim)
+    i.Sysctrl_SetRCLStableTime               0x00003fcc   Section        0  sysctrl.o(i.Sysctrl_SetRCLStableTime)
+    i.Sysctrl_SetXTHStableTime               0x00003ff0   Section        0  sysctrl.o(i.Sysctrl_SetXTHStableTime)
+    i.Sysctrl_SetXTLStableTime               0x00004010   Section        0  sysctrl.o(i.Sysctrl_SetXTLStableTime)
+    i.Sysctrl_SysClkSwitch                   0x00004030   Section        0  sysctrl.o(i.Sysctrl_SysClkSwitch)
+    i.Sysctrl_XTHDriverConfig                0x0000405c   Section        0  sysctrl.o(i.Sysctrl_XTHDriverConfig)
+    i.Sysctrl_XTLDriverConfig                0x00004078   Section        0  sysctrl.o(i.Sysctrl_XTLDriverConfig)
+    i.SystemCoreClockUpdate                  0x000040ac   Section        0  system_hc32l136.o(i.SystemCoreClockUpdate)
+    i.SystemInit                             0x000040bc   Section        0  system_hc32l136.o(i.SystemInit)
+    i.Tim0Int                                0x000040e4   Section        0  mcu.o(i.Tim0Int)
+    i.Tim1Int                                0x00004104   Section        0  mcu.o(i.Tim1Int)
+    i.Tim3Int                                0x00004120   Section        0  mcu.o(i.Tim3Int)
+    i.Tim3_ClearIntFlag                      0x00004174   Section        0  timer3.o(i.Tim3_ClearIntFlag)
+    i.Tim3_GetIntFlag                        0x00004188   Section        0  timer3.o(i.Tim3_GetIntFlag)
+    i.Tim3_IRQHandler                        0x000041a0   Section        0  timer3.o(i.Tim3_IRQHandler)
+    i.Tim3_M0_ARRSet                         0x000041c4   Section        0  timer3.o(i.Tim3_M0_ARRSet)
+    i.Tim3_M0_Cnt16Set                       0x000041e0   Section        0  timer3.o(i.Tim3_M0_Cnt16Set)
+    i.Tim3_M0_Run                            0x000041fc   Section        0  timer3.o(i.Tim3_M0_Run)
+    i.Tim3_M0_Stop                           0x00004214   Section        0  timer3.o(i.Tim3_M0_Stop)
+    i.Tim3_Mode0_DisableIrq                  0x00004228   Section        0  timer3.o(i.Tim3_Mode0_DisableIrq)
+    i.Tim3_Mode0_EnableIrq                   0x00004240   Section        0  timer3.o(i.Tim3_Mode0_EnableIrq)
+    i.Tim3_Mode0_Init                        0x00004258   Section        0  timer3.o(i.Tim3_Mode0_Init)
+    i.Tim_IRQHandler                         0x00004310   Section        0  bt.o(i.Tim_IRQHandler)
+    i.UpdateRunningData                      0x00004364   Section        0  ctrl.o(i.UpdateRunningData)
+    i.UpdateUserData                         0x000043a0   Section        0  ctrl.o(i.UpdateUserData)
+    i.WaterFlowFaultProcess                  0x00004414   Section        0  ctrl.o(i.WaterFlowFaultProcess)
+    i._GpioEnableIrq                         0x000044d8   Section        0  gpio.o(i._GpioEnableIrq)
+    _GpioEnableIrq                           0x000044d9   Thumb Code   208  gpio.o(i._GpioEnableIrq)
+    i._SysctrlUnlock                         0x000045ac   Section        0  sysctrl.o(i._SysctrlUnlock)
+    _SysctrlUnlock                           0x000045ad   Thumb Code    12  sysctrl.o(i._SysctrlUnlock)
+    i.__ARM_common_switch8                   0x000045c4   Section        0  ctrl.o(i.__ARM_common_switch8)
+    i.__NVIC_SetPriority                     0x000045e0   Section        0  interrupts_hc32l136.o(i.__NVIC_SetPriority)
+    __NVIC_SetPriority                       0x000045e1   Thumb Code   110  interrupts_hc32l136.o(i.__NVIC_SetPriority)
+    i._sys_exit                              0x00004658   Section        0  ddl.o(i._sys_exit)
+    i.ddl_memclr                             0x0000465c   Section        0  ddl.o(i.ddl_memclr)
+    i.delay100us                             0x0000467c   Section        0  ddl.o(i.delay100us)
+    i.delay10us                              0x000046d8   Section        0  ddl.o(i.delay10us)
+    i.delay1ms                               0x00004734   Section        0  ddl.o(i.delay1ms)
+    i.main                                   0x0000478c   Section        0  main.o(i.main)
+    .constdata                               0x000047a0   Section       24  sysctrl.o(.constdata)
+    .data                                    0x20000000   Section        4  system_hc32l136.o(.data)
+    .data                                    0x20000004   Section      184  ctrl.o(.data)
+    .data                                    0x200000bc   Section        9  keypad.o(.data)
+    .data                                    0x200000c6   Section        9  mcu.o(.data)
+    stcAdcIrqFlag                            0x200000c9   Data           6  mcu.o(.data)
+    .data                                    0x200000d0   Section        4  flash.o(.data)
+    pfnFlashCallback                         0x200000d0   Data           4  flash.o(.data)
+    .data                                    0x200000d4   Section       12  bt.o(.data)
+    pfnTim0Callback                          0x200000d4   Data           4  bt.o(.data)
+    pfnTim1Callback                          0x200000d8   Data           4  bt.o(.data)
+    pfnTim2Callback                          0x200000dc   Data           4  bt.o(.data)
+    .data                                    0x200000e0   Section        4  timer3.o(.data)
+    pfnTim3Callback                          0x200000e0   Data           4  timer3.o(.data)
+    .bss                                     0x200000e4   Section       20  ctrl.o(.bss)
+    .bss                                     0x200000f8   Section       24  adc.o(.bss)
+    stcAdcIrqCalbaks                         0x200000f8   Data          24  adc.o(.bss)
+    .bss                                     0x20000110   Section       96  libspace.o(.bss)
+    HEAP                                     0x20000170   Section      512  startup_hc32l136.o(HEAP)
+    Heap_Mem                                 0x20000170   Data         512  startup_hc32l136.o(HEAP)
+    STACK                                    0x20000370   Section      512  startup_hc32l136.o(STACK)
+    Stack_Mem                                0x20000370   Data         512  startup_hc32l136.o(STACK)
+    __initial_sp                             0x20000570   Data           0  startup_hc32l136.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv3M$S$PE$A:L22$X:L11$S22$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$ROPI$EBA8$UX$STANDARDLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_use_no_argv                        0x00000000   Number         0  main.o ABSOLUTE
+    __Vectors                                0x00000000   Data           4  startup_hc32l136.o(RESET)
+    Adt_IRQHandler                            - Undefined Weak Reference
+    ClkTrim_IRQHandler                        - Undefined Weak Reference
+    Dma_IRQHandler                            - Undefined Weak Reference
+    I2c_IRQHandler                            - Undefined Weak Reference
+    Lcd_IRQHandler                            - Undefined Weak Reference
+    LpTim_IRQHandler                          - Undefined Weak Reference
+    LpUart_IRQHandler                         - Undefined Weak Reference
+    Lvd_IRQHandler                            - Undefined Weak Reference
+    Pca_IRQHandler                            - Undefined Weak Reference
+    Pcnt_IRQHandler                           - Undefined Weak Reference
+    Rtc_IRQHandler                            - Undefined Weak Reference
+    Spi_IRQHandler                            - Undefined Weak Reference
+    Uart_IRQHandler                           - Undefined Weak Reference
+    Vc_IRQHandler                             - Undefined Weak Reference
+    Wdt_IRQHandler                            - Undefined Weak Reference
+    __ARM_exceptions_init                     - Undefined Weak Reference
+    __alloca_initialize                       - Undefined Weak Reference
+    __arm_preinit_                            - Undefined Weak Reference
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __rt_locale                               - Undefined Weak Reference
+    __sigvec_lookup                           - Undefined Weak Reference
+    _atexit_init                              - Undefined Weak Reference
+    _call_atexit_fns                          - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _fp_trap_init                             - Undefined Weak Reference
+    _fp_trap_shutdown                         - Undefined Weak Reference
+    _get_lc_collate                           - Undefined Weak Reference
+    _get_lc_ctype                             - Undefined Weak Reference
+    _get_lc_monetary                          - Undefined Weak Reference
+    _get_lc_numeric                           - Undefined Weak Reference
+    _get_lc_time                              - Undefined Weak Reference
+    _getenv_init                              - Undefined Weak Reference
+    _handle_redirection                       - Undefined Weak Reference
+    _init_alloc                               - Undefined Weak Reference
+    _init_user_alloc                          - Undefined Weak Reference
+    _initio                                   - Undefined Weak Reference
+    _rand_init                                - Undefined Weak Reference
+    _signal_finish                            - Undefined Weak Reference
+    _signal_init                              - Undefined Weak Reference
+    _terminate_alloc                          - Undefined Weak Reference
+    _terminate_user_alloc                     - Undefined Weak Reference
+    _terminateio                              - Undefined Weak Reference
+    __Vectors_End                            0x000000c0   Data           0  startup_hc32l136.o(RESET)
+    __Vectors_Size                           0x000000c0   Number         0  startup_hc32l136.o ABSOLUTE
+    __main                                   0x000000c1   Thumb Code     8  __main.o(!!!main)
+    __scatterload                            0x000000c9   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_rt2                        0x000000c9   Thumb Code    52  __scatter.o(!!!scatter)
+    __scatterload_rt2_thumb_only             0x000000c9   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_null                       0x000000d9   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_copy                       0x00000105   Thumb Code    26  __scatter_copy.o(!!handler_copy)
+    __scatterload_zeroinit                   0x00000121   Thumb Code    28  __scatter_zi.o(!!handler_zi)
+    __rt_lib_init                            0x0000013d   Thumb Code     0  libinit.o(.ARM.Collect$$libinit$$00000000)
+    __rt_lib_init_alloca_1                   0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000002E)
+    __rt_lib_init_argv_1                     0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000002C)
+    __rt_lib_init_atexit_1                   0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001B)
+    __rt_lib_init_clock_1                    0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000021)
+    __rt_lib_init_cpp_1                      0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000032)
+    __rt_lib_init_exceptions_1               0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000030)
+    __rt_lib_init_fp_1                       0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000002)
+    __rt_lib_init_fp_trap_1                  0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001F)
+    __rt_lib_init_getenv_1                   0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000023)
+    __rt_lib_init_heap_1                     0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000A)
+    __rt_lib_init_lc_collate_1               0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000011)
+    __rt_lib_init_lc_ctype_1                 0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000013)
+    __rt_lib_init_lc_monetary_1              0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000015)
+    __rt_lib_init_lc_numeric_1               0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000017)
+    __rt_lib_init_lc_time_1                  0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000019)
+    __rt_lib_init_preinit_1                  0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000004)
+    __rt_lib_init_rand_1                     0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000E)
+    __rt_lib_init_return                     0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000033)
+    __rt_lib_init_signal_1                   0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001D)
+    __rt_lib_init_stdio_1                    0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000025)
+    __rt_lib_init_user_alloc_1               0x0000013f   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000C)
+    __rt_lib_shutdown                        0x00000141   Thumb Code     0  libshutdown.o(.ARM.Collect$$libshutdown$$00000000)
+    __rt_lib_shutdown_cpp_1                  0x00000143   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000002)
+    __rt_lib_shutdown_fp_trap_1              0x00000143   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000007)
+    __rt_lib_shutdown_heap_1                 0x00000143   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F)
+    __rt_lib_shutdown_return                 0x00000143   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000010)
+    __rt_lib_shutdown_signal_1               0x00000143   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A)
+    __rt_lib_shutdown_stdio_1                0x00000143   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000004)
+    __rt_lib_shutdown_user_alloc_1           0x00000143   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C)
+    __rt_entry                               0x00000145   Thumb Code     0  __rtentry.o(.ARM.Collect$$rtentry$$00000000)
+    __rt_entry_presh_1                       0x00000145   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$00000002)
+    __rt_entry_sh                            0x00000145   Thumb Code     0  __rtentry4.o(.ARM.Collect$$rtentry$$00000004)
+    __rt_entry_li                            0x0000014b   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000A)
+    __rt_entry_postsh_1                      0x0000014b   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$00000009)
+    __rt_entry_main                          0x0000014f   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
+    __rt_entry_postli_1                      0x0000014f   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000C)
+    __rt_exit                                0x00000157   Thumb Code     0  rtexit.o(.ARM.Collect$$rtexit$$00000000)
+    __rt_exit_ls                             0x00000159   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
+    __rt_exit_prels_1                        0x00000159   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
+    __rt_exit_exit                           0x0000015d   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
+    __aeabi_memcpy4                          0x00000165   Thumb Code    56  rt_memcpy.o(.emb_text)
+    __aeabi_memcpy8                          0x00000165   Thumb Code     0  rt_memcpy.o(.emb_text)
+    Reset_Handler                            0x0000019d   Thumb Code    26  startup_hc32l136.o(.text)
+    NMI_Handler                              0x000001b7   Thumb Code     2  startup_hc32l136.o(.text)
+    SVC_Handler                              0x000001bb   Thumb Code     2  startup_hc32l136.o(.text)
+    PendSV_Handler                           0x000001bd   Thumb Code     2  startup_hc32l136.o(.text)
+    SysTick_Handler                          0x000001bf   Thumb Code     2  startup_hc32l136.o(.text)
+    __user_initial_stackheap                 0x000001c5   Thumb Code     0  startup_hc32l136.o(.text)
+    __use_no_semihosting                     0x000001f5   Thumb Code     2  use_no_semi_2.o(.text)
+    __aeabi_uidiv                            0x000001f7   Thumb Code     0  aeabi_sdiv.o(.text)
+    __aeabi_uidivmod                         0x000001f7   Thumb Code    20  aeabi_sdiv.o(.text)
+    __aeabi_idiv                             0x0000020b   Thumb Code     0  aeabi_sdiv.o(.text)
+    __aeabi_idivmod                          0x0000020b   Thumb Code   326  aeabi_sdiv.o(.text)
+    __use_two_region_memory                  0x00000351   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_escrow$2region                 0x00000353   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_expand$2region                 0x00000355   Thumb Code     2  heapauxi.o(.text)
+    __I$use$semihosting                      0x00000357   Thumb Code     0  use_no_semi.o(.text)
+    __use_no_semihosting_swi                 0x00000357   Thumb Code     2  use_no_semi.o(.text)
+    __user_setup_stackheap                   0x00000359   Thumb Code    62  sys_stackheap_outer.o(.text)
+    exit                                     0x00000397   Thumb Code    16  exit.o(.text)
+    __user_libspace                          0x000003a9   Thumb Code     8  libspace.o(.text)
+    __user_perproc_libspace                  0x000003a9   Thumb Code     0  libspace.o(.text)
+    __user_perthread_libspace                0x000003a9   Thumb Code     0  libspace.o(.text)
+    ADCStart                                 0x000003b1   Thumb Code    14  mcu.o(i.ADCStart)
+    ADCStop                                  0x000003c5   Thumb Code     8  mcu.o(i.ADCStop)
+    ALLStart                                 0x000003cd   Thumb Code    38  mcu.o(i.ALLStart)
+    ALLStop                                  0x000003f3   Thumb Code    32  mcu.o(i.ALLStop)
+    AdcContIrqCallback                       0x00000415   Thumb Code    20  mcu.o(i.AdcContIrqCallback)
+    Adc_ConfigIrq                            0x00000431   Thumb Code   110  adc.o(i.Adc_ConfigIrq)
+    Adc_ConfigSglChannel                     0x000004a5   Thumb Code    30  adc.o(i.Adc_ConfigSglChannel)
+    Adc_ConfigSglMode                        0x000004c9   Thumb Code    40  adc.o(i.Adc_ConfigSglMode)
+    Adc_Enable                               0x000004f5   Thumb Code    16  adc.o(i.Adc_Enable)
+    Adc_EnableIrq                            0x00000509   Thumb Code    18  adc.o(i.Adc_EnableIrq)
+    Adc_GetSglResult                         0x00000521   Thumb Code    24  adc.o(i.Adc_GetSglResult)
+    Adc_IRQHandler                           0x0000053d   Thumb Code   234  adc.o(i.Adc_IRQHandler)
+    Adc_Init                                 0x00000631   Thumb Code   140  adc.o(i.Adc_Init)
+    Adc_SGL_Start                            0x000006c1   Thumb Code    16  adc.o(i.Adc_SGL_Start)
+    Adc_SGL_Stop                             0x000006d5   Thumb Code    14  adc.o(i.Adc_SGL_Stop)
+    BoostModeHandler                         0x000006e9   Thumb Code   368  ctrl.o(i.BoostModeHandler)
+    Bt_ClearIntFlag                          0x00000879   Thumb Code    22  bt.o(i.Bt_ClearIntFlag)
+    Bt_GetIntFlag                            0x00000895   Thumb Code    24  bt.o(i.Bt_GetIntFlag)
+    Bt_M0_ARRSet                             0x000008b1   Thumb Code    82  bt.o(i.Bt_M0_ARRSet)
+    Bt_M0_Cnt16Set                           0x00000911   Thumb Code    82  bt.o(i.Bt_M0_Cnt16Set)
+    Bt_M0_Run                                0x00000971   Thumb Code    24  bt.o(i.Bt_M0_Run)
+    Bt_M0_Stop                               0x0000098d   Thumb Code    22  bt.o(i.Bt_M0_Stop)
+    Bt_Mode0_EnableIrq                       0x000009a9   Thumb Code    24  bt.o(i.Bt_Mode0_EnableIrq)
+    Bt_Mode0_Init                            0x000009c5   Thumb Code   536  bt.o(i.Bt_Mode0_Init)
+    CalculateConvertValue                    0x00000bf5   Thumb Code    44  ctrl.o(i.CalculateConvertValue)
+    CalculateThresholdLimit                  0x00000c2d   Thumb Code    44  ctrl.o(i.CalculateThresholdLimit)
+    CalibrateParameter                       0x00000c65   Thumb Code    38  ctrl.o(i.CalibrateParameter)
+    CellCurrentCycleOutput                   0x00000c9d   Thumb Code   112  ctrl.o(i.CellCurrentCycleOutput)
+    CellCurrentLED                           0x00000d31   Thumb Code    58  ctrl.o(i.CellCurrentLED)
+    CellCurrentOutput                        0x00000d6d   Thumb Code   156  ctrl.o(i.CellCurrentOutput)
+    CellOutputCalibration                    0x00000e39   Thumb Code   450  ctrl.o(i.CellOutputCalibration)
+    CellOutputControl                        0x00001041   Thumb Code    66  ctrl.o(i.CellOutputControl)
+    CellOutputCurrentAdjust                  0x00001091   Thumb Code   412  ctrl.o(i.CellOutputCurrentAdjust)
+    CellPolarityControl                      0x0000125d   Thumb Code   156  ctrl.o(i.CellPolarityControl)
+    CellPolarityReverse                      0x00001305   Thumb Code    42  ctrl.o(i.CellPolarityReverse)
+    CellRealCurrentDisplay                   0x00001339   Thumb Code   104  ctrl.o(i.CellRealCurrentDisplay)
+    CellReverseForPCBTest                    0x000013c1   Thumb Code    64  ctrl.o(i.CellReverseForPCBTest)
+    CheckWaterFlow                           0x0000140d   Thumb Code    48  ctrl.o(i.CheckWaterFlow)
+    CheckWaterSaltLevel                      0x00001449   Thumb Code   104  ctrl.o(i.CheckWaterSaltLevel)
+    ChlorBoostProcess                        0x000014cd   Thumb Code    84  ctrl.o(i.ChlorBoostProcess)
+    ClearRunningData                         0x0000153d   Thumb Code    20  ctrl.o(i.ClearRunningData)
+    ComboKeyProcess                          0x00001555   Thumb Code   122  ctrl.o(i.ComboKeyProcess)
+    CurrentADCProcess                        0x000015d5   Thumb Code    76  ctrl.o(i.CurrentADCProcess)
+    DataRangeCheck                           0x00001635   Thumb Code   194  ctrl.o(i.DataRangeCheck)
+    Delay_ms                                 0x00001701   Thumb Code    12  ctrl.o(i.Delay_ms)
+    Deley_us                                 0x0000170d   Thumb Code    12  ctrl.o(i.Deley_us)
+    EepromDataCheck                          0x00001719   Thumb Code   256  ctrl.o(i.EepromDataCheck)
+    Eeprom_ReadBytes                         0x00001835   Thumb Code    12  ctrl.o(i.Eeprom_ReadBytes)
+    EnableNvic                               0x00001841   Thumb Code   120  interrupts_hc32l136.o(i.EnableNvic)
+    FactoryReset                             0x000018c1   Thumb Code    26  ctrl.o(i.FactoryReset)
+    FlashInt                                 0x000018e5   Thumb Code    46  ctrl.o(i.FlashInt)
+    Flash_ClearIntFlag                       0x00001915   Thumb Code   112  flash.o(i.Flash_ClearIntFlag)
+    Flash_DisableIrq                         0x00001991   Thumb Code   156  flash.o(i.Flash_DisableIrq)
+    Flash_GetIntFlag                         0x00001a39   Thumb Code    40  flash.o(i.Flash_GetIntFlag)
+    Flash_Init                               0x00001a65   Thumb Code   672  flash.o(i.Flash_Init)
+    Flash_SectorErase                        0x00001d1d   Thumb Code   176  flash.o(i.Flash_SectorErase)
+    Flash_WaitCycle                          0x00001ddd   Thumb Code   108  flash.o(i.Flash_WaitCycle)
+    Flash_WriteByte                          0x00001e59   Thumb Code   176  flash.o(i.Flash_WriteByte)
+    GetCellRealCurrent                       0x00001f19   Thumb Code   304  ctrl.o(i.GetCellRealCurrent)
+    GetModelRatingCurrent                    0x00002085   Thumb Code    92  ctrl.o(i.GetModelRatingCurrent)
+    Gpio_ClearIrq                            0x00002109   Thumb Code    24  gpio.o(i.Gpio_ClearIrq)
+    Gpio_ClrIO                               0x00002125   Thumb Code    24  gpio.o(i.Gpio_ClrIO)
+    Gpio_EnableIrq                           0x00002141   Thumb Code    24  gpio.o(i.Gpio_EnableIrq)
+    Gpio_GetInputIO                          0x00002159   Thumb Code    16  gpio.o(i.Gpio_GetInputIO)
+    Gpio_GetIrqStatus                        0x0000216d   Thumb Code    16  gpio.o(i.Gpio_GetIrqStatus)
+    Gpio_IRQHandler                          0x00002181   Thumb Code    76  mcu.o(i.Gpio_IRQHandler)
+    Gpio_Init                                0x000021d9   Thumb Code   300  gpio.o(i.Gpio_Init)
+    Gpio_ReadOutputIO                        0x00002311   Thumb Code    16  gpio.o(i.Gpio_ReadOutputIO)
+    Gpio_SetAnalogMode                       0x00002325   Thumb Code    24  gpio.o(i.Gpio_SetAnalogMode)
+    Gpio_SetIO                               0x00002341   Thumb Code    24  gpio.o(i.Gpio_SetIO)
+    HardFault_Handler                        0x0000235d   Thumb Code    16  interrupts_hc32l136.o(i.HardFault_Handler)
+    IRQ000_Handler                           0x0000236d   Thumb Code    10  interrupts_hc32l136.o(i.IRQ000_Handler)
+    IRQ001_Handler                           0x00002377   Thumb Code    10  interrupts_hc32l136.o(i.IRQ001_Handler)
+    IRQ002_Handler                           0x00002381   Thumb Code    10  interrupts_hc32l136.o(i.IRQ002_Handler)
+    IRQ003_Handler                           0x0000238b   Thumb Code    10  interrupts_hc32l136.o(i.IRQ003_Handler)
+    IRQ004_Handler                           0x00002395   Thumb Code    10  interrupts_hc32l136.o(i.IRQ004_Handler)
+    IRQ005_Handler                           0x0000239f   Thumb Code    10  interrupts_hc32l136.o(i.IRQ005_Handler)
+    IRQ006_Handler                           0x000023a9   Thumb Code    10  interrupts_hc32l136.o(i.IRQ006_Handler)
+    IRQ007_Handler                           0x000023b3   Thumb Code    10  interrupts_hc32l136.o(i.IRQ007_Handler)
+    IRQ008_Handler                           0x000023bd   Thumb Code    10  interrupts_hc32l136.o(i.IRQ008_Handler)
+    IRQ009_Handler                           0x000023c7   Thumb Code    10  interrupts_hc32l136.o(i.IRQ009_Handler)
+    IRQ010_Handler                           0x000023d1   Thumb Code    10  interrupts_hc32l136.o(i.IRQ010_Handler)
+    IRQ011_Handler                           0x000023db   Thumb Code    10  interrupts_hc32l136.o(i.IRQ011_Handler)
+    IRQ012_Handler                           0x000023e5   Thumb Code    10  interrupts_hc32l136.o(i.IRQ012_Handler)
+    IRQ013_Handler                           0x000023ef   Thumb Code    10  interrupts_hc32l136.o(i.IRQ013_Handler)
+    IRQ014_Handler                           0x000023f9   Thumb Code    10  interrupts_hc32l136.o(i.IRQ014_Handler)
+    IRQ015_Handler                           0x00002403   Thumb Code    10  interrupts_hc32l136.o(i.IRQ015_Handler)
+    IRQ016_Handler                           0x0000240d   Thumb Code    10  interrupts_hc32l136.o(i.IRQ016_Handler)
+    IRQ017_Handler                           0x00002417   Thumb Code    10  interrupts_hc32l136.o(i.IRQ017_Handler)
+    IRQ018_Handler                           0x00002421   Thumb Code    10  interrupts_hc32l136.o(i.IRQ018_Handler)
+    IRQ019_Handler                           0x0000242b   Thumb Code    10  interrupts_hc32l136.o(i.IRQ019_Handler)
+    IRQ020_Handler                           0x00002435   Thumb Code    10  interrupts_hc32l136.o(i.IRQ020_Handler)
+    IRQ021_Handler                           0x0000243f   Thumb Code    10  interrupts_hc32l136.o(i.IRQ021_Handler)
+    IRQ022_Handler                           0x00002449   Thumb Code    10  interrupts_hc32l136.o(i.IRQ022_Handler)
+    IRQ023_Handler                           0x00002453   Thumb Code    10  interrupts_hc32l136.o(i.IRQ023_Handler)
+    IRQ024_Handler                           0x0000245d   Thumb Code    10  interrupts_hc32l136.o(i.IRQ024_Handler)
+    IRQ025_Handler                           0x00002467   Thumb Code    10  interrupts_hc32l136.o(i.IRQ025_Handler)
+    IRQ026_Handler                           0x00002471   Thumb Code    10  interrupts_hc32l136.o(i.IRQ026_Handler)
+    IRQ027_Handler                           0x0000247b   Thumb Code    10  interrupts_hc32l136.o(i.IRQ027_Handler)
+    IRQ028_Handler                           0x00002485   Thumb Code    10  interrupts_hc32l136.o(i.IRQ028_Handler)
+    IRQ029_Handler                           0x0000248f   Thumb Code    10  interrupts_hc32l136.o(i.IRQ029_Handler)
+    IRQ030_Handler                           0x00002499   Thumb Code    10  interrupts_hc32l136.o(i.IRQ030_Handler)
+    IRQ031_Handler                           0x000024a3   Thumb Code    10  interrupts_hc32l136.o(i.IRQ031_Handler)
+    Init_ADC                                 0x000024ad   Thumb Code   186  mcu.o(i.Init_ADC)
+    Init_IOPorts                             0x00002575   Thumb Code   382  mcu.o(i.Init_IOPorts)
+    Init_OscFrequency                        0x000026f3   Thumb Code    30  mcu.o(i.Init_OscFrequency)
+    Init_Timer                               0x00002711   Thumb Code   278  mcu.o(i.Init_Timer)
+    KeyDetect                                0x00002841   Thumb Code   250  keypad.o(i.KeyDetect)
+    KeyDetectTimer                           0x00002961   Thumb Code    20  keypad.o(i.KeyDetectTimer)
+    KeyHandler                               0x00002979   Thumb Code    90  keypad.o(i.KeyHandler)
+    KeyScanStatus                            0x000029e1   Thumb Code    48  keypad.o(i.KeyScanStatus)
+    KeyVariableInitial                       0x00002a11   Thumb Code    46  keypad.o(i.KeyVariableInitial)
+    LEDALLControl                            0x00002a65   Thumb Code   204  ctrl.o(i.LEDALLControl)
+    LEDControl                               0x00002b31   Thumb Code   420  ctrl.o(i.LEDControl)
+    LEDDisplayHexValue                       0x00002cd5   Thumb Code    52  ctrl.o(i.LEDDisplayHexValue)
+    LEDFlashDisplay                          0x00002d09   Thumb Code   104  ctrl.o(i.LEDFlashDisplay)
+    LEDFlashSetting                          0x00002d7d   Thumb Code    42  ctrl.o(i.LEDFlashSetting)
+    MCU_Initialize                           0x00002dad   Thumb Code    26  mcu.o(i.MCU_Initialize)
+    MainTimerHandler                         0x00002dc9   Thumb Code    80  ctrl.o(i.MainTimerHandler)
+    ModelChangeLED                           0x00002e29   Thumb Code    44  ctrl.o(i.ModelChangeLED)
+    ModelSelectKeyProcess                    0x00002e59   Thumb Code    82  ctrl.o(i.ModelSelectKeyProcess)
+    PWMStart                                 0x00002eb5   Thumb Code    34  mcu.o(i.PWMStart)
+    PWMStop                                  0x00002ed7   Thumb Code    46  mcu.o(i.PWMStop)
+    PowerOffLED                              0x00002f05   Thumb Code    14  ctrl.o(i.PowerOffLED)
+    PowerOnInitialize                        0x00002f19   Thumb Code    56  ctrl.o(i.PowerOnInitialize)
+    PowerOnLED                               0x00002f59   Thumb Code    42  ctrl.o(i.PowerOnLED)
+    PowerupFunctionModeSelect                0x00002f85   Thumb Code   434  ctrl.o(i.PowerupFunctionModeSelect)
+    ProcessHandler                           0x00003165   Thumb Code   528  ctrl.o(i.ProcessHandler)
+    ReadCellPolarity                         0x000033cd   Thumb Code    14  ctrl.o(i.ReadCellPolarity)
+    ReadKey                                  0x000033e1   Thumb Code    40  keypad.o(i.ReadKey)
+    ReverseLEDDisplay                        0x00003409   Thumb Code    54  ctrl.o(i.ReverseLEDDisplay)
+    ReverseTimeSettingKeyProcess             0x00003445   Thumb Code    94  ctrl.o(i.ReverseTimeSettingKeyProcess)
+    RunningLEDDisplay                        0x000034b1   Thumb Code   176  ctrl.o(i.RunningLEDDisplay)
+    RunningTimeKeyProcess                    0x00003575   Thumb Code   198  ctrl.o(i.RunningTimeKeyProcess)
+    SWVersionDisplay                         0x00003659   Thumb Code   238  ctrl.o(i.SWVersionDisplay)
+    SaveCalValueByDirection                  0x00003751   Thumb Code    52  ctrl.o(i.SaveCalValueByDirection)
+    SaveCellCurrent                          0x00003795   Thumb Code    22  ctrl.o(i.SaveCellCurrent)
+    SaveCellReverseSetting                   0x000037b9   Thumb Code    34  ctrl.o(i.SaveCellReverseSetting)
+    SaveCellReverseTime                      0x000037e5   Thumb Code    22  ctrl.o(i.SaveCellReverseTime)
+    SaveCellRunningMinutes                   0x00003809   Thumb Code    22  ctrl.o(i.SaveCellRunningMinutes)
+    SaveCellRunningTime                      0x0000382d   Thumb Code    52  ctrl.o(i.SaveCellRunningTime)
+    SaveDataToArea                           0x0000386d   Thumb Code   134  ctrl.o(i.SaveDataToArea)
+    SaveEventProcess                         0x000038f9   Thumb Code   134  ctrl.o(i.SaveEventProcess)
+    SaveModelNumber                          0x0000398d   Thumb Code    34  ctrl.o(i.SaveModelNumber)
+    SaveTestModeFlag                         0x000039b9   Thumb Code    22  ctrl.o(i.SaveTestModeFlag)
+    SerivceReset                             0x000039dd   Thumb Code    48  ctrl.o(i.SerivceReset)
+    SetToDefault                             0x00003a1d   Thumb Code    52  ctrl.o(i.SetToDefault)
+    SpecialSecretCodeProcess                 0x00003a59   Thumb Code   194  ctrl.o(i.SpecialSecretCodeProcess)
+    StartTimer1                              0x00003b45   Thumb Code    10  mcu.o(i.StartTimer1)
+    StopTimer1                               0x00003b4f   Thumb Code    10  mcu.o(i.StopTimer1)
+    Sysctrl_ClkInit                          0x00003b59   Thumb Code   106  sysctrl.o(i.Sysctrl_ClkInit)
+    Sysctrl_ClkSourceEnable                  0x00003bc5   Thumb Code   312  sysctrl.o(i.Sysctrl_ClkSourceEnable)
+    Sysctrl_GetHClkFreq                      0x00003d05   Thumb Code   354  sysctrl.o(i.Sysctrl_GetHClkFreq)
+    Sysctrl_SetHCLKDiv                       0x00003e79   Thumb Code    38  sysctrl.o(i.Sysctrl_SetHCLKDiv)
+    Sysctrl_SetPCLKDiv                       0x00003ea5   Thumb Code    38  sysctrl.o(i.Sysctrl_SetPCLKDiv)
+    Sysctrl_SetPLLStableTime                 0x00003ed1   Thumb Code    32  sysctrl.o(i.Sysctrl_SetPLLStableTime)
+    Sysctrl_SetPeripheralGate                0x00003ef5   Thumb Code    54  sysctrl.o(i.Sysctrl_SetPeripheralGate)
+    Sysctrl_SetRCHTrim                       0x00003f31   Thumb Code   148  sysctrl.o(i.Sysctrl_SetRCHTrim)
+    Sysctrl_SetRCLStableTime                 0x00003fcd   Thumb Code    32  sysctrl.o(i.Sysctrl_SetRCLStableTime)
+    Sysctrl_SetXTHStableTime                 0x00003ff1   Thumb Code    28  sysctrl.o(i.Sysctrl_SetXTHStableTime)
+    Sysctrl_SetXTLStableTime                 0x00004011   Thumb Code    28  sysctrl.o(i.Sysctrl_SetXTLStableTime)
+    Sysctrl_SysClkSwitch                     0x00004031   Thumb Code    40  sysctrl.o(i.Sysctrl_SysClkSwitch)
+    Sysctrl_XTHDriverConfig                  0x0000405d   Thumb Code    24  sysctrl.o(i.Sysctrl_XTHDriverConfig)
+    Sysctrl_XTLDriverConfig                  0x00004079   Thumb Code    46  sysctrl.o(i.Sysctrl_XTLDriverConfig)
+    SystemCoreClockUpdate                    0x000040ad   Thumb Code    12  system_hc32l136.o(i.SystemCoreClockUpdate)
+    SystemInit                               0x000040bd   Thumb Code    30  system_hc32l136.o(i.SystemInit)
+    Tim0Int                                  0x000040e5   Thumb Code    32  mcu.o(i.Tim0Int)
+    Tim1Int                                  0x00004105   Thumb Code    28  mcu.o(i.Tim1Int)
+    Tim3Int                                  0x00004121   Thumb Code    74  mcu.o(i.Tim3Int)
+    Tim3_ClearIntFlag                        0x00004175   Thumb Code    16  timer3.o(i.Tim3_ClearIntFlag)
+    Tim3_GetIntFlag                          0x00004189   Thumb Code    18  timer3.o(i.Tim3_GetIntFlag)
+    Tim3_IRQHandler                          0x000041a1   Thumb Code    30  timer3.o(i.Tim3_IRQHandler)
+    Tim3_M0_ARRSet                           0x000041c5   Thumb Code    22  timer3.o(i.Tim3_M0_ARRSet)
+    Tim3_M0_Cnt16Set                         0x000041e1   Thumb Code    22  timer3.o(i.Tim3_M0_Cnt16Set)
+    Tim3_M0_Run                              0x000041fd   Thumb Code    18  timer3.o(i.Tim3_M0_Run)
+    Tim3_M0_Stop                             0x00004215   Thumb Code    16  timer3.o(i.Tim3_M0_Stop)
+    Tim3_Mode0_DisableIrq                    0x00004229   Thumb Code    18  timer3.o(i.Tim3_Mode0_DisableIrq)
+    Tim3_Mode0_EnableIrq                     0x00004241   Thumb Code    20  timer3.o(i.Tim3_Mode0_EnableIrq)
+    Tim3_Mode0_Init                          0x00004259   Thumb Code   174  timer3.o(i.Tim3_Mode0_Init)
+    Tim_IRQHandler                           0x00004311   Thumb Code    72  bt.o(i.Tim_IRQHandler)
+    UpdateRunningData                        0x00004365   Thumb Code    48  ctrl.o(i.UpdateRunningData)
+    UpdateUserData                           0x000043a1   Thumb Code    74  ctrl.o(i.UpdateUserData)
+    WaterFlowFaultProcess                    0x00004415   Thumb Code   166  ctrl.o(i.WaterFlowFaultProcess)
+    __ARM_common_switch8                     0x000045c5   Thumb Code    28  ctrl.o(i.__ARM_common_switch8)
+    _sys_exit                                0x00004659   Thumb Code     4  ddl.o(i._sys_exit)
+    ddl_memclr                               0x0000465d   Thumb Code    32  ddl.o(i.ddl_memclr)
+    delay100us                               0x0000467d   Thumb Code    74  ddl.o(i.delay100us)
+    delay10us                                0x000046d9   Thumb Code    74  ddl.o(i.delay10us)
+    delay1ms                                 0x00004735   Thumb Code    76  ddl.o(i.delay1ms)
+    main                                     0x0000478d   Thumb Code    20  main.o(i.main)
+    Region$$Table$$Base                      0x000047b8   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x000047d8   Number         0  anon$$obj.o(Region$$Table)
+    SystemCoreClock                          0x20000000   Data           4  system_hc32l136.o(.data)
+    LimitDutyTab                             0x20000004   Data           8  ctrl.o(.data)
+    BoostDutyTab                             0x2000000c   Data           8  ctrl.o(.data)
+    LimitCurrentTab                          0x20000014   Data           2  ctrl.o(.data)
+    BoostCurrentTab                          0x20000016   Data           2  ctrl.o(.data)
+    bDoBoostModeFlag                         0x20000018   Data           1  ctrl.o(.data)
+    bOneSecondFlag                           0x20000019   Data           1  ctrl.o(.data)
+    bLEDFlashFlag                            0x2000001a   Data           1  ctrl.o(.data)
+    bCalibrationFlag                         0x2000001b   Data           1  ctrl.o(.data)
+    bLowOutputFlag                           0x2000001c   Data           1  ctrl.o(.data)
+    bTimer3EnableFlag                        0x2000001d   Data           1  ctrl.o(.data)
+    bADCDoneFlag                             0x2000001e   Data           1  ctrl.o(.data)
+    bProtectFlag                             0x2000001f   Data           1  ctrl.o(.data)
+    bLEDONFlag                               0x20000020   Data           1  ctrl.o(.data)
+    bADCUpdateFlag                           0x20000021   Data           1  ctrl.o(.data)
+    bWFProcessFlag                           0x20000022   Data           1  ctrl.o(.data)
+    bTimeAdjustFlag                          0x20000023   Data           1  ctrl.o(.data)
+    bReturnFlag                              0x20000024   Data           1  ctrl.o(.data)
+    bCalibrateMode                           0x20000025   Data           1  ctrl.o(.data)
+    bResetMode                               0x20000026   Data           1  ctrl.o(.data)
+    bFineTuneFlag                            0x20000027   Data           1  ctrl.o(.data)
+    bOutputFlag                              0x20000028   Data           1  ctrl.o(.data)
+    bStopOutputFlag                          0x20000029   Data           1  ctrl.o(.data)
+    bFastRevserseMode                        0x2000002a   Data           1  ctrl.o(.data)
+    ucModelNumber                            0x2000002b   Data           1  ctrl.o(.data)
+    ucCellPolarity                           0x2000002c   Data           1  ctrl.o(.data)
+    ucCellCurrent                            0x2000002d   Data           1  ctrl.o(.data)
+    ucPrevCellCurrent                        0x2000002e   Data           1  ctrl.o(.data)
+    ucOriginalCurrent                        0x2000002f   Data           1  ctrl.o(.data)
+    ucMaxDisplayCurrent                      0x20000030   Data           1  ctrl.o(.data)
+    ucBoostStatus                            0x20000031   Data           1  ctrl.o(.data)
+    bPermanentBoostMode                      0x20000032   Data           1  ctrl.o(.data)
+    ucPermanentBoostCnt                      0x20000033   Data           1  ctrl.o(.data)
+    ucADCCounter                             0x20000034   Data           1  ctrl.o(.data)
+    ucDisplayWaitTimerCnt                    0x20000035   Data           1  ctrl.o(.data)
+    ucPCBTestTimerCnt                        0x20000036   Data           1  ctrl.o(.data)
+    ucFunctionMode                           0x20000037   Data           1  ctrl.o(.data)
+    ucCellReverseSetting                     0x20000038   Data           1  ctrl.o(.data)
+    ucCellReverseTime                        0x20000039   Data           1  ctrl.o(.data)
+    ucTimer0Counter                          0x2000003a   Data           1  ctrl.o(.data)
+    ucSecondCounter                          0x2000003b   Data           1  ctrl.o(.data)
+    bTestModeFlag                            0x2000003c   Data           1  ctrl.o(.data)
+    ucStableCnt                              0x2000003d   Data           1  ctrl.o(.data)
+    ucCurrentCalValue                        0x2000003e   Data           1  ctrl.o(.data)
+    ucFCurrentCalValue                       0x2000003f   Data           1  ctrl.o(.data)
+    ucRCurrentCalValue                       0x20000040   Data           1  ctrl.o(.data)
+    ucConvertGain                            0x20000041   Data           2  ctrl.o(.data)
+    ucPeriodCnt                              0x20000043   Data           1  ctrl.o(.data)
+    ucInWaterCounter                         0x20000044   Data           1  ctrl.o(.data)
+    ucWaterFlowCounter                       0x20000045   Data           1  ctrl.o(.data)
+    ucWaterFlowStatus                        0x20000046   Data           1  ctrl.o(.data)
+    ucNewWaterFlowStatus                     0x20000047   Data           1  ctrl.o(.data)
+    ucDigit                                  0x20000048   Data           1  ctrl.o(.data)
+    ucRunningMins                            0x20000049   Data           1  ctrl.o(.data)
+    ucRunningHours                           0x2000004a   Data           6  ctrl.o(.data)
+    ucNumber                                 0x20000050   Data           6  ctrl.o(.data)
+    ucSecretCode                             0x20000056   Data           1  ctrl.o(.data)
+    ucCalibrateTimeCnt                       0x20000057   Data           1  ctrl.o(.data)
+    ucGainValue                              0x20000058   Data           4  ctrl.o(.data)
+    ucSaveType                               0x2000005c   Data           1  ctrl.o(.data)
+    uiCellRealCurrent                        0x20000060   Data           4  ctrl.o(.data)
+    uiLimitCurrent                           0x20000064   Data           4  ctrl.o(.data)
+    iADCSum                                  0x20000068   Data           4  ctrl.o(.data)
+    iSaveCounter                             0x2000006c   Data           4  ctrl.o(.data)
+    uiBoostCounter                           0x20000070   Data           4  ctrl.o(.data)
+    uiLEDFlashStatus                         0x20000074   Data           4  ctrl.o(.data)
+    iADCData                                 0x20000078   Data           4  ctrl.o(.data)
+    uiMAX                                    0x2000007c   Data           4  ctrl.o(.data)
+    uiMIN                                    0x20000080   Data           4  ctrl.o(.data)
+    uiSum                                    0x20000084   Data           4  ctrl.o(.data)
+    uiStdH                                   0x20000088   Data           4  ctrl.o(.data)
+    uiStdL                                   0x2000008c   Data           4  ctrl.o(.data)
+    ulSum                                    0x20000090   Data           4  ctrl.o(.data)
+    uiCurrentADC                             0x20000094   Data           4  ctrl.o(.data)
+    ucVersionNum                             0x20000098   Data           1  ctrl.o(.data)
+    ucVersionNum2                            0x20000099   Data           1  ctrl.o(.data)
+    Version                                  0x2000009a   Data           4  ctrl.o(.data)
+    uiCurrentDuty                            0x200000a0   Data           4  ctrl.o(.data)
+    uiPWMHCnt                                0x200000a4   Data           4  ctrl.o(.data)
+    uiPWMLCnt                                0x200000a8   Data           4  ctrl.o(.data)
+    uiPWMPeriod                              0x200000ac   Data           4  ctrl.o(.data)
+    uiCurrentMaxDuty                         0x200000b0   Data           4  ctrl.o(.data)
+    uiOutputCounter                          0x200000b4   Data           4  ctrl.o(.data)
+    uiOutputTime                             0x200000b8   Data           4  ctrl.o(.data)
+    g_bKeyDetect                             0x200000bc   Data           1  keypad.o(.data)
+    g_bKeyRepeat                             0x200000bd   Data           1  keypad.o(.data)
+    g_bKey1stRepeat                          0x200000be   Data           1  keypad.o(.data)
+    g_bKeyCheckRepeat                        0x200000bf   Data           1  keypad.o(.data)
+    g_bFastRepeat                            0x200000c0   Data           1  keypad.o(.data)
+    g_ucKeyCounter                           0x200000c1   Data           1  keypad.o(.data)
+    g_ucKeyDebounce                          0x200000c2   Data           1  keypad.o(.data)
+    g_LastKeyStatus                          0x200000c3   Data           1  keypad.o(.data)
+    g_KeyCode                                0x200000c4   Data           1  keypad.o(.data)
+    u16AdcRestult0                           0x200000c6   Data           2  mcu.o(.data)
+    ucTestCnt                                0x200000c8   Data           1  mcu.o(.data)
+    ucData                                   0x200000e4   Data          20  ctrl.o(.bss)
+    __libspace_start                         0x20000110   Data          96  libspace.o(.bss)
+    __temporary_stack_top$libspace           0x20000170   Data           0  libspace.o(.bss)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x000000c1
+
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x000048bc, Max: 0x00010000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x000047d8, Max: 0x00010000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000000   0x000000c0   Data   RO            3    RESET               startup_hc32l136.o
+    0x000000c0   0x000000c0   0x00000008   Code   RO         2528  * !!!main             c_p.l(__main.o)
+    0x000000c8   0x000000c8   0x0000003c   Code   RO         2693    !!!scatter          c_p.l(__scatter.o)
+    0x00000104   0x00000104   0x0000001a   Code   RO         2695    !!handler_copy      c_p.l(__scatter_copy.o)
+    0x0000011e   0x0000011e   0x00000002   PAD
+    0x00000120   0x00000120   0x0000001c   Code   RO         2697    !!handler_zi        c_p.l(__scatter_zi.o)
+    0x0000013c   0x0000013c   0x00000002   Code   RO         2568    .ARM.Collect$$libinit$$00000000  c_p.l(libinit.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO         2582    .ARM.Collect$$libinit$$00000002  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO         2584    .ARM.Collect$$libinit$$00000004  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO         2587    .ARM.Collect$$libinit$$0000000A  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO         2589    .ARM.Collect$$libinit$$0000000C  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO         2591    .ARM.Collect$$libinit$$0000000E  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO         2594    .ARM.Collect$$libinit$$00000011  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO         2596    .ARM.Collect$$libinit$$00000013  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO         2598    .ARM.Collect$$libinit$$00000015  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO         2600    .ARM.Collect$$libinit$$00000017  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO         2602    .ARM.Collect$$libinit$$00000019  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO         2604    .ARM.Collect$$libinit$$0000001B  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO         2606    .ARM.Collect$$libinit$$0000001D  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO         2608    .ARM.Collect$$libinit$$0000001F  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO         2610    .ARM.Collect$$libinit$$00000021  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO         2612    .ARM.Collect$$libinit$$00000023  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO         2614    .ARM.Collect$$libinit$$00000025  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO         2618    .ARM.Collect$$libinit$$0000002C  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO         2620    .ARM.Collect$$libinit$$0000002E  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO         2622    .ARM.Collect$$libinit$$00000030  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000000   Code   RO         2624    .ARM.Collect$$libinit$$00000032  c_p.l(libinit2.o)
+    0x0000013e   0x0000013e   0x00000002   Code   RO         2625    .ARM.Collect$$libinit$$00000033  c_p.l(libinit2.o)
+    0x00000140   0x00000140   0x00000002   Code   RO         2649    .ARM.Collect$$libshutdown$$00000000  c_p.l(libshutdown.o)
+    0x00000142   0x00000142   0x00000000   Code   RO         2675    .ARM.Collect$$libshutdown$$00000002  c_p.l(libshutdown2.o)
+    0x00000142   0x00000142   0x00000000   Code   RO         2677    .ARM.Collect$$libshutdown$$00000004  c_p.l(libshutdown2.o)
+    0x00000142   0x00000142   0x00000000   Code   RO         2680    .ARM.Collect$$libshutdown$$00000007  c_p.l(libshutdown2.o)
+    0x00000142   0x00000142   0x00000000   Code   RO         2683    .ARM.Collect$$libshutdown$$0000000A  c_p.l(libshutdown2.o)
+    0x00000142   0x00000142   0x00000000   Code   RO         2685    .ARM.Collect$$libshutdown$$0000000C  c_p.l(libshutdown2.o)
+    0x00000142   0x00000142   0x00000000   Code   RO         2688    .ARM.Collect$$libshutdown$$0000000F  c_p.l(libshutdown2.o)
+    0x00000142   0x00000142   0x00000002   Code   RO         2689    .ARM.Collect$$libshutdown$$00000010  c_p.l(libshutdown2.o)
+    0x00000144   0x00000144   0x00000000   Code   RO         2532    .ARM.Collect$$rtentry$$00000000  c_p.l(__rtentry.o)
+    0x00000144   0x00000144   0x00000000   Code   RO         2538    .ARM.Collect$$rtentry$$00000002  c_p.l(__rtentry2.o)
+    0x00000144   0x00000144   0x00000006   Code   RO         2550    .ARM.Collect$$rtentry$$00000004  c_p.l(__rtentry4.o)
+    0x0000014a   0x0000014a   0x00000000   Code   RO         2540    .ARM.Collect$$rtentry$$00000009  c_p.l(__rtentry2.o)
+    0x0000014a   0x0000014a   0x00000004   Code   RO         2541    .ARM.Collect$$rtentry$$0000000A  c_p.l(__rtentry2.o)
+    0x0000014e   0x0000014e   0x00000000   Code   RO         2543    .ARM.Collect$$rtentry$$0000000C  c_p.l(__rtentry2.o)
+    0x0000014e   0x0000014e   0x00000008   Code   RO         2544    .ARM.Collect$$rtentry$$0000000D  c_p.l(__rtentry2.o)
+    0x00000156   0x00000156   0x00000002   Code   RO         2573    .ARM.Collect$$rtexit$$00000000  c_p.l(rtexit.o)
+    0x00000158   0x00000158   0x00000000   Code   RO         2627    .ARM.Collect$$rtexit$$00000002  c_p.l(rtexit2.o)
+    0x00000158   0x00000158   0x00000004   Code   RO         2628    .ARM.Collect$$rtexit$$00000003  c_p.l(rtexit2.o)
+    0x0000015c   0x0000015c   0x00000006   Code   RO         2629    .ARM.Collect$$rtexit$$00000004  c_p.l(rtexit2.o)
+    0x00000162   0x00000162   0x00000002   PAD
+    0x00000164   0x00000164   0x00000038   Code   RO         2518    .emb_text           c_p.l(rt_memcpy.o)
+    0x0000019c   0x0000019c   0x00000058   Code   RO            4    .text               startup_hc32l136.o
+    0x000001f4   0x000001f4   0x00000002   Code   RO         2516    .text               c_p.l(use_no_semi_2.o)
+    0x000001f6   0x000001f6   0x0000015a   Code   RO         2522    .text               c_p.l(aeabi_sdiv.o)
+    0x00000350   0x00000350   0x00000006   Code   RO         2526    .text               c_p.l(heapauxi.o)
+    0x00000356   0x00000356   0x00000002   Code   RO         2530    .text               c_p.l(use_no_semi.o)
+    0x00000358   0x00000358   0x0000003e   Code   RO         2554    .text               c_p.l(sys_stackheap_outer.o)
+    0x00000396   0x00000396   0x00000010   Code   RO         2557    .text               c_p.l(exit.o)
+    0x000003a6   0x000003a6   0x00000002   PAD
+    0x000003a8   0x000003a8   0x00000008   Code   RO         2569    .text               c_p.l(libspace.o)
+    0x000003b0   0x000003b0   0x00000014   Code   RO          668    i.ADCStart          mcu.o
+    0x000003c4   0x000003c4   0x00000008   Code   RO          669    i.ADCStop           mcu.o
+    0x000003cc   0x000003cc   0x00000026   Code   RO          670    i.ALLStart          mcu.o
+    0x000003f2   0x000003f2   0x00000020   Code   RO          671    i.ALLStop           mcu.o
+    0x00000412   0x00000412   0x00000002   PAD
+    0x00000414   0x00000414   0x0000001c   Code   RO          672    i.AdcContIrqCallback  mcu.o
+    0x00000430   0x00000430   0x00000074   Code   RO         1914    i.Adc_ConfigIrq     adc.o
+    0x000004a4   0x000004a4   0x00000024   Code   RO         1917    i.Adc_ConfigSglChannel  adc.o
+    0x000004c8   0x000004c8   0x0000002c   Code   RO         1918    i.Adc_ConfigSglMode  adc.o
+    0x000004f4   0x000004f4   0x00000014   Code   RO         1924    i.Adc_Enable        adc.o
+    0x00000508   0x00000508   0x00000018   Code   RO         1925    i.Adc_EnableIrq     adc.o
+    0x00000520   0x00000520   0x0000001c   Code   RO         1930    i.Adc_GetSglResult  adc.o
+    0x0000053c   0x0000053c   0x000000f4   Code   RO         1932    i.Adc_IRQHandler    adc.o
+    0x00000630   0x00000630   0x00000090   Code   RO         1933    i.Adc_Init          adc.o
+    0x000006c0   0x000006c0   0x00000014   Code   RO         1942    i.Adc_SGL_Start     adc.o
+    0x000006d4   0x000006d4   0x00000014   Code   RO         1943    i.Adc_SGL_Stop      adc.o
+    0x000006e8   0x000006e8   0x00000190   Code   RO           91    i.BoostModeHandler  ctrl.o
+    0x00000878   0x00000878   0x0000001c   Code   RO         1575    i.Bt_ClearIntFlag   bt.o
+    0x00000894   0x00000894   0x0000001c   Code   RO         1576    i.Bt_GetIntFlag     bt.o
+    0x000008b0   0x000008b0   0x00000060   Code   RO         1577    i.Bt_M0_ARRSet      bt.o
+    0x00000910   0x00000910   0x00000060   Code   RO         1579    i.Bt_M0_Cnt16Set    bt.o
+    0x00000970   0x00000970   0x0000001c   Code   RO         1583    i.Bt_M0_Run         bt.o
+    0x0000098c   0x0000098c   0x0000001c   Code   RO         1584    i.Bt_M0_Stop        bt.o
+    0x000009a8   0x000009a8   0x0000001c   Code   RO         1617    i.Bt_Mode0_EnableIrq  bt.o
+    0x000009c4   0x000009c4   0x00000230   Code   RO         1618    i.Bt_Mode0_Init     bt.o
+    0x00000bf4   0x00000bf4   0x00000038   Code   RO           92    i.CalculateConvertValue  ctrl.o
+    0x00000c2c   0x00000c2c   0x00000038   Code   RO           93    i.CalculateThresholdLimit  ctrl.o
+    0x00000c64   0x00000c64   0x00000038   Code   RO           94    i.CalibrateParameter  ctrl.o
+    0x00000c9c   0x00000c9c   0x00000094   Code   RO           95    i.CellCurrentCycleOutput  ctrl.o
+    0x00000d30   0x00000d30   0x0000003a   Code   RO           96    i.CellCurrentLED    ctrl.o
+    0x00000d6a   0x00000d6a   0x00000002   PAD
+    0x00000d6c   0x00000d6c   0x000000cc   Code   RO           97    i.CellCurrentOutput  ctrl.o
+    0x00000e38   0x00000e38   0x00000208   Code   RO           98    i.CellOutputCalibration  ctrl.o
+    0x00001040   0x00001040   0x00000050   Code   RO           99    i.CellOutputControl  ctrl.o
+    0x00001090   0x00001090   0x000001cc   Code   RO          100    i.CellOutputCurrentAdjust  ctrl.o
+    0x0000125c   0x0000125c   0x000000a8   Code   RO          101    i.CellPolarityControl  ctrl.o
+    0x00001304   0x00001304   0x00000034   Code   RO          102    i.CellPolarityReverse  ctrl.o
+    0x00001338   0x00001338   0x00000088   Code   RO          103    i.CellRealCurrentDisplay  ctrl.o
+    0x000013c0   0x000013c0   0x0000004c   Code   RO          104    i.CellReverseForPCBTest  ctrl.o
+    0x0000140c   0x0000140c   0x0000003c   Code   RO          105    i.CheckWaterFlow    ctrl.o
+    0x00001448   0x00001448   0x00000084   Code   RO          106    i.CheckWaterSaltLevel  ctrl.o
+    0x000014cc   0x000014cc   0x00000070   Code   RO          107    i.ChlorBoostProcess  ctrl.o
+    0x0000153c   0x0000153c   0x00000018   Code   RO          108    i.ClearRunningData  ctrl.o
+    0x00001554   0x00001554   0x00000080   Code   RO          109    i.ComboKeyProcess   ctrl.o
+    0x000015d4   0x000015d4   0x00000060   Code   RO          110    i.CurrentADCProcess  ctrl.o
+    0x00001634   0x00001634   0x000000cc   Code   RO          111    i.DataRangeCheck    ctrl.o
+    0x00001700   0x00001700   0x0000000c   Code   RO          112    i.Delay_ms          ctrl.o
+    0x0000170c   0x0000170c   0x0000000c   Code   RO          113    i.Deley_us          ctrl.o
+    0x00001718   0x00001718   0x0000011c   Code   RO          114    i.EepromDataCheck   ctrl.o
+    0x00001834   0x00001834   0x0000000c   Code   RO          115    i.Eeprom_ReadBytes  ctrl.o
+    0x00001840   0x00001840   0x00000080   Code   RO         1188    i.EnableNvic        interrupts_hc32l136.o
+    0x000018c0   0x000018c0   0x00000024   Code   RO          117    i.FactoryReset      ctrl.o
+    0x000018e4   0x000018e4   0x0000002e   Code   RO          118    i.FlashInt          ctrl.o
+    0x00001912   0x00001912   0x00000002   PAD
+    0x00001914   0x00001914   0x0000007c   Code   RO          907    i.Flash_ClearIntFlag  flash.o
+    0x00001990   0x00001990   0x000000a8   Code   RO          908    i.Flash_DisableIrq  flash.o
+    0x00001a38   0x00001a38   0x0000002c   Code   RO          910    i.Flash_GetIntFlag  flash.o
+    0x00001a64   0x00001a64   0x000002b8   Code   RO          911    i.Flash_Init        flash.o
+    0x00001d1c   0x00001d1c   0x000000c0   Code   RO          913    i.Flash_SectorErase  flash.o
+    0x00001ddc   0x00001ddc   0x0000007c   Code   RO          915    i.Flash_WaitCycle   flash.o
+    0x00001e58   0x00001e58   0x000000c0   Code   RO          916    i.Flash_WriteByte   flash.o
+    0x00001f18   0x00001f18   0x0000016c   Code   RO          119    i.GetCellRealCurrent  ctrl.o
+    0x00002084   0x00002084   0x00000084   Code   RO          120    i.GetModelRatingCurrent  ctrl.o
+    0x00002108   0x00002108   0x0000001c   Code   RO         1009    i.Gpio_ClearIrq     gpio.o
+    0x00002124   0x00002124   0x0000001c   Code   RO         1010    i.Gpio_ClrIO        gpio.o
+    0x00002140   0x00002140   0x00000018   Code   RO         1013    i.Gpio_EnableIrq    gpio.o
+    0x00002158   0x00002158   0x00000014   Code   RO         1015    i.Gpio_GetInputIO   gpio.o
+    0x0000216c   0x0000216c   0x00000014   Code   RO         1016    i.Gpio_GetIrqStatus  gpio.o
+    0x00002180   0x00002180   0x00000058   Code   RO          673    i.Gpio_IRQHandler   mcu.o
+    0x000021d8   0x000021d8   0x00000138   Code   RO         1017    i.Gpio_Init         gpio.o
+    0x00002310   0x00002310   0x00000014   Code   RO         1018    i.Gpio_ReadOutputIO  gpio.o
+    0x00002324   0x00002324   0x0000001c   Code   RO         1020    i.Gpio_SetAnalogMode  gpio.o
+    0x00002340   0x00002340   0x0000001c   Code   RO         1022    i.Gpio_SetIO        gpio.o
+    0x0000235c   0x0000235c   0x00000010   Code   RO         1189    i.HardFault_Handler  interrupts_hc32l136.o
+    0x0000236c   0x0000236c   0x0000000a   Code   RO         1190    i.IRQ000_Handler    interrupts_hc32l136.o
+    0x00002376   0x00002376   0x0000000a   Code   RO         1191    i.IRQ001_Handler    interrupts_hc32l136.o
+    0x00002380   0x00002380   0x0000000a   Code   RO         1192    i.IRQ002_Handler    interrupts_hc32l136.o
+    0x0000238a   0x0000238a   0x0000000a   Code   RO         1193    i.IRQ003_Handler    interrupts_hc32l136.o
+    0x00002394   0x00002394   0x0000000a   Code   RO         1194    i.IRQ004_Handler    interrupts_hc32l136.o
+    0x0000239e   0x0000239e   0x0000000a   Code   RO         1195    i.IRQ005_Handler    interrupts_hc32l136.o
+    0x000023a8   0x000023a8   0x0000000a   Code   RO         1196    i.IRQ006_Handler    interrupts_hc32l136.o
+    0x000023b2   0x000023b2   0x0000000a   Code   RO         1197    i.IRQ007_Handler    interrupts_hc32l136.o
+    0x000023bc   0x000023bc   0x0000000a   Code   RO         1198    i.IRQ008_Handler    interrupts_hc32l136.o
+    0x000023c6   0x000023c6   0x0000000a   Code   RO         1199    i.IRQ009_Handler    interrupts_hc32l136.o
+    0x000023d0   0x000023d0   0x0000000a   Code   RO         1200    i.IRQ010_Handler    interrupts_hc32l136.o
+    0x000023da   0x000023da   0x0000000a   Code   RO         1201    i.IRQ011_Handler    interrupts_hc32l136.o
+    0x000023e4   0x000023e4   0x0000000a   Code   RO         1202    i.IRQ012_Handler    interrupts_hc32l136.o
+    0x000023ee   0x000023ee   0x0000000a   Code   RO         1203    i.IRQ013_Handler    interrupts_hc32l136.o
+    0x000023f8   0x000023f8   0x0000000a   Code   RO         1204    i.IRQ014_Handler    interrupts_hc32l136.o
+    0x00002402   0x00002402   0x0000000a   Code   RO         1205    i.IRQ015_Handler    interrupts_hc32l136.o
+    0x0000240c   0x0000240c   0x0000000a   Code   RO         1206    i.IRQ016_Handler    interrupts_hc32l136.o
+    0x00002416   0x00002416   0x0000000a   Code   RO         1207    i.IRQ017_Handler    interrupts_hc32l136.o
+    0x00002420   0x00002420   0x0000000a   Code   RO         1208    i.IRQ018_Handler    interrupts_hc32l136.o
+    0x0000242a   0x0000242a   0x0000000a   Code   RO         1209    i.IRQ019_Handler    interrupts_hc32l136.o
+    0x00002434   0x00002434   0x0000000a   Code   RO         1210    i.IRQ020_Handler    interrupts_hc32l136.o
+    0x0000243e   0x0000243e   0x0000000a   Code   RO         1211    i.IRQ021_Handler    interrupts_hc32l136.o
+    0x00002448   0x00002448   0x0000000a   Code   RO         1212    i.IRQ022_Handler    interrupts_hc32l136.o
+    0x00002452   0x00002452   0x0000000a   Code   RO         1213    i.IRQ023_Handler    interrupts_hc32l136.o
+    0x0000245c   0x0000245c   0x0000000a   Code   RO         1214    i.IRQ024_Handler    interrupts_hc32l136.o
+    0x00002466   0x00002466   0x0000000a   Code   RO         1215    i.IRQ025_Handler    interrupts_hc32l136.o
+    0x00002470   0x00002470   0x0000000a   Code   RO         1216    i.IRQ026_Handler    interrupts_hc32l136.o
+    0x0000247a   0x0000247a   0x0000000a   Code   RO         1217    i.IRQ027_Handler    interrupts_hc32l136.o
+    0x00002484   0x00002484   0x0000000a   Code   RO         1218    i.IRQ028_Handler    interrupts_hc32l136.o
+    0x0000248e   0x0000248e   0x0000000a   Code   RO         1219    i.IRQ029_Handler    interrupts_hc32l136.o
+    0x00002498   0x00002498   0x0000000a   Code   RO         1220    i.IRQ030_Handler    interrupts_hc32l136.o
+    0x000024a2   0x000024a2   0x0000000a   Code   RO         1221    i.IRQ031_Handler    interrupts_hc32l136.o
+    0x000024ac   0x000024ac   0x000000c8   Code   RO          674    i.Init_ADC          mcu.o
+    0x00002574   0x00002574   0x0000017e   Code   RO          675    i.Init_IOPorts      mcu.o
+    0x000026f2   0x000026f2   0x0000001e   Code   RO          676    i.Init_OscFrequency  mcu.o
+    0x00002710   0x00002710   0x00000130   Code   RO          677    i.Init_Timer        mcu.o
+    0x00002840   0x00002840   0x00000120   Code   RO          592    i.KeyDetect         keypad.o
+    0x00002960   0x00002960   0x00000018   Code   RO          593    i.KeyDetectTimer    keypad.o
+    0x00002978   0x00002978   0x00000068   Code   RO          594    i.KeyHandler        keypad.o
+    0x000029e0   0x000029e0   0x00000030   Code   RO          595    i.KeyScanStatus     keypad.o
+    0x00002a10   0x00002a10   0x00000054   Code   RO          596    i.KeyVariableInitial  keypad.o
+    0x00002a64   0x00002a64   0x000000cc   Code   RO          121    i.LEDALLControl     ctrl.o
+    0x00002b30   0x00002b30   0x000001a4   Code   RO          122    i.LEDControl        ctrl.o
+    0x00002cd4   0x00002cd4   0x00000034   Code   RO          123    i.LEDDisplayHexValue  ctrl.o
+    0x00002d08   0x00002d08   0x00000074   Code   RO          124    i.LEDFlashDisplay   ctrl.o
+    0x00002d7c   0x00002d7c   0x00000030   Code   RO          125    i.LEDFlashSetting   ctrl.o
+    0x00002dac   0x00002dac   0x0000001a   Code   RO          679    i.MCU_Initialize    mcu.o
+    0x00002dc6   0x00002dc6   0x00000002   PAD
+    0x00002dc8   0x00002dc8   0x00000060   Code   RO          126    i.MainTimerHandler  ctrl.o
+    0x00002e28   0x00002e28   0x00000030   Code   RO          127    i.ModelChangeLED    ctrl.o
+    0x00002e58   0x00002e58   0x0000005c   Code   RO          128    i.ModelSelectKeyProcess  ctrl.o
+    0x00002eb4   0x00002eb4   0x00000022   Code   RO          680    i.PWMStart          mcu.o
+    0x00002ed6   0x00002ed6   0x0000002e   Code   RO          681    i.PWMStop           mcu.o
+    0x00002f04   0x00002f04   0x00000014   Code   RO          129    i.PowerOffLED       ctrl.o
+    0x00002f18   0x00002f18   0x00000040   Code   RO          130    i.PowerOnInitialize  ctrl.o
+    0x00002f58   0x00002f58   0x0000002a   Code   RO          131    i.PowerOnLED        ctrl.o
+    0x00002f82   0x00002f82   0x00000002   PAD
+    0x00002f84   0x00002f84   0x000001e0   Code   RO          132    i.PowerupFunctionModeSelect  ctrl.o
+    0x00003164   0x00003164   0x00000268   Code   RO          133    i.ProcessHandler    ctrl.o
+    0x000033cc   0x000033cc   0x00000014   Code   RO          135    i.ReadCellPolarity  ctrl.o
+    0x000033e0   0x000033e0   0x00000028   Code   RO          597    i.ReadKey           keypad.o
+    0x00003408   0x00003408   0x0000003c   Code   RO          143    i.ReverseLEDDisplay  ctrl.o
+    0x00003444   0x00003444   0x0000006c   Code   RO          144    i.ReverseTimeSettingKeyProcess  ctrl.o
+    0x000034b0   0x000034b0   0x000000c4   Code   RO          145    i.RunningLEDDisplay  ctrl.o
+    0x00003574   0x00003574   0x000000e4   Code   RO          146    i.RunningTimeKeyProcess  ctrl.o
+    0x00003658   0x00003658   0x000000f8   Code   RO          147    i.SWVersionDisplay  ctrl.o
+    0x00003750   0x00003750   0x00000044   Code   RO          148    i.SaveCalValueByDirection  ctrl.o
+    0x00003794   0x00003794   0x00000024   Code   RO          149    i.SaveCellCurrent   ctrl.o
+    0x000037b8   0x000037b8   0x0000002c   Code   RO          151    i.SaveCellReverseSetting  ctrl.o
+    0x000037e4   0x000037e4   0x00000024   Code   RO          152    i.SaveCellReverseTime  ctrl.o
+    0x00003808   0x00003808   0x00000024   Code   RO          153    i.SaveCellRunningMinutes  ctrl.o
+    0x0000382c   0x0000382c   0x00000040   Code   RO          154    i.SaveCellRunningTime  ctrl.o
+    0x0000386c   0x0000386c   0x0000008c   Code   RO          156    i.SaveDataToArea    ctrl.o
+    0x000038f8   0x000038f8   0x00000094   Code   RO          157    i.SaveEventProcess  ctrl.o
+    0x0000398c   0x0000398c   0x0000002c   Code   RO          158    i.SaveModelNumber   ctrl.o
+    0x000039b8   0x000039b8   0x00000024   Code   RO          160    i.SaveTestModeFlag  ctrl.o
+    0x000039dc   0x000039dc   0x00000040   Code   RO          161    i.SerivceReset      ctrl.o
+    0x00003a1c   0x00003a1c   0x0000003c   Code   RO          162    i.SetToDefault      ctrl.o
+    0x00003a58   0x00003a58   0x000000ec   Code   RO          163    i.SpecialSecretCodeProcess  ctrl.o
+    0x00003b44   0x00003b44   0x0000000a   Code   RO          682    i.StartTimer1       mcu.o
+    0x00003b4e   0x00003b4e   0x0000000a   Code   RO          683    i.StopTimer1        mcu.o
+    0x00003b58   0x00003b58   0x0000006a   Code   RO         1419    i.Sysctrl_ClkInit   sysctrl.o
+    0x00003bc2   0x00003bc2   0x00000002   PAD
+    0x00003bc4   0x00003bc4   0x00000140   Code   RO         1420    i.Sysctrl_ClkSourceEnable  sysctrl.o
+    0x00003d04   0x00003d04   0x00000174   Code   RO         1421    i.Sysctrl_GetHClkFreq  sysctrl.o
+    0x00003e78   0x00003e78   0x0000002c   Code   RO         1425    i.Sysctrl_SetHCLKDiv  sysctrl.o
+    0x00003ea4   0x00003ea4   0x0000002c   Code   RO         1426    i.Sysctrl_SetPCLKDiv  sysctrl.o
+    0x00003ed0   0x00003ed0   0x00000024   Code   RO         1428    i.Sysctrl_SetPLLStableTime  sysctrl.o
+    0x00003ef4   0x00003ef4   0x0000003c   Code   RO         1429    i.Sysctrl_SetPeripheralGate  sysctrl.o
+    0x00003f30   0x00003f30   0x0000009c   Code   RO         1430    i.Sysctrl_SetRCHTrim  sysctrl.o
+    0x00003fcc   0x00003fcc   0x00000024   Code   RO         1431    i.Sysctrl_SetRCLStableTime  sysctrl.o
+    0x00003ff0   0x00003ff0   0x00000020   Code   RO         1435    i.Sysctrl_SetXTHStableTime  sysctrl.o
+    0x00004010   0x00004010   0x00000020   Code   RO         1436    i.Sysctrl_SetXTLStableTime  sysctrl.o
+    0x00004030   0x00004030   0x0000002c   Code   RO         1437    i.Sysctrl_SysClkSwitch  sysctrl.o
+    0x0000405c   0x0000405c   0x0000001c   Code   RO         1438    i.Sysctrl_XTHDriverConfig  sysctrl.o
+    0x00004078   0x00004078   0x00000034   Code   RO         1439    i.Sysctrl_XTLDriverConfig  sysctrl.o
+    0x000040ac   0x000040ac   0x00000010   Code   RO           12    i.SystemCoreClockUpdate  system_hc32l136.o
+    0x000040bc   0x000040bc   0x00000028   Code   RO           13    i.SystemInit        system_hc32l136.o
+    0x000040e4   0x000040e4   0x00000020   Code   RO          684    i.Tim0Int           mcu.o
+    0x00004104   0x00004104   0x0000001c   Code   RO          685    i.Tim1Int           mcu.o
+    0x00004120   0x00004120   0x00000054   Code   RO          686    i.Tim3Int           mcu.o
+    0x00004174   0x00004174   0x00000014   Code   RO         2185    i.Tim3_ClearIntFlag  timer3.o
+    0x00004188   0x00004188   0x00000018   Code   RO         2186    i.Tim3_GetIntFlag   timer3.o
+    0x000041a0   0x000041a0   0x00000024   Code   RO         2187    i.Tim3_IRQHandler   timer3.o
+    0x000041c4   0x000041c4   0x0000001c   Code   RO         2188    i.Tim3_M0_ARRSet    timer3.o
+    0x000041e0   0x000041e0   0x0000001c   Code   RO         2190    i.Tim3_M0_Cnt16Set  timer3.o
+    0x000041fc   0x000041fc   0x00000018   Code   RO         2194    i.Tim3_M0_Run       timer3.o
+    0x00004214   0x00004214   0x00000014   Code   RO         2195    i.Tim3_M0_Stop      timer3.o
+    0x00004228   0x00004228   0x00000018   Code   RO         2227    i.Tim3_Mode0_DisableIrq  timer3.o
+    0x00004240   0x00004240   0x00000018   Code   RO         2228    i.Tim3_Mode0_EnableIrq  timer3.o
+    0x00004258   0x00004258   0x000000b8   Code   RO         2229    i.Tim3_Mode0_Init   timer3.o
+    0x00004310   0x00004310   0x00000054   Code   RO         1625    i.Tim_IRQHandler    bt.o
+    0x00004364   0x00004364   0x0000003c   Code   RO          164    i.UpdateRunningData  ctrl.o
+    0x000043a0   0x000043a0   0x00000074   Code   RO          165    i.UpdateUserData    ctrl.o
+    0x00004414   0x00004414   0x000000c4   Code   RO          166    i.WaterFlowFaultProcess  ctrl.o
+    0x000044d8   0x000044d8   0x000000d4   Code   RO         1035    i._GpioEnableIrq    gpio.o
+    0x000045ac   0x000045ac   0x00000018   Code   RO         1440    i._SysctrlUnlock    sysctrl.o
+    0x000045c4   0x000045c4   0x0000001c   Code   RO          560    i.__ARM_common_switch8  ctrl.o
+    0x000045e0   0x000045e0   0x00000078   Code   RO         1222    i.__NVIC_SetPriority  interrupts_hc32l136.o
+    0x00004658   0x00004658   0x00000004   Code   RO          817    i._sys_exit         ddl.o
+    0x0000465c   0x0000465c   0x00000020   Code   RO          819    i.ddl_memclr        ddl.o
+    0x0000467c   0x0000467c   0x0000005c   Code   RO          820    i.delay100us        ddl.o
+    0x000046d8   0x000046d8   0x0000005c   Code   RO          821    i.delay10us         ddl.o
+    0x00004734   0x00004734   0x00000058   Code   RO          822    i.delay1ms          ddl.o
+    0x0000478c   0x0000478c   0x00000014   Code   RO          654    i.main              main.o
+    0x000047a0   0x000047a0   0x00000018   Data   RO         1441    .constdata          sysctrl.o
+    0x000047b8   0x000047b8   0x00000020   Data   RO         2691    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x000047d8, Size: 0x00000570, Max: 0x00002000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x000047d8   0x00000004   Data   RW           14    .data               system_hc32l136.o
+    0x20000004   0x000047dc   0x000000b8   Data   RW          168    .data               ctrl.o
+    0x200000bc   0x00004894   0x00000009   Data   RW          598    .data               keypad.o
+    0x200000c5   0x0000489d   0x00000001   PAD
+    0x200000c6   0x0000489e   0x00000009   Data   RW          687    .data               mcu.o
+    0x200000cf   0x000048a7   0x00000001   PAD
+    0x200000d0   0x000048a8   0x00000004   Data   RW          919    .data               flash.o
+    0x200000d4   0x000048ac   0x0000000c   Data   RW         1626    .data               bt.o
+    0x200000e0   0x000048b8   0x00000004   Data   RW         2236    .data               timer3.o
+    0x200000e4        -       0x00000014   Zero   RW          167    .bss                ctrl.o
+    0x200000f8        -       0x00000018   Zero   RW         1949    .bss                adc.o
+    0x20000110        -       0x00000060   Zero   RW         2570    .bss                c_p.l(libspace.o)
+    0x20000170        -       0x00000200   Zero   RW            2    HEAP                startup_hc32l136.o
+    0x20000370        -       0x00000200   Zero   RW            1    STACK               startup_hc32l136.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       696         54          0          0         24       5506   adc.o
+       976         88          0         12          0       5977   bt.o
+      8694       1168          0        184         20      46572   ctrl.o
+       308         48          0          0          0       3033   ddl.o
+      1540        100          0          4          0       4536   flash.o
+       720         44          0          0          0       5970   gpio.o
+       584         18          0          0          0      24413   interrupts_hc32l136.o
+       588         94          0          9          0       4086   keypad.o
+        20          0          0          0          0        431   main.o
+      1400         76          0          9          0      25046   mcu.o
+        88         40        192          0       1024        636   startup_hc32l136.o
+      1386        126         24          0          0       9880   sysctrl.o
+        56         14          0          4          0     126551   system_hc32l136.o
+       412         58          0          4          0       5618   timer3.o
+
+    ----------------------------------------------------------------------
+     17480       1928        248        228       1068     268255   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+        12          0          0          2          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         8          0          0          0          0         68   __main.o
+         0          0          0          0          0          0   __rtentry.o
+        12          0          0          0          0          0   __rtentry2.o
+         6          0          0          0          0          0   __rtentry4.o
+        60          8          0          0          0          0   __scatter.o
+        26          0          0          0          0          0   __scatter_copy.o
+        28          0          0          0          0          0   __scatter_zi.o
+       346          0          0          0          0         92   aeabi_sdiv.o
+        16          0          0          0          0         68   exit.o
+         6          0          0          0          0        136   heapauxi.o
+         2          0          0          0          0          0   libinit.o
+         2          0          0          0          0          0   libinit2.o
+         2          0          0          0          0          0   libshutdown.o
+         2          0          0          0          0          0   libshutdown2.o
+         8          4          0          0         96         68   libspace.o
+        56          0          0          0          0         68   rt_memcpy.o
+         2          0          0          0          0          0   rtexit.o
+        10          0          0          0          0          0   rtexit2.o
+        62          0          0          0          0         80   sys_stackheap_outer.o
+         2          0          0          0          0         68   use_no_semi.o
+         2          0          0          0          0         68   use_no_semi_2.o
+
+    ----------------------------------------------------------------------
+       664         12          0          0         96        716   Library Totals
+         6          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       658         12          0          0         96        716   c_p.l
+
+    ----------------------------------------------------------------------
+       664         12          0          0         96        716   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+     18144       1940        248        228       1164     260451   Grand Totals
+     18144       1940        248        228       1164     260451   ELF Image Totals
+     18144       1940        248        228          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                18392 (  17.96kB)
+    Total RW  Size (RW Data + ZI Data)              1392 (   1.36kB)
+    Total ROM Size (Code + RO Data + RW Data)      18620 (  18.18kB)
+
+==============================================================================
+

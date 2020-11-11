@@ -1,0 +1,43 @@
+---- ucConvertGain Matches (16 in 1 files) ----
+ctrl.c (SRC\hyclor\src) line 207 : unsigned char ucConvertGain[2];
+SaveCalValueByDirection in ctrl.c (SRC\hyclor\src) : 		ucData[9] = ucConvertGain[0];
+SaveCalValueByDirection in ctrl.c (SRC\hyclor\src) : 		ucData[10] = ucConvertGain[1];
+SaveCalValueByDirection in ctrl.c (SRC\hyclor\src) : 		ucData[11] = ucConvertGain[0];
+SaveCalValueByDirection in ctrl.c (SRC\hyclor\src) : 		ucData[12] = ucConvertGain[1];		
+GetCellRealCurrent in ctrl.c (SRC\hyclor\src) : 			uiTemp = ucConvertGain[0];
+GetCellRealCurrent in ctrl.c (SRC\hyclor\src) : 			uiTemp2 = ucConvertGain[1];
+GetCellRealCurrent in ctrl.c (SRC\hyclor\src) : 			uiTemp = ucConvertGain[0];
+GetCellRealCurrent in ctrl.c (SRC\hyclor\src) : 			uiTemp2 = ucConvertGain[1];
+CalculateConvertValue in ctrl.c (SRC\hyclor\src) : 	ucConvertGain[0] = uiTemp/100;
+CalculateConvertValue in ctrl.c (SRC\hyclor\src) : 	uiTemp2 = uiTemp2 * ucConvertGain[0];
+CalculateConvertValue in ctrl.c (SRC\hyclor\src) : 	ucConvertGain[1] = uiTemp - uiTemp2;
+CellPolarityControl in ctrl.c (SRC\hyclor\src) : 		ucConvertGain[0] = ucData[9];
+CellPolarityControl in ctrl.c (SRC\hyclor\src) : 		ucConvertGain[1] = ucData[10];
+CellPolarityControl in ctrl.c (SRC\hyclor\src) : 		ucConvertGain[0] = ucData[11];
+CellPolarityControl in ctrl.c (SRC\hyclor\src) : 		ucConvertGain[1] = ucData[12];	
+---- bDoBoostModeFlag Matches (12 in 1 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 156 : unsigned char bDoBoostModeFlag   = _FALSE;
+SerivceReset line 902 : 	bDoBoostModeFlag = 0;
+GetModelRatingCurrent line 1134 : 	if((bPermanentBoostMode)||(bDoBoostModeFlag))
+CellOutputCurrentAdjust line 1649 : 	if((ucBoostStatus)||(bDoBoostModeFlag))
+SpecialSecretCodeProcess line 2368 : 		if((bDoBoostModeFlag == 0)&&(bPermanentBoostMode == 0))
+SpecialSecretCodeProcess line 2381 : 		bDoBoostModeFlag = 0;
+BoostModeHandler line 2504 : 				bDoBoostModeFlag = 1;
+BoostModeHandler line 2523 : 				bDoBoostModeFlag = 0;
+BoostModeHandler line 2546 : 				bDoBoostModeFlag = 0;
+ProcessHandler line 2865 : 		if(bDoBoostModeFlag)
+ProcessHandler line 2870 : 				bDoBoostModeFlag = 0;
+ProcessHandler line 2877 : 		if((ucBoostStatus==0)&&(bDoBoostModeFlag==0)&&(bResetMode==0))
+---- bDoBoostModeFlag Matches (12 in 1 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 156 : unsigned char bDoBoostModeFlag   = _FALSE;
+SerivceReset line 902 : 	bDoBoostModeFlag = 0;
+GetModelRatingCurrent line 1134 : 	if((bPermanentBoostMode)||(bDoBoostModeFlag))
+CellOutputCurrentAdjust line 1649 : 	if((ucBoostStatus)||(bDoBoostModeFlag))
+SpecialSecretCodeProcess line 2368 : 		if((bDoBoostModeFlag == 0)&&(bPermanentBoostMode == 0))
+SpecialSecretCodeProcess line 2381 : 		bDoBoostModeFlag = 0;
+BoostModeHandler line 2523 : 				bDoBoostModeFlag = 0;
+BoostModeHandler line 2504 : 				bDoBoostModeFlag = 1;
+BoostModeHandler line 2546 : 				bDoBoostModeFlag = 0;
+ProcessHandler line 2865 : 		if(bDoBoostModeFlag)
+ProcessHandler line 2870 : 				bDoBoostModeFlag = 0;
+ProcessHandler line 2877 : 		if((ucBoostStatus==0)&&(bDoBoostModeFlag==0)&&(bResetMode==0))
