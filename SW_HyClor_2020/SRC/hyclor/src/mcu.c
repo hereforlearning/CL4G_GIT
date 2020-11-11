@@ -680,7 +680,6 @@ void MCU_Initialize(void)
 #endif	
 	Init_APP_Uart();
 }
-
 void MCUStopOutput(void)
 {
 	PWMStop();

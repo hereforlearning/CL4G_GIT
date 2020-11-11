@@ -51,6 +51,7 @@ unsigned char ReadKey(void)
 	if(SWITCH_UP == _LOW)
 	{
 		ucKey |= KEYCODE_UP;
+		//UartSendString("keycode_up");
 	}
 	if(SWITCH_DOWN == _LOW)
 	{

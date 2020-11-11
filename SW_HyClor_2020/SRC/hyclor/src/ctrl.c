@@ -2708,6 +2708,7 @@ void ProcessHandler(void)
 	
 	if(bOneSecondFlag)
 	{
+		UartSendString("oneseconds\n");
 		bOneSecondFlag = _FALSE;
 
 		if(ucPCBTestTimerCnt>0)
@@ -2929,6 +2930,7 @@ void CurrentADCProcess(void)
 void MainTimerHandler(void)
 {
 	ucTimer0Counter++;
+	APP_UART_1MS_HANDLE();
 	if(ucTimer0Counter>=100)
 	{		
 		ucTimer0Counter = 0;

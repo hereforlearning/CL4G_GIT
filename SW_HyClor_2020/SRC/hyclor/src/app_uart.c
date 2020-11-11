@@ -56,6 +56,9 @@
 #include "uart.h"
 #include "gpio.h"
 #include "sysctrl.h"
+#include "crc32.h"
+#include "app_uart.h"
+#include "app_aes.h"
 
 /******************************************************************************
  * Local pre-processor symbols/macros ('#define')                            
@@ -96,29 +99,22 @@
  ******************************************************************************/
 uint8_t u8TxData[44] = {0x00,0x55};
 uint8_t u8RxData;
-uint8_t u8TxCnt=0,u8RxCnt=0;
+uint8_t u8TxCnt=0,u8RX_RECIEVE_CNT=0;
 uint8_t tx_send;
 uint8_t rx_reci;
 void TxIntCallback(void)
 {
-    u8TxCnt++;
-   // if(u8TxCnt<=1)
-	//    M0P_UART1->SBUF = u8TxData[1];
-    tx_send=1;
+		bTX_DONE=1;
     Uart_ClrStatus(UARTCH1,UartTC);    
 }
 void RxIntCallback(void)
 {
     u8RxData=Uart_ReceiveData(UARTCH1);
-	if(u8RxData==NULL)
-		return;
-    //u8RxCnt++;
-	if(u8RxCnt<44){
-		u8RxCnt++;
-		u8TxData[u8RxCnt]=u8RxData; }	
-	else
-		u8RxCnt=0;
-Uart_ClrStatus(UARTCH1,UartRC);
+	u8RX_RECIEVE_CNT=0;	
+	u8RX_BUFF[u8RX_BUFF_CNT]=u8RxData;
+	if(u8RX_BUFF_CNT<(sizeof(u8RX_BUFF)-1))
+		u8RX_BUFF_CNT++;
+	Uart_ClrStatus(UARTCH1,UartRC);
 }
 void ErrIntCallback(void)
 {
@@ -190,26 +186,25 @@ void Init_APP_Uart(void)
     Uart_ClrStatus(UARTCH1,UartRC);
     Uart_EnableFunc(UARTCH1,UartRx);
 	
-    #if 0
+    #if 0 //UART TEST 
     while(1)
     {
 		unsigned char i=0;
 		unsigned char *text="sdfaslkfjeroiquerqieruweoip";
-		//if(u8RxCnt>=1)
+		//if(u8RX_RECIEVE_CNT>=1)
         if(1){
            Uart_DisableIrq(UARTCH1,UartRxIrq);
            Uart_EnableIrq(UARTCH1,UartTxIrq);
-					 u8RxCnt = 0;
-					for(i=0;i<33;i++)
-					{
+			u8RX_RECIEVE_CNT = 0;
+			for(i=0;i<33;i++)
+			{
  			  	
-						tx_send=0;
+			bTX_DONE=0;
             M0P_UART1->SBUF ='r';// u8RxData;   
-					  while(!tx_send);
-					}
-				}
-				
-				#if 0
+		 	 while(!bTX_DONE);
+			}
+		}
+		#if 0
         else if(u8TxCnt>1)
         {
             u8TxCnt = 0;
@@ -217,7 +212,7 @@ void Init_APP_Uart(void)
             Uart_DisableIrq(UARTCH1,UartTxIrq);
             Uart_EnableIrq(UARTCH1,UartRxIrq);
         }
-				#endif
+		#endif
 		 //  Uart_DisableIrq(UARTCH1,UartTxIrq);
 		//    Uart_EnableIrq(UARTCH1,UartRxIrq);
 				delay1ms(1000);
@@ -278,7 +273,7 @@ void IOTQueueKeyHandle()
 		}
 		else
 			IOTQueueKeyCnt=0;
-		RESIVE_UAER_KEY=IOTQueueKeyPop();
+	  //	RESIVE_UAER_KEY=IOTQueueKeyPop();
 	}
 }
 /***********************************************************************/
@@ -366,7 +361,7 @@ void IOKeepOnline(void)
 /***********************************************************************/
 struct _UartQueue UartQueueBuff[UART_QUEUE_LENTH];
 //struct _UartQueue *EusartQueue[5]={pEusartQueue0,pEusartQueue1,pEusartQueue2,pEusartQueue3,pEusartQueue4,
-pEusartQueue5};
+//pEusartQueue5};
 struct  _UartQueue * pEusartQueueStorage;
 struct  _UartQueue * pEusartQueueResolve;
 void IOTUartQueueInit()
@@ -381,7 +376,7 @@ unsigned char  IOTUartQueuePush(unsigned char *data)
 status==empty)))
 	{
 		memcpy((pEusartQueueStorage->DATABuff),data,NUM_RX_MAX);
-		memset(RX_BUFF,0,NUM_RX_MAX);
+		memset(u8RX_BUFF,0,NUM_RX_MAX);
 		pEusartQueueStorage->status=filled;
 		if(pEusartQueueStorage==&UartQueueBuff[4])
 			pEusartQueueStorage=UartQueueBuff;
@@ -389,7 +384,7 @@ status==empty)))
 			pEusartQueueStorage++;
 		return 1;
 	}
-    memset(RX_BUFF,0,NUM_RX_MAX);
+    memset(u8RX_BUFF,0,NUM_RX_MAX);
 	return 0;
 }
 
@@ -422,7 +417,7 @@ unsigned char IOTUartQueueioifempty()
 /***********************************************************************/
 //aura 4g borad 
 //+ADA: "g","ok","FD","i",22
-struct Aura4GRec
+struct Aura4GRec_t
 {
 	unsigned char resever[5];//+ADA:"
 	unsigned char SendOrGet;
@@ -436,14 +431,14 @@ struct Aura4GRec
 /***********************************************************************/
 
 unsigned char  IotwifiWaitStatus;
-struct ST_TCP
+struct TCP_RESOLVE_t
 {
     unsigned char num;
     unsigned char len;
     unsigned char data[100];
 }TCP;
 //+IPD,0,58:2a25bf2f6ac8+0f693c98+32+3F9501290C8F605E6EE36D3ADA0EBD53
-struct ST_PACKAGE_HEAD
+struct PACKAGE_HEAD_t
 {
 	unsigned char head[5];//+IPD,
 	unsigned char package_type;//0
@@ -452,7 +447,7 @@ struct ST_PACKAGE_HEAD
 	unsigned char unused_2;//:
 };
 
-struct _ST_TCP
+struct TCP_t
 {
 	unsigned char ControlDeviceID[12];
 	unsigned char unused_3;//+
@@ -464,7 +459,7 @@ struct _ST_TCP
 };
 
 //481c55e223:aabbccddeeff:192.168.0.166:1234
-struct _ST_UDP
+struct UDP_t
 {
 //	unsigned char eUDPSignalType;
 	union
@@ -486,22 +481,22 @@ struct _ST_UDP
 
 
 
-struct ST_PACKAGE
+struct PACKAGE_t
 {
-	struct ST_PACKAGE_HEAD PackageHead;
+	struct PACKAGE_HEAD_t PackageHead;
 	union {
-		struct _ST_TCP RawTCP;
-		struct _ST_UDP RawUDP;
+		struct TCP_t RawTCP;
+		struct UDP_t RawUDP;
 	};
 };
 
-struct ST_STRUCT_PACKAGE
+struct STRUCT_PACKAGE_t
 {
 	unsigned char *ppackage;
 	unsigned char package_type;
 };
 
-struct ST_NETWORK_STATUE
+struct NETWORK_STATUE_t
 {
 	unsigned char ConnectStatue;
 	unsigned char RemoteDeviceID[12];
@@ -511,6 +506,7 @@ struct ST_NETWORK_STATUE
 
 unsigned char RESIVE_UAER_KEY;
 unsigned char KEY_USART_MAP[]={
+#if 0
 pmkey,
 cbkey,//oxi
 wmkey ,
@@ -524,34 +520,23 @@ bwkey ,
 stkey,
 0xff,
 LRKey,	//Wingo added for left+right key
+#endif 
 };
 
 
-unsigned char WifiReciveString;
-unsigned char RX_BUFF[100];
-unsigned char RX_[NUM_RX_MAX];
-unsigned char ReciveString = 0;
+unsigned char u8RX_BUFF[100];
 unsigned char POWER_ON = 1;
-unsigned char TX_DONE;
-unsigned char RX_DONE;
-unsigned char RX_DATA;
-unsigned char RX_CNT;
-unsigned char RX_BUFF_CNT;
+unsigned char bTX_DONE;
+unsigned char u8RX_RECIEVE_CNT;
+unsigned char u8RX_BUFF_CNT;
 unsigned char BASE_CNT=0;
 unsigned char READY_SEND_DEGUE=0;
 
-void system_delay(unsigned int cnt)
+void system_delay(unsigned int u32cnt)
 {
-    unsigned char i = 0;
-    unsigned int j = 0;
-    for (i = 0; i < 100; i++)
-    {
-        j = cnt;
-        while (j--);
-    }
+	delay1ms(u32cnt);
 }
 
-#if(UART_CONNECT_SELECT != NONE)
 const unsigned char *AT_CMD[] =
 #if 1//4G
 {
@@ -577,11 +562,12 @@ const unsigned char *AT_CMD[] =
 };
 #endif
 
-
 void UartSendString(unsigned char *text)
 {
     unsigned char i = 0, j;
     unsigned char ucFontBuf[16];
+	//Uart_DisableIrq(UARTCH1,UartRxIrq);
+	Uart_EnableIrq(UARTCH1,UartTxIrq);
     while ((*text > 0x00))
     {
         EUSART_SendData(*text);
@@ -589,74 +575,38 @@ void UartSendString(unsigned char *text)
     }
 }
 
-extern unsigned char TX_DONE;
-
 void EUSART_SendData(unsigned char data)//unsigned char ucLenth)
 {
+	bTX_DONE=0;
+    M0P_UART1->SBUF = data;
+	while (!bTX_DONE);
 }
 
 void EUSART_ReceiveData(unsigned char data)//(unsigned char ucLenth)
 {
+
 }
+
 
 void EUSART_WIFI_INIT(void)
 {
-    char i = 0;
+    unsigned char i = 0;
     unsigned int J = 0;
     unsigned int J1 = 0;
-    signed	char wait_ok = 0;
-    unsigned char delay = 0;
-    unsigned char *p = NULL;
-    //goto LL;
-	RX_CNT=0xff;
+	u8RX_RECIEVE_CNT=0xff;
+	Init_APP_Uart();
 	IOTUartQueueInit();
     for (i = 0; i < 6; i++)//(sizeof(AT_CMD)/sizeof(unsigned char *))
     {
-        ReciveString = 0;
         UartSendString((unsigned char *)AT_CMD[i]);
-        wait_ok = 0;
-        delay = 0;
-        for (J1 = 0; J1 < 2000; J1++)
-            for (J = 0; J < 2000; J++);
+		delay1ms(100);
     }
 	 UartSendString("AT+ADA=\"s\"\,\"FD\"\,\"i\"\,1\x0d\x0a");
 	 IOTRESTARTIDLEFUN();
 	 //send power on signal
 }
 
-static u32 CRC32[256];
-//初始化表,在单片机等RAM较小的系�?可以在源码中把tab构造为const数组
-static void init_table() {
-   for (int i = 0; i < 256; i++) {
-      u32 crc = i;
-      for (int j = 0; j < 8; j++) {
-         if (crc & 1) {
-            crc = (crc >> 1) ^ 0xEDB88320;
-         }
-         else {
-            crc = crc >> 1;
-         }
-      }
-      CRC32[i] = crc;
-   }
-}
-
-//crc32实现函数
-u32 crc32(const u8* buf, int len) {
-   static unsigned char init = 0;
-   u32 ret = 0xFFFFFFFF;
-   if (!init) {
-      init_table();
-      init = 1;
-   }
-   for (int i = 0; i < len; i++) {
-      ret = CRC32[((ret & 0xFF) ^ buf[i])] ^ (ret >> 8);
-   }
-   ret = ~ret;
-   return ret;
-}
-
-void convert_num_to_string(unsigned u32 data, unsigned char *string, unsigned char length)
+void convert_num_to_string( u32 data, unsigned char *string, unsigned char length)
 {
     unsigned char temp;
     while (length)
@@ -665,43 +615,6 @@ void convert_num_to_string(unsigned u32 data, unsigned char *string, unsigned ch
         data /= 16;
     }
 }
-
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
- void datahex(char* string,unsigned char slength,unsigned char *data) {
-	memset(data,0,16);
-   // if(string == NULL) 
-    //   return NULL;
-    //size_t slength = strlen(string);
-    //if((slength % 2) = 0) // must be even
-       //return NULL;
-    unsigned char dlength = slength / 2;
-    //uint8_t* data = malloc(dlength);
-    //memset(data, 0, dlength);
-    unsigned char index = 0;
-    while (index < slength) {
-        char c = string[index];
-        int value = 0;
-        if(c >= '0' && c <= '9')
-          value = (c - '0');
-        else if (c >= 'A' && c <= 'F') 
-          value = (10 + (c - 'A'));
-        else if (c >= 'a' && c <= 'f')
-          value = (10 + (c - 'a'));
-        //else {
-          //free(data);
-          //return NULL;
-       // }
-		//printf("\ndatais%x %u ",value,index/2);
-        data[(index/2)] += value << (((index + 1) % 2) * 4);
-	    //printf(" %x %x ",data[(index/2)] ,hex_data[index/2]);
-        index++;
-    }
-    //return data;
-}
-
-char data[]="32C6B92A062C8342D4DD7921F0616497";//test weather aes work or not 
-unsigned char hex_data[16];
-unsigned char key[16]={1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6};
 
 void IotWifiSendString(unsigned char *str,unsigned char channel)
 {
@@ -726,69 +639,12 @@ void IotWifiSendString(unsigned char *str,unsigned char channel)
 	UartSendString(str);
 }
 
-void aes_decrypt(unsigned char * decrypt_data){
-#if 0
-	struct AES_ctx ctx;
-	datahex(data,32,hex_data);
-	AES_init_ctx(&ctx, key);
-	AES_ECB_decrypt(&ctx, hex_data);
-	hex_data[19]="";
-	display(0,0,hex_data,20);	
-#endif
 
-#if 1
-	struct AES_ctx ctx;
-	unsigned char decrypt_buff[32];
-	datahex(decrypt_data,32,decrypt_buff);
-	AES_init_ctx(&ctx, key);
-	AES_ECB_decrypt(&ctx, decrypt_buff);
-//	display(0, 0,decrypt_buff, 20);
-	memcpy(decrypt_data,decrypt_buff,16);
-#endif
-}
-void Process_aes_test(void){
-	struct AES_ctx ctx;
-	datahex("32C6B92A062C8342D4DD7921F0616497",32,hex_data);
-	AES_init_ctx(&ctx, key);
-	display(0,0,hex_data,20);
-	AES_ECB_decrypt(&ctx, hex_data);
-	hex_data[19]="";
-	display(1,0,hex_data,20);
-	datahex("32C6B92A062C8342D4DD7921F0616497",32,hex_data);
-	//AES_init_ctx(&ctx, key);
-	display(2,0,hex_data,20);
-	
-	datahex("32C6B92A062C8342D4DD7921F0616497",32,hex_data);
-	display(3,0,hex_data,20);
-	AES_ECB_decrypt(&ctx, hex_data);
-	hex_data[19]="";
-//	display(3,0,hex_data,20);
-	while(1);
-}
-
-void Process_crc32_test()
-{
-	unsigned char DispStr[20];
-	unsigned char test_crc_data[]={0,1,2,3,4,"",6,7,8,9,0};
-	static unsigned char i=0;
-	unsigned u32 crc_result;
-	{
-		i=1;
-		crc_result=crc32(test_crc_data,5);
-		convert_num_to_string(crc_result,DispStr,8);
-		display(0,0,DispStr,20);	
-		NumberInStr("you can see",15,4,2,DispStr);
-		display(2,0,"you look here",20);	
-		display(1,0,DispStr,20);	
-		while(1);
-	}
-}
-
-unsigned char  IotWifiWaitCheck;
+unsigned char  bIotWifiWaitCheck;
 enum _WAITRESULT IotWifiWaitResponed()
 {
 	static unsigned char check;
-	if(!IotWifiWaitCheck)
+	if(!bIotWifiWaitCheck)
 		return;
 	check++;
 	if(check>WaitOverTime)
@@ -796,7 +652,6 @@ enum _WAITRESULT IotWifiWaitResponed()
 	switch (IotwifiWaitStatus)
 	{
 		case WaitConnectPhoneResult:
-			
 			break;
 		default :
 			break;	
@@ -808,8 +663,7 @@ void TCPIPRawPackageResolve(unsigned char * ipdata)
 {
 	//data format and filter uncorrect data
 }
-
-void TCPIPDataResolve(struct ST_STRUCT_PACKAGE *packge)
+void TCPIPDataResolve(struct STRUCT_PACKAGE_t *packge)
 {
 	switch(packge->package_type)
 	{
@@ -833,9 +687,7 @@ void TCPIPDataResolve(struct ST_STRUCT_PACKAGE *packge)
 	}
 }
 
-
-
-unsigned char IOT_SESOVL_WIFI_ONLINE(struct Aura4GRec * pparam)
+unsigned char IOT_RESOLVE_WIFI_ONLINE(struct Aura4GRec_t * pparam)
 {
 	unsigned char temp=0;
 	if(strncmp(&pparam[15],"+ADA: \"l\"\,\"up\"",sizeof("+ADA: \"l\"\,\"up\"")-2)==0){
@@ -849,11 +701,10 @@ unsigned char IOT_SESOVL_WIFI_ONLINE(struct Aura4GRec * pparam)
 		temp=1;
 	}
 	return temp;
-	
 }
 
 unsigned char IOT_KEY=0;
-unsigned char IOT_SESOVL_WIFI_DATA(struct Aura4GRec * pparam)
+unsigned char IOT_RESOLVE_WIFI_DATA(struct Aura4GRec_t * pparam)
 {
 	unsigned char temp=0;
 	if(pparam->SendOrGet=='g'){
@@ -883,217 +734,177 @@ unsigned char IOT_SESOVL_WIFI_DATA(struct Aura4GRec * pparam)
 		}
 		else if(pparam->RecData[0]=='3')
 		{
-				system_delay(500);
-				if (POWER_ON)
-					UartSendString("AT+ADA=\"s\"\,\"FD\"\,\"i\"\,1\x0d\x0a");
-				else
-					UartSendString("AT+ADA=\"s\"\,\"FD\"\,\"i\"\,0\x0d\x0a");
-				system_delay(500);
-				IOT_KEY=0x80|4;
+			system_delay(500);
+			if (POWER_ON)
+				UartSendString("AT+ADA=\"s\"\,\"FD\"\,\"i\"\,1\x0d\x0a");
+			else
+				UartSendString("AT+ADA=\"s\"\,\"FD\"\,\"i\"\,0\x0d\x0a");
+			system_delay(500);
+			IOT_KEY=0x80|4;
 		}
 	}
 }
 	return temp;
 }
 
+unsigned char IOT_RESOLVE_DATA_UDP(struct PACKAGE_t * pparam)
+{
+/***********************************************************************/
+#if 0
+	//481c55e223:aabbccddeeff:192.168.0.166:1234
+	if(pparam->PackageHead.package_type=='1')
+	{
+		//connected to phone
+		display(0,0,"connnecting phone",20);
+		memcpy(str,"AT+CIPSTART=0\,\"TCP\"\,\"192.168.0.145\"\,1234\x0d\x0a",sizeof("AT+CIPSTART=1\,\"TCP\"\,\"192.168.0.
+145\"\,1234\x0d\x0a"));
+		memcpy(&str[sizeof("AT+CIPSTART=0\,\"TCP\"\,\"")-1],ptcp->RawUDP.FindConnected.SourceIp,sizeof("192.168.0.145")-1);
+		memcpy(&str[sizeof("AT+CIPSTART=0\,\"TCP\"\,\"192.168.0.145\"\,")-1],ptcp->RawUDP.FindConnected.SourcePort,4);
+		str[50]=0;
+		UartSendString(str);//AT+CIPSTART=1,"TCP","192.168.0.145",1234
+		system_delay(5000);
+		return;
+	}
+#endif
+/***********************************************************************/
+}
 
+unsigned char IOT_RESOLVE_DATA_ONOFF(struct Aura4GRec_t * pparam)
+{
+#if 0
+	aes_decrypt(ptcp->RawTCP.EncrytData);
+	{
+		p = &(ptcp->PackageHead);
+		wait_ok = 0;
+		wait_ok = !(unsigned char)strncmp("+IPD", RX_, 3);
+		if (!wait_ok)
+			goto CLEARN;
+		p += 5;
+		TCP.num = *p - '0';
+		p += 2;
+		TCP.len = 0;
+		i=0;
+		while ((*p != ':')&&(i<15))
+		{
+			TCP.len = TCP.len * 10 + *p - '0';
+			p++;
+		}
+		if(i>15)
+			goto CLEARN;
+		p++;
+		memcpy((unsigned char *)TCP.data,ptcp->RawTCP.EncrytData,20);
+		if (POWER_ON)
+		{
+			DisplayACSIIString_5X7(4, 0, "RECIVE DATA:");
+			DisplayACSIIString_5X7(5, 1, "					");
+			ptcp->RawTCP.EncrytData[15] = 0;
+			DisplayACSIIString_5X7(5, 0, ptcp->RawTCP.EncrytData);
+			if (!(unsigned char)strncmp("OFF", ptcp->RawTCP.EncrytData, 2))
+			{
+				gotoPOWER_OFF:
+				 menuid=0x0b;
+//						newmenuid=1;
+				POWER_ON = 0;
+				DisplayACSIIString_5X7(7, 0,"  Will POWER OFF  ");
+//						  display(0, 0, "	WIll POWER OFF	 ", 20);
+//						  display(1, 0, "					 ", 20);
+//						  display(2, 0, "					 ", 20);
+//						  display(3, 0, "					 ", 20);
+				system_delay(10000);
+//						  LCDScreenClear();
+//						  BacklightControl(0);
+				POWER_OFF_OK = 1;
+				goto OUTIF;
+			}
+			else if (ptcp->RawTCP.EncrytData[0] == 'W')
+			{
+				temp = ((ptcp->RawTCP.EncrytData[1] - '0') * 10 + ptcp->RawTCP.EncrytData[2] - '0');
 
-void EUSART_DataHandler(void)
+				if (ptcp->RawTCP.EncrytData[3] == '0')
+					temp = 50;
+				else if (temp != 0)
+					temp = temp / 2;
+
+				if (ptcp->RawTCP.EncrytData[2] == 0)
+					temp = ptcp->RawTCP.EncrytData[1] - '0';
+				BacklightControl(temp);
+				s = "					   ";
+			}
+			else if (ptcp->RawTCP.EncrytData[0] == 'k')
+			{
+				temp = (ptcp->RawTCP.EncrytData[1] - '0');
+				RESIVE_UAER_KEY=KEY_USART_MAP[temp];
+				ptcp->RawTCP.EncrytData[2]='2';
+				ptcp->RawTCP.EncrytData[3]=0;
+				IotWifiSendString(&ptcp->RawTCP.EncrytData[0],TCP.num );
+			}
+		}
+		else if (!POWER_ON)
+		{
+			if (!(unsigned char)strncmp("ON", ptcp->RawTCP.EncrytData, 2))
+			{
+				gotoPOWER_ON:
+				POWER_ON = 1;
+				lcd_init();
+				BacklightControl(BKL_DUTY_PERIOD);
+				s = "SSID:ESP32 		 ";
+				display(0, 0, s, 20);
+				s = "PASSWORD:1234567890 ";
+				display(1, 0, s, 20);
+				display(2, 0, " 				   ", 20);
+				s = "USE PHONE CONTROL	 ";
+				display(3, 0, s, 20);
+				POWER_ON_OK = 1;
+//						menuid=0x0b;
+//							newmenuid=1;
+//						message=0;
+				goto OUTIF;
+			}
+		}
+	}
+#endif
+}
+
+void IOTHandler(void)
 {
 #define	DisplayACSIIString_5X7(n1,n2,n3)
-    char i = 0;
-    signed  char wait_ok = 0;
-    signed  char temp = 0;
-    unsigned char delay = 0;
-    unsigned char *p = NULL;
-    const char *s;
-    static unsigned char POWER_ON_OK = 0;
-    static unsigned char POWER_OFF_OK = 0;
-    unsigned char *p = NULL;
-	static unsigned long System_20_Tick_Cnt_remember=0;
-	struct ST_PACKAGE *ptcp;
-	struct Aura4GRec * pAura4GRec;
-	unsigned char str[50];
-	IOKeepOnline();
-	IOTRESTARTHANDLEFUN();
-//	IOTQueueKeyHandle();
-POWER_ON_GO:
-    {
-#if 1
-		if(!IOTUartQueueioifempty())
-        {        
-			IOTUartQueuePop(RX_);
-			ptcp=RX_;
-/***********************************************************************/
-            pAura4GRec=RX_;
-			if(IOT_SESOVL_WIFI_ONLINE(pAura4GRec))
-				goto CLEARN;	
-			if(IOT_SESOVL_WIFI_DATA(pAura4GRec))	
-				goto CLEARN;	
-
-/***********************************************************************/
-			//481c55e223:aabbccddeeff:192.168.0.166:1234
-			if(ptcp->PackageHead.package_type=='1')
-			{
-				//connected to phone
-				display(0,0,"connnecting phone",20);
-				memcpy(str,"AT+CIPSTART=0\,\"TCP\"\,\"192.168.0.145\"\,1234\x0d\x0a",sizeof("AT+CIPSTART=1\,\"TCP\"\,\"192.168.0.
-145\"\,1234\x0d\x0a"));
-				memcpy(&str[sizeof("AT+CIPSTART=0\,\"TCP\"\,\"")-1],ptcp->RawUDP.FindConnected.SourceIp,sizeof("192.168.0.145")-1);
-				memcpy(&str[sizeof("AT+CIPSTART=0\,\"TCP\"\,\"192.168.0.145\"\,")-1],ptcp->RawUDP.FindConnected.SourcePort,4);
-				str[50]=0;
-				UartSendString(str);//AT+CIPSTART=1,"TCP","192.168.0.145",1234
-				system_delay(5000);
-				return;
-			}
-/***********************************************************************/
-			aes_decrypt(ptcp->RawTCP.EncrytData);
-            {
-                p = &(ptcp->PackageHead);
-                wait_ok = 0;
-                wait_ok = !(unsigned char)strncmp("+IPD", RX_, 3);
-                if (!wait_ok)
-                    goto CLEARN;
-                p += 5;
-                TCP.num = *p - '0';
-                p += 2;
-                TCP.len = 0;
-				i=0;
-                while ((*p != ':')&&(i<15))
-                {
-                    TCP.len = TCP.len * 10 + *p - '0';
-                    p++;
-                }
-				if(i>15)
-					goto CLEARN;
-                p++;
-				memcpy((unsigned char *)TCP.data,ptcp->RawTCP.EncrytData,20);
-	            if (POWER_ON)
-                {
-                    DisplayACSIIString_5X7(4, 0, "RECIVE DATA:");
-                    DisplayACSIIString_5X7(5, 1, "					");
-                    ptcp->RawTCP.EncrytData[15] = 0;
-                    DisplayACSIIString_5X7(5, 0, ptcp->RawTCP.EncrytData);
-                    if (!(unsigned char)strncmp("OFF", ptcp->RawTCP.EncrytData, 2))
-                    {
-						gotoPOWER_OFF:
-						 menuid=0x0b;
-//						newmenuid=1;
-						POWER_ON = 0;
-                        DisplayACSIIString_5X7(7, 0,"  Will POWER OFF  ");
-                        display(0, 0, "   WIll POWER OFF   ", 20);
-                        display(1, 0, "                    ", 20);
-                        display(2, 0, "                    ", 20);
-                        display(3, 0, "                    ", 20);
-                        system_delay(10000);
-                        LCDScreenClear();
-                        BacklightControl(0);
-                        POWER_OFF_OK = 1;
-						goto OUTIF;
-                    }
-                    else if (ptcp->RawTCP.EncrytData[0] == 'W')
-                    {
-                        temp = ((ptcp->RawTCP.EncrytData[1] - '0') * 10 + ptcp->RawTCP.EncrytData[2] - '0');
-
-                        if (ptcp->RawTCP.EncrytData[3] == '0')
-                            temp = 50;
-                        else if (temp != 0)
-                            temp = temp / 2;
-
-                        if (ptcp->RawTCP.EncrytData[2] == 0)
-                            temp = ptcp->RawTCP.EncrytData[1] - '0';
-                        BacklightControl(temp);
-                        s = "                      ";
-                    }
-                    else if (ptcp->RawTCP.EncrytData[0] == 'k')
-                    {
-						temp = (ptcp->RawTCP.EncrytData[1] - '0');
-						RESIVE_UAER_KEY=KEY_USART_MAP[temp];
-						ptcp->RawTCP.EncrytData[2]='2';
-						ptcp->RawTCP.EncrytData[3]=0;
-						IotWifiSendString(&ptcp->RawTCP.EncrytData[0],TCP.num );
-                    }
-                }
-                else if (!POWER_ON)
-                {
-                    if (!(unsigned char)strncmp("ON", ptcp->RawTCP.EncrytData, 2))
-                    {
-						gotoPOWER_ON:
-						POWER_ON = 1;
-                        lcd_init();
-                        BacklightControl(BKL_DUTY_PERIOD);
-                        s = "SSID:ESP32          ";
-                        display(0, 0, s, 20);
-                        s = "PASSWORD:1234567890 ";
-                        display(1, 0, s, 20);
-                        display(2, 0, "                    ", 20);
-                        s = "USE PHONE CONTROL   ";
-                        display(3, 0, s, 20);
-                        POWER_ON_OK = 1;
-				        menuid=0x0b;
-       					newmenuid=1;
-						message=0;
-						goto OUTIF;
-                    }
-                }
-            }
-CLEARN:		OUTIF:
-            memset(RX_, 0, sizeof(RX_));
-            WifiReciveString = 0;
-			IOKeepOnlineCnt=0;
-#endif
-			System_20_Tick_Cnt=System_20_Tick_Cnt_remember;
-		}
-    }
-#endif
-
-    return;
-	
+	struct PACKAGE_t *ptcp;
+	struct Aura4GRec_t * pAura4GRec;
+	unsigned char u8RX_[NUM_RX_MAX];
+	memset(u8RX_, 0, sizeof(u8RX_));
+//	IOKeepOnline();
+//	IOTRESTARTHANDLEFUN();
+	//	IOTQueueKeyHandle();
+	POWER_ON_GO:
+	if(!IOTUartQueueioifempty())
+	{        
+		IOTUartQueuePop(u8RX_);
+	    pAura4GRec=u8RX_;
+		if(IOT_RESOLVE_WIFI_ONLINE(pAura4GRec))
+			return;	
+		if(IOT_RESOLVE_WIFI_DATA(pAura4GRec))	
+			return; 
+	}
 }
 
-void pic18_int(void)/ 
+void APP_UART_1MS_HANDLE(void) 
 {
-	unsigned char temp[100];
-	unsigned char i=0;
-	{
-		TX_DONE=1;
-	}
-		static unsigned char cnt =0 ; 
-		static unsigned char stop[1] ;
-        static unsigned char start;
-		unsigned char i=0;
-        i=RCREG1;
-		RX_CNT=0;	
-        RX_BUFF[RX_BUFF_CNT]=i;
-        if(RX_BUFF_CNT<(sizeof(RX_BUFF)-1))
-			RX_BUFF_CNT++;
-	}
     makesure_uart_not_interrupt_intoif :
-	if(INTCONbits.TMR0IF)
-	{
-		INTCONbits.TMR0IF = 0;
-		if(RX_CNT<20)
-		{	RX_CNT++;
-//			goto makesure_uart_not_interrupt;
-		}
-		else if (RX_CNT==20){
-			IOTUartQueuePush(RX_BUFF);
-			RX_CNT=0xff;
-			RX_BUFF_CNT=0;
-		}
-		if(IOTQueueKeyCnt<=100)
-			IOTQueueKeyCnt++;
-		if(systick==100)
-		{
-			IOKeepOnlineCnt++;
-				IOTRESTARTFlag=1;
-		}
+	if(u8RX_RECIEVE_CNT<20)
+	{	
+		u8RX_RECIEVE_CNT++;
+	}
+	else if (u8RX_RECIEVE_CNT==20){
+		IOTUartQueuePush(u8RX_BUFF);
+		u8RX_RECIEVE_CNT=0xff;
+		u8RX_BUFF_CNT=0;
+	}
+	if(IOTQueueKeyCnt<=100)
+		IOTQueueKeyCnt++;
+	IOKeepOnlineCnt++;
 }
-
-
 
 /******************************************************************************
- * EOF (not truncated)
  ******************************************************************************/
 
 

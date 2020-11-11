@@ -18,3 +18,6 @@
 .\objects\app_uart.o: ..\SRC\hyclor\inc\ddl_device.h
 .\objects\app_uart.o: ..\SRC\driver\inc\uart.h
 .\objects\app_uart.o: ..\SRC\driver\inc\gpio.h
+.\objects\app_uart.o: ..\SRC\hyclor\inc\crc32.h
+.\objects\app_uart.o: ..\SRC\hyclor\inc\app_uart.h
+.\objects\app_uart.o: ..\SRC\hyclor\inc\app_aes.h

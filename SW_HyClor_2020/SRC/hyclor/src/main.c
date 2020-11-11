@@ -14,12 +14,12 @@
 #include "mcu.h"
 #include "keypad.h"
 #include "ctrl.h"
+#include "app_uart.h"
 #if(BOARD_SELECT == BOARD_LCD_ENCODER)
 #include "display.h"
 #endif
 int main(void)
 {
-
 	MCU_Initialize();             //Initial all MCU settings
 	#if(BOARD_SELECT == BOARD_LCD_ENCODER)
 	LCDInitialize();
@@ -30,7 +30,7 @@ int main(void)
 	#endif
 	while(1)
 	{
-		
+		IOTHandler();
 		KeyHandler();		      //Key Process
 		ProcessHandler();		  //Event Process
 	}

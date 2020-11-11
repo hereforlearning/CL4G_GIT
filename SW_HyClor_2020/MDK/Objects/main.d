@@ -3,4 +3,5 @@
 .\objects\main.o: ..\SRC\hyclor\inc\mcu.h
 .\objects\main.o: ..\SRC\hyclor\inc\keypad.h
 .\objects\main.o: ..\SRC\hyclor\inc\ctrl.h
+.\objects\main.o: ..\SRC\hyclor\inc\app_uart.h
 .\objects\main.o: ..\SRC\hyclor\inc\display.h

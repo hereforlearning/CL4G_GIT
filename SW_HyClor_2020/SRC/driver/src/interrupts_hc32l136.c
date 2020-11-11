@@ -63,7 +63,7 @@ extern void Gpio_IRQHandler(uint8_t u8Param);
 
 //__WEAKDEF void Gpio_IRQHandler(uint8_t u8Param);
 __WEAKDEF void Dma_IRQHandler(uint8_t u8Param);
-__WEAKDEF void Uart_IRQHandler(uint8_t u8Param);
+//__WEAKDEF void Uart_IRQHandler(uint8_t u8Param);
 __WEAKDEF void LpUart_IRQHandler(uint8_t u8Param);
 __WEAKDEF void Spi_IRQHandler(uint8_t u8Param);
 __WEAKDEF void I2c_IRQHandler(uint8_t u8Param);

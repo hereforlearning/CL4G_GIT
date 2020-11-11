@@ -41,3 +41,101 @@ BoostModeHandler line 2546 : 				bDoBoostModeFlag = 0;
 ProcessHandler line 2865 : 		if(bDoBoostModeFlag)
 ProcessHandler line 2870 : 				bDoBoostModeFlag = 0;
 ProcessHandler line 2877 : 		if((ucBoostStatus==0)&&(bDoBoostModeFlag==0)&&(bResetMode==0))
+---- RX_DONE Matches (2 in 2 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 530 : unsigned char RX_DONE;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\eusart.h line 13 : extern unsigned char RX_DONE;
+---- TX_DONE Matches (4 in 2 files) ----
+TxIntCallback line 105 : 	TX_DONE=1;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 529 : unsigned char TX_DONE;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 585 : extern unsigned char TX_DONE;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\eusart.h line 12 : extern unsigned char TX_DONE;
+---- EUSART_ReceiveData Matches (2 in 2 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 591 : void EUSART_ReceiveData(unsigned char data)//(unsigned char ucLenth)
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\eusart.h line 7 : extern void EUSART_ReceiveData(unsigned char ucLenth);
+---- PackageHead Matches (2 in 1 files) ----
+ST_PACKAGE line 484 : 	struct ST_PACKAGE_HEAD PackageHead;
+IOT_RESOLVE_DATA_UDP line 891 : 	if(ptcp->PackageHead.package_type=='1')
+---- WifiReciveString Matches (3 in 2 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 523 : unsigned char WifiReciveString;
+EUSART_DataHandler line 1026 : //            WifiReciveString = 0;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\eusart.h line 25 : extern unsigned char WifiReciveString;
+---- RX_ Matches (7 in 2 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 525 : unsigned char RX_[NUM_RX_MAX];
+EUSART_DataHandler line 962 : 			IOTUartQueuePop(RX_);
+EUSART_DataHandler line 963 : 			ptcp=RX_;
+EUSART_DataHandler line 965 :             pAura4GRec=RX_;
+EUSART_DataHandler line 972 :             memset(RX_, 0, sizeof(RX_));
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\eusart.h line 26 : extern unsigned char RX_[NUM_RX_MAX];
+---- ReciveString Matches (3 in 2 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 529 : unsigned char ReciveString = 0;
+EUSART_WIFI_INIT line 606 :         ReciveString = 0;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 13 : extern unsigned char ReciveString = 0;
+---- RX_DATA Matches (3 in 2 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 531 : unsigned char RX_DATA;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 15 : extern unsigned char RX_DATA;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 22 : extern unsigned char RX_DATA;
+---- RX_DATA Search Errors Encountered (1) ----
+The following 1 files could not be processed:
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\eusart.h : File could not be opened.
+---- IOKeepOnlineCnt Matches (6 in 2 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 283 : unsigned char IOKeepOnlineCnt=0;
+IOKeepOnline line 346 : 		if(IOKeepOnlineCnt>=2)
+IOKeepOnline line 348 : 			IOKeepOnlineCnt=0;
+EUSART_DataHandler line 973 : ////			IOKeepOnlineCnt=0;
+APP_UART_1MS_HANDLE line 994 : 	IOKeepOnlineCnt++;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 26 : extern unsigned char IOKeepOnlineCnt;
+---- IOKeepOnlineCnt Search Errors Encountered (1) ----
+The following 1 files could not be processed:
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\eusart.h : File could not be opened.
+---- system_delay Matches (9 in 2 files) ----
+IOTRESTARTHANDLEFUN line 298 : 				system_delay(5000);
+IOTRESTARTHANDLEFUN line 300 : 				system_delay(5000);
+IOTRESTARTHANDLEFUN line 309 : //				system_delay(5000);
+IOKeepOnline line 357 : 			system_delay(1000);
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 537 : void system_delay(unsigned int cnt)
+IotWifiSendString line 632 : 	system_delay(600);
+IOT_RESOLVE_WIFI_DATA line 735 : 			system_delay(500);
+IOT_RESOLVE_WIFI_DATA line 740 : 			system_delay(500);
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 150 : void system_delay(unsigned int cnt);
+---- system_delay Search Errors Encountered (1) ----
+The following 1 files could not be processed:
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\eusart.h : File could not be opened.
+---- RX_DATA Matches (1 in 1 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 531 : unsigned char RX_DATA;
+---- RX_DATA Search Errors Encountered (1) ----
+The following 1 files could not be processed:
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\eusart.h : File could not be opened.
+---- RX_DATA Matches (1 in 1 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 531 : unsigned char RX_DATA;
+---- u8RX_RECIEVE_CNT Matches (9 in 2 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 102 : uint8_t u8TxCnt=0,u8RX_RECIEVE_CNT=0;
+RxIntCallback line 113 : 	u8RX_RECIEVE_CNT=0;	
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 531 : unsigned char u8RX_RECIEVE_CNT;
+EUSART_WIFI_INIT line 595 : 	u8RX_RECIEVE_CNT=0xff;
+APP_UART_1MS_HANDLE line 901 : 	if(u8RX_RECIEVE_CNT<20)
+APP_UART_1MS_HANDLE line 903 : 		u8RX_RECIEVE_CNT++;
+APP_UART_1MS_HANDLE line 905 : 	else if (u8RX_RECIEVE_CNT==20){
+APP_UART_1MS_HANDLE line 907 : 		u8RX_RECIEVE_CNT=0xff;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 18 : extern unsigned char u8RX_RECIEVE_CNT;
+---- /**********************************************... Matches (18 in 7 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 1 : /******************************************************************************
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 42 : /******************************************************************************/
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 52 : /******************************************************************************
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 63 : /******************************************************************************
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 67 : /******************************************************************************
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 71 : /******************************************************************************
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 75 : /******************************************************************************
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 79 : /******************************************************************************
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 83 : /******************************************************************************
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 916 : /******************************************************************************
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 1 : /******************************************************************************
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 296 : /*******************************************************************************
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\display.c line 1 : /******************************************************************************
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\keypad.c line 1 : /******************************************************************************
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\main.c line 1 : /******************************************************************************
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\mcu.c line 1 : /******************************************************************************
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\mcu.c line 190 : /*******************************************************************************
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\st7565r.c line 1 : /******************************************************************************
+---- GpioPin5 Matches (2 in 2 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\keypad.c line 30 : #define SWITCH_UP    Gpio_GetInputIO(GpioPortA, GpioPin5)
+Init_IOPorts line 311 :     Gpio_Init(GpioPortA, GpioPin5, &stcGpioCfg);   //S2

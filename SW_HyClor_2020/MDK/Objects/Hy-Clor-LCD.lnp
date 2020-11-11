@@ -8,6 +8,8 @@
 ".\objects\display.o"
 ".\objects\st7565r.o"
 ".\objects\app_uart.o"
+".\objects\crc32.o"
+".\objects\app_aes.o"
 ".\objects\ddl.o"
 ".\objects\flash.o"
 ".\objects\gpio.o"
