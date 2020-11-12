@@ -1,141 +1,54 @@
----- ucConvertGain Matches (16 in 1 files) ----
-ctrl.c (SRC\hyclor\src) line 207 : unsigned char ucConvertGain[2];
-SaveCalValueByDirection in ctrl.c (SRC\hyclor\src) : 		ucData[9] = ucConvertGain[0];
-SaveCalValueByDirection in ctrl.c (SRC\hyclor\src) : 		ucData[10] = ucConvertGain[1];
-SaveCalValueByDirection in ctrl.c (SRC\hyclor\src) : 		ucData[11] = ucConvertGain[0];
-SaveCalValueByDirection in ctrl.c (SRC\hyclor\src) : 		ucData[12] = ucConvertGain[1];		
-GetCellRealCurrent in ctrl.c (SRC\hyclor\src) : 			uiTemp = ucConvertGain[0];
-GetCellRealCurrent in ctrl.c (SRC\hyclor\src) : 			uiTemp2 = ucConvertGain[1];
-GetCellRealCurrent in ctrl.c (SRC\hyclor\src) : 			uiTemp = ucConvertGain[0];
-GetCellRealCurrent in ctrl.c (SRC\hyclor\src) : 			uiTemp2 = ucConvertGain[1];
-CalculateConvertValue in ctrl.c (SRC\hyclor\src) : 	ucConvertGain[0] = uiTemp/100;
-CalculateConvertValue in ctrl.c (SRC\hyclor\src) : 	uiTemp2 = uiTemp2 * ucConvertGain[0];
-CalculateConvertValue in ctrl.c (SRC\hyclor\src) : 	ucConvertGain[1] = uiTemp - uiTemp2;
-CellPolarityControl in ctrl.c (SRC\hyclor\src) : 		ucConvertGain[0] = ucData[9];
-CellPolarityControl in ctrl.c (SRC\hyclor\src) : 		ucConvertGain[1] = ucData[10];
-CellPolarityControl in ctrl.c (SRC\hyclor\src) : 		ucConvertGain[0] = ucData[11];
-CellPolarityControl in ctrl.c (SRC\hyclor\src) : 		ucConvertGain[1] = ucData[12];	
----- bDoBoostModeFlag Matches (12 in 1 files) ----
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 156 : unsigned char bDoBoostModeFlag   = _FALSE;
-SerivceReset line 902 : 	bDoBoostModeFlag = 0;
-GetModelRatingCurrent line 1134 : 	if((bPermanentBoostMode)||(bDoBoostModeFlag))
-CellOutputCurrentAdjust line 1649 : 	if((ucBoostStatus)||(bDoBoostModeFlag))
-SpecialSecretCodeProcess line 2368 : 		if((bDoBoostModeFlag == 0)&&(bPermanentBoostMode == 0))
-SpecialSecretCodeProcess line 2381 : 		bDoBoostModeFlag = 0;
-BoostModeHandler line 2504 : 				bDoBoostModeFlag = 1;
-BoostModeHandler line 2523 : 				bDoBoostModeFlag = 0;
-BoostModeHandler line 2546 : 				bDoBoostModeFlag = 0;
-ProcessHandler line 2865 : 		if(bDoBoostModeFlag)
-ProcessHandler line 2870 : 				bDoBoostModeFlag = 0;
-ProcessHandler line 2877 : 		if((ucBoostStatus==0)&&(bDoBoostModeFlag==0)&&(bResetMode==0))
----- bDoBoostModeFlag Matches (12 in 1 files) ----
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 156 : unsigned char bDoBoostModeFlag   = _FALSE;
-SerivceReset line 902 : 	bDoBoostModeFlag = 0;
-GetModelRatingCurrent line 1134 : 	if((bPermanentBoostMode)||(bDoBoostModeFlag))
-CellOutputCurrentAdjust line 1649 : 	if((ucBoostStatus)||(bDoBoostModeFlag))
-SpecialSecretCodeProcess line 2368 : 		if((bDoBoostModeFlag == 0)&&(bPermanentBoostMode == 0))
-SpecialSecretCodeProcess line 2381 : 		bDoBoostModeFlag = 0;
-BoostModeHandler line 2523 : 				bDoBoostModeFlag = 0;
-BoostModeHandler line 2504 : 				bDoBoostModeFlag = 1;
-BoostModeHandler line 2546 : 				bDoBoostModeFlag = 0;
-ProcessHandler line 2865 : 		if(bDoBoostModeFlag)
-ProcessHandler line 2870 : 				bDoBoostModeFlag = 0;
-ProcessHandler line 2877 : 		if((ucBoostStatus==0)&&(bDoBoostModeFlag==0)&&(bResetMode==0))
----- RX_DONE Matches (2 in 2 files) ----
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 530 : unsigned char RX_DONE;
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\eusart.h line 13 : extern unsigned char RX_DONE;
----- TX_DONE Matches (4 in 2 files) ----
-TxIntCallback line 105 : 	TX_DONE=1;
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 529 : unsigned char TX_DONE;
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 585 : extern unsigned char TX_DONE;
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\eusart.h line 12 : extern unsigned char TX_DONE;
----- EUSART_ReceiveData Matches (2 in 2 files) ----
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 591 : void EUSART_ReceiveData(unsigned char data)//(unsigned char ucLenth)
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\eusart.h line 7 : extern void EUSART_ReceiveData(unsigned char ucLenth);
----- PackageHead Matches (2 in 1 files) ----
-ST_PACKAGE line 484 : 	struct ST_PACKAGE_HEAD PackageHead;
-IOT_RESOLVE_DATA_UDP line 891 : 	if(ptcp->PackageHead.package_type=='1')
----- WifiReciveString Matches (3 in 2 files) ----
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 523 : unsigned char WifiReciveString;
-EUSART_DataHandler line 1026 : //            WifiReciveString = 0;
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\eusart.h line 25 : extern unsigned char WifiReciveString;
----- RX_ Matches (7 in 2 files) ----
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 525 : unsigned char RX_[NUM_RX_MAX];
-EUSART_DataHandler line 962 : 			IOTUartQueuePop(RX_);
-EUSART_DataHandler line 963 : 			ptcp=RX_;
-EUSART_DataHandler line 965 :             pAura4GRec=RX_;
-EUSART_DataHandler line 972 :             memset(RX_, 0, sizeof(RX_));
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\eusart.h line 26 : extern unsigned char RX_[NUM_RX_MAX];
----- ReciveString Matches (3 in 2 files) ----
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 529 : unsigned char ReciveString = 0;
-EUSART_WIFI_INIT line 606 :         ReciveString = 0;
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 13 : extern unsigned char ReciveString = 0;
----- RX_DATA Matches (3 in 2 files) ----
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 531 : unsigned char RX_DATA;
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 15 : extern unsigned char RX_DATA;
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 22 : extern unsigned char RX_DATA;
----- RX_DATA Search Errors Encountered (1) ----
-The following 1 files could not be processed:
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\eusart.h : File could not be opened.
----- IOKeepOnlineCnt Matches (6 in 2 files) ----
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 283 : unsigned char IOKeepOnlineCnt=0;
-IOKeepOnline line 346 : 		if(IOKeepOnlineCnt>=2)
-IOKeepOnline line 348 : 			IOKeepOnlineCnt=0;
-EUSART_DataHandler line 973 : ////			IOKeepOnlineCnt=0;
-APP_UART_1MS_HANDLE line 994 : 	IOKeepOnlineCnt++;
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 26 : extern unsigned char IOKeepOnlineCnt;
----- IOKeepOnlineCnt Search Errors Encountered (1) ----
-The following 1 files could not be processed:
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\eusart.h : File could not be opened.
----- system_delay Matches (9 in 2 files) ----
-IOTRESTARTHANDLEFUN line 298 : 				system_delay(5000);
-IOTRESTARTHANDLEFUN line 300 : 				system_delay(5000);
-IOTRESTARTHANDLEFUN line 309 : //				system_delay(5000);
-IOKeepOnline line 357 : 			system_delay(1000);
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 537 : void system_delay(unsigned int cnt)
-IotWifiSendString line 632 : 	system_delay(600);
-IOT_RESOLVE_WIFI_DATA line 735 : 			system_delay(500);
-IOT_RESOLVE_WIFI_DATA line 740 : 			system_delay(500);
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 150 : void system_delay(unsigned int cnt);
----- system_delay Search Errors Encountered (1) ----
-The following 1 files could not be processed:
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\eusart.h : File could not be opened.
----- RX_DATA Matches (1 in 1 files) ----
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 531 : unsigned char RX_DATA;
----- RX_DATA Search Errors Encountered (1) ----
-The following 1 files could not be processed:
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\eusart.h : File could not be opened.
----- RX_DATA Matches (1 in 1 files) ----
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 531 : unsigned char RX_DATA;
----- u8RX_RECIEVE_CNT Matches (9 in 2 files) ----
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 102 : uint8_t u8TxCnt=0,u8RX_RECIEVE_CNT=0;
-RxIntCallback line 113 : 	u8RX_RECIEVE_CNT=0;	
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 531 : unsigned char u8RX_RECIEVE_CNT;
-EUSART_WIFI_INIT line 595 : 	u8RX_RECIEVE_CNT=0xff;
-APP_UART_1MS_HANDLE line 901 : 	if(u8RX_RECIEVE_CNT<20)
-APP_UART_1MS_HANDLE line 903 : 		u8RX_RECIEVE_CNT++;
-APP_UART_1MS_HANDLE line 905 : 	else if (u8RX_RECIEVE_CNT==20){
-APP_UART_1MS_HANDLE line 907 : 		u8RX_RECIEVE_CNT=0xff;
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 18 : extern unsigned char u8RX_RECIEVE_CNT;
----- /**********************************************... Matches (18 in 7 files) ----
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 1 : /******************************************************************************
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 42 : /******************************************************************************/
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 52 : /******************************************************************************
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 63 : /******************************************************************************
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 67 : /******************************************************************************
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 71 : /******************************************************************************
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 75 : /******************************************************************************
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 79 : /******************************************************************************
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 83 : /******************************************************************************
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 916 : /******************************************************************************
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 1 : /******************************************************************************
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 296 : /*******************************************************************************
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\display.c line 1 : /******************************************************************************
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\keypad.c line 1 : /******************************************************************************
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\main.c line 1 : /******************************************************************************
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\mcu.c line 1 : /******************************************************************************
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\mcu.c line 190 : /*******************************************************************************
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\st7565r.c line 1 : /******************************************************************************
----- GpioPin5 Matches (2 in 2 files) ----
-F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\keypad.c line 30 : #define SWITCH_UP    Gpio_GetInputIO(GpioPortA, GpioPin5)
-Init_IOPorts line 311 :     Gpio_Init(GpioPortA, GpioPin5, &stcGpioCfg);   //S2
+---- ucDisplayWaitTimerCnt Matches (40 in 1 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 194 : unsigned char ucDisplayWaitTimerCnt;
+CellOutputCurrentAdjust line 1680 : 		ucDisplayWaitTimerCnt = 3;	
+CellOutputCurrentAdjust line 1686 : 		ucDisplayWaitTimerCnt = 3;	
+CellOutputCurrentAdjust line 1761 : 		ucDisplayWaitTimerCnt = 3;	
+CellOutputCurrentAdjust line 1813 : 			ucDisplayWaitTimerCnt = 5;	
+CellOutputControl line 1849 : 	ucDisplayWaitTimerCnt = 4;	//Waiting 4 Second than start display the current
+ReverseTimeSettingKeyProcess line 1870 : 					ucDisplayWaitTimerCnt = 11;
+ReverseTimeSettingKeyProcess line 1880 : 					ucDisplayWaitTimerCnt = 11;
+ReverseTimeSettingKeyProcess line 1895 : 			ucDisplayWaitTimerCnt = 11;
+ReverseTimeSettingKeyProcess line 1906 : 			ucDisplayWaitTimerCnt = 11;
+ModelSelectKeyProcess line 1932 : 	ucDisplayWaitTimerCnt = 11;
+RunningLEDDisplay line 1952 : 		if(ucDisplayWaitTimerCnt == 1)
+RunningLEDDisplay line 1964 : 			ucDisplayWaitTimerCnt = 0;
+RunningLEDDisplay line 1969 : 	if(ucDisplayWaitTimerCnt == 6)
+RunningLEDDisplay line 1974 : 	else if(ucDisplayWaitTimerCnt == 5)
+RunningTimeKeyProcess line 2005 : 			ucDisplayWaitTimerCnt = 7;
+RunningTimeKeyProcess line 2012 : 				ucDisplayWaitTimerCnt = 7;
+RunningTimeKeyProcess line 2017 : 			ucDisplayWaitTimerCnt = 3;
+RunningTimeKeyProcess line 2032 : 		ucDisplayWaitTimerCnt = 6;
+RunningTimeKeyProcess line 2047 : 			ucDisplayWaitTimerCnt = 0;
+PowerupFunctionModeSelect line 2120 : 		ucDisplayWaitTimerCnt = 0;	
+PowerupFunctionModeSelect line 2122 : 		ucDisplayWaitTimerCnt = 11;
+PowerupFunctionModeSelect line 2125 : 		if(ucDisplayWaitTimerCnt == 0)
+PowerupFunctionModeSelect line 2153 : 			if(ucDisplayWaitTimerCnt>0)
+PowerupFunctionModeSelect line 2154 : 				ucDisplayWaitTimerCnt--;
+ChlorBoostProcess line 2438 : 		ucDisplayWaitTimerCnt = 2;
+ChlorBoostProcess line 2445 : 		ucDisplayWaitTimerCnt = 2;			
+ChlorBoostProcess line 2452 : 		ucDisplayWaitTimerCnt = 2;	
+BoostModeHandler line 2486 : 	if(ucDisplayWaitTimerCnt == 0)
+BoostModeHandler line 2494 : 				ucDisplayWaitTimerCnt = 2;
+BoostModeHandler line 2515 : 				ucDisplayWaitTimerCnt = 2;	
+BoostModeHandler line 2532 : 				ucDisplayWaitTimerCnt = 2;
+ProcessHandler line 2717 : 		if(ucDisplayWaitTimerCnt>0)
+ProcessHandler line 2718 : 			ucDisplayWaitTimerCnt--;
+ProcessHandler line 2748 : 			ucDisplayWaitTimerCnt = 3;
+ProcessHandler line 2764 : 			ucDisplayWaitTimerCnt = 3;
+ProcessHandler line 2800 : 			ucDisplayWaitTimerCnt = 0;
+ProcessHandler line 2802 : 			ucDisplayWaitTimerCnt = 3;
+ProcessHandler line 2807 : 				ucDisplayWaitTimerCnt = 0;
+ProcessHandler line 2880 : 			if(ucDisplayWaitTimerCnt == 0)
+---- ModelSelectKeyProcess Matches (2 in 1 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 1915 : void ModelSelectKeyProcess(unsigned char ucKey)
+PowerupFunctionModeSelect line 2133 : 				ModelSelectKeyProcess(g_KeyCode);
+---- ModelSelectKeyProcess Matches (2 in 1 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 1915 : void ModelSelectKeyProcess(unsigned char ucKey)
+PowerupFunctionModeSelect line 2133 : 				ModelSelectKeyProcess(g_KeyCode);
+---- BOARD_SELECT Matches (6 in 3 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\global.h line 147 : //#define BOARD_SELECT                           BOARD_LED_BUTTON
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\main.c line 18 : #if(BOARD_SELECT == BOARD_LCD_ENCODER)
+main line 24 : 	#if(BOARD_SELECT == BOARD_LCD_ENCODER)
+main line 28 : 	#if(BOARD_SELECT == BOARD_LCD_ENCODER)
+Init_IOPorts line 309 : #if(BOARD_SELECT == BOARD_LED_BUTTON)
+Init_IOPorts line 371 : #if(BOARD_SELECT == BOARD_LED_BUTTON)

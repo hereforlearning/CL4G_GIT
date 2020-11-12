@@ -28,6 +28,7 @@ int main(void)
 	#if(BOARD_SELECT == BOARD_LCD_ENCODER)
 	LCDInspection();
 	#endif
+	EUSART_WIFI_INIT();
 	while(1)
 	{
 		IOTHandler();

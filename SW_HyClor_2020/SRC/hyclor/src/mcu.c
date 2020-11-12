@@ -310,7 +310,8 @@ void Init_IOPorts(void)
     Gpio_Init(GpioPortA, GpioPin4, &stcGpioCfg);   //S1
     Gpio_Init(GpioPortA, GpioPin5, &stcGpioCfg);   //S2
 #else
-
+    Gpio_Init(GpioPortA, GpioPin4, &stcGpioCfg);   //S1
+    Gpio_Init(GpioPortA, GpioPin5, &stcGpioCfg);   //S2
 #endif
 #if(WATER_SENSOR_TYPE == EXT_SENSOR)
     Gpio_Init(GpioPortA, GpioPin0, &stcGpioCfg);   //Water Flow

@@ -152,10 +152,68 @@
           <Name>UL2CM3(-S0 -C0 -P0 -FD20000000 -FC1000 -FN1 -FF0FlashHC32L136_64K -FS00 -FL010000 -FP0($$Device:HC32L136J8TA$Flash\FlashHC32L136_64K.FLM))</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
-      <Breakpoint/>
+      <Breakpoint>
+        <Bp>
+          <Number>0</Number>
+          <Type>0</Type>
+          <LineNumber>53</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>16584</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>..\SRC\hyclor\src\keypad.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\Hy_Clor_LCD\../SRC/hyclor/src/keypad.c\53</Expression>
+        </Bp>
+        <Bp>
+          <Number>1</Number>
+          <Type>0</Type>
+          <LineNumber>56</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>16588</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>..\SRC\hyclor\src\keypad.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\Hy_Clor_LCD\../SRC/hyclor/src/keypad.c\56</Expression>
+        </Bp>
+      </Breakpoint>
       <WatchWindow1>
         <Ww>
           <count>0</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>ucDisplayWaitTimerCnt</ItemText>
+        </Ww>
+        <Ww>
+          <count>1</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>pEusartQueueStorage</ItemText>
+        </Ww>
+        <Ww>
+          <count>2</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>pEusartQueueResolve</ItemText>
+        </Ww>
+        <Ww>
+          <count>3</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>UartQueueBuff</ItemText>
+        </Ww>
+        <Ww>
+          <count>4</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>cnt,0x0A</ItemText>
+        </Ww>
+        <Ww>
+          <count>5</count>
           <WinNumber>1</WinNumber>
           <ItemText>ucDisplayWaitTimerCnt</ItemText>
         </Ww>

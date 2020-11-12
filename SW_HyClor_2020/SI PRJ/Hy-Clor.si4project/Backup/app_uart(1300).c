@@ -378,7 +378,7 @@ status==empty)))
 		memcpy((pEusartQueueStorage->DATABuff),data,NUM_RX_MAX);
 		memset(u8RX_BUFF,0,NUM_RX_MAX);
 		pEusartQueueStorage->status=filled;
-		if(pEusartQueueStorage==&UartQueueBuff[UART_QUEUE_LENTH-1])
+		if(pEusartQueueStorage==&UartQueueBuff[4])
 			pEusartQueueStorage=UartQueueBuff;
 		else
 			pEusartQueueStorage++;
@@ -506,9 +506,21 @@ struct NETWORK_STATUE_t
 
 unsigned char RESIVE_UAER_KEY;
 unsigned char KEY_USART_MAP[]={
-//	KEY_UP,
-//	KEY_DOWN,
-//	KEY_UP_DOWN,
+#if 0
+pmkey,
+cbkey,//oxi
+wmkey ,
+leftkey ,
+upkey,
+okkey ,
+downkey ,
+rightkey ,
+ctkey ,
+bwkey ,
+stkey,
+0xff,
+LRKey,	//Wingo added for left+right key
+#endif 
 };
 
 
@@ -534,7 +546,6 @@ const unsigned char *AT_CMD[] =
 	"AT+ADA=\"enable\"\x0d\x0a",
 	"AT+ADA=\"l\"\x0d\x0a",
 	"AT+ADA=\"l\"\x0d\x0a",
-	"AT+ADA=\"s\"\,\"FD\"\,\"i\"\,1\x0d\x0a"
 };
 #else //ESP32
 {
@@ -597,22 +608,6 @@ void EUSART_WIFI_INIT(void)
 	 IOTRESTARTIDLEFUN();
 	 //send power on signal
 }
-
-void EUSART_WIFI_INIT_PROCESS(void)
-{
-    static unsigned char  step = 0;
-    static unsigned int  u32cnt = 0;
-	u32cnt++;
-	if(u32cnt%1000==0){
-		if(step<7){
-			step++;
-		    UartSendString((unsigned char *)AT_CMD[step]);
-//			UartSendString("AT+ADA=\"s\"\,\"FD\"\,\"i\"\,1\x0d\x0a");
-		}
-	}
-	//send power on signal
-}
-
 
 void convert_num_to_string( u32 data, unsigned char *string, unsigned char length)
 {
@@ -873,7 +868,6 @@ unsigned char IOT_RESOLVE_DATA_ONOFF(struct Aura4GRec_t * pparam)
 #endif
 }
 
-u32 cnt=0;
 void IOTHandler(void)
 {
 #define	DisplayACSIIString_5X7(n1,n2,n3)
@@ -881,16 +875,14 @@ void IOTHandler(void)
 	struct Aura4GRec_t * pAura4GRec;
 	unsigned char u8RX_[NUM_RX_MAX];
 	memset(u8RX_, 0, sizeof(u8RX_));
-	EUSART_WIFI_INIT_PROCESS();
 //	IOKeepOnline();
 //	IOTRESTARTHANDLEFUN();
-//	IOTQueueKeyHandle();
+	//	IOTQueueKeyHandle();
 	POWER_ON_GO:
 	if(!IOTUartQueueioifempty())
 	{        
-		IOTUartQueuePop(u8RX_);
 		DEBUG("WEGETDATAWOHO\n");
-		DEBUG(u8RX_);
+		IOTUartQueuePop(u8RX_);
 	    pAura4GRec=u8RX_;
 		if(IOT_RESOLVE_WIFI_ONLINE(pAura4GRec))
 			return;	
@@ -901,7 +893,6 @@ void IOTHandler(void)
 
 void APP_UART_1MS_HANDLE(void) 
 {
-	cnt++;
     makesure_uart_not_interrupt_intoif :
 	if(u8RX_RECIEVE_CNT<20)
 	{	
