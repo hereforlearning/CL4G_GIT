@@ -590,7 +590,6 @@ void EUSART_WIFI_INIT(void)
 	IOTUartQueueInit();
     for (i = 0; i < 6; i++)//(sizeof(AT_CMD)/sizeof(unsigned char *))
     {
-
         UartSendString((unsigned char *)AT_CMD[i]);
 		delay1ms(100);
     }
@@ -604,16 +603,11 @@ void EUSART_WIFI_INIT_PROCESS(void)
     static unsigned char  step = 0;
     static unsigned int  u32cnt = 0;
 	u32cnt++;
-	unsigned char t[2]={'0',0};
-	if((u32cnt%20000)==0){
-		if(step<(sizeof(AT_CMD)/sizeof(AT_CMD[0]))){
-				
-	]=step+'0';
-		  //  UartSendString(t);
-			  //UartSendString("testyoulittlebaster\n");
+	if(u32cnt%1000==0){
+		if(step<7){
+			step++;
 		    UartSendString((unsigned char *)AT_CMD[step]);
 //			UartSendString("AT+ADA=\"s\"\,\"FD\"\,\"i\"\,1\x0d\x0a");
-				step++;
 		}
 	}
 	//send power on signal

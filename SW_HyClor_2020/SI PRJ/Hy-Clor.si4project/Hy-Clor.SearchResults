@@ -52,3 +52,6 @@ main line 24 : 	#if(BOARD_SELECT == BOARD_LCD_ENCODER)
 main line 28 : 	#if(BOARD_SELECT == BOARD_LCD_ENCODER)
 Init_IOPorts line 309 : #if(BOARD_SELECT == BOARD_LED_BUTTON)
 Init_IOPorts line 371 : #if(BOARD_SELECT == BOARD_LED_BUTTON)
+---- EUSART_WIFI_INIT_PROCESS Matches (2 in 1 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 601 : void EUSART_WIFI_INIT_PROCESS(void)
+IOTHandler line 884 : 	EUSART_WIFI_INIT_PROCESS();

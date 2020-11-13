@@ -604,16 +604,12 @@ void EUSART_WIFI_INIT_PROCESS(void)
     static unsigned char  step = 0;
     static unsigned int  u32cnt = 0;
 	u32cnt++;
-	unsigned char t[2]={'0',0};
 	if((u32cnt%20000)==0){
-		if(step<(sizeof(AT_CMD)/sizeof(AT_CMD[0]))){
-				
-	]=step+'0';
-		  //  UartSendString(t);
+		if(step<(sizeof(AT_CMD)/sizeof(AT_CMD[0])-1)){
+				step++;
 			  //UartSendString("testyoulittlebaster\n");
 		    UartSendString((unsigned char *)AT_CMD[step]);
 //			UartSendString("AT+ADA=\"s\"\,\"FD\"\,\"i\"\,1\x0d\x0a");
-				step++;
 		}
 	}
 	//send power on signal
