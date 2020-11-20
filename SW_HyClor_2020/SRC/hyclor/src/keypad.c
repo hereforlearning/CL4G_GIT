@@ -152,12 +152,17 @@ void KeyDetect(void)
 		 g_LastKeyStatus = ucStatusBff; // refresh key status
 		 g_bKeyRepeat = 0;
 		 g_bKey1stRepeat = 1;
-		 g_bKeyCheckRepeat = 0;
+		 g_bKeyCheckRepeat =                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            0;
 		 g_ucKeyDebounce = 0;
 		 g_bFastRepeat = 0;
 	 }
 	 g_ucKeyCounter = KEY_DEBOUNCE_TIME; // next time counter
  }
+	if(IOT_RESOLVE_KEY(&g_KeyCode))
+	{
+	   g_bKeyDetect = 1; // release to detect key
+	   g_bKeyRepeat = 0;
+	}
 }
 
 void KeyHandler(void)

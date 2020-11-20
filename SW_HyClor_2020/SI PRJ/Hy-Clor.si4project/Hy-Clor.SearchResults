@@ -55,3 +55,147 @@ Init_IOPorts line 371 : #if(BOARD_SELECT == BOARD_LED_BUTTON)
 ---- EUSART_WIFI_INIT_PROCESS Matches (2 in 1 files) ----
 F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 601 : void EUSART_WIFI_INIT_PROCESS(void)
 IOTHandler line 884 : 	EUSART_WIFI_INIT_PROCESS();
+---- IOTUartQueueInit Matches (2 in 1 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 367 : void IOTUartQueueInit()
+EUSART_WIFI_INIT line 590 : 	IOTUartQueueInit();
+---- SBUF Matches (5 in 4 files) ----
+EUSART_SendData line 573 :     M0P_UART1->SBUF = data;
+Debug_Output line 176 :     //M0P_UART0->SBUF = u8Data;
+{anonM0P_LPUART_TypeDef}::{anon_union} line 7625 :         __IO uint32_t SBUF;
+{anonM0P_UART_TypeDef}::{anon_union} line 9431 :         __IO uint32_t SBUF;
+LPUart_GetRb8 line 391 :     return ((pstcData->pstcInstance->SBUF>>8)&0x01);
+---- g_bKeyRepeat Matches (8 in 1 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\keypad.c line 19 : unsigned char g_bKeyRepeat;
+KeyVariableInitial line 40 :  g_bKeyRepeat = 0;
+KeyDetect line 123 : 						 g_bKeyRepeat = 1;
+KeyDetect line 138 : 				 g_bKeyRepeat = 0;
+KeyDetect line 153 : 		 g_bKeyRepeat = 0;
+KeyHandler line 169 : 		g_bKeyRepeat = 0;
+KeyHandler line 185 : 			 	if(g_bKeyRepeat)
+KeyHandler line 187 : 					g_bKeyRepeat = 0;
+---- g_KeyCode Matches (13 in 3 files) ----
+PowerupFunctionModeSelect line 2133 : 				ModelSelectKeyProcess(g_KeyCode);
+PowerupFunctionModeSelect line 2138 : 				ReverseTimeSettingKeyProcess(g_KeyCode);
+PowerupFunctionModeSelect line 2144 : 				RunningTimeKeyProcess(g_KeyCode);
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\keypad.c line 27 : KeyScanType   g_KeyCode;
+KeyVariableInitial line 38 :  g_KeyCode = KEY_NOTHING;
+KeyDetect line 107 : 			 if (g_KeyCode == g_LastKeyStatus) // check repeat
+KeyDetect line 136 : 				 g_KeyCode = g_LastKeyStatus;
+KeyDetect line 147 : 			 g_KeyCode = KEY_NOTHING; // reset key code
+KeyHandler line 165 : 	 if(IOT_RESOLVE_KEY(g_KeyCode))
+KeyHandler line 168 : 		g_KeyCode=0;
+KeyHandler line 176 : 		 switch (g_KeyCode)
+KeyHandler line 195 : 		 SpecialSecretCodeProcess(g_KeyCode);
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\keypad.h line 41 : extern KeyScanType   g_KeyCode;
+---- g_ucKeyCounter Matches (6 in 1 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\keypad.c line 24 : unsigned char g_ucKeyCounter;
+KeyVariableInitial line 36 :  g_ucKeyCounter = KEY_DEBOUNCE_TIME;
+KeyDetectTimer line 66 :  if (g_ucKeyCounter)
+KeyDetectTimer line 67 : 	 g_ucKeyCounter--; // descrease counter
+KeyDetect line 97 :  if (g_ucKeyCounter == 0) // check counter
+KeyDetect line 159 : 	 g_ucKeyCounter = KEY_DEBOUNCE_TIME; // next time counter
+---- KEY_DEBOUNCE_TIME Matches (6 in 2 files) ----
+KeyVariableInitial line 36 :  g_ucKeyCounter = KEY_DEBOUNCE_TIME;
+KeyDetect line 159 : 	 g_ucKeyCounter = KEY_DEBOUNCE_TIME; // next time counter
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\keypad.h line 18 : #define KEY_DEBOUNCE_REPEAT     20 // KEY_DEBOUNCE_TIME*KEY_DEBOUNCE_REPEAT(ms)
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\keypad.h line 19 : #define KEY_DEBOUNCE_MIDDLE     6  // KEY_DEBOUNCE_TIME*KEY_DEBOUNCE_MIDDLE(ms)
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\keypad.h line 20 : #define KEY_DEBOUNCE_FAST       3  // KEY_DEBOUNCE_TIME*KEY_DEBOUNCE_FAST(ms)
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\keypad.h line 21 : #define KEY_DEBOUNCE_TIME       20 // unit: 1ms
+---- KeyDetectTimer Matches (3 in 3 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\keypad.c line 64 : void KeyDetectTimer(void)
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\keypad.h line 44 : extern void KeyDetectTimer(void);
+Tim0Int line 198 : 		KeyDetectTimer();
+---- ucBoostStatus Matches (19 in 1 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 190 : unsigned char ucBoostStatus = 0;
+SerivceReset line 901 : 	ucBoostStatus = 0;
+CellOutputCurrentAdjust line 1649 : 	if((ucBoostStatus)||(bDoBoostModeFlag))
+ChlorBoostProcess line 2434 : 	if(ucBoostStatus == 0)
+ChlorBoostProcess line 2439 : 		ucBoostStatus++;	
+ChlorBoostProcess line 2441 : 	else if(ucBoostStatus == 2)
+ChlorBoostProcess line 2446 : 		ucBoostStatus++;				
+ChlorBoostProcess line 2448 : 	else if(ucBoostStatus == 4)
+ChlorBoostProcess line 2453 : 		ucBoostStatus++;	
+BoostModeHandler line 2488 : 		switch(ucBoostStatus)
+BoostModeHandler line 2493 : 				ucBoostStatus++;
+BoostModeHandler line 2503 : 				ucBoostStatus = 0;
+BoostModeHandler line 2514 : 				ucBoostStatus++;
+BoostModeHandler line 2522 : 				ucBoostStatus = 0;
+BoostModeHandler line 2531 : 				ucBoostStatus++;
+BoostModeHandler line 2545 : 				ucBoostStatus = 0;
+BoostModeHandler line 2549 : 				ucBoostStatus = 0;
+ProcessHandler line 2878 : 		if((ucBoostStatus==0)&&(bDoBoostModeFlag==0)&&(bResetMode==0))
+ProcessHandler line 2892 : 	if(ucBoostStatus==0)
+---- ucCellCurrent Matches (36 in 2 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 724 : extern unsigned char ucCellCurrent;
+IOT_RESOLVE_WIFI_DATA line 775 : 			ucCellCurrent = temp*10;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 186 : unsigned char ucCellCurrent;
+ReadCellCurrentSetting line 370 : 	ucCellCurrent = Eeprom_ReadBytes(CELL_CURRENT_ADDR);
+SaveCellCurrent line 423 :     ucData[4] = ucCellCurrent;	
+UpdateUserData line 800 : 	ucCellCurrent = ucData[4];
+CellRealCurrentDisplay line 1313 : 		if(ucCellCurrent == USER_MIN)
+CalculateThresholdLimit line 1418 :     iTemp =iTemp * ucCellCurrent;
+CellOutputCalibration line 1490 :     if(ucCellCurrent == 0)
+CellOutputCurrentAdjust line 1769 : 			if(ucCellCurrent<USER_MAX)
+CellOutputCurrentAdjust line 1770 : 				ucCellCurrent+=5;
+CellOutputCurrentAdjust line 1772 : 			uiCurrentMaxDuty = ucDutyDiv*ucCellCurrent;
+CellOutputCurrentAdjust line 1780 : 			if(ucCellCurrent>5)
+CellOutputCurrentAdjust line 1781 : 				ucCellCurrent-=5;
+CellOutputCurrentAdjust line 1783 : 				ucCellCurrent = USER_MIN;
+CellOutputCurrentAdjust line 1785 : 			uiCurrentMaxDuty = ucDutyDiv*ucCellCurrent;
+CellOutputCurrentAdjust line 1791 : 		uiOutputTime = 6*ucCellCurrent;
+CellOutputCurrentAdjust line 1792 : 		iTemp = ucCellCurrent;
+CellOutputCurrentAdjust line 1798 : 		if(ucCellCurrent>iTemp)
+CellOutputCurrentAdjust line 1804 : 		CellCurrentOutput(ucCellCurrent);
+CellOutputControl line 1841 : 	while (ucTemp<=ucCellCurrent);
+CellOutputControl line 1842 : 	uiOutputTime = 6*ucCellCurrent;
+CellOutputControl line 1844 : 	//CellCurrentOutput(ucCellCurrent);
+PowerupFunctionModeSelect line 2167 : 	ucCellCurrent = USER_MAX;
+PowerOnInitialize line 2248 : 	ucCellCurrent = 50;
+WaterFlowFaultProcess line 2321 : 			CellCurrentOutput(ucCellCurrent);
+SpecialSecretCodeProcess line 2373 : 			ucCellCurrent = USER_MAX;
+CellCurrentCycleOutput line 2666 : 	if((bOutputFlag == _ENABLE)&&(ucCellCurrent < USER_MAX))
+ProcessHandler line 2746 : 			ucCellCurrent = USER_MIN;
+ProcessHandler line 2761 : 			ucCellCurrent = USER_MAX;
+ProcessHandler line 2787 : 			ucOriginalCurrent = ucCellCurrent;
+ProcessHandler line 2788 : 			ucCellCurrent = USER_MIN;	
+ProcessHandler line 2795 : 			if(ucCellCurrent<ucOriginalCurrent)
+ProcessHandler line 2796 : 				ucCellCurrent+=10;
+ProcessHandler line 2812 : 			uiOutputTime = 6*ucCellCurrent;
+ProcessHandler line 2813 : 			CellCurrentOutput(ucCellCurrent);	
+---- WaitOverTime Matches (2 in 2 files) ----
+IotWifiWaitResponed line 667 : 	if(check>WaitOverTime)
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 131 : #define WaitOverTime 3
+---- CellCurrentLED Matches (18 in 2 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 726 : void CellCurrentLED(unsigned char ucVal);
+IOT_RESOLVE_WIFI_DATA line 776 : 			CellCurrentLED(temp);
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 1057 : void CellCurrentLED(unsigned char ucVal)
+ModelChangeLED line 1104 : 	CellCurrentLED(0);
+ModelChangeLED line 1115 : 	CellCurrentLED(0);
+CellRealCurrentDisplay line 1327 : 	CellCurrentLED(ucLEDNum);	
+CellOutputCurrentAdjust line 1678 : 		CellCurrentLED(10);
+CellOutputCurrentAdjust line 1684 : 		CellCurrentLED(0);
+CellOutputCurrentAdjust line 1797 : 		CellCurrentLED(ucNum);
+CellOutputControl line 1828 : 	CellCurrentLED(10);
+CellOutputControl line 1838 : 		CellCurrentLED(i);
+ReverseTimeSettingKeyProcess line 1869 : 					CellCurrentLED(2);
+ReverseTimeSettingKeyProcess line 1879 : 					CellCurrentLED(1);
+PowerupFunctionModeSelect line 2083 : 		CellCurrentLED(8);		
+ProcessHandler line 2745 : 			CellCurrentLED(0);
+ProcessHandler line 2760 : 			CellCurrentLED(10);
+ProcessHandler line 2778 : 			CellCurrentLED(0);
+ProcessHandler line 2833 : 				CellCurrentLED(0);
+---- u8RX_BUFF Matches (7 in 2 files) ----
+RxIntCallback line 116 : 	u8RX_BUFF[u8RX_BUFF_CNT]=u8RxData;
+RxIntCallback line 117 : 	if(u8RX_BUFF_CNT<(sizeof(u8RX_BUFF)-1))
+IOTUartQueuePush line 381 : 		memset(u8RX_BUFF,0,NUM_RX_MAX);
+IOTUartQueuePush line 389 :     memset(u8RX_BUFF,0,NUM_RX_MAX);
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 518 : unsigned char u8RX_BUFF[100];
+APP_UART_1MS_HANDLE line 970 : 		IOTUartQueuePush(u8RX_BUFF);
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 15 : extern unsigned char u8RX_BUFF[100];
+---- u8RxData Matches (3 in 1 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 103 : uint8_t u8RxData;
+RxIntCallback line 114 :     u8RxData=Uart_ReceiveData(UARTCH1);
+RxIntCallback line 116 : 	u8RX_BUFF[u8RX_BUFF_CNT]=u8RxData;
+---- onesecond Matches (0 in 0 files) ----
+---- oneseconds Matches (1 in 1 files) ----
+ProcessHandler line 2711 : 		UartSendString("oneseconds\n");

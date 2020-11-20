@@ -54,7 +54,7 @@
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
           <DebugInformation>1</DebugInformation>
-          <BrowseInformation>0</BrowseInformation>
+          <BrowseInformation>1</BrowseInformation>
           <ListingPath>.\Listings\</ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
           <Merge32K>0</Merge32K>
@@ -321,7 +321,7 @@
             <PlainCh>0</PlainCh>
             <Ropi>0</Ropi>
             <Rwpi>0</Rwpi>
-            <wLevel>2</wLevel>
+            <wLevel>1</wLevel>
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
             <uC99>1</uC99>
@@ -417,6 +417,21 @@
               <FileType>1</FileType>
               <FilePath>..\SRC\hyclor\src\mcu.c</FilePath>
             </File>
+            <File>
+              <FileName>app_uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SRC\hyclor\src\app_uart.c</FilePath>
+            </File>
+            <File>
+              <FileName>crc32.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SRC\hyclor\src\crc32.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_aes.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SRC\hyclor\src\app_aes.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -461,6 +476,11 @@
               <FileName>timer3.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\SRC\driver\src\timer3.c</FilePath>
+            </File>
+            <File>
+              <FileName>uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SRC\driver\src\uart.c</FilePath>
             </File>
           </Files>
         </Group>

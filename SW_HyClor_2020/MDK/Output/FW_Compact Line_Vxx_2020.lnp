@@ -5,6 +5,9 @@
 ".\output\keypad.o"
 ".\output\main.o"
 ".\output\mcu.o"
+".\output\app_uart.o"
+".\output\crc32.o"
+".\output\app_aes.o"
 ".\output\ddl.o"
 ".\output\flash.o"
 ".\output\gpio.o"
@@ -13,6 +16,7 @@
 ".\output\bt.o"
 ".\output\adc.o"
 ".\output\timer3.o"
+".\output\uart.o"
 --strict --scatter ".\output\FW_Compact Line_Vxx_2020.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

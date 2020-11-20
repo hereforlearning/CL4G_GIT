@@ -59,6 +59,8 @@
 #include "crc32.h"
 #include "app_uart.h"
 #include "app_aes.h"
+#include "keypad.h"
+
 
 /******************************************************************************
  * Local pre-processor symbols/macros ('#define')                            
@@ -97,8 +99,15 @@
  ** This sample
  **
  ******************************************************************************/
+unsigned char u8RX_BUFF[100];
+unsigned char POWER_ON = 1;
+unsigned char bTX_DONE;
+unsigned char u8RX_RECIEVE_CNT;
+unsigned char u8RX_BUFF_CNT;
+unsigned char BASE_CNT=0;
+unsigned char READY_SEND_DEGUE=0;
+
 uint8_t u8TxData[44] = {0x00,0x55};
-uint8_t u8RxData;
 uint8_t u8TxCnt=0,u8RX_RECIEVE_CNT=0;
 uint8_t tx_send;
 uint8_t rx_reci;
@@ -109,6 +118,7 @@ void TxIntCallback(void)
 }
 void RxIntCallback(void)
 {
+	uint8_t u8RxData;
     u8RxData=Uart_ReceiveData(UARTCH1);
 	u8RX_RECIEVE_CNT=0;	
 	u8RX_BUFF[u8RX_BUFF_CNT]=u8RxData;
@@ -177,8 +187,8 @@ void Init_APP_Uart(void)
     
     Uart_SetClkDiv(UARTCH1,Uart8Or16Div);
     stcBaud.u32Pclk = Sysctrl_GetPClkFreq();
-    stcBaud.enRunMode = UartMode3;
-    stcBaud.u32Baud = 9600;
+    stcBaud.enRunMode = UartMode1;
+    stcBaud.u32Baud = 115200;
     u16Scnt = Uart_CalScnt(UARTCH1,&stcBaud);
     Uart_SetBaud(UARTCH1,u16Scnt);
     
@@ -391,7 +401,7 @@ status==empty)))
 void IOTUartQueuePop(unsigned char *data)
 {
 	struct	_UartQueue *q=pEusartQueueResolve;
-	memcpy(data,&pEusartQueueResolve->DATABuff[2],NUM_RX_MAX-2);
+	memcpy(data,&pEusartQueueResolve->DATABuff[0],NUM_RX_MAX);
 	pEusartQueueResolve->status=empty;
 	if(pEusartQueueResolve==&UartQueueBuff[4])
 		pEusartQueueResolve=UartQueueBuff;
@@ -417,9 +427,10 @@ unsigned char IOTUartQueueioifempty()
 /***********************************************************************/
 //aura 4g borad 
 //+ADA: "g","ok","FD","i",22
+//"+ADA: "g","ok","TG","s","1"\r\n"
 struct Aura4GRec_t
 {
-	unsigned char resever[5];//+ADA:"
+	unsigned char resever[7];//+ADA: " 
 	unsigned char SendOrGet;
 	unsigned char resever1[8];//","ok","
 	unsigned char RecString[2];//
@@ -506,19 +517,11 @@ struct NETWORK_STATUE_t
 
 unsigned char RESIVE_UAER_KEY;
 unsigned char KEY_USART_MAP[]={
-//	KEY_UP,
-//	KEY_DOWN,
-//	KEY_UP_DOWN,
+	KEY_UP			  ,
+	KEY_DOWN			  ,
+	KEY_UP_DOWN	  
 };
 
-
-unsigned char u8RX_BUFF[100];
-unsigned char POWER_ON = 1;
-unsigned char bTX_DONE;
-unsigned char u8RX_RECIEVE_CNT;
-unsigned char u8RX_BUFF_CNT;
-unsigned char BASE_CNT=0;
-unsigned char READY_SEND_DEGUE=0;
 
 void system_delay(unsigned int u32cnt)
 {
@@ -608,7 +611,7 @@ void EUSART_WIFI_INIT_PROCESS(void)
 	if((u32cnt%20000)==0){
 		if(step<(sizeof(AT_CMD)/sizeof(AT_CMD[0]))){
 				
-	]=step+'0';
+	  
 		  //  UartSendString(t);
 			  //UartSendString("testyoulittlebaster\n");
 		    UartSendString((unsigned char *)AT_CMD[step]);
@@ -717,9 +720,25 @@ unsigned char IOT_RESOLVE_WIFI_ONLINE(struct Aura4GRec_t * pparam)
 	return temp;
 }
 
+void IOT_SEND_SELF_STATUE()
+{
+	UartSendString("AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,9001\x0d\x0a");
+	delay1ms(20);
+	UartSendString("AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,9111\x0d\x0a");
+	delay1ms(20);
+	UartSendString("AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,9222\x0d\x0a");
+	delay1ms(20);
+}
+
+
+
 unsigned char IOT_KEY=0;
+extern unsigned char ucCellCurrent;
+extern unsigned char ucDisplayWaitTimerCnt;
+void CellCurrentLED(unsigned char ucVal);
 unsigned char IOT_RESOLVE_WIFI_DATA(struct Aura4GRec_t * pparam)
 {
+//"+ADA: "g","ok","TG","s","1"\r\n"
 	unsigned char temp=0;
 	if(pparam->SendOrGet=='g'){
 	if(pparam->RecString[0]=='T')
@@ -730,12 +749,15 @@ unsigned char IOT_RESOLVE_WIFI_DATA(struct Aura4GRec_t * pparam)
 			UartSendString("AT+ADA=\"s\"\,\"TG\"\,\"s\"\,\"99\"\x0d\x0a");
 			IOT_KEY=RESIVE_UAER_KEY;
 	}
+	
 	if(pparam->RecString[0]=='F'){
 		if(pparam->RecData[0]=='0')
 		{
 			if (POWER_ON){
 				UartSendString("AT+ADA=\"s\"\,\"FD\"\,\"i\"\,0\x0d\x0a");
 				IOT_KEY=0x80|1;
+				POWER_ON=!POWER_ON;
+				LEDALLControl(0);
 			}
 			
 		}
@@ -744,21 +766,45 @@ unsigned char IOT_RESOLVE_WIFI_DATA(struct Aura4GRec_t * pparam)
             if (!POWER_ON){
 				UartSendString("AT+ADA=\"s\"\,\"FD\"\,\"i\"\ ,1\x0d\x0a");
 				IOT_KEY=0x80|2;
+				POWER_ON=!POWER_ON;
+				LEDALLControl(1);
         	}
 		}
 		else if(pparam->RecData[0]=='3')
 		{
-			system_delay(500);
+//			system_delay(500);
 			if (POWER_ON)
 				UartSendString("AT+ADA=\"s\"\,\"FD\"\,\"i\"\,1\x0d\x0a");
 			else
 				UartSendString("AT+ADA=\"s\"\,\"FD\"\,\"i\"\,0\x0d\x0a");
-			system_delay(500);
+			delay1ms(40);
+			IOT_SEND_SELF_STATUE();
+
+//			system_delay(500);
 			IOT_KEY=0x80|4;
 		}
 	}
-}
+
+		if(pparam->RecString[0]=='Z'){
+			temp=pparam->RecData[1]-'0';
+			temp=temp*10+pparam->RecData[2]-'0';
+			CellCurrentLED(temp);
+			ucCellCurrent = temp*10;
+			temp=1;
+			ucDisplayWaitTimerCnt = 3;	
+		}
+	}
 	return temp;
+}
+
+unsigned char  IOT_RESOLVE_KEY(unsigned char *key)
+{
+	if(IOT_KEY){
+		*key=IOT_KEY;
+		IOT_KEY=0;
+		return 1;
+	}
+	return 0;
 }
 
 unsigned char IOT_RESOLVE_DATA_UDP(struct PACKAGE_t * pparam)
@@ -882,6 +928,7 @@ unsigned char IOT_RESOLVE_DATA_ONOFF(struct Aura4GRec_t * pparam)
 u32 cnt=0;
 void IOTHandler(void)
 {
+	IOT_LOOP:
 #define	DisplayACSIIString_5X7(n1,n2,n3)
 	struct PACKAGE_t *ptcp;
 	struct Aura4GRec_t * pAura4GRec;
@@ -895,13 +942,19 @@ void IOTHandler(void)
 	if(!IOTUartQueueioifempty())
 	{        
 		IOTUartQueuePop(u8RX_);
-		DEBUG("WEGETDATAWOHO\n");
-		DEBUG(u8RX_);
+		DEBUG_SEND_STRING("WEGETDATAWOHO\n");
+		DEBUG_SEND_STRING(u8RX_);
 	    pAura4GRec=u8RX_;
 		if(IOT_RESOLVE_WIFI_ONLINE(pAura4GRec))
 			return;	
 		if(IOT_RESOLVE_WIFI_DATA(pAura4GRec))	
 			return; 
+	}
+		
+	if(!POWER_ON)
+	{
+ 
+		goto IOT_LOOP;
 	}
 }
 

@@ -2708,7 +2708,7 @@ void ProcessHandler(void)
 	
 	if(bOneSecondFlag)
 	{
-		UartSendString("oneseconds\n");
+//		UartSendString("oneseconds\n");
 		bOneSecondFlag = _FALSE;
 
 		if(ucPCBTestTimerCnt>0)

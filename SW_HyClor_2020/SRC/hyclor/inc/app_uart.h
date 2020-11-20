@@ -155,5 +155,9 @@ void IOTRESTARTIDLEFUN(void);
 unsigned char IOTUartQueueioifempty();
 void IOTHandler(void);
 void APP_UART_1MS_HANDLE(void) ;
-#define DEBUG(str) UartSendString(str)
+#define DEBUG_SEND_STRING(str) //UartSendString(str)
+
+extern unsigned char IOT_KEY ;
+unsigned char  IOT_RESOLVE_KEY(unsigned char *key);
+
 #endif

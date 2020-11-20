@@ -1,36 +1,37 @@
 Dependencies for Project 'Hy-Clor', Target 'Hy-Clor': (DO NOT MODIFY !)
-F (.\startup_hc32l136.s)(0x5BACC3B9)(--cpu Cortex-M0+ -g --apcs=interwork -I.\RTE\_Hy-Clor-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include--pd "__UVISION_VERSION SETA 526" --pd "_RTE_ SETA 1"--list .\listings\startup_hc32l136.lst --xref -o .\output\startup_hc32l136.o --depend .\output\startup_hc32l136.d)
-F (..\SRC\mcu\common\system_hc32l136.c)(0x5B849879)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\system_hc32l136.o --depend .\output\system_hc32l136.d)
+CompilerVersion: 5060750::V5.06 update 6 (build 750)::ARMCC
+F (.\startup_hc32l136.s)(0x5BACC3B9)(--cpu Cortex-M0+ -g --apcs=interwork -I.\RTE\_Hy-Clor-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include"--pd "__UVISION_VERSION SETA 529" --pd "_RTE_ SETA 1"--list .\listings\startup_hc32l136.lst --xref -o .\output\startup_hc32l136.o --depend .\output\startup_hc32l136.d)
+F (..\SRC\mcu\common\system_hc32l136.c)(0x5B849879)(--c99 --gnu -c --cpu Cortex-M0+ -g -W -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include"-D__UVISION_VERSION="529" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\system_hc32l136.o --omf_browse .\output\system_hc32l136.crf --depend .\output\system_hc32l136.d)
 I (..\SRC\mcu\common\base_types.h)(0x5B641BB6)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
-I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x599EDB3A)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\string.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stddef.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\assert.h)(0x5D9AD212)
 I (..\SRC\mcu\common\hc32l136.h)(0x5B9B6C79)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0plus.h)(0x5B617084)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1F3E94)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B5843C6)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B617084)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm0plus.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D2590B6)
 I (..\SRC\mcu\common\system_hc32l136.h)(0x5B849879)
 I (..\SRC\driver\inc\sysctrl.h)(0x5B849878)
 I (..\SRC\driver\inc\ddl.h)(0x5E746B99)
 I (..\SRC\hyclor\inc\ddl_device.h)(0x5BACC3BA)
 I (..\SRC\driver\inc\interrupts_hc32l136.h)(0x5B849877)
-F (..\SRC\hyclor\src\ctrl.c)(0x5F9A2A54)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\ctrl.o --depend .\output\ctrl.d)
+F (..\SRC\hyclor\src\ctrl.c)(0x5FB727B9)(--c99 --gnu -c --cpu Cortex-M0+ -g -W -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include"-D__UVISION_VERSION="529" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\ctrl.o --omf_browse .\output\ctrl.crf --depend .\output\ctrl.d)
 I (..\SRC\driver\inc\gpio.h)(0x5B9797C9)
 I (..\SRC\driver\inc\ddl.h)(0x5E746B99)
 I (..\SRC\mcu\common\base_types.h)(0x5B641BB6)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
-I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x599EDB3A)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\string.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stddef.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\assert.h)(0x5D9AD212)
 I (..\SRC\mcu\common\hc32l136.h)(0x5B9B6C79)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0plus.h)(0x5B617084)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1F3E94)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B5843C6)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B617084)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm0plus.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D2590B6)
 I (..\SRC\mcu\common\system_hc32l136.h)(0x5B849879)
 I (..\SRC\driver\inc\sysctrl.h)(0x5B849878)
 I (..\SRC\driver\inc\interrupts_hc32l136.h)(0x5B849877)
@@ -39,20 +40,20 @@ I (..\SRC\driver\inc\flash.h)(0x5B289C94)
 I (..\SRC\hyclor\inc\global.h)(0x5F9A27DB)
 I (..\SRC\hyclor\inc\keypad.h)(0x5E7B2104)
 I (..\SRC\hyclor\inc\mcu.h)(0x5F604BF7)
-F (..\SRC\hyclor\src\keypad.c)(0x5E748DE4)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\keypad.o --depend .\output\keypad.d)
+F (..\SRC\hyclor\src\keypad.c)(0x5FB5C9EA)(--c99 --gnu -c --cpu Cortex-M0+ -g -W -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include"-D__UVISION_VERSION="529" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\keypad.o --omf_browse .\output\keypad.crf --depend .\output\keypad.d)
 I (..\SRC\driver\inc\gpio.h)(0x5B9797C9)
 I (..\SRC\driver\inc\ddl.h)(0x5E746B99)
 I (..\SRC\mcu\common\base_types.h)(0x5B641BB6)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
-I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x599EDB3A)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\string.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stddef.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\assert.h)(0x5D9AD212)
 I (..\SRC\mcu\common\hc32l136.h)(0x5B9B6C79)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0plus.h)(0x5B617084)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1F3E94)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B5843C6)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B617084)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm0plus.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D2590B6)
 I (..\SRC\mcu\common\system_hc32l136.h)(0x5B849879)
 I (..\SRC\driver\inc\sysctrl.h)(0x5B849878)
 I (..\SRC\driver\inc\interrupts_hc32l136.h)(0x5B849877)
@@ -60,25 +61,26 @@ I (..\SRC\hyclor\inc\ddl_device.h)(0x5BACC3BA)
 I (..\SRC\hyclor\inc\keypad.h)(0x5E7B2104)
 I (..\SRC\hyclor\inc\global.h)(0x5F9A27DB)
 I (..\SRC\hyclor\inc\ctrl.h)(0x5F6C48D8)
-F (..\SRC\hyclor\src\main.c)(0x5F114CC4)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\main.o --depend .\output\main.d)
+F (..\SRC\hyclor\src\main.c)(0x5FAB8365)(--c99 --gnu -c --cpu Cortex-M0+ -g -W -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include"-D__UVISION_VERSION="529" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\main.o --omf_browse .\output\main.crf --depend .\output\main.d)
 I (..\SRC\hyclor\inc\global.h)(0x5F9A27DB)
 I (..\SRC\hyclor\inc\mcu.h)(0x5F604BF7)
 I (..\SRC\hyclor\inc\keypad.h)(0x5E7B2104)
 I (..\SRC\hyclor\inc\ctrl.h)(0x5F6C48D8)
-F (..\SRC\hyclor\src\mcu.c)(0x5F6C419C)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\mcu.o --depend .\output\mcu.d)
+I (..\SRC\hyclor\inc\app_uart.h)(0x5FB7228A)
+F (..\SRC\hyclor\src\mcu.c)(0x5FB5C9E0)(--c99 --gnu -c --cpu Cortex-M0+ -g -W -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include"-D__UVISION_VERSION="529" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\mcu.o --omf_browse .\output\mcu.crf --depend .\output\mcu.d)
 I (..\SRC\driver\inc\gpio.h)(0x5B9797C9)
 I (..\SRC\driver\inc\ddl.h)(0x5E746B99)
 I (..\SRC\mcu\common\base_types.h)(0x5B641BB6)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
-I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x599EDB3A)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\string.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stddef.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\assert.h)(0x5D9AD212)
 I (..\SRC\mcu\common\hc32l136.h)(0x5B9B6C79)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0plus.h)(0x5B617084)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1F3E94)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B5843C6)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B617084)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm0plus.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D2590B6)
 I (..\SRC\mcu\common\system_hc32l136.h)(0x5B849879)
 I (..\SRC\driver\inc\sysctrl.h)(0x5B849878)
 I (..\SRC\driver\inc\interrupts_hc32l136.h)(0x5B849877)
@@ -90,143 +92,190 @@ I (..\SRC\driver\inc\timer3.h)(0x5BA3713B)
 I (..\SRC\hyclor\inc\global.h)(0x5F9A27DB)
 I (..\SRC\hyclor\inc\keypad.h)(0x5E7B2104)
 I (..\SRC\hyclor\inc\ctrl.h)(0x5F6C48D8)
-F (..\SRC\driver\src\ddl.c)(0x5B99D127)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\ddl.o --depend .\output\ddl.d)
+F (..\SRC\hyclor\src\app_uart.c)(0x5FB726A2)(--c99 --gnu -c --cpu Cortex-M0+ -g -W -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include"-D__UVISION_VERSION="529" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\app_uart.o --omf_browse .\output\app_uart.crf --depend .\output\app_uart.d)
 I (..\SRC\driver\inc\ddl.h)(0x5E746B99)
 I (..\SRC\mcu\common\base_types.h)(0x5B641BB6)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
-I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x599EDB3A)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\string.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stddef.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\assert.h)(0x5D9AD212)
 I (..\SRC\mcu\common\hc32l136.h)(0x5B9B6C79)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0plus.h)(0x5B617084)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1F3E94)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B5843C6)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B617084)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm0plus.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D2590B6)
 I (..\SRC\mcu\common\system_hc32l136.h)(0x5B849879)
 I (..\SRC\driver\inc\sysctrl.h)(0x5B849878)
 I (..\SRC\driver\inc\interrupts_hc32l136.h)(0x5B849877)
 I (..\SRC\hyclor\inc\ddl_device.h)(0x5BACC3BA)
-F (..\SRC\driver\src\flash.c)(0x5BAB5C7D)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\flash.o --depend .\output\flash.d)
+I (..\SRC\driver\inc\uart.h)(0x5B849878)
+I (..\SRC\driver\inc\gpio.h)(0x5B9797C9)
+I (..\SRC\hyclor\inc\crc32.h)(0x5FAB4D8B)
+I (..\SRC\hyclor\inc\app_uart.h)(0x5FB7228A)
+I (..\SRC\hyclor\inc\app_aes.h)(0x5FAB5013)
+I (..\SRC\hyclor\inc\keypad.h)(0x5E7B2104)
+F (..\SRC\hyclor\src\crc32.c)(0x5FAB4F45)(--c99 --gnu -c --cpu Cortex-M0+ -g -W -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include"-D__UVISION_VERSION="529" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\crc32.o --omf_browse .\output\crc32.crf --depend .\output\crc32.d)
+I (..\SRC\hyclor\inc\crc32.h)(0x5FAB4D8B)
+F (..\SRC\hyclor\src\app_aes.c)(0x5FAB543D)(--c99 --gnu -c --cpu Cortex-M0+ -g -W -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include"-D__UVISION_VERSION="529" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\app_aes.o --omf_browse .\output\app_aes.crf --depend .\output\app_aes.d)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\string.h)(0x5D9AD218)
+I (..\SRC\hyclor\inc\app_aes.h)(0x5FAB5013)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+F (..\SRC\driver\src\ddl.c)(0x5B99D127)(--c99 --gnu -c --cpu Cortex-M0+ -g -W -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include"-D__UVISION_VERSION="529" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\ddl.o --omf_browse .\output\ddl.crf --depend .\output\ddl.d)
+I (..\SRC\driver\inc\ddl.h)(0x5E746B99)
+I (..\SRC\mcu\common\base_types.h)(0x5B641BB6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\string.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stddef.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\assert.h)(0x5D9AD212)
+I (..\SRC\mcu\common\hc32l136.h)(0x5B9B6C79)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm0plus.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D2590B6)
+I (..\SRC\mcu\common\system_hc32l136.h)(0x5B849879)
+I (..\SRC\driver\inc\sysctrl.h)(0x5B849878)
+I (..\SRC\driver\inc\interrupts_hc32l136.h)(0x5B849877)
+I (..\SRC\hyclor\inc\ddl_device.h)(0x5BACC3BA)
+F (..\SRC\driver\src\flash.c)(0x5BAB5C7D)(--c99 --gnu -c --cpu Cortex-M0+ -g -W -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include"-D__UVISION_VERSION="529" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\flash.o --omf_browse .\output\flash.crf --depend .\output\flash.d)
 I (..\SRC\driver\inc\flash.h)(0x5B289C94)
 I (..\SRC\driver\inc\ddl.h)(0x5E746B99)
 I (..\SRC\mcu\common\base_types.h)(0x5B641BB6)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
-I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x599EDB3A)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\string.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stddef.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\assert.h)(0x5D9AD212)
 I (..\SRC\mcu\common\hc32l136.h)(0x5B9B6C79)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0plus.h)(0x5B617084)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1F3E94)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B5843C6)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B617084)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm0plus.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D2590B6)
 I (..\SRC\mcu\common\system_hc32l136.h)(0x5B849879)
 I (..\SRC\driver\inc\sysctrl.h)(0x5B849878)
 I (..\SRC\driver\inc\interrupts_hc32l136.h)(0x5B849877)
 I (..\SRC\hyclor\inc\ddl_device.h)(0x5BACC3BA)
-F (..\SRC\driver\src\gpio.c)(0x5B9797AF)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\gpio.o --depend .\output\gpio.d)
+F (..\SRC\driver\src\gpio.c)(0x5B9797AF)(--c99 --gnu -c --cpu Cortex-M0+ -g -W -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include"-D__UVISION_VERSION="529" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\gpio.o --omf_browse .\output\gpio.crf --depend .\output\gpio.d)
 I (..\SRC\driver\inc\gpio.h)(0x5B9797C9)
 I (..\SRC\driver\inc\ddl.h)(0x5E746B99)
 I (..\SRC\mcu\common\base_types.h)(0x5B641BB6)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
-I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x599EDB3A)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\string.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stddef.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\assert.h)(0x5D9AD212)
 I (..\SRC\mcu\common\hc32l136.h)(0x5B9B6C79)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0plus.h)(0x5B617084)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1F3E94)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B5843C6)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B617084)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm0plus.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D2590B6)
 I (..\SRC\mcu\common\system_hc32l136.h)(0x5B849879)
 I (..\SRC\driver\inc\sysctrl.h)(0x5B849878)
 I (..\SRC\driver\inc\interrupts_hc32l136.h)(0x5B849877)
 I (..\SRC\hyclor\inc\ddl_device.h)(0x5BACC3BA)
-F (..\SRC\driver\src\interrupts_hc32l136.c)(0x5F5B1113)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\interrupts_hc32l136.o --depend .\output\interrupts_hc32l136.d)
+F (..\SRC\driver\src\interrupts_hc32l136.c)(0x5FAB74D9)(--c99 --gnu -c --cpu Cortex-M0+ -g -W -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include"-D__UVISION_VERSION="529" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\interrupts_hc32l136.o --omf_browse .\output\interrupts_hc32l136.crf --depend .\output\interrupts_hc32l136.d)
 I (..\SRC\driver\inc\ddl.h)(0x5E746B99)
 I (..\SRC\mcu\common\base_types.h)(0x5B641BB6)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
-I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x599EDB3A)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\string.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stddef.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\assert.h)(0x5D9AD212)
 I (..\SRC\mcu\common\hc32l136.h)(0x5B9B6C79)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0plus.h)(0x5B617084)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1F3E94)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B5843C6)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B617084)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm0plus.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D2590B6)
 I (..\SRC\mcu\common\system_hc32l136.h)(0x5B849879)
 I (..\SRC\driver\inc\sysctrl.h)(0x5B849878)
 I (..\SRC\driver\inc\interrupts_hc32l136.h)(0x5B849877)
 I (..\SRC\hyclor\inc\ddl_device.h)(0x5BACC3BA)
-F (..\SRC\driver\src\sysctrl.c)(0x5B289C94)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\sysctrl.o --depend .\output\sysctrl.d)
+F (..\SRC\driver\src\sysctrl.c)(0x5B289C94)(--c99 --gnu -c --cpu Cortex-M0+ -g -W -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include"-D__UVISION_VERSION="529" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\sysctrl.o --omf_browse .\output\sysctrl.crf --depend .\output\sysctrl.d)
 I (..\SRC\driver\inc\sysctrl.h)(0x5B849878)
 I (..\SRC\driver\inc\ddl.h)(0x5E746B99)
 I (..\SRC\mcu\common\base_types.h)(0x5B641BB6)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
-I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x599EDB3A)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\string.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stddef.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\assert.h)(0x5D9AD212)
 I (..\SRC\mcu\common\hc32l136.h)(0x5B9B6C79)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0plus.h)(0x5B617084)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1F3E94)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B5843C6)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B617084)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm0plus.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D2590B6)
 I (..\SRC\mcu\common\system_hc32l136.h)(0x5B849879)
 I (..\SRC\hyclor\inc\ddl_device.h)(0x5BACC3BA)
 I (..\SRC\driver\inc\interrupts_hc32l136.h)(0x5B849877)
-F (..\SRC\driver\src\bt.c)(0x5BA4B271)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\bt.o --depend .\output\bt.d)
+F (..\SRC\driver\src\bt.c)(0x5BA4B271)(--c99 --gnu -c --cpu Cortex-M0+ -g -W -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include"-D__UVISION_VERSION="529" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\bt.o --omf_browse .\output\bt.crf --depend .\output\bt.d)
 I (..\SRC\driver\inc\bt.h)(0x5BA3713B)
 I (..\SRC\driver\inc\ddl.h)(0x5E746B99)
 I (..\SRC\mcu\common\base_types.h)(0x5B641BB6)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
-I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x599EDB3A)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\string.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stddef.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\assert.h)(0x5D9AD212)
 I (..\SRC\mcu\common\hc32l136.h)(0x5B9B6C79)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0plus.h)(0x5B617084)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1F3E94)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B5843C6)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B617084)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm0plus.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D2590B6)
 I (..\SRC\mcu\common\system_hc32l136.h)(0x5B849879)
 I (..\SRC\driver\inc\sysctrl.h)(0x5B849878)
 I (..\SRC\driver\inc\interrupts_hc32l136.h)(0x5B849877)
 I (..\SRC\hyclor\inc\ddl_device.h)(0x5BACC3BA)
-F (..\SRC\driver\src\adc.c)(0x5B978881)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\adc.o --depend .\output\adc.d)
+F (..\SRC\driver\src\adc.c)(0x5B978881)(--c99 --gnu -c --cpu Cortex-M0+ -g -W -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include"-D__UVISION_VERSION="529" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\adc.o --omf_browse .\output\adc.crf --depend .\output\adc.d)
 I (..\SRC\driver\inc\adc.h)(0x5B849877)
 I (..\SRC\driver\inc\ddl.h)(0x5E746B99)
 I (..\SRC\mcu\common\base_types.h)(0x5B641BB6)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
-I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x599EDB3A)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\string.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stddef.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\assert.h)(0x5D9AD212)
 I (..\SRC\mcu\common\hc32l136.h)(0x5B9B6C79)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0plus.h)(0x5B617084)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1F3E94)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B5843C6)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B617084)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm0plus.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D2590B6)
 I (..\SRC\mcu\common\system_hc32l136.h)(0x5B849879)
 I (..\SRC\driver\inc\sysctrl.h)(0x5B849878)
 I (..\SRC\driver\inc\interrupts_hc32l136.h)(0x5B849877)
 I (..\SRC\hyclor\inc\ddl_device.h)(0x5BACC3BA)
-F (..\SRC\driver\src\timer3.c)(0x5BA4B271)(--c99 --gnu -c --cpu Cortex-M0+ -g -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\timer3.o --depend .\output\timer3.d)
+F (..\SRC\driver\src\timer3.c)(0x5BA4B271)(--c99 --gnu -c --cpu Cortex-M0+ -g -W -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include"-D__UVISION_VERSION="529" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\timer3.o --omf_browse .\output\timer3.crf --depend .\output\timer3.d)
 I (..\SRC\driver\inc\timer3.h)(0x5BA3713B)
 I (..\SRC\driver\inc\ddl.h)(0x5E746B99)
 I (..\SRC\mcu\common\base_types.h)(0x5B641BB6)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x599EDB3C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599EDB3E)
-I (C:\Keil_v5\ARM\ARMCC\include\assert.h)(0x599EDB3A)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\string.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stddef.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\assert.h)(0x5D9AD212)
 I (..\SRC\mcu\common\hc32l136.h)(0x5B9B6C79)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm0plus.h)(0x5B617084)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_version.h)(0x5B1F3E94)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5B5843C6)
-I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B617084)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm0plus.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D2590B6)
+I (..\SRC\mcu\common\system_hc32l136.h)(0x5B849879)
+I (..\SRC\driver\inc\sysctrl.h)(0x5B849878)
+I (..\SRC\driver\inc\interrupts_hc32l136.h)(0x5B849877)
+I (..\SRC\hyclor\inc\ddl_device.h)(0x5BACC3BA)
+F (..\SRC\driver\src\uart.c)(0x5BA48EB5)(--c99 --gnu -c --cpu Cortex-M0+ -g -W -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include"-D__UVISION_VERSION="529" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\uart.o --omf_browse .\output\uart.crf --depend .\output\uart.d)
+I (..\SRC\driver\inc\uart.h)(0x5B849878)
+I (..\SRC\driver\inc\ddl.h)(0x5E746B99)
+I (..\SRC\mcu\common\base_types.h)(0x5B641BB6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\string.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stddef.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
+I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\assert.h)(0x5D9AD212)
+I (..\SRC\mcu\common\hc32l136.h)(0x5B9B6C79)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm0plus.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D2590B6)
+I (E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D2590B6)
 I (..\SRC\mcu\common\system_hc32l136.h)(0x5B849879)
 I (..\SRC\driver\inc\sysctrl.h)(0x5B849878)
 I (..\SRC\driver\inc\interrupts_hc32l136.h)(0x5B849877)
