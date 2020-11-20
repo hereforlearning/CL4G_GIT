@@ -2308,7 +2308,7 @@ void WaterFlowFaultProcess(void)
 	if(ucWaterFlowStatus != ucNewWaterFlowStatus)
 	{
 		ucWaterFlowStatus = ucNewWaterFlowStatus;
-		ucWaterFlowStatus=0;//JIE_DEBUG
+		ucWaterFlowStatus=0;
 		if(ucWaterFlowStatus)
 	    {
 			LEDFlashSetting(LED_12,_ON);	

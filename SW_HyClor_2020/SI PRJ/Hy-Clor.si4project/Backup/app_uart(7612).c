@@ -723,11 +723,11 @@ unsigned char IOT_RESOLVE_WIFI_ONLINE(struct Aura4GRec_t * pparam)
 void IOT_SEND_SELF_STATUE()
 {
 	UartSendString("AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,9001\x0d\x0a");
-	delay1ms(30);
+	delay1ms(20);
 	UartSendString("AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,9111\x0d\x0a");
-	delay1ms(30);
+	delay1ms(20);
 	UartSendString("AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,9222\x0d\x0a");
-	delay1ms(30);
+	delay1ms(20);
 }
 
 
@@ -777,7 +777,7 @@ unsigned char IOT_RESOLVE_WIFI_DATA(struct Aura4GRec_t * pparam)
 				UartSendString("AT+ADA=\"s\"\,\"FD\"\,\"i\"\,1\x0d\x0a");
 			else
 				UartSendString("AT+ADA=\"s\"\,\"FD\"\,\"i\"\,0\x0d\x0a");
-			delay1ms(30);
+			delay1ms(40);
 			IOT_SEND_SELF_STATUE();
 
 //			system_delay(500);

@@ -31,7 +31,7 @@ int main(void)
 	EUSART_WIFI_INIT();
 	while(1)
 	{
-//		IOTHandler();
+		IOTHandler();
 		KeyHandler();		      //Key Process
 		ProcessHandler();		  //Event Process
 	}

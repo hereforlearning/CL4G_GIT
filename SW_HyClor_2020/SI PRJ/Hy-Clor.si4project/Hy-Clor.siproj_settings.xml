@@ -17,6 +17,12 @@
 		<ImportedLibs/>
 	</Imports>
 	<ParseConditions>
-		<Defines/>
+		<Defines>
+			<define id="BRAND_SELECT" value="_EU_DAVEY_" />
+			<define id="BURN_IN_TEST" value="0" />
+			<define id="CURRENT_CALIBRATION" value="1" />
+			<define id="DIRECTION_TEST" value="0" />
+			<define id="POWER_BOARD_VERSION" value="0" />
+		</Defines>
 	</ParseConditions>
 </ProjectSettings>

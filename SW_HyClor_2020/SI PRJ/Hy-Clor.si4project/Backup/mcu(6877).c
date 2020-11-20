@@ -273,7 +273,7 @@ void Init_OscFrequency(void)
     Flash_WaitCycle(FlashWaitCycle0);
     
     ///< 时钟初始化前，优先设置要使用的时钟源：此处设置RCH为4MHz
-    Sysctrl_SetRCHTrim(SysctrlRchFreq4MHz);
+    Sysctrl_SetRCHTrim(SysctrlRchFreq16MHz);
     
     ///< 选择内部RCH作为HCLK时钟源;
     stcCfg.enClkSrc    = SysctrlClkRCH;
@@ -459,11 +459,11 @@ void Init_Timer(void)
     
     Bt_Mode0_Init(TIM0, &stcBtBaseCfg);                     //TIM0 的模式0功能初始化
     
-    u16ArrValue = 0x10000-1000*1;//64536;////0x6000;
+    u16ArrValue = 0x10000-1000*4;//64536;////0x6000;
     
     Bt_M0_ARRSet(TIM0, u16ArrValue);                        //设置重载值(周期 = 0x10000 - ARR)
     
-    u16CntValue = 0x10000-1000*1;///64536;//0x6000;
+    u16CntValue = 0x10000-1000*4;///64536;//0x6000;
     
     Bt_M0_Cnt16Set(TIM0, u16CntValue);                      //设置计数初值
     
@@ -486,18 +486,18 @@ void Init_Timer(void)
     
     Bt_Mode0_Init(TIM1, &stcBtTimer1Cfg);                     //TIM0 的模式0功能初始化
  #if(POWER_BOARD_VERSION == POWER_TRC_VERSION)   
-    u16ArrValue =0x10000- (0x10000-65411)*1;
+    u16ArrValue =0x10000- (0x10000-65411)*4;
 //  u16ArrValue = 65411;
  #else
-    u16ArrValue =0x10000- (0x10000-65436)*1;
+    u16ArrValue =0x10000- (0x10000-65436)*4;
 //    u16ArrValue = 65436;
  #endif
     Bt_M0_ARRSet(TIM1, u16ArrValue);                        //设置重载值(周期 = 0x10000 - ARR)
 #if(POWER_BOARD_VERSION == POWER_TRC_VERSION)     
-    u16ArrValue =0x10000- (0x10000-65411)*1;
+    u16ArrValue =0x10000- (0x10000-65411)*4;
 //  u16CntValue = 65411;
 #else
-    u16ArrValue =0x10000- (0x10000-65436)*1;
+    u16ArrValue =0x10000- (0x10000-65436)*4;
 //	u16CntValue = 65436;
 #endif
     Bt_M0_Cnt16Set(TIM1, u16CntValue);                      //设置计数初值
@@ -512,7 +512,7 @@ void Init_Timer(void)
 
 	stcTim3BaseCfg.enWorkMode    = Tim3WorkMode0;             //定时器模式
     stcTim3BaseCfg.enCT          = Tim3Timer;                 //定时器功能，计数时钟为内部PCLK
-    stcTim3BaseCfg.enPRS         = Tim3PCLKDiv4;              //PCLK
+    stcTim3BaseCfg.enPRS         = Tim3PCLKDiv16;              //PCLK
     stcTim3BaseCfg.enCntMode     = Tim316bitArrMode;               //自动重载16位计数器/定时器
     stcTim3BaseCfg.bEnTog        = FALSE;
     stcTim3BaseCfg.bEnGate       = FALSE;
@@ -683,8 +683,8 @@ void MCU_Initialize(void)
 #if(POWER_BOARD_VERSION == POWER_MOS_VERSION)	
 	Init_PWM();
 #endif	
-//	Init_APP_Uart();
-//	EUSART_WIFI_INIT();
+	Init_APP_Uart();
+	EUSART_WIFI_INIT();
 }	
 void MCUStopOutput(void)
 {
