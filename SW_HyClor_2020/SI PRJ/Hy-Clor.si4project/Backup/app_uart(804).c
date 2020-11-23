@@ -790,8 +790,7 @@ unsigned char IOT_RESOLVE_WIFI_DATA(struct Aura4GRec_t * pparam)
 		if(pparam->RecString[0]=='Z'){
 			temp=pparam->RecData[1]-'0';
 			temp=temp*10+pparam->RecData[2]-'0';
-			temp=temp*10+pparam->RecData[3]-'0';
-			ucCellCurrent = temp;
+			ucCellCurrent = temp*10;
 //			CellCurrentLED(temp);
 			CellOutputCurrentAdjustAPI(ucCellCurrent);
 			temp=1;

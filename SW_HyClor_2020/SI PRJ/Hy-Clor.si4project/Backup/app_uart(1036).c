@@ -736,7 +736,6 @@ unsigned char IOT_KEY=0;
 extern unsigned char ucCellCurrent;
 extern unsigned char ucDisplayWaitTimerCnt;
 void CellCurrentLED(unsigned char ucVal);
-void CellOutputCurrentAdjustAPI(unsigned char CellCurrent);
 unsigned char IOT_RESOLVE_WIFI_DATA(struct Aura4GRec_t * pparam)
 {
 //"+ADA: "g","ok","TG","s","1"\r\n"
@@ -774,42 +773,26 @@ unsigned char IOT_RESOLVE_WIFI_DATA(struct Aura4GRec_t * pparam)
 		else if(pparam->RecData[0]=='3')
 		{
 //			system_delay(500);
-			IOT_SEND_SELF_STATUE();
-			delay1ms(30);
 			if (POWER_ON)
 				UartSendString("AT+ADA=\"s\"\,\"FD\"\,\"i\"\,1\x0d\x0a");
 			else
 				UartSendString("AT+ADA=\"s\"\,\"FD\"\,\"i\"\,0\x0d\x0a");
 			delay1ms(30);
+			IOT_SEND_SELF_STATUE();
 
 //			system_delay(500);
 			IOT_KEY=0x80|4;
 		}
-		}
-	
+	}
+
 		if(pparam->RecString[0]=='Z'){
 			temp=pparam->RecData[1]-'0';
 			temp=temp*10+pparam->RecData[2]-'0';
-			temp=temp*10+pparam->RecData[3]-'0';
-			ucCellCurrent = temp;
-//			CellCurrentLED(temp);
-			CellOutputCurrentAdjustAPI(ucCellCurrent);
+			CellCurrentLED(temp);
+			ucCellCurrent = temp*10;
 			temp=1;
 			ucDisplayWaitTimerCnt = 3;	
 		}
-			
-		if(pparam->RecString[0]=='A'){
-			if(pparam->RecData[2]=='R')
-			{
-
-
-			}
-			temp=temp*10+pparam->RecData[2]-'0';
-			temp=1;
-			ucDisplayWaitTimerCnt = 3;	
-		}
-	
-	
 	}
 	return temp;
 }
@@ -977,19 +960,6 @@ void IOTHandler(void)
 
 void APP_UART_1MS_HANDLE(void) 
 {
-#if 0//1ms output test
-	static unsigned char dir=0;
-	if(dir==0)
-	{
-		Gpio_SetIO(GpioPortD, GpioPin1);
-		dir=1;
-	}
-	else
-	{
-		dir=0;
-		Gpio_ClrIO(GpioPortD, GpioPin1);
-	}
-#endif
 	cnt++;
     makesure_uart_not_interrupt_intoif :
 	if(u8RX_RECIEVE_CNT<20)

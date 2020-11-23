@@ -71,7 +71,7 @@ GetCellRealCurrent line 1225 : 			uiCellRealCurrent = 0;
 GetCellRealCurrent line 1269 : 			uiCellRealCurrent = (uiTemp/100);	
 GetCellRealCurrent line 1275 : 			uiCellRealCurrent = 0;
 CellRealCurrentDisplay line 1300 : 		//LEDDisplayHexValue(uiCellRealCurrent);
-CellRealCurrentDisplay line 1315 : 			uiCellRealCurrent = 0;
+CellRealCurrentDishttps://item.szlcsc.com/253992.htmlplay line 1315 : 			uiCellRealCurrent = 0;
 CellRealCurrentDisplay line 1317 : 		iTemp = uiCellRealCurrent;
 CellOutputCalibration line 1549 : 	if(uiCellRealCurrent>uiStdHigh)
 CellOutputCalibration line 1552 : 		uiTol = uiCellRealCurrent - uiStdH;
@@ -310,3 +310,140 @@ ProcessHandler line 2692 : #if(WATER_FLOW_CHECK == _ENABLE)
 ProcessHandler line 2738 : 		#if(WATER_FLOW_CHECK == _ENABLE)	 	
 F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\global.h line 97 : #define WATER_FLOW_CHECK                         _ENABLE
 F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\global.h line 134 : #define WATER_FLOW_CHECK                         _ENABLE //
+---- JIE_DEBUG Matches (1 in 1 files) ----
+WaterFlowFaultProcess line 2311 : 		ucWaterFlowStatus=0;//JIE_DEBUG
+---- JIE_DEBUG Matches (1 in 1 files) ----
+WaterFlowFaultProcess line 2311 : 		ucWaterFlowStatus=0;//JIE_DEBUG
+---- _FORWARD Matches (9 in 2 files) ----
+SaveCalValueByDirection line 454 : 	if(ucCellPolarity == _FORWARD)
+DataRangeCheck line 677 : 	if(ucData[3] > _FORWARD)
+CellPolarityReverse line 1393 : 	if(ucPol == _FORWARD)
+CellPolarityReverse line 1397 : 		//Eeprom_WriteBytes(CELL_POLARITY_ADDR,_FORWARD);
+CellPolarityReverse line 1398 : 		ucData[3] = _FORWARD;
+ChlorBoostProcess line 2423 : 		if(ucCellPolarity ==_FORWARD)
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\global.h line 54 : #define _FORWARD                                 1
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\global.h line 85 : #define DEFUALT_CELL_POLARITY                    _FORWARD
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\global.h line 122 : #define DEFUALT_CELL_POLARITY                    _FORWARD
+---- ucCellPolarity Matches (16 in 1 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 185 : unsigned char ucCellPolarity;
+ReadCellPolarity line 365 : 	ucCellPolarity = Eeprom_ReadBytes(CELL_POLARITY_ADDR);
+SaveCellPolarity line 417 : 	ucData[3] = ucCellPolarity;
+SaveCalValueByDirection line 454 : 	if(ucCellPolarity == _FORWARD)
+UpdateUserData line 799 : 	ucCellPolarity = ucData[3];
+CellPolarityControl line 1362 : 	if(ucCellPolarity)//Forward
+CellReverse line 1405 : 	if(ucCellPolarity)
+CellReverse line 1406 : 		ucCellPolarity = 0;
+CellReverse line 1408 : 		ucCellPolarity = 1;
+CellReverseForPCBTest line 2205 : 		if(ucCellPolarity)
+CellReverseForPCBTest line 2206 : 			ucCellPolarity = 0;
+CellReverseForPCBTest line 2208 : 			ucCellPolarity = 1;	
+ChlorBoostProcess line 2423 : 		if(ucCellPolarity ==_FORWARD)
+BoostModeHandler line 2500 : 				if(ucCellPolarity == _REVERSE)
+BoostModeHandler line 2520 : 				if(ucCellPolarity == _REVERSE)
+BoostModeHandler line 2543 : 				if(ucCellPolarity == _REVERSE)
+---- ReadCellPolarity Matches (2 in 1 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 363 : void ReadCellPolarity(void)
+ProcessHandler line 2784 : 			ReadCellPolarity();
+---- LED_11 Matches (22 in 1 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 98 : 	LED_11 =BIT10,
+LEDControl line 504 : 			case LED_11:		//D1
+LEDControl line 555 : 			case LED_11:		//D1
+CellPolarityControl line 1371 : 		LEDFlashSetting(LED_11,_OFF);
+CellPolarityControl line 1382 : 		LEDFlashSetting(LED_11,_ON);
+CellPolarityControl line 1385 : 	LEDControl(LED_11,_ON);
+CellOutputCurrentAdjust line 1657 : 			LEDControl(LED_11,_ON);
+CellOutputCurrentAdjust line 1659 : 			LEDControl(LED_11,_OFF);
+CellOutputCurrentAdjust line 1661 : 			LEDControl(LED_11,_ON);
+CellOutputCurrentAdjust line 1663 : 			LEDControl(LED_11,_OFF);
+CellOutputCurrentAdjust line 1665 : 			LEDControl(LED_11,_ON);
+CellOutputCurrentAdjust line 1667 : 			LEDControl(LED_11,_OFF);
+CellOutputCurrentAdjust line 1669 : 			LEDFlashSetting(LED_11,_ON);
+SpecialSecretCodeProcess line 2374 : 			LEDFlashSetting(LED_12|LED_11,_ON);
+ChlorBoostProcess line 2425 : 			LEDFlashSetting(LED_11,_OFF);
+ChlorBoostProcess line 2426 : 			LEDControl(LED_11, _ON);
+BoostModeHandler line 2499 : 				LEDControl(LED_11,_ON);
+BoostModeHandler line 2501 : 				LEDFlashSetting(LED_11,_ON);
+BoostModeHandler line 2519 : 				LEDControl(LED_11,_ON);
+BoostModeHandler line 2521 : 				LEDFlashSetting(LED_11,_ON);
+BoostModeHandler line 2542 : 				LEDControl(LED_11,_ON);
+BoostModeHandler line 2544 : 				LEDFlashSetting(LED_11,_ON);
+---- SaveCellPolarity Matches (1 in 1 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 415 : void SaveCellPolarity(void)
+---- ucCellPolarity Matches (16 in 1 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 185 : unsigned char ucCellPolarity;
+ReadCellPolarity line 365 : 	ucCellPolarity = Eeprom_ReadBytes(CELL_POLARITY_ADDR);
+SaveCellPolarity line 417 : 	ucData[3] = ucCellPolarity;
+SaveCalValueByDirection line 454 : 	if(ucCellPolarity == _FORWARD)
+UpdateUserData line 799 : 	ucCellPolarity = ucData[3];
+CellPolarityControl line 1362 : 	if(ucCellPolarity)//Forward
+CellReverse line 1405 : 	if(ucCellPolarity)
+CellReverse line 1406 : 		ucCellPolarity = 0;
+CellReverse line 1408 : 		ucCellPolarity = 1;
+CellReverseForPCBTest line 2205 : 		if(ucCellPolarity)
+CellReverseForPCBTest line 2206 : 			ucCellPolarity = 0;
+CellReverseForPCBTest line 2208 : 			ucCellPolarity = 1;	
+ChlorBoostProcess line 2423 : 		if(ucCellPolarity ==_FORWARD)
+BoostModeHandler line 2500 : 				if(ucCellPolarity == _REVERSE)
+BoostModeHandler line 2520 : 				if(ucCellPolarity == _REVERSE)
+BoostModeHandler line 2543 : 				if(ucCellPolarity == _REVERSE)
+---- CellPolarityControl Matches (4 in 1 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 1350 : void CellPolarityControl(void)
+CellReverse line 1410 : 	CellPolarityControl();
+PowerOnInitialize line 2241 : 	CellPolarityControl();	
+ProcessHandler line 2785 : 			CellPolarityControl();
+---- _FORWARD Matches (9 in 2 files) ----
+SaveCalValueByDirection line 454 : 	if(ucCellPolarity == _FORWARD)
+DataRangeCheck line 677 : 	if(ucData[3] > _FORWARD)
+CellPolarityReverse line 1393 : 	if(ucPol == _FORWARD)
+CellPolarityReverse line 1397 : 		//Eeprom_WriteBytes(CELL_POLARITY_ADDR,_FORWARD);
+CellPolarityReverse line 1398 : 		ucData[3] = _FORWARD;
+ChlorBoostProcess line 2423 : 		if(ucCellPolarity ==_FORWARD)
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\global.h line 54 : #define _FORWARD                                 1
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\global.h line 85 : #define DEFUALT_CELL_POLARITY                    _FORWARD
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\global.h line 122 : #define DEFUALT_CELL_POLARITY                    _FORWARD
+---- GpioPin0 Matches (23 in 4 files) ----
+APP_UART_1MS_HANDLE line 966 : 		Gpio_SetIO(GpioPortD, GpioPin0);
+APP_UART_1MS_HANDLE line 972 : 		Gpio_ClrIO(GpioPortD, GpioPin0);
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 29 : #define CELL_POLARITY2_HIGH	         Gpio_SetIO(GpioPortD, GpioPin0)
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 30 : #define CELL_POLARITY2_LOW           Gpio_ClrIO(GpioPortD, GpioPin0)
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 38 : //#define CELL_POLARITY_HIGH	         Gpio_SetIO(GpioPortD, GpioPin0)
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 39 : //#define CELL_POLARITY_LOW	         Gpio_ClrIO(GpioPortD, GpioPin0)
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 47 : #define WATER_FLOW_SENSOR            Gpio_GetInputIO(GpioPortA, GpioPin0)
+LEDControl line 540 : 				Gpio_SetIO(GpioPortB, GpioPin0);
+LEDControl line 591 : 				Gpio_ClrIO(GpioPortB, GpioPin0);
+LEDALLControl line 972 : 		Gpio_SetIO(GpioPortB, GpioPin0);
+LEDALLControl line 993 : 		Gpio_ClrIO(GpioPortB, GpioPin0);
+en_gpio_pin line 97 :     GpioPin0  = 0u,                 ///< GPIO PIN0 
+Tim3Int line 235 :             //Gpio_WriteOutputIO(GpioPortB, GpioPin0,TRUE);                       
+Tim3Int line 242 :             //Gpio_WriteOutputIO(GpioPortB, GpioPin0,FALSE);                                                
+Init_IOPorts line 317 :     Gpio_Init(GpioPortA, GpioPin0, &stcGpioCfg);   //Water Flow
+Init_IOPorts line 367 : 	Gpio_ClrIO(GpioPortD, GpioPin0);
+Init_IOPorts line 368 : 	Gpio_Init(GpioPortD, GpioPin0, &stcGpioCfg);	
+Init_IOPorts line 390 : 	Gpio_ClrIO(GpioPortB, GpioPin0);
+Init_IOPorts line 408 : 	Gpio_Init(GpioPortB, GpioPin0, &stcGpioCfg);
+Init_ADC line 549 :     Gpio_SetAnalogMode(GpioPortA, GpioPin0);        //PA00 (AIN0)
+Init_ADC line 551 :     Gpio_Init(GpioPortA, GpioPin0, &stcAdcAN0Port);
+MCUStopOutput line 695 : 	Gpio_ClrIO(GpioPortD, GpioPin0);
+MCUStopOutput line 713 : 	Gpio_ClrIO(GpioPortB, GpioPin0);
+---- uiCurrentDuty Matches (17 in 1 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 266 : unsigned int uiCurrentDuty = PWM_MIN;
+CellCurrentOutput line 1446 :     	uiCurrentDuty = PWM_MIN;
+CellOutputCalibration line 1568 : 		if(uiCurrentDuty >= iTempSum)
+CellOutputCalibration line 1570 : 			uiCurrentDuty -= ucStep;
+CellOutputCalibration line 1571 : 			uiPWMHCnt = uiCurrentDuty;//uiPWMHCnt = uiCurrentDuty *10;
+CellOutputCalibration line 1583 : 			uiCurrentDuty = PWM_MIN;
+CellOutputCalibration line 1605 : 		iTempSum = uiCurrentDuty;
+CellOutputCalibration line 1616 : 			uiCurrentDuty = iTempSum;
+CellOutputCalibration line 1617 : 			uiPWMHCnt = uiCurrentDuty;//uiPWMHCnt = uiCurrentDuty *10;
+CellOutputCalibration line 1622 : 			uiCurrentDuty = uiCurrentMaxDuty;
+CellOutputCalibration line 1623 : 			uiPWMHCnt = uiCurrentDuty;//uiPWMHCnt = uiCurrentDuty *10;
+ChlorBoostProcess line 2421 : 		uiCurrentDuty = uiPWMHCnt;
+CheckWaterSaltLevel line 2640 : 	if((uiCurrentDuty >= uiCurrentMaxDuty)&&(uiCellRealCurrent < uiLowSaltCurrent)&&(bStopOutputFlag == _FALSE))
+CellCurrentCycleOutput line 2680 : 			uiCurrentDuty = PWM_MIN;
+---- _REVERSE Matches (6 in 2 files) ----
+CellPolarityReverse line 1394 : 		//Eeprom_WriteBytes(CELL_POLARITY_ADDR,_REVERSE);
+CellPolarityReverse line 1395 : 		ucData[3] = _REVERSE;
+BoostModeHandler line 2545 : 				if(ucCellPolarity == _REVERSE)
+BoostModeHandler line 2565 : 				if(ucCellPolarity == _REVERSE)
+BoostModeHandler line 2588 : 				if(ucCellPolarity == _REVERSE)
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\global.h line 55 : #define _REVERSE                                 0

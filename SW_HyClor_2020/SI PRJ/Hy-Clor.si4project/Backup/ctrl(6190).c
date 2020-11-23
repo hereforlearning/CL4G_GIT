@@ -38,8 +38,8 @@
 #define CELL_POLARITY_HIGH	         Gpio_SetIO(GpioPortD, GpioPin0)
 #define CELL_POLARITY_LOW	         Gpio_ClrIO(GpioPortD, GpioPin0)
 
-//#define CELL_POLARITY2_HIGH	         Gpio_SetIO(GpioPortD, GpioPin1)
-//#define CELL_POLARITY2_LOW           Gpio_ClrIO(GpioPortD, GpioPin1)
+#define CELL_POLARITY2_HIGH	         Gpio_SetIO(GpioPortD, GpioPin1)
+#define CELL_POLARITY2_LOW           Gpio_ClrIO(GpioPortD, GpioPin1)
 #endif
 //#define FAN_CTRL_HIGH
 #if(WATER_FLOW_CHECK == _ENABLE)
@@ -1816,51 +1816,6 @@ void CellOutputCurrentAdjust(unsigned char ucAdjDirect)
 	
 }
 
-void CellOutputCurrentAdjustAPI(unsigned char CellCurrent)
-{
-	unsigned char ucNum;
-	unsigned int iTemp;
-	unsigned int uiLedNum;
-	ucCellCurrent=CellCurrent;
-	if((ucBoostStatus)||(bDoBoostModeFlag))
-		return;
-
-	if(bResetMode)
-	{
-		return;
-	}
-	{
-		uiLEDFlashStatus &= 0xFC00;
-		#if(DEBUG == _ENABLE)
-		uiCurrentMaxDuty = ucDutyDiv*ucCellCurrent;
-		#if(SUPPORT_1KHZ == _ENABLE)
-		uiCurrentMaxDuty = uiCurrentMaxDuty/10;
-		#endif
-		#endif
-		uiOutputTime = 6*ucCellCurrent;
-		iTemp = ucCellCurrent;
-		ucNum = 10;
-		ucNum = iTemp/ucNum;
-		//uiOutputTime = 6*ucNum;
-		iTemp = ucNum *10;
-		CellCurrentLED(ucNum);
-		if(ucCellCurrent>iTemp)
-		{
-			uiLedNum = LED_1<<ucNum;
-			LEDFlashSetting(uiLedNum,_ON);
-			LEDControl(uiLedNum,_ON);
-		}
-		CellCurrentOutput(ucCellCurrent);
-		uiOutputCounter = 0;
-		SaveCellCurrent();
-#if(BRAND_SELECT == _AU_CAS_)
-		CalculateThresholdLimit();
-#endif
-		ucDisplayWaitTimerCnt = 5;	
-	}
-}
-
-
 void CellOutputControl(void)
 {
 	
@@ -2353,7 +2308,7 @@ void WaterFlowFaultProcess(void)
 	if(ucWaterFlowStatus != ucNewWaterFlowStatus)
 	{
 		ucWaterFlowStatus = ucNewWaterFlowStatus;
-//		ucWaterFlowStatus=0;//JIE_DEBUG
+		ucWaterFlowStatus=0;//JIE_DEBUG
 		if(ucWaterFlowStatus)
 	    {
 			LEDFlashSetting(LED_12,_ON);	

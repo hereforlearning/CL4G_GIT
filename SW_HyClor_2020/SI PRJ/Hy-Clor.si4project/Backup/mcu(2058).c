@@ -273,7 +273,7 @@ void Init_OscFrequency(void)
     Flash_WaitCycle(FlashWaitCycle0);
     
     ///< 时钟初始化前，优先设置要使用的时钟源：此处设置RCH为4MHz
-    Sysctrl_SetRCHTrim(SysctrlRchFreq16MHz);
+    Sysctrl_SetRCHTrim(SysctrlRchFreq4MHz);
     
     ///< 选择内部RCH作为HCLK时钟源;
     stcCfg.enClkSrc    = SysctrlClkRCH;
@@ -449,7 +449,7 @@ void Init_Timer(void)
     
     stcBtBaseCfg.enWorkMode = BtWorkMode0;                  //定时器模式
     stcBtBaseCfg.enCT       = BtTimer;                      //定时器功能，计数时钟为内部PCLK
-    stcBtBaseCfg.enPRS      = BtPCLKDiv16;//BtPCLKDiv64;                  //PCLK/64
+    stcBtBaseCfg.enPRS      = BtPCLKDiv4;//BtPCLKDiv64;                  //PCLK/64
     stcBtBaseCfg.enCntMode  = Bt16bitArrMode;               //自动重载16位计数器/定时器
     stcBtBaseCfg.bEnTog     = FALSE;
     stcBtBaseCfg.bEnGate    = FALSE;
@@ -476,7 +476,7 @@ void Init_Timer(void)
 //Timer 1
     stcBtTimer1Cfg.enWorkMode = BtWorkMode0;                  //定时器模式
     stcBtTimer1Cfg.enCT       = BtTimer;                      //定时器功能，计数时钟为内部PCLK
-    stcBtTimer1Cfg.enPRS      = BtPCLKDiv16;//BtPCLKDiv4//BtPCLKDiv64;                  //PCLK/64
+    stcBtTimer1Cfg.enPRS      = BtPCLKDiv4;//BtPCLKDiv4//BtPCLKDiv64;                  //PCLK/64
     stcBtTimer1Cfg.enCntMode  = Bt16bitArrMode;               //自动重载16位计数器/定时器
     stcBtTimer1Cfg.bEnTog     = FALSE;
     stcBtTimer1Cfg.bEnGate    = FALSE;
@@ -512,7 +512,7 @@ void Init_Timer(void)
 
 	stcTim3BaseCfg.enWorkMode    = Tim3WorkMode0;             //定时器模式
     stcTim3BaseCfg.enCT          = Tim3Timer;                 //定时器功能，计数时钟为内部PCLK
-    stcTim3BaseCfg.enPRS         = Tim3PCLKDiv16;              //PCLK
+    stcTim3BaseCfg.enPRS         = Tim3PCLKDiv4;              //PCLK
     stcTim3BaseCfg.enCntMode     = Tim316bitArrMode;               //自动重载16位计数器/定时器
     stcTim3BaseCfg.bEnTog        = FALSE;
     stcTim3BaseCfg.bEnGate       = FALSE;
@@ -521,7 +521,7 @@ void Init_Timer(void)
 	stcTim3BaseCfg.pfnTim3Cb  = Tim3Int;                      //中断函数入口
 	Tim3_Mode0_Init(&stcTim3BaseCfg);                        //TIM3 的模式0功能初始化
 
-    u16ArrValue = 0xFFFF-uiPWMPeriod*1;
+    u16ArrValue = 0xFFFF-uiPWMPeriod;
 	Tim3_M0_Cnt16Set(u16ArrValue);
     Tim3_M0_ARRSet(u16ArrValue);                       //设置重载值,并使能缓存	
     Tim3_ClearIntFlag(Tim3UevIrq);
