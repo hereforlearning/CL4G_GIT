@@ -18,7 +18,7 @@ I (..\SRC\driver\inc\sysctrl.h)(0x5B849878)
 I (..\SRC\driver\inc\ddl.h)(0x5E746B99)
 I (..\SRC\hyclor\inc\ddl_device.h)(0x5BACC3BA)
 I (..\SRC\driver\inc\interrupts_hc32l136.h)(0x5B849877)
-F (..\SRC\hyclor\src\ctrl.c)(0x5FBB8392)(--c99 --gnu -c --cpu Cortex-M0+ -g -W -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include"-D__UVISION_VERSION="529" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\ctrl.o --omf_browse .\output\ctrl.crf --depend .\output\ctrl.d)
+F (..\SRC\hyclor\src\ctrl.c)(0x5FBCAE71)(--c99 --gnu -c --cpu Cortex-M0+ -g -W -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include"-D__UVISION_VERSION="529" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\ctrl.o --omf_browse .\output\ctrl.crf --depend .\output\ctrl.d)
 I (..\SRC\driver\inc\gpio.h)(0x5B9797C9)
 I (..\SRC\driver\inc\ddl.h)(0x5E746B99)
 I (..\SRC\mcu\common\base_types.h)(0x5B641BB6)
@@ -37,10 +37,11 @@ I (..\SRC\driver\inc\sysctrl.h)(0x5B849878)
 I (..\SRC\driver\inc\interrupts_hc32l136.h)(0x5B849877)
 I (..\SRC\hyclor\inc\ddl_device.h)(0x5BACC3BA)
 I (..\SRC\driver\inc\flash.h)(0x5B289C94)
-I (..\SRC\hyclor\inc\global.h)(0x5FB753B5)
+I (..\SRC\hyclor\inc\global.h)(0x5FBB90B0)
 I (..\SRC\hyclor\inc\keypad.h)(0x5E7B2104)
 I (..\SRC\hyclor\inc\mcu.h)(0x5F604BF7)
-F (..\SRC\hyclor\src\keypad.c)(0x5FB5C9EA)(--c99 --gnu -c --cpu Cortex-M0+ -g -W -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include"-D__UVISION_VERSION="529" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\keypad.o --omf_browse .\output\keypad.crf --depend .\output\keypad.d)
+I (..\SRC\hyclor\inc\app_uart.h)(0x5FBCC4F6)
+F (..\SRC\hyclor\src\keypad.c)(0x5FBCC580)(--c99 --gnu -c --cpu Cortex-M0+ -g -W -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include"-D__UVISION_VERSION="529" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\keypad.o --omf_browse .\output\keypad.crf --depend .\output\keypad.d)
 I (..\SRC\driver\inc\gpio.h)(0x5B9797C9)
 I (..\SRC\driver\inc\ddl.h)(0x5E746B99)
 I (..\SRC\mcu\common\base_types.h)(0x5B641BB6)
@@ -59,14 +60,15 @@ I (..\SRC\driver\inc\sysctrl.h)(0x5B849878)
 I (..\SRC\driver\inc\interrupts_hc32l136.h)(0x5B849877)
 I (..\SRC\hyclor\inc\ddl_device.h)(0x5BACC3BA)
 I (..\SRC\hyclor\inc\keypad.h)(0x5E7B2104)
-I (..\SRC\hyclor\inc\global.h)(0x5FB753B5)
+I (..\SRC\hyclor\inc\global.h)(0x5FBB90B0)
 I (..\SRC\hyclor\inc\ctrl.h)(0x5F6C48D8)
-F (..\SRC\hyclor\src\main.c)(0x5FBB43D0)(--c99 --gnu -c --cpu Cortex-M0+ -g -W -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include"-D__UVISION_VERSION="529" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\main.o --omf_browse .\output\main.crf --depend .\output\main.d)
-I (..\SRC\hyclor\inc\global.h)(0x5FB753B5)
+I (..\SRC\hyclor\inc\app_uart.h)(0x5FBCC4F6)
+F (..\SRC\hyclor\src\main.c)(0x5FBC6045)(--c99 --gnu -c --cpu Cortex-M0+ -g -W -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include"-D__UVISION_VERSION="529" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\main.o --omf_browse .\output\main.crf --depend .\output\main.d)
+I (..\SRC\hyclor\inc\global.h)(0x5FBB90B0)
 I (..\SRC\hyclor\inc\mcu.h)(0x5F604BF7)
 I (..\SRC\hyclor\inc\keypad.h)(0x5E7B2104)
 I (..\SRC\hyclor\inc\ctrl.h)(0x5F6C48D8)
-I (..\SRC\hyclor\inc\app_uart.h)(0x5FB7228A)
+I (..\SRC\hyclor\inc\app_uart.h)(0x5FBCC4F6)
 F (..\SRC\hyclor\src\mcu.c)(0x5FBB650C)(--c99 --gnu -c --cpu Cortex-M0+ -g -W -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include"-D__UVISION_VERSION="529" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\mcu.o --omf_browse .\output\mcu.crf --depend .\output\mcu.d)
 I (..\SRC\driver\inc\gpio.h)(0x5B9797C9)
 I (..\SRC\driver\inc\ddl.h)(0x5E746B99)
@@ -89,10 +91,10 @@ I (..\SRC\driver\inc\bt.h)(0x5BA3713B)
 I (..\SRC\driver\inc\flash.h)(0x5B289C94)
 I (..\SRC\driver\inc\adc.h)(0x5B849877)
 I (..\SRC\driver\inc\timer3.h)(0x5BA3713B)
-I (..\SRC\hyclor\inc\global.h)(0x5FB753B5)
+I (..\SRC\hyclor\inc\global.h)(0x5FBB90B0)
 I (..\SRC\hyclor\inc\keypad.h)(0x5E7B2104)
 I (..\SRC\hyclor\inc\ctrl.h)(0x5F6C48D8)
-F (..\SRC\hyclor\src\app_uart.c)(0x5FBB8804)(--c99 --gnu -c --cpu Cortex-M0+ -g -W -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include"-D__UVISION_VERSION="529" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\app_uart.o --omf_browse .\output\app_uart.crf --depend .\output\app_uart.d)
+F (..\SRC\hyclor\src\app_uart.c)(0x5FBCDC9A)(--c99 --gnu -c --cpu Cortex-M0+ -g -W -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include"-D__UVISION_VERSION="529" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\app_uart.o --omf_browse .\output\app_uart.crf --depend .\output\app_uart.d)
 I (..\SRC\driver\inc\ddl.h)(0x5E746B99)
 I (..\SRC\mcu\common\base_types.h)(0x5B641BB6)
 I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
@@ -112,7 +114,7 @@ I (..\SRC\hyclor\inc\ddl_device.h)(0x5BACC3BA)
 I (..\SRC\driver\inc\uart.h)(0x5B849878)
 I (..\SRC\driver\inc\gpio.h)(0x5B9797C9)
 I (..\SRC\hyclor\inc\crc32.h)(0x5FAB4D8B)
-I (..\SRC\hyclor\inc\app_uart.h)(0x5FB7228A)
+I (..\SRC\hyclor\inc\app_uart.h)(0x5FBCC4F6)
 I (..\SRC\hyclor\inc\app_aes.h)(0x5FAB5013)
 I (..\SRC\hyclor\inc\keypad.h)(0x5E7B2104)
 F (..\SRC\hyclor\src\crc32.c)(0x5FAB4F45)(--c99 --gnu -c --cpu Cortex-M0+ -g -W -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include"-D__UVISION_VERSION="529" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\crc32.o --omf_browse .\output\crc32.crf --depend .\output\crc32.d)

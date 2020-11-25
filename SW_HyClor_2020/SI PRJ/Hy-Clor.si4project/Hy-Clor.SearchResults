@@ -447,3 +447,275 @@ BoostModeHandler line 2545 : 				if(ucCellPolarity == _REVERSE)
 BoostModeHandler line 2565 : 				if(ucCellPolarity == _REVERSE)
 BoostModeHandler line 2588 : 				if(ucCellPolarity == _REVERSE)
 F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\global.h line 55 : #define _REVERSE                                 0
+---- ucCellCurrent Matches (40 in 2 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 736 : extern unsigned char ucCellCurrent;
+IOT_RESOLVE_WIFI_DATA line 794 : 			ucCellCurrent = temp;
+IOT_RESOLVE_WIFI_DATA line 796 : 			CellOutputCurrentAdjustAPI(ucCellCurrent);
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 186 : unsigned char ucCellCurrent;
+ReadCellCurrentSetting line 370 : 	ucCellCurrent = Eeprom_ReadBytes(CELL_CURRENT_ADDR);
+SaveCellCurrent line 423 :     ucData[4] = ucCellCurrent;	
+UpdateUserData line 800 : 	ucCellCurrent = ucData[4];
+CellRealCurrentDisplay line 1313 : 		if(ucCellCurrent == USER_MIN)
+CalculateThresholdLimit line 1418 :     iTemp =iTemp * ucCellCurrent;
+CellOutputCalibration line 1490 :     if(ucCellCurrent == 0)
+CellOutputCurrentAdjust line 1769 : 			if(ucCellCurrent<USER_MAX)
+CellOutputCurrentAdjust line 1770 : 				ucCellCurrent+=5;
+CellOutputCurrentAdjust line 1772 : 			uiCurrentMaxDuty = ucDutyDiv*ucCellCurrent;
+CellOutputCurrentAdjust line 1780 : 			if(ucCellCurrent>5)
+CellOutputCurrentAdjust line 1781 : 				ucCellCurrent-=5;
+CellOutputCurrentAdjust line 1783 : 				ucCellCurrent = USER_MIN;
+CellOutputCurrentAdjust line 1785 : 			uiCurrentMaxDuty = ucDutyDiv*ucCellCurrent;
+CellOutputCurrentAdjust line 1791 : 		uiOutputTime = 6*ucCellCurrent;
+CellOutputCurrentAdjust line 1792 : 		iTemp = ucCellCurrent;
+CellOutputCurrentAdjust line 1798 : 		if(ucCellCurrent>iTemp)
+CellOutputCurrentAdjust line 1804 : 		CellCurrentOutput(ucCellCurrent);
+CellOutputCurrentAdjustAPI line 1824 : 	ucCellCurrent=CellCurrent;
+CellOutputCurrentAdjustAPI line 1835 : 		uiCurrentMaxDuty = ucDutyDiv*ucCellCurrent;
+CellOutputCurrentAdjustAPI line 1840 : 		uiOutputTime = 6*ucCellCurrent;
+CellOutputCurrentAdjustAPI line 1841 : 		iTemp = ucCellCurrent;
+CellOutputCurrentAdjustAPI line 1847 : 		if(ucCellCurrent>iTemp)
+CellOutputCurrentAdjustAPI line 1853 : 		CellCurrentOutput(ucCellCurrent);
+CellOutputControl line 1886 : 	while (ucTemp<=ucCellCurrent);
+CellOutputControl line 1887 : 	uiOutputTime = 6*ucCellCurrent;
+CellOutputControl line 1889 : 	//CellCurrentOutput(ucCellCurrent);
+PowerupFunctionModeSelect line 2212 : 	ucCellCurrent = USER_MAX;
+WaterFlowFaultProcess line 2366 : 			CellCurrentOutput(ucCellCurrent);
+SpecialSecretCodeProcess line 2418 : 			ucCellCurrent = USER_MAX;
+CellCurrentCycleOutput line 2711 : 	if((bOutputFlag == _ENABLE)&&(ucCellCurrent < USER_MAX))
+ProcessHandler line 2832 : 			ucOriginalCurrent = ucCellCurrent;
+ProcessHandler line 2833 : 			ucCellCurrent = USER_MIN;	
+ProcessHandler line 2840 : 			if(ucCellCurrent<ucOriginalCurrent)
+ProcessHandler line 2841 : 				ucCellCurrent+=10;
+ProcessHandler line 2857 : 			uiOutputTime = 6*ucCellCurrent;
+ProcessHandler line 2858 : 			CellCurrentOutput(ucCellCurrent);	
+---- _REVERSE Matches (6 in 2 files) ----
+CellPolarityReverse line 1394 : 		//Eeprom_WriteBytes(CELL_POLARITY_ADDR,_REVERSE);
+CellPolarityReverse line 1395 : 		ucData[3] = _REVERSE;
+BoostModeHandler line 2545 : 				if(ucCellPolarity == _REVERSE)
+BoostModeHandler line 2565 : 				if(ucCellPolarity == _REVERSE)
+BoostModeHandler line 2588 : 				if(ucCellPolarity == _REVERSE)
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\global.h line 55 : #define _REVERSE                                 0
+---- ucCellPolarity Matches (16 in 1 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 185 : unsigned char ucCellPolarity;
+ReadCellPolarity line 365 : 	ucCellPolarity = Eeprom_ReadBytes(CELL_POLARITY_ADDR);
+SaveCellPolarity line 417 : 	ucData[3] = ucCellPolarity;
+SaveCalValueByDirection line 454 : 	if(ucCellPolarity == _FORWARD)
+UpdateUserData line 799 : 	ucCellPolarity = ucData[3];
+CellPolarityControl line 1362 : 	if(ucCellPolarity)//Forward
+CellReverse line 1405 : 	if(ucCellPolarity)
+CellReverse line 1406 : 		ucCellPolarity = 0;
+CellReverse line 1408 : 		ucCellPolarity = 1;
+CellReverseForPCBTest line 2250 : 		if(ucCellPolarity)
+CellReverseForPCBTest line 2251 : 			ucCellPolarity = 0;
+CellReverseForPCBTest line 2253 : 			ucCellPolarity = 1;	
+ChlorBoostProcess line 2468 : 		if(ucCellPolarity ==_FORWARD)
+BoostModeHandler line 2545 : 				if(ucCellPolarity == _REVERSE)
+BoostModeHandler line 2565 : 				if(ucCellPolarity == _REVERSE)
+BoostModeHandler line 2588 : 				if(ucCellPolarity == _REVERSE)
+---- cnt Matches (78 in 13 files) ----
+Adc_ConfigSqrMode line 622 :     M0P_ADC->SQR2_f.CNT  = u8AdcSampCnt - 1;
+Adc_ConfigJqrMode line 646 :     M0P_ADC->JQR_f.CNT  = u8AdcSampCnt - 1;
+Adt_SetCount line 1414 :     pstcM0PAdt->CNTER_f.CNT = u16Value;
+Adt_GetCount line 1439 :     u16Value = pstcM0PAdt->CNTER_f.CNT;
+Adt_ClearCount line 1463 :     pstcM0PAdt->CNTER_f.CNT = 0;
+Adt_GetCntState line 1486 :     pstcAdtCntState->u16Counter = pstcM0PAdt->CNTER_f.CNT;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 994 : u32 cnt=0;
+APP_UART_1MS_HANDLE line 1030 : 	cnt++;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 150 : void system_delay(unsigned int cnt);
+Bt_M0_Cnt16Set line 542 :             M0P_TIM0_MODE0->CNT_f.CNT = u16Data;
+Bt_M0_Cnt16Set line 545 :             M0P_TIM1_MODE0->CNT_f.CNT = u16Data;
+Bt_M0_Cnt16Set line 548 :             M0P_TIM2_MODE0->CNT_f.CNT = u16Data;
+Bt_M0_Cnt16Get line 576 :             u16CntData = M0P_TIM0_MODE0->CNT_f.CNT;
+Bt_M0_Cnt16Get line 579 :             u16CntData = M0P_TIM1_MODE0->CNT_f.CNT;
+Bt_M0_Cnt16Get line 582 :             u16CntData = M0P_TIM2_MODE0->CNT_f.CNT;
+Bt_M1_Cnt16Set line 880 :             M0P_TIM0_MODE1->CNT_f.CNT = u16Data;
+Bt_M1_Cnt16Set line 883 :             M0P_TIM1_MODE1->CNT_f.CNT = u16Data;
+Bt_M1_Cnt16Set line 886 :             M0P_TIM2_MODE1->CNT_f.CNT = u16Data;
+Bt_M1_Cnt16Get line 914 :             u16CntData = M0P_TIM0_MODE1->CNT_f.CNT;
+Bt_M1_Cnt16Get line 917 :             u16CntData = M0P_TIM1_MODE1->CNT_f.CNT;
+Bt_M1_Cnt16Get line 920 :             u16CntData = M0P_TIM2_MODE1->CNT_f.CNT;
+Bt_M23_Cnt16Set line 1138 :     pstcM0PBt->CNT_f.CNT       = u16Data;
+Bt_M23_Cnt16Get line 1158 :     u16CntData = pstcM0PBt->CNT_f.CNT;
+Debug_UartInit line 165 :     //M0P_BT0->CNT = u32ReloadVal;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\driver\src\dmac.c line 110 : #define DMA_DTCTL_CNT_Pos                   (16U)                               /*!< DMA_DTCTLx: CNT Position */
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\driver\src\dmac.c line 111 : #define DMA_DTCTL_CNT_Msk                   (0xFFFFU << DMA_DTCTL_CNT_Pos)      /*!< DMA_DTCTLx: CNT Mask 0xFFFF0000 */
+{anonstc_adc_sqr2_field_t} line 189 :     __IO uint32_t CNT                       : 4;
+{anonstc_adc_jqr_field_t} line 198 :     __IO uint32_t CNT                       : 2;
+{anonstc_lptimer_cnt_field_t} line 2763 :     __IO uint32_t CNT                       :16;
+{anonstc_pca_cnt_field_t} line 2955 :     __IO uint32_t CNT                       :16;
+{anonstc_pcnt_cnt_field_t} line 3160 :     __IO uint16_t CNT                       :16;
+{anonstc_rng_mode_field_t} line 3294 :     __IO uint32_t CNT                       : 3;
+{anonstc_tim0_mode0_cnt_field_t} line 3562 :     __IO uint32_t CNT                       :16;
+{anonstc_tim0_mode1_cnt_field_t} line 3603 :     __IO uint32_t CNT                       :16;
+{anonstc_tim0_mode23_cnt_field_t} line 3673 :     __IO uint32_t CNT                       :16;
+{anonstc_tim1_mode0_cnt_field_t} line 3827 :     __IO uint32_t CNT                       :16;
+{anonstc_tim1_mode1_cnt_field_t} line 3868 :     __IO uint32_t CNT                       :16;
+{anonstc_tim1_mode23_cnt_field_t} line 3938 :     __IO uint32_t CNT                       :16;
+{anonstc_tim2_mode0_cnt_field_t} line 4092 :     __IO uint32_t CNT                       :16;
+{anonstc_tim2_mode1_cnt_field_t} line 4133 :     __IO uint32_t CNT                       :16;
+{anonstc_tim2_mode23_cnt_field_t} line 4203 :     __IO uint32_t CNT                       :16;
+{anonstc_tim3_mode0_cnt_field_t} line 4357 :     __IO uint32_t CNT                       :16;
+{anonstc_tim3_mode1_cnt_field_t} line 4398 :     __IO uint32_t CNT                       :16;
+{anonstc_tim3_mode23_cnt_field_t} line 4468 :     __IO uint32_t CNT                       :16;
+{anonstc_tim4_cnter_field_t} line 4688 :     __IO uint32_t CNT                       :16;
+{anonstc_tim5_cnter_field_t} line 5174 :     __IO uint32_t CNT                       :16;
+{anonstc_tim6_cnter_field_t} line 5660 :     __IO uint32_t CNT                       :16;
+{anonM0P_LPTIMER_TypeDef}::{anon_union} line 7595 :         __IO uint32_t CNT;
+{anonM0P_PCA_TypeDef}::{anon_union} line 7714 :         __IO uint32_t CNT;
+{anonM0P_PCNT_TypeDef}::{anon_union} line 7877 :         __IO uint16_t CNT;
+{anonM0P_TIM0_MODE0_TypeDef}::{anon_union} line 8145 :         __IO uint32_t CNT;
+{anonM0P_TIM0_MODE1_TypeDef}::{anon_union} line 8181 :         __IO uint32_t CNT;
+{anonM0P_TIM0_MODE23_TypeDef}::{anon_union} line 8233 :         __IO uint32_t CNT;
+{anonM0P_TIM1_MODE0_TypeDef}::{anon_union} line 8309 :         __IO uint32_t CNT;
+{anonM0P_TIM1_MODE1_TypeDef}::{anon_union} line 8345 :         __IO uint32_t CNT;
+{anonM0P_TIM1_MODE23_TypeDef}::{anon_union} line 8397 :         __IO uint32_t CNT;
+{anonM0P_TIM2_MODE0_TypeDef}::{anon_union} line 8473 :         __IO uint32_t CNT;
+{anonM0P_TIM2_MODE1_TypeDef}::{anon_union} line 8509 :         __IO uint32_t CNT;
+{anonM0P_TIM2_MODE23_TypeDef}::{anon_union} line 8561 :         __IO uint32_t CNT;
+{anonM0P_TIM3_MODE0_TypeDef}::{anon_union} line 8637 :         __IO uint32_t CNT;
+{anonM0P_TIM3_MODE1_TypeDef}::{anon_union} line 8673 :         __IO uint32_t CNT;
+{anonM0P_TIM3_MODE23_TypeDef}::{anon_union} line 8725 :         __IO uint32_t CNT;
+Lpt_Cnt16Get line 280 :     u16CntData = M0P_LPTIMER->CNT_f.CNT;
+Pca_Cnt16Set line 692 :     M0P_PCA->CNT_f.CNT = u16Data;
+Pca_Cnt16Get line 710 :     u16CntData = M0P_PCA->CNT_f.CNT;
+PCNT_Count line 256 :    return  M0P_PCNT->CNT;
+Rng_Init line 100 :     M0P_RNG->MODE_f.CNT     = 6;
+Rng_Init line 111 :     M0P_RNG->MODE_f.CNT     = 4;
+Rng_Generate line 140 :     M0P_RNG->MODE_f.CNT     = 6;
+Rng_Generate line 150 :     M0P_RNG->MODE_f.CNT     = 4;
+Rng_Generate line 151 :     M0P_RNG->MODE_f.CNT     = 4;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\driver\src\timer3.c line 471 :  ** \param [in]  u16Data          CNT 16位初值
+Tim3_M0_Cnt16Set line 479 :     M0P_TIM3_MODE0->CNT_f.CNT = u16Data;
+Tim3_M0_Cnt16Get line 497 :     u16CntData = M0P_TIM3_MODE0->CNT_f.CNT;
+Tim3_M1_Cnt16Set line 691 :     M0P_TIM3_MODE1->CNT_f.CNT = u16Data;
+Tim3_M1_Cnt16Get line 709 :     u16CntData = M0P_TIM3_MODE1->CNT_f.CNT;
+Tim3_M23_Cnt16Set line 850 :     M0P_TIM3_MODE23->CNT_f.CNT = u16Data;
+Tim3_M23_Cnt16Get line 868 :     u16CntData = M0P_TIM3_MODE23->CNT_f.CNT;
+---- ucCellPolarity Matches (20 in 2 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 69 : extern unsigned char  ucCellPolarity;
+IOT_RESOLVE_WIFI_DATA line 796 : 			ucCellPolarity=temp;
+IOT_RESOLVE_WIFI_DATA line 820 : 			if(ucCellPolarity!=temp){
+IOT_RESOLVE_WIFI_DATA line 821 : 				ucCellPolarity=temp;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 185 : unsigned char ucCellPolarity;
+ReadCellPolarity line 365 : 	ucCellPolarity = Eeprom_ReadBytes(CELL_POLARITY_ADDR);
+SaveCellPolarity line 417 : 	ucData[3] = ucCellPolarity;
+SaveCalValueByDirection line 454 : 	if(ucCellPolarity == _FORWARD)
+UpdateUserData line 799 : 	ucCellPolarity = ucData[3];
+CellPolarityControl line 1361 : 	if(ucCellPolarity)//Forward
+CellReverse line 1404 : 	if(ucCellPolarity)
+CellReverse line 1405 : 		ucCellPolarity = 0;
+CellReverse line 1407 : 		ucCellPolarity = 1;
+CellReverseForPCBTest line 2249 : 		if(ucCellPolarity)
+CellReverseForPCBTest line 2250 : 			ucCellPolarity = 0;
+CellReverseForPCBTest line 2252 : 			ucCellPolarity = 1;	
+ChlorBoostProcess line 2467 : 		if(ucCellPolarity ==_FORWARD)
+BoostModeHandler line 2544 : 				if(ucCellPolarity == _REVERSE)
+BoostModeHandler line 2564 : 				if(ucCellPolarity == _REVERSE)
+BoostModeHandler line 2587 : 				if(ucCellPolarity == _REVERSE)
+---- WATER_FLOW_CHECK Matches (11 in 2 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 45 : #if(WATER_FLOW_CHECK == _ENABLE)
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 166 : #if(WATER_FLOW_CHECK == _ENABLE)
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 210 : #if(WATER_FLOW_CHECK == _ENABLE)
+CellRealCurrentDisplay line 1322 : 	#if(WATER_FLOW_CHECK == _ENABLE)
+CellCurrentOutput line 1430 : #if(WATER_FLOW_CHECK == _ENABLE)	
+CellOutputCalibration line 1495 : #if(WATER_FLOW_CHECK == _ENABLE)
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 2301 : #if(WATER_FLOW_CHECK == _ENABLE)
+ProcessHandler line 2736 : #if(WATER_FLOW_CHECK == _ENABLE)
+ProcessHandler line 2782 : 		#if(WATER_FLOW_CHECK == _ENABLE)	 	
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\global.h line 97 : #define WATER_FLOW_CHECK                         _ENABLE
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\global.h line 134 : #define WATER_FLOW_CHECK                         _ENABLE //
+---- eIOTEVENT Matches (7 in 4 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 990 : unsigned char eIOTEVENT=_IOT_EVENT_NULL;
+IOTEventHandler line 995 : 	switch(eIOTEVENT){
+IOTEventHandler line 1012 : 	eIOTEVENT=_IOT_EVENT_NULL;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 162 : extern unsigned char eIOTEVENT;
+WaterFlowFaultProcess line 2356 : 		eIOTEVENT|=_IOT_EVENT_ERROR;
+KeyHandler line 177 : 				eIOTEVENT=_IOT_EVENT_UPDATE_KEY;
+KeyHandler line 181 : 				eIOTEVENT=_IOT_EVENT_UPDATE_KEY;
+---- eIOTEVENT Matches (7 in 4 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 990 : unsigned char eIOTEVENT=_IOT_EVENT_NULL;
+IOTEventHandler line 1009 : 	if(eIOTEVENT&_IOT_EVENT_ERROR==_IOT_EVENT_ERROR){
+IOTEventHandler line 1019 : 	eIOTEVENT=_IOT_EVENT_NULL;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 162 : extern unsigned char eIOTEVENT;
+WaterFlowFaultProcess line 2356 : 		eIOTEVENT|=_IOT_EVENT_ERROR;
+KeyHandler line 177 : 				eIOTEVENT|=_IOT_EVENT_UPDATE_KEY;
+KeyHandler line 181 : 				eIOTEVENT|=_IOT_EVENT_UPDATE_KEY;
+---- LEDFlashSetting Matches (25 in 1 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 606 : void LEDFlashSetting(unsigned int ucID,unsigned char ucOnOff)
+ModelChangeLED line 1120 : 		LEDFlashSetting(LED_5,_ON);
+ModelChangeLED line 1123 : 		LEDFlashSetting(LED_5,_OFF);
+CellPolarityControl line 1372 : 		LEDFlashSetting(LED_11,_OFF);
+CellPolarityControl line 1383 : 		LEDFlashSetting(LED_11,_ON);
+CellOutputCurrentAdjust line 1670 : 			LEDFlashSetting(LED_11,_ON);
+CellOutputCurrentAdjust line 1802 : 			LEDFlashSetting(uiLedNum,_ON);
+CellOutputCurrentAdjustAPI line 1851 : 			LEDFlashSetting(uiLedNum,_ON);
+ReverseTimeSettingKeyProcess line 1939 : 			LEDFlashSetting(LED_3,_OFF);
+ReverseTimeSettingKeyProcess line 1950 : 			LEDFlashSetting(LED_2,_OFF);
+PowerupFunctionModeSelect line 2115 : 		LEDFlashSetting(0x3C00,_ON);
+PowerupFunctionModeSelect line 2125 : 		LEDFlashSetting(0x0007,_ON);
+WaterFlowFaultProcess line 2362 : 			LEDFlashSetting(LED_12,_ON);	
+WaterFlowFaultProcess line 2368 : 			LEDFlashSetting(LED_12,_OFF);
+SpecialSecretCodeProcess line 2423 : 			LEDFlashSetting(LED_12|LED_11,_ON);
+SpecialSecretCodeProcess line 2436 : 		LEDFlashSetting((LED_1|LED_10),_ON);
+ChlorBoostProcess line 2471 : 		LEDFlashSetting(LED_12,_OFF);
+ChlorBoostProcess line 2474 : 			LEDFlashSetting(LED_11,_OFF);
+ComboKeyProcess line 2524 : 		LEDFlashSetting(LED_12,_ON);
+BoostModeHandler line 2550 : 				LEDFlashSetting(LED_11,_ON);
+BoostModeHandler line 2551 : 				LEDFlashSetting(0x3FF,_ON);
+BoostModeHandler line 2570 : 				LEDFlashSetting(LED_11,_ON);
+BoostModeHandler line 2593 : 				LEDFlashSetting(LED_11,_ON);
+CheckWaterSaltLevel line 2694 : 			LEDFlashSetting(LED_12,_ON);
+CheckWaterSaltLevel line 2704 : 				LEDFlashSetting(LED_12,_OFF);
+---- CheckWaterFlow Matches (2 in 1 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 2304 : void CheckWaterFlow(void)
+ProcessHandler line 2742 : 	CheckWaterFlow();		//Water Flow Sensor
+---- LED_12 Matches (18 in 1 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 101 : 	LED_12 =BIT11
+LEDControl line 547 : 			case LED_12:		//D12
+LEDControl line 598 : 			case LED_12:		//D12
+WaterFlowFaultProcess line 2362 : 			LEDFlashSetting(LED_12,_ON);	
+WaterFlowFaultProcess line 2368 : 			LEDFlashSetting(LED_12,_OFF);
+WaterFlowFaultProcess line 2369 : 			LEDControl(LED_12,_OFF);
+SpecialSecretCodeProcess line 2423 : 			LEDFlashSetting(LED_12|LED_11,_ON);
+ChlorBoostProcess line 2471 : 		LEDFlashSetting(LED_12,_OFF);
+ComboKeyProcess line 2512 : 		LEDControl(LED_12,_ON);
+ComboKeyProcess line 2514 : 		LEDControl(LED_12,_OFF);
+ComboKeyProcess line 2516 : 		LEDControl(LED_12,_ON);
+ComboKeyProcess line 2518 : 		LEDControl(LED_12,_OFF);
+ComboKeyProcess line 2520 : 		LEDControl(LED_12,_ON);
+ComboKeyProcess line 2522 : 		LEDControl(LED_12,_OFF);
+ComboKeyProcess line 2524 : 		LEDFlashSetting(LED_12,_ON);
+CheckWaterSaltLevel line 2694 : 			LEDFlashSetting(LED_12,_ON);
+CheckWaterSaltLevel line 2704 : 				LEDFlashSetting(LED_12,_OFF);
+CheckWaterSaltLevel line 2705 : 				LEDControl(LED_12,_OFF);
+---- UU Matches (11 in 1 files) ----
+IOT_SEND_SELF_STATUE line 735 : 	unsigned char str[]="AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,92000\x0d\x0a";
+IOT_SEND_SELF_STATUE line 737 : 	UartSendString("AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,90001\x0d\x0a");
+IOT_SEND_SELF_STATUE line 739 : 	UartSendString("AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,91001\x0d\x0a");
+IOT_SEND_SELF_STATUE line 741 : 	//UartSendString("AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,92100\x0d\x0a");
+IOT_SEND_SELF_STATUE line 742 : 	temp=sizeof("AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,920")-2;
+IOTEventHandler line 997 : 		unsigned char str[]="AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,92000\x0d\x0a";
+IOTEventHandler line 1000 : 		//UartSendString("AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,92100\x0d\x0a");
+IOTEventHandler line 1001 : 		temp=sizeof("AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,920")-2;
+IOTEventHandler line 1009 : 		unsigned char str[]="AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,91000\x0d\x0a";
+IOTEventHandler line 1012 : 		//UartSendString("AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,92100\x0d\x0a");
+IOTEventHandler line 1013 : 		temp=sizeof("AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,91")-2;
+---- ucIOTEVENTMessage Matches (8 in 3 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 991 : unsigned char ucIOTEVENTMessage=0;
+IOTEventHandler line 1017 : 		str[temp++]=ucIOTEVENTMessage/10+'0';
+IOTEventHandler line 1018 : 		str[temp++]=ucIOTEVENTMessage%10+'0';
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 163 : extern unsigned char ucIOTEVENTMessage;
+WaterFlowFaultProcess line 2361 : 			ucIOTEVENTMessage=21;
+WaterFlowFaultProcess line 2367 : 			ucIOTEVENTMessage=20;
+CheckWaterSaltLevel line 2696 : 			ucIOTEVENTMessage=11;
+CheckWaterSaltLevel line 2709 : 				ucIOTEVENTMessage=10;
+---- 911 Matches (0 in 0 files) ----
+---- 911 Search Errors Encountered (2) ----
+The following 2 files could not be processed:
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\aes.c : File could not be opened.
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\aes.h : File could not be opened.
+---- 911 Matches (0 in 0 files) ----
+---- 911 Search Errors Encountered (2) ----
+The following 2 files could not be processed:
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\aes.c : File could not be opened.
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\aes.h : File could not be opened.

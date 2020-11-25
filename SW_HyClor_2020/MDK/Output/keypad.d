@@ -20,3 +20,4 @@
 .\output\keypad.o: ..\SRC\hyclor\inc\keypad.h
 .\output\keypad.o: ..\SRC\hyclor\inc\global.h
 .\output\keypad.o: ..\SRC\hyclor\inc\ctrl.h
+.\output\keypad.o: ..\SRC\hyclor\inc\app_uart.h

@@ -159,5 +159,13 @@ void APP_UART_1MS_HANDLE(void) ;
 
 extern unsigned char IOT_KEY ;
 unsigned char  IOT_RESOLVE_KEY(unsigned char *key);
+extern unsigned char eIOTEVENT;
+extern unsigned char ucIOTEVENTMessage;
+extern unsigned int uiIOTEVENTCNT;
+enum{
+	_IOT_EVENT_NULL=0,
+	_IOT_EVENT_UPDATE_KEY=1,
+	_IOT_EVENT_ERROR=2,
+};
 
 #endif

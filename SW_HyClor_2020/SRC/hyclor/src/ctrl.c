@@ -17,6 +17,8 @@
 #include "global.h"
 #include "keypad.h"
 #include "mcu.h"
+#include "app_uart.h"
+
 #if(POWER_BOARD_VERSION == POWER_TRC_VERSION)
 //Control IO definition
 #define CURRENT_CTRL                 Gpio_ReadOutputIO(GpioPortC, GpioPin13)
@@ -1356,7 +1358,6 @@ void CellPolarityControl(void)
 #endif		
 	{
 		CURRENT_CTRL_OFF;
-
 		Delay_ms(500);
 	}
 	if(ucCellPolarity)//Forward
@@ -1399,7 +1400,7 @@ void CellPolarityReverse(void)
 	ucSaveType |= _USER_SETTING;
 }
 
-#if(POWER_BOARD_TEST == _ENABLE)
+#if((POWER_BOARD_TEST == _ENABLE)||(IOT_TEST==_ENABLE))
 void CellReverse(void)
 {
 	if(ucCellPolarity)
@@ -2352,15 +2353,18 @@ void WaterFlowFaultProcess(void)
 		return;
 	if(ucWaterFlowStatus != ucNewWaterFlowStatus)
 	{
+		eIOTEVENT|=_IOT_EVENT_ERROR;
 		ucWaterFlowStatus = ucNewWaterFlowStatus;
 //		ucWaterFlowStatus=0;//JIE_DEBUG
 		if(ucWaterFlowStatus)
 	    {
+			ucIOTEVENTMessage=21;
 			LEDFlashSetting(LED_12,_ON);	
 			CellCurrentOutput(0);
 	    }
 		else
 		{
+			ucIOTEVENTMessage=20;
 			LEDFlashSetting(LED_12,_OFF);
 			LEDControl(LED_12,_OFF);
 			CellCurrentOutput(ucCellCurrent);
@@ -2688,6 +2692,8 @@ void CheckWaterSaltLevel(void)
 		{
 			bLowOutputFlag = _TRUE;
 			LEDFlashSetting(LED_12,_ON);
+			eIOTEVENT|=_IOT_EVENT_ERROR;
+			ucIOTEVENTMessage=11;
 		}
 	}
 	else
@@ -2699,6 +2705,8 @@ void CheckWaterSaltLevel(void)
 			{
 				LEDFlashSetting(LED_12,_OFF);
 				LEDControl(LED_12,_OFF);
+				eIOTEVENT|=_IOT_EVENT_ERROR;
+				ucIOTEVENTMessage=10;
 			}
 		}
 	}

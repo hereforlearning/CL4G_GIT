@@ -21,3 +21,4 @@
 .\output\ctrl.o: ..\SRC\hyclor\inc\global.h
 .\output\ctrl.o: ..\SRC\hyclor\inc\keypad.h
 .\output\ctrl.o: ..\SRC\hyclor\inc\mcu.h
+.\output\ctrl.o: ..\SRC\hyclor\inc\app_uart.h

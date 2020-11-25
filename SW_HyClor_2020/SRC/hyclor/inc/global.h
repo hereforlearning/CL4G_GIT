@@ -186,6 +186,7 @@
 #define CURRENT_TEST                             (DEBUG&_DISABLE) 
 #define BURN_IN_TEST                             (DEBUG&_DISABLE)
 #define DIRECTION_TEST                           (DEBUG&_DISABLE)
+#define IOT_TEST                                 (_ENABLE)
 
 #endif /* _GLOBAL_H_ */
 

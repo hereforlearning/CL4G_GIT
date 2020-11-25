@@ -61,6 +61,16 @@
 #include "app_aes.h"
 #include "keypad.h"
 
+/******************************************************************************/
+//CL
+unsigned char IOT_KEY=0;
+extern unsigned char ucCellCurrent;
+extern unsigned char ucDisplayWaitTimerCnt;
+extern unsigned char  ucCellPolarity;
+void CellPolarityControl(void);
+void CellCurrentLED(unsigned char ucVal);
+void CellOutputCurrentAdjustAPI(unsigned char CellCurrent);
+/******************************************************************************/
 
 /******************************************************************************
  * Local pre-processor symbols/macros ('#define')                            
@@ -722,21 +732,21 @@ unsigned char IOT_RESOLVE_WIFI_ONLINE(struct Aura4GRec_t * pparam)
 
 void IOT_SEND_SELF_STATUE()
 {
-	UartSendString("AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,9001\x0d\x0a");
+	unsigned char str[]="AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,92000\x0d\x0a";
+	unsigned char temp=0;
+	UartSendString("AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,90001\x0d\x0a");
 	delay1ms(30);
-	UartSendString("AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,9111\x0d\x0a");
+	UartSendString("AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,91001\x0d\x0a");
 	delay1ms(30);
-	UartSendString("AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,9222\x0d\x0a");
+	//UartSendString("AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,92100\x0d\x0a");
+	temp=sizeof("AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,920")-2;
+	str[temp++]=ucCellCurrent/100+'0';
+	str[temp++]=ucCellCurrent%100/10+'0';
+	str[temp++]=ucCellCurrent%10+'0';
+	UartSendString(str);
 	delay1ms(30);
 }
 
-
-
-unsigned char IOT_KEY=0;
-extern unsigned char ucCellCurrent;
-extern unsigned char ucDisplayWaitTimerCnt;
-void CellCurrentLED(unsigned char ucVal);
-void CellOutputCurrentAdjustAPI(unsigned char CellCurrent);
 unsigned char IOT_RESOLVE_WIFI_DATA(struct Aura4GRec_t * pparam)
 {
 //"+ADA: "g","ok","TG","s","1"\r\n"
@@ -758,6 +768,10 @@ unsigned char IOT_RESOLVE_WIFI_DATA(struct Aura4GRec_t * pparam)
 				UartSendString("AT+ADA=\"s\"\,\"FD\"\,\"i\"\,0\x0d\x0a");
 				IOT_KEY=0x80|1;
 				POWER_ON=!POWER_ON;
+				delay1ms(30);
+				//init to ucCellCurrent=0;
+				//and dir to reverce;
+				CellOutputCurrentAdjustAPI(0);
 				LEDALLControl(0);
 			}
 			
@@ -768,21 +782,28 @@ unsigned char IOT_RESOLVE_WIFI_DATA(struct Aura4GRec_t * pparam)
 				UartSendString("AT+ADA=\"s\"\,\"FD\"\,\"i\"\ ,1\x0d\x0a");
 				IOT_KEY=0x80|2;
 				POWER_ON=!POWER_ON;
-				LEDALLControl(1);
+				ucCellCurrent=0;
+				ucCellPolarity=1;//_REVERSE//FLASHING
+				CellOutputCurrentAdjustAPI(0);
+				delay1ms(100);
+				CellPolarityControl();
         	}
 		}
 		else if(pparam->RecData[0]=='3')
 		{
-//			system_delay(500);
-			IOT_SEND_SELF_STATUE();
+//			IOT_SEND_SELF_STATUE();
 			delay1ms(30);
 			if (POWER_ON)
 				UartSendString("AT+ADA=\"s\"\,\"FD\"\,\"i\"\,1\x0d\x0a");
 			else
 				UartSendString("AT+ADA=\"s\"\,\"FD\"\,\"i\"\,0\x0d\x0a");
 			delay1ms(30);
-
-//			system_delay(500);
+			//init to ucCellCurrent=0;
+			//and dir to reverce;
+			CellOutputCurrentAdjustAPI(0);
+			ucCellPolarity=1;//_REVERSE//FLASHING
+//			delay1ms(100);
+//			CellPolarityControl();
 			IOT_KEY=0x80|4;
 		}
 		}
@@ -791,18 +812,23 @@ unsigned char IOT_RESOLVE_WIFI_DATA(struct Aura4GRec_t * pparam)
 			temp=pparam->RecData[1]-'0';
 			temp=temp*10+pparam->RecData[2]-'0';
 			temp=temp*10+pparam->RecData[3]-'0';
-			ucCellCurrent = temp;
-//			CellCurrentLED(temp);
-			CellOutputCurrentAdjustAPI(ucCellCurrent);
-			temp=1;
+			CellOutputCurrentAdjustAPI(temp);
 			ucDisplayWaitTimerCnt = 3;	
+			temp=1;
 		}
 			
 		if(pparam->RecString[0]=='A'){
 			if(pparam->RecData[2]=='R')
 			{
-
-
+				temp=1;	
+//#define _REVERSE                                 0
+			}
+			else
+				temp=0;
+			if(ucCellPolarity!=temp){
+				ucCellPolarity=temp;
+				delay1ms(100);
+				CellPolarityControl();
 			}
 			temp=temp*10+pparam->RecData[2]-'0';
 			temp=1;
@@ -942,20 +968,12 @@ unsigned char IOT_RESOLVE_DATA_ONOFF(struct Aura4GRec_t * pparam)
 #endif
 }
 
-u32 cnt=0;
-void IOTHandler(void)
+
+void IOTMessageQueueHandler()
 {
-	IOT_LOOP:
-#define	DisplayACSIIString_5X7(n1,n2,n3)
-	struct PACKAGE_t *ptcp;
 	struct Aura4GRec_t * pAura4GRec;
 	unsigned char u8RX_[NUM_RX_MAX];
 	memset(u8RX_, 0, sizeof(u8RX_));
-	EUSART_WIFI_INIT_PROCESS();
-//	IOKeepOnline();
-//	IOTRESTARTHANDLEFUN();
-//	IOTQueueKeyHandle();
-	POWER_ON_GO:
 	if(!IOTUartQueueioifempty())
 	{        
 		IOTUartQueuePop(u8RX_);
@@ -967,10 +985,56 @@ void IOTHandler(void)
 		if(IOT_RESOLVE_WIFI_DATA(pAura4GRec))	
 			return; 
 	}
-		
+}
+
+unsigned char eIOTEVENT=_IOT_EVENT_NULL;
+unsigned char ucIOTEVENTMessage=0;
+unsigned int uiIOTEVENTCNT=0;
+void IOTEventHandler()
+{
+	unsigned char str[]="AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,92000\x0d\x0a";
+	unsigned char temp=0;
+#if 1
+	if(eIOTEVENT&_IOT_EVENT_UPDATE_KEY==_IOT_EVENT_UPDATE_KEY){
+		if(uiIOTEVENTCNT==0){
+			delay1ms(30);
+			//UartSendString("AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,92100\x0d\x0a");
+			temp=sizeof("AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,920")-2;
+			str[temp++]=ucCellCurrent/100+'0';
+			str[temp++]=ucCellCurrent%100/10+'0';
+			str[temp++]=ucCellCurrent%10+'0';
+			UartSendString(str);
+			eIOTEVENT&=~_IOT_EVENT_UPDATE_KEY;
+		}
+	}
+#endif
+	if((eIOTEVENT&_IOT_EVENT_ERROR)==_IOT_EVENT_ERROR){
+//		unsigned char str[]="AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,91000\x0d\x0a";
+//		unsigned char temp=0;
+		delay1ms(30);
+		//UartSendString("AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,92100\x0d\x0a");
+		memcpy(str,"AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,91000\x0d\x0a",sizeof(str));
+		temp=sizeof("AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,91")-1;
+		str[temp++]=ucIOTEVENTMessage/10+'0';
+		str[temp++]=ucIOTEVENTMessage%10+'0';
+		UartSendString(str);
+		eIOTEVENT&=~_IOT_EVENT_ERROR;
+	}
+}
+
+void IOTHandler(void)
+{
+	IOT_LOOP:
+#define	DisplayACSIIString_5X7(n1,n2,n3)
+//	EUSART_WIFI_INIT_PROCESS();
+//	IOKeepOnline();
+//	IOTRESTARTHANDLEFUN();
+//	IOTQueueKeyHandle();
+	IOTMessageQueueHandler();
+	IOTEventHandler();
+	
 	if(!POWER_ON)
 	{
- 
 		goto IOT_LOOP;
 	}
 }
@@ -990,7 +1054,6 @@ void APP_UART_1MS_HANDLE(void)
 		Gpio_ClrIO(GpioPortD, GpioPin1);
 	}
 #endif
-	cnt++;
     makesure_uart_not_interrupt_intoif :
 	if(u8RX_RECIEVE_CNT<20)
 	{	
@@ -1004,6 +1067,10 @@ void APP_UART_1MS_HANDLE(void)
 	if(IOTQueueKeyCnt<=100)
 		IOTQueueKeyCnt++;
 	IOKeepOnlineCnt++;
+	
+	if(uiIOTEVENTCNT>0)
+		uiIOTEVENTCNT--;
+
 }
 
 /******************************************************************************

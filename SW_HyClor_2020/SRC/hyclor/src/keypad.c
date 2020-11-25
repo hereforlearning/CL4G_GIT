@@ -14,7 +14,7 @@
 #include "keypad.h"
 #include "global.h"
 #include "ctrl.h"
-
+#include "app_uart.h"
 unsigned char g_bKeyDetect;
 unsigned char g_bKeyRepeat;
 unsigned char g_bKey1stRepeat;
@@ -174,9 +174,13 @@ void KeyHandler(void)
 		 {
 			 case KEY_UP: 
 			 	CellOutputCurrentAdjust(1);
+				eIOTEVENT|=_IOT_EVENT_UPDATE_KEY;
+				uiIOTEVENTCNT=2000;
 			 	break; 				 
 			 case KEY_DOWN: 		 	
 			 	CellOutputCurrentAdjust(2);
+				eIOTEVENT|=_IOT_EVENT_UPDATE_KEY;
+				uiIOTEVENTCNT=2000;
 			 	break; 				 
 			 case KEY_UP_DOWN:
 			 	if(g_bKeyRepeat)
