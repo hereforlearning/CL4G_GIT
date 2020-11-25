@@ -13,7 +13,7 @@ extern void BluetoothTest(void);
 extern void IOKeepOnline(void);
 
 extern unsigned char u8RX_BUFF[100];
-extern unsigned char IOT_POWER_ON ;
+extern unsigned char POWER_ON ;
 extern unsigned char bTX_DONE;
 extern unsigned char u8RX_RECIEVE_CNT;
 extern unsigned char u8RX_BUFF_CNT;
@@ -31,7 +31,7 @@ extern unsigned char Status4G;
 extern unsigned char StatusSIM;
 extern unsigned char IOTRESTARTCNT;
 extern unsigned char RX_BUFF[100];
-extern unsigned char IOT_POWER_ON;
+extern unsigned char POWER_ON;
 extern const unsigned char *AT_CMD[];
 
 /*

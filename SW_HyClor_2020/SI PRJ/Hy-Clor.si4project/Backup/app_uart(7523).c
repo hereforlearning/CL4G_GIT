@@ -110,7 +110,7 @@ void CellOutputCurrentAdjustAPI(unsigned char CellCurrent);
  **
  ******************************************************************************/
 unsigned char u8RX_BUFF[100];
-unsigned char IOT_POWER_ON = 1;
+unsigned char POWER_ON = 1;
 unsigned char bTX_DONE;
 unsigned char u8RX_RECIEVE_CNT;
 unsigned char u8RX_BUFF_CNT;
@@ -365,7 +365,7 @@ void IOKeepOnline(void)
 		if(IOKeepOnlineCnt>=2)
 		{
 			IOKeepOnlineCnt=0;
-			if(IOT_POWER_ON)
+			if(POWER_ON)
 			{
 				UartSendString("AT+ADA=\"s\"\,\"FD\"\,\"i\"\,1\x0d\x0a");
 			}
@@ -716,7 +716,6 @@ void TCPIPDataResolve(struct STRUCT_PACKAGE_t *packge)
 
 unsigned char IOT_RESOLVE_WIFI_ONLINE(struct Aura4GRec_t * pparam)
 {
-#if 1
 	unsigned char temp=0;
 	if(strncmp(&pparam[15],"+ADA: \"l\"\,\"up\"",sizeof("+ADA: \"l\"\,\"up\"")-2)==0){
 		Status4G=1;
@@ -729,7 +728,6 @@ unsigned char IOT_RESOLVE_WIFI_ONLINE(struct Aura4GRec_t * pparam)
 		temp=1;
 	}
 	return temp;
-#endif
 }
 
 void IOT_SEND_SELF_STATUE()
@@ -766,54 +764,46 @@ unsigned char IOT_RESOLVE_WIFI_DATA(struct Aura4GRec_t * pparam)
 	if(pparam->RecString[0]=='F'){
 		if(pparam->RecData[0]=='0')
 		{
-			if (IOT_POWER_ON){
-//				UartSendString("AT+ADA=\"s\"\,\"FD\"\,\"i\"\,0\x0d\x0a");
+			if (POWER_ON){
+				UartSendString("AT+ADA=\"s\"\,\"FD\"\,\"i\"\,0\x0d\x0a");
 				IOT_KEY=0x80|1;
-				IOT_POWER_ON=!IOT_POWER_ON;
+				POWER_ON=!POWER_ON;
 				delay1ms(30);
 				//init to ucCellCurrent=0;
 				//and dir to reverce;
 				CellOutputCurrentAdjustAPI(0);
-				ucCellPolarity=1;//_REVERSE//FLASHING
-				delay1ms(100);
-				CellPolarityControl();
 				LEDALLControl(0);
-				UartSendString("AT+ADA=\"s\"\,\"FD\"\,\"i\"\ ,0\x0d\x0a");
 			}
 			
 		}
 		else if(pparam->RecData[0]=='1')
 		{
-            if (!IOT_POWER_ON){
+            if (!POWER_ON){
+				UartSendString("AT+ADA=\"s\"\,\"FD\"\,\"i\"\ ,1\x0d\x0a");
 				IOT_KEY=0x80|2;
-				IOT_POWER_ON=!IOT_POWER_ON;
+				POWER_ON=!POWER_ON;
 				ucCellCurrent=0;
 				ucCellPolarity=1;//_REVERSE//FLASHING
-				LEDALLControl(1);
-				delay1ms(100);
-				LEDALLControl(0);
 				CellOutputCurrentAdjustAPI(0);
 				delay1ms(100);
 				CellPolarityControl();
-				UartSendString("AT+ADA=\"s\"\,\"FD\"\,\"i\"\ ,1\x0d\x0a");
         	}
 		}
 		else if(pparam->RecData[0]=='3')
 		{
 //			IOT_SEND_SELF_STATUE();
 			delay1ms(30);
-			if (IOT_POWER_ON)
+			if (POWER_ON)
 				UartSendString("AT+ADA=\"s\"\,\"FD\"\,\"i\"\,1\x0d\x0a");
 			else
 				UartSendString("AT+ADA=\"s\"\,\"FD\"\,\"i\"\,0\x0d\x0a");
 			delay1ms(30);
 			//init to ucCellCurrent=0;
 			//and dir to reverce;
-			ucCellCurrent=0;
 			CellOutputCurrentAdjustAPI(0);
 			ucCellPolarity=1;//_REVERSE//FLASHING
-			delay1ms(100);
-			CellPolarityControl();
+//			delay1ms(100);
+//			CellPolarityControl();
 			IOT_KEY=0x80|4;
 		}
 		}
@@ -906,7 +896,7 @@ unsigned char IOT_RESOLVE_DATA_ONOFF(struct Aura4GRec_t * pparam)
 			goto CLEARN;
 		p++;
 		memcpy((unsigned char *)TCP.data,ptcp->RawTCP.EncrytData,20);
-		if (IOT_POWER_ON)
+		if (POWER_ON)
 		{
 			DisplayACSIIString_5X7(4, 0, "RECIVE DATA:");
 			DisplayACSIIString_5X7(5, 1, "					");
@@ -917,7 +907,7 @@ unsigned char IOT_RESOLVE_DATA_ONOFF(struct Aura4GRec_t * pparam)
 				gotoPOWER_OFF:
 				 menuid=0x0b;
 //						newmenuid=1;
-				IOT_POWER_ON = 0;
+				POWER_ON = 0;
 				DisplayACSIIString_5X7(7, 0,"  Will POWER OFF  ");
 //						  display(0, 0, "	WIll POWER OFF	 ", 20);
 //						  display(1, 0, "					 ", 20);
@@ -952,12 +942,12 @@ unsigned char IOT_RESOLVE_DATA_ONOFF(struct Aura4GRec_t * pparam)
 				IotWifiSendString(&ptcp->RawTCP.EncrytData[0],TCP.num );
 			}
 		}
-		else if (!IOT_POWER_ON)
+		else if (!POWER_ON)
 		{
 			if (!(unsigned char)strncmp("ON", ptcp->RawTCP.EncrytData, 2))
 			{
 				gotoPOWER_ON:
-				IOT_POWER_ON = 1;
+				POWER_ON = 1;
 				lcd_init();
 				BacklightControl(BKL_DUTY_PERIOD);
 				s = "SSID:ESP32 		 ";
@@ -990,10 +980,8 @@ void IOTMessageQueueHandler()
 		DEBUG_SEND_STRING("WEGETDATAWOHO\n");
 		DEBUG_SEND_STRING(u8RX_);
 	    pAura4GRec=u8RX_;
-#if 0
 		if(IOT_RESOLVE_WIFI_ONLINE(pAura4GRec))
 			return;	
-#endif
 		if(IOT_RESOLVE_WIFI_DATA(pAura4GRec))	
 			return; 
 	}
@@ -1045,7 +1033,7 @@ void IOTHandler(void)
 	IOTMessageQueueHandler();
 	IOTEventHandler();
 	
-	if(!IOT_POWER_ON)
+	if(!POWER_ON)
 	{
 		goto IOT_LOOP;
 	}

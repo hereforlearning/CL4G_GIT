@@ -719,3 +719,13 @@ F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\aes.h : File
 The following 2 files could not be processed:
 F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\aes.c : File could not be opened.
 F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\aes.h : File could not be opened.
+---- IOT_POWER_ON Matches (11 in 2 files) ----
+IOKeepOnline line 368 : 			if(IOT_POWER_ON)
+IOT_RESOLVE_WIFI_DATA line 767 : 			if (IOT_POWER_ON){
+IOT_RESOLVE_WIFI_DATA line 770 : 				IOT_POWER_ON=!IOT_POWER_ON;
+IOT_RESOLVE_WIFI_DATA line 781 :             if (!IOT_POWER_ON){
+IOT_RESOLVE_WIFI_DATA line 784 : 				IOT_POWER_ON=!IOT_POWER_ON;
+IOT_RESOLVE_WIFI_DATA line 796 : 			if (IOT_POWER_ON)
+IOTHandler line 1036 : 	if(!IOT_POWER_ON)
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 16 : extern unsigned char IOT_POWER_ON ;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 34 : extern unsigned char IOT_POWER_ON;
