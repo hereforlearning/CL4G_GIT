@@ -784,12 +784,7 @@ unsigned char IOT_RESOLVE_WIFI_DATA(struct Aura4GRec_t * pparam)
 				POWER_ON=!POWER_ON;
 				ucCellCurrent=0;
 				ucCellPolarity=1;//_REVERSE//FLASHING
-				delay1ms(100);
-				LEDALLControl(1);
-				delay1ms(1000);
-				LEDALLControl(0);
 				CellOutputCurrentAdjustAPI(0);
-				ucCellPolarity=1;//_REVERSE//FLASHING
 				delay1ms(100);
 				CellPolarityControl();
         	}
@@ -807,8 +802,8 @@ unsigned char IOT_RESOLVE_WIFI_DATA(struct Aura4GRec_t * pparam)
 			//and dir to reverce;
 			CellOutputCurrentAdjustAPI(0);
 			ucCellPolarity=1;//_REVERSE//FLASHING
-			delay1ms(100);
-			CellPolarityControl();
+//			delay1ms(100);
+//			CellPolarityControl();
 			IOT_KEY=0x80|4;
 		}
 		}

@@ -1857,7 +1857,7 @@ void CellOutputCurrentAdjustAPI(unsigned char CellCurrent)
 #if(BRAND_SELECT == _AU_CAS_)
 		CalculateThresholdLimit();
 #endif
-		ucDisplayWaitTimerCnt = 5;	//JIE_DEBUG
+		ucDisplayWaitTimerCnt = 5;	
 	}
 }
 
