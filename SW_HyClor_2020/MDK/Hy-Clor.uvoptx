@@ -120,10 +120,6 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>DLGUARM</Key>
-          <Name>告&lt;
-?:w告&lt;
-?:w告&lt;
-</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -156,24 +152,7 @@
           <Name>UL2CM3(-S0 -C0 -P0 -FD20000000 -FC1000 -FN1 -FF0FlashHC32L136_64K -FS00 -FL010000 -FP0($$Device:HC32L136J8TA$Flash\FlashHC32L136_64K.FLM))</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
-      <Breakpoint>
-        <Bp>
-          <Number>0</Number>
-          <Type>0</Type>
-          <LineNumber>1038</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>10324</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\SRC\hyclor\src\app_uart.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\FW_Compact_Line_Vxx_2020\../SRC/hyclor/src/app_uart.c\1038</Expression>
-        </Bp>
-      </Breakpoint>
+      <Breakpoint/>
       <WatchWindow1>
         <Ww>
           <count>0</count>

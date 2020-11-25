@@ -18,7 +18,7 @@ I (..\SRC\driver\inc\sysctrl.h)(0x5B849878)
 I (..\SRC\driver\inc\ddl.h)(0x5E746B99)
 I (..\SRC\hyclor\inc\ddl_device.h)(0x5BACC3BA)
 I (..\SRC\driver\inc\interrupts_hc32l136.h)(0x5B849877)
-F (..\SRC\hyclor\src\ctrl.c)(0x5FBCAE71)(--c99 --gnu -c --cpu Cortex-M0+ -g -W -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include"-D__UVISION_VERSION="529" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\ctrl.o --omf_browse .\output\ctrl.crf --depend .\output\ctrl.d)
+F (..\SRC\hyclor\src\ctrl.c)(0x5FBDC5CA)(--c99 --gnu -c --cpu Cortex-M0+ -g -W -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include"-D__UVISION_VERSION="529" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\ctrl.o --omf_browse .\output\ctrl.crf --depend .\output\ctrl.d)
 I (..\SRC\driver\inc\gpio.h)(0x5B9797C9)
 I (..\SRC\driver\inc\ddl.h)(0x5E746B99)
 I (..\SRC\mcu\common\base_types.h)(0x5B641BB6)
@@ -41,7 +41,7 @@ I (..\SRC\hyclor\inc\global.h)(0x5FBB90B0)
 I (..\SRC\hyclor\inc\keypad.h)(0x5E7B2104)
 I (..\SRC\hyclor\inc\mcu.h)(0x5F604BF7)
 I (..\SRC\hyclor\inc\app_uart.h)(0x5FBCC4F6)
-F (..\SRC\hyclor\src\keypad.c)(0x5FBCC580)(--c99 --gnu -c --cpu Cortex-M0+ -g -W -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include"-D__UVISION_VERSION="529" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\keypad.o --omf_browse .\output\keypad.crf --depend .\output\keypad.d)
+F (..\SRC\hyclor\src\keypad.c)(0x5FBDDDD7)(--c99 --gnu -c --cpu Cortex-M0+ -g -W -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include"-D__UVISION_VERSION="529" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\keypad.o --omf_browse .\output\keypad.crf --depend .\output\keypad.d)
 I (..\SRC\driver\inc\gpio.h)(0x5B9797C9)
 I (..\SRC\driver\inc\ddl.h)(0x5E746B99)
 I (..\SRC\mcu\common\base_types.h)(0x5B641BB6)
@@ -94,7 +94,7 @@ I (..\SRC\driver\inc\timer3.h)(0x5BA3713B)
 I (..\SRC\hyclor\inc\global.h)(0x5FBB90B0)
 I (..\SRC\hyclor\inc\keypad.h)(0x5E7B2104)
 I (..\SRC\hyclor\inc\ctrl.h)(0x5F6C48D8)
-F (..\SRC\hyclor\src\app_uart.c)(0x5FBCDC9A)(--c99 --gnu -c --cpu Cortex-M0+ -g -W -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include"-D__UVISION_VERSION="529" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\app_uart.o --omf_browse .\output\app_uart.crf --depend .\output\app_uart.d)
+F (..\SRC\hyclor\src\app_uart.c)(0x5FBDCB7E)(--c99 --gnu -c --cpu Cortex-M0+ -g -W -O0 --apcs=interwork --split_sections -I ..\SRC\mcu\common -I ..\SRC\driver\inc -I ..\SRC\hyclor\inc-I.\RTE\_Hy-Clor-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include"-I"E:\Program Files (x86)\keil_mdk5\ARM\PACK\HDSC\HC32L136\1.0.0\Device\Include"-D__UVISION_VERSION="529" -D_RTE_ -DBOARD_SELECT="BOARD_LED_BUTTON"-o .\output\app_uart.o --omf_browse .\output\app_uart.crf --depend .\output\app_uart.d)
 I (..\SRC\driver\inc\ddl.h)(0x5E746B99)
 I (..\SRC\mcu\common\base_types.h)(0x5B641BB6)
 I (E:\Program Files (x86)\keil_mdk5\ARM\ARMCC\include\stdio.h)(0x5D9AD21A)
