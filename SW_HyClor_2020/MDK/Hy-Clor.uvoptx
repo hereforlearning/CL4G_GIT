@@ -120,6 +120,7 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>DLGUARM</Key>
+          <Name>?鍂@L??鍂@L?</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -403,6 +404,31 @@
           <count>49</count>
           <WinNumber>1</WinNumber>
           <ItemText>IOTuiCellRealCurrent</ItemText>
+        </Ww>
+        <Ww>
+          <count>50</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>pEusartQueueStorage</ItemText>
+        </Ww>
+        <Ww>
+          <count>51</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>UartQueueBuff</ItemText>
+        </Ww>
+        <Ww>
+          <count>52</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>pEusartQueueResolve</ItemText>
+        </Ww>
+        <Ww>
+          <count>53</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>p</ItemText>
+        </Ww>
+        <Ww>
+          <count>54</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>pnext</ItemText>
         </Ww>
       </WatchWindow1>
       <WatchWindow2>

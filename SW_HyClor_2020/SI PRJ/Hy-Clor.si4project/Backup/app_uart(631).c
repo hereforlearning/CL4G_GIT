@@ -250,7 +250,6 @@ void UART_PROCESS(void)
 
 /***********************************************************************/
 #define QueueLen 3
-unsigned int uiIOTQueueRESOLVECnt=0;
 unsigned char IOTQueueKeyCnt=0xff;
 unsigned char IOTQueueKey[QueueLen];
 unsigned char IOTQueueKeyLen=0;
@@ -413,41 +412,13 @@ status==empty)))
 
 void IOTUartQueuePop(unsigned char *data)
 {
-	struct	_UartQueue *p;
-	struct	_UartQueue *pnext;
-	struct	_UartQueue *pstart;
+	struct	_UartQueue *q=pEusartQueueResolve;
 	memcpy(data,&pEusartQueueResolve->DATABuff[0],NUM_RX_MAX);
 	pEusartQueueResolve->status=empty;
-	p=pEusartQueueResolve;
-	pstart=pEusartQueueResolve;
-
-#if 0
-	while(1){
-		if(p==&UartQueueBuff[UART_QUEUE_LENTH-1])
-			pnext=UartQueueBuff;
-		else
-			pnext=p+1;
-		if((pnext->status!=empty)&&p->status==empty)
-		{
-			pEusartQueueResolve=pnext;
-			break;
-		}
-		if((pnext->status!=empty)&&p->status!=empty)
-			pEusartQueueResolve=pnext;
-			break;
-		if(p==&UartQueueBuff[UART_QUEUE_LENTH-1])
-			p=UartQueueBuff;
-		else
-			p++;
-		if(pstart==p)
-			break;
-	}
-#else
-if(pEusartQueueResolve==&UartQueueBuff[UART_QUEUE_LENTH-1])
-	pEusartQueueResolve=UartQueueBuff;
-else
-	pEusartQueueResolve++;
-#endif
+	if(pEusartQueueResolve==&UartQueueBuff[UART_QUEUE_LENTH-1])
+		pEusartQueueResolve=UartQueueBuff;
+	else
+		pEusartQueueResolve++;
 	
 }
 
@@ -458,33 +429,11 @@ unsigned char IOTUartQueueioifempty()
 //		pEusartQueuejxResolve=UartQueueBuff;
 //	else
 //		pEusartQueuejxResolve=UartQueueBuff++;
-#if 1
-	struct	_UartQueue *p;
-	struct	_UartQueue *pnext;
-	struct	_UartQueue *pstart;
-	p=pEusartQueueResolve;
-	pstart=pEusartQueueResolve;
-	while(1){
-		if((p->status!=empty))
-		{
-			pEusartQueueResolve=p;
-			return 0;
-		}
-		if(p==&UartQueueBuff[UART_QUEUE_LENTH-1])
-			p=UartQueueBuff;
-		else
-			p++;
-		if(pstart==p)
-			break;
-	}
-	return 1;
-#else	
 	if(pEusartQueueResolve->status==empty)
 	{
 		return 1;
 	}
 	return 0;
-#endif
 }
 
 /***********************************************************************/
@@ -1038,10 +987,6 @@ void IOTMessageQueueHandler()
 {
 	struct Aura4GRec_t * pAura4GRec;
 	unsigned char u8RX_[NUM_RX_MAX];
-	if(uiIOTQueueRESOLVECnt<100)
-		return;
-	else
-		uiIOTQueueRESOLVECnt=0;
 	memset(u8RX_, 0, sizeof(u8RX_));
 	if(!IOTUartQueueioifempty())
 	{        
@@ -1126,6 +1071,7 @@ void IOTHandler(void)
 //	IOTQueueKeyHandle();
 	IOTMessageQueueHandler();
 	IOTEventHandler();
+	
 	if(!IOT_POWER_ON)
 	{
 		goto IOT_LOOP;
@@ -1168,8 +1114,6 @@ void APP_UART_1MS_HANDLE(void)
 	if(uiIOTEVENTCURRENTCNT>0)
 		uiIOTEVENTCURRENTCNT--;
 
-	if(uiIOTQueueRESOLVECnt<100)
-		uiIOTQueueRESOLVECnt++;
 
 }
 

@@ -848,3 +848,18 @@ APP_UART_1MS_HANDLE line 1114 : 	if(uiIOTEVENTCURRENTCNT>0)
 APP_UART_1MS_HANDLE line 1115 : 		uiIOTEVENTCURRENTCNT--;
 F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 165 : extern unsigned int uiIOTEVENTCURRENTCNT;
 CellRealCurrentDisplay line 1333 : 		uiIOTEVENTCURRENTCNT=2000;
+---- IOTUartQueuePush Matches (3 in 2 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 395 : unsigned char  IOTUartQueuePush(unsigned char *data)
+APP_UART_1MS_HANDLE line 1102 : 		IOTUartQueuePush(u8RX_BUFF);
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 149 : unsigned char  IOTUartQueuePush(unsigned char *data);
+---- pEusartQueueResolve Matches (11 in 1 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 388 : struct  _UartQueue * pEusartQueueResolve;
+IOTUartQueueInit line 392 : 	pEusartQueueResolve=UartQueueBuff;
+IOTUartQueuePush line 397 : 	if((pEusartQueueStorage!=pEusartQueueResolve)||((pEusartQueueStorage==pEusartQueueResolve)&&(pEusartQueueStorage->
+IOTUartQueuePop line 415 : 	struct	_UartQueue *q=pEusartQueueResolve;
+IOTUartQueuePop line 416 : 	memcpy(data,&pEusartQueueResolve->DATABuff[0],NUM_RX_MAX);
+IOTUartQueuePop line 417 : 	pEusartQueueResolve->status=empty;
+IOTUartQueuePop line 418 : 	if(pEusartQueueResolve==&UartQueueBuff[UART_QUEUE_LENTH-1])
+IOTUartQueuePop line 419 : 		pEusartQueueResolve=UartQueueBuff;
+IOTUartQueuePop line 421 : 		pEusartQueueResolve++;
+IOTUartQueueioifempty line 432 : 	if(pEusartQueueResolve->status==empty)

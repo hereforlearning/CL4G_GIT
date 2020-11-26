@@ -134,7 +134,7 @@ enum _WAITRESULT
 	OVER_TIME,
 };
 
-#define UART_QUEUE_LENTH 10
+#define UART_QUEUE_LENTH 5
 extern struct _UartQueue UartQueueBuff[UART_QUEUE_LENTH];
 #define pEusartQueue0 (UartQueueBuff)
 #define pEusartQueue2 (&UartQueueBuff[2])

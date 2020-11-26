@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\output\FW_Compact Line_Vxx_2020.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\output\FW_Compact Line_Vxx_2020.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Wed Nov 25 20:18:01 2020
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Thu Nov 26 11:12:43 2020
 <BR><P>
 <H3>Maximum Stack Usage =        176 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -399,7 +399,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SaveDataToArea
 </UL>
 
-<P><STRONG><a name="[5c]"></a>APP_UART_1MS_HANDLE</STRONG> (Thumb, 114 bytes, Stack size 8 bytes, app_uart.o(i.APP_UART_1MS_HANDLE))
+<P><STRONG><a name="[5c]"></a>APP_UART_1MS_HANDLE</STRONG> (Thumb, 132 bytes, Stack size 8 bytes, app_uart.o(i.APP_UART_1MS_HANDLE))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = APP_UART_1MS_HANDLE &rArr; IOTUartQueuePush &rArr; __aeabi_memcpy
 </UL>
 <BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IOTUartQueuePush
@@ -993,9 +993,9 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay1ms
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UartSendString
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IOTHandler
 </UL>
@@ -1009,7 +1009,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[a5]"></a>IOTMessageQueueHandler</STRONG> (Thumb, 46 bytes, Stack size 88 bytes, app_uart.o(i.IOTMessageQueueHandler))
+<P><STRONG><a name="[a5]"></a>IOTMessageQueueHandler</STRONG> (Thumb, 62 bytes, Stack size 88 bytes, app_uart.o(i.IOTMessageQueueHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = IOTMessageQueueHandler &rArr; IOT_RESOLVE_WIFI_DATA &rArr; CellOutputCurrentAdjustAPI &rArr; CellCurrentOutput &rArr; PWMStop &rArr; EnableNvic &rArr; __NVIC_SetPriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IOT_RESOLVE_WIFI_DATA
@@ -1036,7 +1036,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IOTMessageQueueHandler
 </UL>
 
-<P><STRONG><a name="[5d]"></a>IOTUartQueuePush</STRONG> (Thumb, 114 bytes, Stack size 8 bytes, app_uart.o(i.IOTUartQueuePush))
+<P><STRONG><a name="[5d]"></a>IOTUartQueuePush</STRONG> (Thumb, 112 bytes, Stack size 8 bytes, app_uart.o(i.IOTUartQueuePush))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = IOTUartQueuePush &rArr; __aeabi_memcpy
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
@@ -1045,7 +1045,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;APP_UART_1MS_HANDLE
 </UL>
 
-<P><STRONG><a name="[a7]"></a>IOTUartQueueioifempty</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, app_uart.o(i.IOTUartQueueioifempty))
+<P><STRONG><a name="[a7]"></a>IOTUartQueueioifempty</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, app_uart.o(i.IOTUartQueueioifempty))
 <BR><BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IOTMessageQueueHandler
 </UL>
 
@@ -2071,8 +2071,8 @@ Global Symbols
 <P><STRONG><a name="[ce]"></a>Uart_CalScnt</STRONG> (Thumb, 104 bytes, Stack size 24 bytes, uart.o(i.Uart_CalScnt))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = Uart_CalScnt &rArr; UartGetInternDataPtr
 </UL>
-<BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
-<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UartGetInternDataPtr
+<BR>[Calls]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UartGetInternDataPtr
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_APP_Uart
 </UL>
