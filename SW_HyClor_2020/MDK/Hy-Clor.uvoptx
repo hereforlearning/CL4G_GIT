@@ -384,6 +384,26 @@
           <WinNumber>1</WinNumber>
           <ItemText>ucIOTEVENTMessage,0x0A</ItemText>
         </Ww>
+        <Ww>
+          <count>46</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>eIOTEVENT</ItemText>
+        </Ww>
+        <Ww>
+          <count>47</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>uiIOTEVENTCURRENTCNT,0x0A</ItemText>
+        </Ww>
+        <Ww>
+          <count>48</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>uitemp,0x0A</ItemText>
+        </Ww>
+        <Ww>
+          <count>49</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>IOTuiCellRealCurrent</ItemText>
+        </Ww>
       </WatchWindow1>
       <WatchWindow2>
         <Ww>

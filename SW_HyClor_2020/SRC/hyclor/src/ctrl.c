@@ -1326,6 +1326,12 @@ void CellRealCurrentDisplay(void)
 			ucLEDNum = 0;
 	#endif	
 	#if(DEBUG == _DISABLE)
+	if(ucLEDNum!=IOTuiCellRealCurrent)
+	{
+		IOTuiCellRealCurrent=ucLEDNum;
+		eIOTEVENT|=_IOT_EVENT_UPDATE_CURRENT;
+		uiIOTEVENTCURRENTCNT=500;
+	}
 	CellCurrentLED(ucLEDNum);	
 	#endif
 	//LEDDisplayHexValue(uiOutputCounter);

@@ -162,10 +162,14 @@ unsigned char  IOT_RESOLVE_KEY(unsigned char *key);
 extern unsigned char eIOTEVENT;
 extern unsigned char ucIOTEVENTMessage;
 extern unsigned int uiIOTEVENTCNT;
+extern unsigned int uiIOTEVENTCURRENTCNT;
+extern unsigned char  IOTuiCellRealCurrent;
 enum{
 	_IOT_EVENT_NULL=0,
 	_IOT_EVENT_UPDATE_KEY=1,
 	_IOT_EVENT_ERROR=2,
+	_IOT_EVENT_UPDATE_CURRENT=4,
 };
+
 
 #endif

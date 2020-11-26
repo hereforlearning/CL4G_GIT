@@ -729,3 +729,122 @@ IOT_RESOLVE_WIFI_DATA line 796 : 			if (IOT_POWER_ON)
 IOTHandler line 1036 : 	if(!IOT_POWER_ON)
 F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 16 : extern unsigned char IOT_POWER_ON ;
 F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 34 : extern unsigned char IOT_POWER_ON;
+---- uiCellRealCurrent Matches (15 in 1 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 245 : unsigned int  uiCellRealCurrent = 0;
+GetCellRealCurrent line 1182 : 		uiCellRealCurrent = 0;
+GetCellRealCurrent line 1220 : 			uiCellRealCurrent = (uiTemp/10);	
+GetCellRealCurrent line 1226 : 			uiCellRealCurrent = 0;
+GetCellRealCurrent line 1270 : 			uiCellRealCurrent = (uiTemp/100);	
+GetCellRealCurrent line 1276 : 			uiCellRealCurrent = 0;
+CellRealCurrentDisplay line 1301 : 		//LEDDisplayHexValue(uiCellRealCurrent);
+CellRealCurrentDisplay line 1316 : 			uiCellRealCurrent = 0;
+CellRealCurrentDisplay line 1318 : 		iTemp = uiCellRealCurrent;
+CellOutputCalibration line 1549 : 	if(uiCellRealCurrent>uiStdHigh)
+CellOutputCalibration line 1552 : 		uiTol = uiCellRealCurrent - uiStdH;
+CellOutputCalibration line 1594 : 	else if(uiCellRealCurrent<uiStdLow)
+CellOutputCalibration line 1597 : 		uiTol = uiStdL - uiCellRealCurrent;
+CheckCellCurrent line 2380 : 	if(uiCellRealCurrent<150)
+CheckWaterSaltLevel line 2689 : 	if((uiCurrentDuty >= uiCurrentMaxDuty)&&(uiCellRealCurrent < uiLowSaltCurrent)&&(bStopOutputFlag == _FALSE))
+---- _IOT_EVENT_ERROR Matches (7 in 3 files) ----
+IOTEventHandler line 1025 : 	if((eIOTEVENT&_IOT_EVENT_ERROR)==_IOT_EVENT_ERROR){
+IOTEventHandler line 1035 : 		eIOTEVENT&=~_IOT_EVENT_ERROR;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 169 : 	_IOT_EVENT_ERROR=2,
+WaterFlowFaultProcess line 2362 : 		eIOTEVENT|=_IOT_EVENT_ERROR;
+CheckWaterSaltLevel line 2701 : 			eIOTEVENT|=_IOT_EVENT_ERROR;
+CheckWaterSaltLevel line 2714 : 				eIOTEVENT|=_IOT_EVENT_ERROR;
+---- uiIOTEVENTCNT Matches (7 in 3 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 1006 : unsigned int uiIOTEVENTCNT=0;
+IOTEventHandler line 1015 : 		if(uiIOTEVENTCNT==0){
+APP_UART_1MS_HANDLE line 1087 : 	if(uiIOTEVENTCNT>0)
+APP_UART_1MS_HANDLE line 1088 : 		uiIOTEVENTCNT--;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 164 : extern unsigned int uiIOTEVENTCNT;
+KeyHandler line 178 : 				uiIOTEVENTCNT=2000;
+KeyHandler line 183 : 				uiIOTEVENTCNT=2000;
+---- uiCellRealCurrent Matches (17 in 1 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 245 : unsigned int  uiCellRealCurrent = 0;
+GetCellRealCurrent line 1182 : 		uiCellRealCurrent = 0;
+GetCellRealCurrent line 1220 : 			uiCellRealCurrent = (uiTemp/10);	
+GetCellRealCurrent line 1226 : 			uiCellRealCurrent = 0;
+GetCellRealCurrent line 1270 : 			uiCellRealCurrent = (uiTemp/100);	
+GetCellRealCurrent line 1276 : 			uiCellRealCurrent = 0;
+GetCellRealCurrent line 1278 : 			if(uiCellRealCurrent!=IOTuiCellRealCurrent)
+GetCellRealCurrent line 1280 : 				IOTuiCellRealCurrent=uiCellRealCurrent;
+CellRealCurrentDisplay line 1307 : 		//LEDDisplayHexValue(uiCellRealCurrent);
+CellRealCurrentDisplay line 1322 : 			uiCellRealCurrent = 0;
+CellRealCurrentDisplay line 1324 : 		iTemp = uiCellRealCurrent;
+CellOutputCalibration line 1556 : 	if(uiCellRealCurrent>uiStdHigh)
+CellOutputCalibration line 1559 : 		uiTol = uiCellRealCurrent - uiStdH;
+CellOutputCalibration line 1601 : 	else if(uiCellRealCurrent<uiStdLow)
+CellOutputCalibration line 1604 : 		uiTol = uiStdL - uiCellRealCurrent;
+CheckCellCurrent line 2387 : 	if(uiCellRealCurrent<150)
+CheckWaterSaltLevel line 2696 : 	if((uiCurrentDuty >= uiCurrentMaxDuty)&&(uiCellRealCurrent < uiLowSaltCurrent)&&(bStopOutputFlag == _FALSE))
+---- _IOT_EVENT_UPDATE_CURRENT Matches (4 in 2 files) ----
+IOTEventHandler line 1029 : 		if(eIOTEVENT&_IOT_EVENT_UPDATE_CURRENT==_IOT_EVENT_UPDATE_CURRENT){
+IOTEventHandler line 1039 : 				eIOTEVENT&=~_IOT_EVENT_UPDATE_CURRENT;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 171 : 	_IOT_EVENT_UPDATE_CURRENT=4,
+---- uiCellRealCurrent Matches (17 in 1 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 245 : unsigned int  uiCellRealCurrent = 0;
+GetCellRealCurrent line 1182 : 		uiCellRealCurrent = 0;
+GetCellRealCurrent line 1220 : 			uiCellRealCurrent = (uiTemp/10);	
+GetCellRealCurrent line 1226 : 			uiCellRealCurrent = 0;
+GetCellRealCurrent line 1270 : 			uiCellRealCurrent = (uiTemp/100);	
+GetCellRealCurrent line 1276 : 			uiCellRealCurrent = 0;
+GetCellRealCurrent line 1278 : 			if(uiCellRealCurrent!=IOTuiCellRealCurrent)
+GetCellRealCurrent line 1280 : 				IOTuiCellRealCurrent=uiCellRealCurrent;
+CellRealCurrentDisplay line 1307 : 		//LEDDisplayHexValue(uiCellRealCurrent);
+CellRealCurrentDisplay line 1322 : 			uiCellRealCurrent = 0;
+CellRealCurrentDisplay line 1324 : 		iTemp = uiCellRealCurrent;
+CellOutputCalibration line 1556 : 	if(uiCellRealCurrent>uiStdHigh)
+CellOutputCalibration line 1559 : 		uiTol = uiCellRealCurrent - uiStdH;
+CellOutputCalibration line 1601 : 	else if(uiCellRealCurrent<uiStdLow)
+CellOutputCalibration line 1604 : 		uiTol = uiStdL - uiCellRealCurrent;
+CheckCellCurrent line 2387 : 	if(uiCellRealCurrent<150)
+CheckWaterSaltLevel line 2696 : 	if((uiCurrentDuty >= uiCurrentMaxDuty)&&(uiCellRealCurrent < uiLowSaltCurrent)&&(bStopOutputFlag == _FALSE))
+---- uiIOTEVENTCURRENT Matches (5 in 3 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 1007 : unsigned int uiIOTEVENTCURRENT=0;
+APP_UART_1MS_HANDLE line 1109 : 	if(uiIOTEVENTCURRENT>0)
+APP_UART_1MS_HANDLE line 1110 : 		uiIOTEVENTCURRENT--;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 165 : extern unsigned int uiIOTEVENTCURRENT;
+GetCellRealCurrent line 1282 : 				uiIOTEVENTCURRENT=2000;
+---- _IOT_EVENT_UPDATE_CURRENT Matches (5 in 3 files) ----
+IOTEventHandler line 1029 : 		if(eIOTEVENT&_IOT_EVENT_UPDATE_CURRENT==_IOT_EVENT_UPDATE_CURRENT){
+IOTEventHandler line 1039 : 				eIOTEVENT&=~_IOT_EVENT_UPDATE_CURRENT;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 171 : 	_IOT_EVENT_UPDATE_CURRENT=4,
+CellRealCurrentDisplay line 1332 : 		eIOTEVENT|=_IOT_EVENT_UPDATE_CURRENT;
+---- uiIOTEVENTCURRENT Matches (6 in 3 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 1007 : unsigned int uiIOTEVENTCURRENT=0;
+IOTEventHandler line 1030 : 			if(uiIOTEVENTCURRENT==0){
+APP_UART_1MS_HANDLE line 1109 : 	if(uiIOTEVENTCURRENT>0)
+APP_UART_1MS_HANDLE line 1110 : 		uiIOTEVENTCURRENT--;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 165 : extern unsigned int uiIOTEVENTCURRENT;
+CellRealCurrentDisplay line 1333 : 		uiIOTEVENTCURRENT=2000;
+---- uiIOTEVENTCURRENTCNT Matches (6 in 3 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 1007 : unsigned int uiIOTEVENTCURRENTCNT=0;
+IOTEventHandler line 1030 : 			if(uiIOTEVENTCURRENTCNT==0){
+APP_UART_1MS_HANDLE line 1109 : 	if(uiIOTEVENTCURRENTCNT>0)
+APP_UART_1MS_HANDLE line 1110 : 		uiIOTEVENTCURRENTCNT--;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 165 : extern unsigned int uiIOTEVENTCURRENTCNT;
+CellRealCurrentDisplay line 1333 : 		uiIOTEVENTCURRENTCNT=2000;
+---- IOTuiCellRealCurrent Matches (7 in 3 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 70 : unsigned char  IOTuiCellRealCurrent=0;
+IOTEventHandler line 1035 : 				str[temp++]=IOTuiCellRealCurrent/100+'0';
+IOTEventHandler line 1036 : 				str[temp++]=IOTuiCellRealCurrent%100/10+'0';
+IOTEventHandler line 1037 : 				str[temp++]=IOTuiCellRealCurrent%10+'0';
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 166 : extern unsigned char  IOTuiCellRealCurrent;
+CellRealCurrentDisplay line 1329 : 	if(ucLEDNum!=IOTuiCellRealCurrent)
+CellRealCurrentDisplay line 1331 : 		IOTuiCellRealCurrent=ucLEDNum;
+---- IOTuiCellRealCurrent Matches (7 in 3 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 70 : unsigned char  IOTuiCellRealCurrent=0;
+IOTEventHandler line 1035 : 				str[temp++]=IOTuiCellRealCurrent/100+'0';
+IOTEventHandler line 1036 : 				str[temp++]=IOTuiCellRealCurrent%100/10+'0';
+IOTEventHandler line 1037 : 				str[temp++]=IOTuiCellRealCurrent%10+'0';
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 166 : extern unsigned char  IOTuiCellRealCurrent;
+CellRealCurrentDisplay line 1329 : 	if(ucLEDNum!=IOTuiCellRealCurrent)
+CellRealCurrentDisplay line 1331 : 		IOTuiCellRealCurrent=ucLEDNum;
+---- uiIOTEVENTCURRENTCNT Matches (6 in 3 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 1009 : unsigned int uiIOTEVENTCURRENTCNT=0;
+IOTEventHandler line 1034 : 			if(uiIOTEVENTCURRENTCNT==0){
+APP_UART_1MS_HANDLE line 1114 : 	if(uiIOTEVENTCURRENTCNT>0)
+APP_UART_1MS_HANDLE line 1115 : 		uiIOTEVENTCURRENTCNT--;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 165 : extern unsigned int uiIOTEVENTCURRENTCNT;
+CellRealCurrentDisplay line 1333 : 		uiIOTEVENTCURRENTCNT=2000;

@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\output\FW_Compact Line_Vxx_2020.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\output\FW_Compact Line_Vxx_2020.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Wed Nov 25 15:07:16 2020
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Wed Nov 25 20:18:01 2020
 <BR><P>
 <H3>Maximum Stack Usage =        176 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -306,6 +306,7 @@ Global Symbols
 <LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CalculateThresholdLimit
 <LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CalculateConvertValue
 <LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_CalScnt
+<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IOTEventHandler
 <LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay100us
 </UL>
 
@@ -398,7 +399,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SaveDataToArea
 </UL>
 
-<P><STRONG><a name="[5c]"></a>APP_UART_1MS_HANDLE</STRONG> (Thumb, 96 bytes, Stack size 8 bytes, app_uart.o(i.APP_UART_1MS_HANDLE))
+<P><STRONG><a name="[5c]"></a>APP_UART_1MS_HANDLE</STRONG> (Thumb, 114 bytes, Stack size 8 bytes, app_uart.o(i.APP_UART_1MS_HANDLE))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = APP_UART_1MS_HANDLE &rArr; IOTUartQueuePush &rArr; __aeabi_memcpy
 </UL>
 <BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IOTUartQueuePush
@@ -667,7 +668,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ProcessHandler
 </UL>
 
-<P><STRONG><a name="[7a]"></a>CellRealCurrentDisplay</STRONG> (Thumb, 104 bytes, Stack size 16 bytes, ctrl.o(i.CellRealCurrentDisplay))
+<P><STRONG><a name="[7a]"></a>CellRealCurrentDisplay</STRONG> (Thumb, 136 bytes, Stack size 16 bytes, ctrl.o(i.CellRealCurrentDisplay))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = CellRealCurrentDisplay &rArr; LEDDisplayHexValue &rArr; LEDControl
 </UL>
 <BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDDisplayHexValue
@@ -987,13 +988,14 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_hc32l136.o(RESET)
 </UL>
-<P><STRONG><a name="[a2]"></a>IOTEventHandler</STRONG> (Thumb, 230 bytes, Stack size 48 bytes, app_uart.o(i.IOTEventHandler))
+<P><STRONG><a name="[a2]"></a>IOTEventHandler</STRONG> (Thumb, 362 bytes, Stack size 48 bytes, app_uart.o(i.IOTEventHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = IOTEventHandler &rArr; UartSendString &rArr; Uart_EnableIrq &rArr; __ARM_common_switch8
 </UL>
 <BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay1ms
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UartSendString
-<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IOTHandler
 </UL>
