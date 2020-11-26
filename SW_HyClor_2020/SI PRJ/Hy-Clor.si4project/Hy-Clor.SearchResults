@@ -863,3 +863,103 @@ IOTUartQueuePop line 418 : 	if(pEusartQueueResolve==&UartQueueBuff[UART_QUEUE_LE
 IOTUartQueuePop line 419 : 		pEusartQueueResolve=UartQueueBuff;
 IOTUartQueuePop line 421 : 		pEusartQueueResolve++;
 IOTUartQueueioifempty line 432 : 	if(pEusartQueueResolve->status==empty)
+---- uiIOTEVENTCURRENTCNT Matches (6 in 3 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 1064 : unsigned int uiIOTEVENTCURRENTCNT=0;
+IOTEventHandler line 1089 : 			if(uiIOTEVENTCURRENTCNT==0){
+APP_UART_1MS_HANDLE line 1168 : 	if(uiIOTEVENTCURRENTCNT>0)
+APP_UART_1MS_HANDLE line 1169 : 		uiIOTEVENTCURRENTCNT--;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 165 : extern unsigned int uiIOTEVENTCURRENTCNT;
+CellRealCurrentDisplay line 1333 : 		uiIOTEVENTCURRENTCNT=500;
+---- eIOTEVENT Matches (14 in 4 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 1061 : unsigned char eIOTEVENT=_IOT_EVENT_NULL;
+IOTEventHandler line 1073 : 	if((eIOTEVENT&_IOT_EVENT_UPDATE_KEY)==_IOT_EVENT_UPDATE_KEY){
+IOTEventHandler line 1082 : 			eIOTEVENT&=~_IOT_EVENT_UPDATE_KEY;
+IOTEventHandler line 1088 : 		if((eIOTEVENT&_IOT_EVENT_UPDATE_CURRENT)==_IOT_EVENT_UPDATE_CURRENT){
+IOTEventHandler line 1099 : 				eIOTEVENT&=~_IOT_EVENT_UPDATE_CURRENT;
+IOTEventHandler line 1105 : 	if((eIOTEVENT&_IOT_EVENT_ERROR)==_IOT_EVENT_ERROR){
+IOTEventHandler line 1115 : 		eIOTEVENT&=~_IOT_EVENT_ERROR;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 162 : extern unsigned char eIOTEVENT;
+CellRealCurrentDisplay line 1332 : 		eIOTEVENT|=_IOT_EVENT_UPDATE_CURRENT;
+WaterFlowFaultProcess line 2362 : 		eIOTEVENT|=_IOT_EVENT_ERROR;
+CheckWaterSaltLevel line 2701 : 			eIOTEVENT|=_IOT_EVENT_ERROR;
+CheckWaterSaltLevel line 2714 : 				eIOTEVENT|=_IOT_EVENT_ERROR;
+KeyHandler line 177 : 				eIOTEVENT|=_IOT_EVENT_UPDATE_KEY;
+KeyHandler line 182 : 				eIOTEVENT|=_IOT_EVENT_UPDATE_KEY;
+---- _IOT_EVENT_ERROR Matches (7 in 3 files) ----
+IOTEventHandler line 1105 : 	if((eIOTEVENT&_IOT_EVENT_ERROR)==_IOT_EVENT_ERROR){
+IOTEventHandler line 1115 : 		eIOTEVENT&=~_IOT_EVENT_ERROR;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 170 : 	_IOT_EVENT_ERROR=2,
+WaterFlowFaultProcess line 2362 : 		eIOTEVENT|=_IOT_EVENT_ERROR;
+CheckWaterSaltLevel line 2701 : 			eIOTEVENT|=_IOT_EVENT_ERROR;
+CheckWaterSaltLevel line 2714 : 				eIOTEVENT|=_IOT_EVENT_ERROR;
+---- ucIOTEVENTMessage Matches (8 in 3 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 1062 : unsigned char ucIOTEVENTMessage=0;
+IOTEventHandler line 1112 : 		str[temp++]=ucIOTEVENTMessage/10+'0';
+IOTEventHandler line 1113 : 		str[temp++]=ucIOTEVENTMessage%10+'0';
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 163 : extern unsigned char ucIOTEVENTMessage;
+WaterFlowFaultProcess line 2367 : 			ucIOTEVENTMessage=21;
+WaterFlowFaultProcess line 2373 : 			ucIOTEVENTMessage=20;
+CheckWaterSaltLevel line 2702 : 			ucIOTEVENTMessage=11;
+CheckWaterSaltLevel line 2715 : 				ucIOTEVENTMessage=10;
+---- ucIOTEVENTMessage Matches (8 in 3 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 1062 : unsigned char ucIOTEVENTMessage=10;
+IOTEventHandler line 1112 : 		str[temp++]=ucIOTEVENTMessage/10+'0';
+IOTEventHandler line 1113 : 		str[temp++]=ucIOTEVENTMessage%10+'0';
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 163 : extern unsigned char ucIOTEVENTMessage;
+WaterFlowFaultProcess line 2367 : 			ucIOTEVENTMessage=21;
+WaterFlowFaultProcess line 2373 : 			ucIOTEVENTMessage=20;
+CheckWaterSaltLevel line 2702 : 			ucIOTEVENTMessage=11;
+CheckWaterSaltLevel line 2715 : 				ucIOTEVENTMessage=10;
+---- ucIOTEVENTMessage Matches (11 in 3 files) ----
+IOT_RESOLVE_WIFI_DATA line 835 : 				ucIOTEVENTMessage=10;
+IOT_RESOLVE_WIFI_DATA line 854 : 				ucIOTEVENTMessage=10;
+IOT_RESOLVE_WIFI_DATA line 874 : 			ucIOTEVENTMessage=10;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 1064 : unsigned char ucIOTEVENTMessage=10;
+IOTEventHandler line 1111 : 		str[temp++]=ucIOTEVENTMessage/10+'0';
+IOTEventHandler line 1112 : 		str[temp++]=ucIOTEVENTMessage%10+'0';
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 163 : extern unsigned char ucIOTEVENTMessage;
+WaterFlowFaultProcess line 2367 : 			ucIOTEVENTMessage=21;
+WaterFlowFaultProcess line 2373 : 			ucIOTEVENTMessage=20;
+CheckWaterSaltLevel line 2702 : 			ucIOTEVENTMessage=11;
+CheckWaterSaltLevel line 2715 : 				ucIOTEVENTMessage=10;
+---- ucIOTEVENTMessage Search Errors Encountered (2) ----
+The following 2 files could not be processed:
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\aes.c : File could not be opened.
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\aes.h : File could not be opened.
+---- uiIOTEVENTCURRENTCNT Matches (6 in 3 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 1066 : unsigned int uiIOTEVENTCURRENTCNT=0;
+IOTEventHandler line 1089 : 			if(uiIOTEVENTCURRENTCNT==0){
+APP_UART_1MS_HANDLE line 1167 : 	if(uiIOTEVENTCURRENTCNT>0)
+APP_UART_1MS_HANDLE line 1168 : 		uiIOTEVENTCURRENTCNT--;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 165 : extern unsigned int uiIOTEVENTCURRENTCNT;
+CellRealCurrentDisplay line 1333 : 		uiIOTEVENTCURRENTCNT=500;
+---- uiIOTEVENTCURRENTCNT Search Errors Encountered (2) ----
+The following 2 files could not be processed:
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\aes.c : File could not be opened.
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\aes.h : File could not be opened.
+---- uiIOTEVENTCURRENTCNT Matches (7 in 3 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 1066 : unsigned int uiIOTEVENTCURRENTCNT=0;
+IOTEventHandler line 1089 : 			if(uiIOTEVENTCURRENTCNT==0){
+IOTEventHandler line 1105 : 		if(uiIOTEVENTCURRENTCNT==400){
+APP_UART_1MS_HANDLE line 1168 : 	if(uiIOTEVENTCURRENTCNT>0)
+APP_UART_1MS_HANDLE line 1169 : 		uiIOTEVENTCURRENTCNT--;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 165 : extern unsigned int uiIOTEVENTCURRENTCNT;
+CellRealCurrentDisplay line 1333 : 		uiIOTEVENTCURRENTCNT=800;
+---- uiIOTEVENTCURRENTCNT Search Errors Encountered (2) ----
+The following 2 files could not be processed:
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\aes.c : File could not be opened.
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\aes.h : File could not be opened.
+---- uiIOTEVENTCURRENTCNT Matches (9 in 3 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 1066 : unsigned int uiIOTEVENTCURRENTCNT=0;
+IOTEventHandler line 1088 : 	//		if(uiIOTEVENTCURRENTCNT==400){
+IOTEventHandler line 1104 : 			if(uiIOTEVENTCURRENTCNT==0){
+IOTEventHandler line 1120 : //			if(uiIOTEVENTCURRENTCNT==0)
+IOTEventHandler line 1122 : //				uiIOTEVENTCURRENTCNT=500;
+APP_UART_1MS_HANDLE line 1180 : 	if(uiIOTEVENTCURRENTCNT>0)
+APP_UART_1MS_HANDLE line 1181 : 		uiIOTEVENTCURRENTCNT--;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 165 : extern unsigned int uiIOTEVENTCURRENTCNT;
+CellRealCurrentDisplay line 1333 : 		uiIOTEVENTCURRENTCNT=500;
+---- uiIOTEVENTCURRENTCNT Search Errors Encountered (2) ----
+The following 2 files could not be processed:
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\aes.c : File could not be opened.
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\aes.h : File could not be opened.

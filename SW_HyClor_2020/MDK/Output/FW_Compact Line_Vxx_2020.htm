@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\output\FW_Compact Line_Vxx_2020.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\output\FW_Compact Line_Vxx_2020.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Thu Nov 26 11:12:43 2020
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Thu Nov 26 15:05:16 2020
 <BR><P>
 <H3>Maximum Stack Usage =        176 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -305,9 +305,9 @@ Global Symbols
 <LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CalibrateParameter
 <LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CalculateThresholdLimit
 <LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CalculateConvertValue
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_CalScnt
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_CalScnt
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IOTEventHandler
-<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay100us
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay100us
 </UL>
 
 <P><STRONG><a name="[147]"></a>__aeabi_idiv</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, aeabi_sdiv.o(.text), UNUSED)
@@ -399,7 +399,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SaveDataToArea
 </UL>
 
-<P><STRONG><a name="[5c]"></a>APP_UART_1MS_HANDLE</STRONG> (Thumb, 132 bytes, Stack size 8 bytes, app_uart.o(i.APP_UART_1MS_HANDLE))
+<P><STRONG><a name="[5c]"></a>APP_UART_1MS_HANDLE</STRONG> (Thumb, 150 bytes, Stack size 8 bytes, app_uart.o(i.APP_UART_1MS_HANDLE))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = APP_UART_1MS_HANDLE &rArr; IOTUartQueuePush &rArr; __aeabi_memcpy
 </UL>
 <BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IOTUartQueuePush
@@ -415,38 +415,38 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> mcu.o(i.Init_ADC)
 </UL>
-<P><STRONG><a name="[c8]"></a>Adc_ConfigIrq</STRONG> (Thumb, 110 bytes, Stack size 0 bytes, adc.o(i.Adc_ConfigIrq))
-<BR><BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_ADC
+<P><STRONG><a name="[c7]"></a>Adc_ConfigIrq</STRONG> (Thumb, 110 bytes, Stack size 0 bytes, adc.o(i.Adc_ConfigIrq))
+<BR><BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_ADC
 </UL>
 
-<P><STRONG><a name="[c6]"></a>Adc_ConfigSglChannel</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, adc.o(i.Adc_ConfigSglChannel))
-<BR><BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_ADC
+<P><STRONG><a name="[c5]"></a>Adc_ConfigSglChannel</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, adc.o(i.Adc_ConfigSglChannel))
+<BR><BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_ADC
 </UL>
 
-<P><STRONG><a name="[c5]"></a>Adc_ConfigSglMode</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, adc.o(i.Adc_ConfigSglMode))
-<BR><BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_ADC
+<P><STRONG><a name="[c4]"></a>Adc_ConfigSglMode</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, adc.o(i.Adc_ConfigSglMode))
+<BR><BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_ADC
 </UL>
 
-<P><STRONG><a name="[c2]"></a>Adc_Enable</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, adc.o(i.Adc_Enable))
-<BR><BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_ADC
+<P><STRONG><a name="[c1]"></a>Adc_Enable</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, adc.o(i.Adc_Enable))
+<BR><BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_ADC
 </UL>
 
-<P><STRONG><a name="[c7]"></a>Adc_EnableIrq</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, adc.o(i.Adc_EnableIrq))
-<BR><BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_ADC
+<P><STRONG><a name="[c6]"></a>Adc_EnableIrq</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, adc.o(i.Adc_EnableIrq))
+<BR><BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_ADC
 </UL>
 
 <P><STRONG><a name="[5e]"></a>Adc_GetSglResult</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, adc.o(i.Adc_GetSglResult))
 <BR><BR>[Called By]<UL><LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AdcContIrqCallback
 </UL>
 
-<P><STRONG><a name="[b7]"></a>Adc_IRQHandler</STRONG> (Thumb, 234 bytes, Stack size 8 bytes, adc.o(i.Adc_IRQHandler))
+<P><STRONG><a name="[b6]"></a>Adc_IRQHandler</STRONG> (Thumb, 234 bytes, Stack size 8 bytes, adc.o(i.Adc_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Adc_IRQHandler
 </UL>
 <BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IRQ024_Handler
 </UL>
 
-<P><STRONG><a name="[c4]"></a>Adc_Init</STRONG> (Thumb, 140 bytes, Stack size 0 bytes, adc.o(i.Adc_Init))
-<BR><BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_ADC
+<P><STRONG><a name="[c3]"></a>Adc_Init</STRONG> (Thumb, 140 bytes, Stack size 0 bytes, adc.o(i.Adc_Init))
+<BR><BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_ADC
 </UL>
 
 <P><STRONG><a name="[51]"></a>Adc_SGL_Start</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, adc.o(i.Adc_SGL_Start))
@@ -472,12 +472,12 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ProcessHandler
 </UL>
 
-<P><STRONG><a name="[dc]"></a>Bt_ClearIntFlag</STRONG> (Thumb, 22 bytes, Stack size 12 bytes, bt.o(i.Bt_ClearIntFlag))
+<P><STRONG><a name="[db]"></a>Bt_ClearIntFlag</STRONG> (Thumb, 22 bytes, Stack size 12 bytes, bt.o(i.Bt_ClearIntFlag))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = Bt_ClearIntFlag
 </UL>
 <BR>[Called By]<UL><LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim1Int
 <LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim0Int
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Timer
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Timer
 </UL>
 
 <P><STRONG><a name="[111]"></a>Bt_GetIntFlag</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, bt.o(i.Bt_GetIntFlag))
@@ -487,16 +487,16 @@ Global Symbols
 <LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim0Int
 </UL>
 
-<P><STRONG><a name="[da]"></a>Bt_M0_ARRSet</STRONG> (Thumb, 82 bytes, Stack size 8 bytes, bt.o(i.Bt_M0_ARRSet))
+<P><STRONG><a name="[d9]"></a>Bt_M0_ARRSet</STRONG> (Thumb, 82 bytes, Stack size 8 bytes, bt.o(i.Bt_M0_ARRSet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Bt_M0_ARRSet
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Timer
+<BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Timer
 </UL>
 
-<P><STRONG><a name="[db]"></a>Bt_M0_Cnt16Set</STRONG> (Thumb, 82 bytes, Stack size 8 bytes, bt.o(i.Bt_M0_Cnt16Set))
+<P><STRONG><a name="[da]"></a>Bt_M0_Cnt16Set</STRONG> (Thumb, 82 bytes, Stack size 8 bytes, bt.o(i.Bt_M0_Cnt16Set))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Bt_M0_Cnt16Set
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Timer
+<BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Timer
 </UL>
 
 <P><STRONG><a name="[55]"></a>Bt_M0_Run</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, bt.o(i.Bt_M0_Run))
@@ -504,7 +504,7 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ALLStart
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartTimer1
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Timer
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Timer
 </UL>
 
 <P><STRONG><a name="[5a]"></a>Bt_M0_Stop</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, bt.o(i.Bt_M0_Stop))
@@ -514,16 +514,16 @@ Global Symbols
 <LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ALLStop
 </UL>
 
-<P><STRONG><a name="[dd]"></a>Bt_Mode0_EnableIrq</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, bt.o(i.Bt_Mode0_EnableIrq))
+<P><STRONG><a name="[dc]"></a>Bt_Mode0_EnableIrq</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, bt.o(i.Bt_Mode0_EnableIrq))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Bt_Mode0_EnableIrq
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Timer
+<BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Timer
 </UL>
 
-<P><STRONG><a name="[d9]"></a>Bt_Mode0_Init</STRONG> (Thumb, 536 bytes, Stack size 12 bytes, bt.o(i.Bt_Mode0_Init))
+<P><STRONG><a name="[d8]"></a>Bt_Mode0_Init</STRONG> (Thumb, 536 bytes, Stack size 12 bytes, bt.o(i.Bt_Mode0_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = Bt_Mode0_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Timer
+<BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Timer
 </UL>
 
 <P><STRONG><a name="[68]"></a>CalculateConvertValue</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, ctrl.o(i.CalculateConvertValue))
@@ -585,7 +585,7 @@ Global Symbols
 <LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_SetIO
 </UL>
 <BR>[Called By]<UL><LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WaterFlowFaultProcess
-<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpecialSecretCodeProcess
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpecialSecretCodeProcess
 <LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ProcessHandler
 <LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CellOutputCurrentAdjustAPI
 <LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CellOutputCurrentAdjust
@@ -626,7 +626,7 @@ Global Symbols
 <LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CellCurrentLED
 <LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyHandler
+<BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyHandler
 <LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ProcessHandler
 <LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BoostModeHandler
 </UL>
@@ -728,7 +728,7 @@ Global Symbols
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay_ms
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChlorBoostProcess
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyHandler
+<BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyHandler
 </UL>
 
 <P><STRONG><a name="[32]"></a>CtsIntCallBack</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, app_uart.o(i.CtsIntCallBack))
@@ -822,8 +822,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMStop
 <LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMStart
 <LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ALLStart
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Timer
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_ADC
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Timer
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_ADC
 </UL>
 
 <P><STRONG><a name="[30]"></a>ErrIntCallback</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, app_uart.o(i.ErrIntCallback))
@@ -873,8 +873,8 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SaveDataToArea
 </UL>
 
-<P><STRONG><a name="[d5]"></a>Flash_WaitCycle</STRONG> (Thumb, 108 bytes, Stack size 0 bytes, flash.o(i.Flash_WaitCycle))
-<BR><BR>[Called By]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_OscFrequency
+<P><STRONG><a name="[d4]"></a>Flash_WaitCycle</STRONG> (Thumb, 108 bytes, Stack size 0 bytes, flash.o(i.Flash_WaitCycle))
+<BR><BR>[Called By]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_OscFrequency
 </UL>
 
 <P><STRONG><a name="[103]"></a>Flash_WriteByte</STRONG> (Thumb, 176 bytes, Stack size 8 bytes, flash.o(i.Flash_WriteByte))
@@ -899,16 +899,16 @@ Global Symbols
 
 <P><STRONG><a name="[9d]"></a>Gpio_ClearIrq</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, gpio.o(i.Gpio_ClearIrq))
 <BR><BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMStop
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_IOPorts
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_IOPorts
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_IRQHandler
 </UL>
 
 <P><STRONG><a name="[76]"></a>Gpio_ClrIO</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, gpio.o(i.Gpio_ClrIO))
 <BR><BR>[Called By]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDControl
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDALLControl
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDALLControl
 <LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CellPolarityControl
 <LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim3Int
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_IOPorts
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_IOPorts
 </UL>
 
 <P><STRONG><a name="[99]"></a>Gpio_EnableIrq</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, gpio.o(i.Gpio_EnableIrq))
@@ -916,11 +916,11 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GpioEnableIrq
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_IOPorts
+<BR>[Called By]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_IOPorts
 </UL>
 
 <P><STRONG><a name="[7e]"></a>Gpio_GetInputIO</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, gpio.o(i.Gpio_GetInputIO))
-<BR><BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadKey
+<BR><BR>[Called By]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadKey
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CheckWaterFlow
 </UL>
 
@@ -946,12 +946,12 @@ Global Symbols
 <LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IRQ000_Handler
 </UL>
 
-<P><STRONG><a name="[c0]"></a>Gpio_Init</STRONG> (Thumb, 300 bytes, Stack size 12 bytes, gpio.o(i.Gpio_Init))
+<P><STRONG><a name="[bf]"></a>Gpio_Init</STRONG> (Thumb, 300 bytes, Stack size 12 bytes, gpio.o(i.Gpio_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = Gpio_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_PortInit
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_IOPorts
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_ADC
+<BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_PortInit
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_IOPorts
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_ADC
 </UL>
 
 <P><STRONG><a name="[75]"></a>Gpio_ReadOutputIO</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, gpio.o(i.Gpio_ReadOutputIO))
@@ -962,24 +962,24 @@ Global Symbols
 <P><STRONG><a name="[11d]"></a>Gpio_SetAfMode</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, gpio.o(i.Gpio_SetAfMode))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Gpio_SetAfMode
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_PortInit
+<BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_PortInit
 </UL>
 
-<P><STRONG><a name="[bf]"></a>Gpio_SetAnalogMode</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, gpio.o(i.Gpio_SetAnalogMode))
-<BR><BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_ADC
+<P><STRONG><a name="[be]"></a>Gpio_SetAnalogMode</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, gpio.o(i.Gpio_SetAnalogMode))
+<BR><BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_ADC
 </UL>
 
 <P><STRONG><a name="[57]"></a>Gpio_SetIO</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, gpio.o(i.Gpio_SetIO))
 <BR><BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ALLStop
 <LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ALLStart
 <LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDControl
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDALLControl
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDALLControl
 <LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CellPolarityControl
 <LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CellOutputCalibration
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CellCurrentOutput
 <LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CellCurrentCycleOutput
 <LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim3Int
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_IOPorts
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_IOPorts
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_IRQHandler
 </UL>
 
@@ -988,7 +988,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_hc32l136.o(RESET)
 </UL>
-<P><STRONG><a name="[a2]"></a>IOTEventHandler</STRONG> (Thumb, 362 bytes, Stack size 48 bytes, app_uart.o(i.IOTEventHandler))
+<P><STRONG><a name="[a2]"></a>IOTEventHandler</STRONG> (Thumb, 396 bytes, Stack size 48 bytes, app_uart.o(i.IOTEventHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = IOTEventHandler &rArr; UartSendString &rArr; Uart_EnableIrq &rArr; __ARM_common_switch8
 </UL>
 <BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay1ms
@@ -1049,15 +1049,14 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IOTMessageQueueHandler
 </UL>
 
-<P><STRONG><a name="[e2]"></a>IOT_RESOLVE_KEY</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, app_uart.o(i.IOT_RESOLVE_KEY))
-<BR><BR>[Called By]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyDetect
+<P><STRONG><a name="[e1]"></a>IOT_RESOLVE_KEY</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, app_uart.o(i.IOT_RESOLVE_KEY))
+<BR><BR>[Called By]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyDetect
 </UL>
 
-<P><STRONG><a name="[a9]"></a>IOT_RESOLVE_WIFI_DATA</STRONG> (Thumb, 414 bytes, Stack size 16 bytes, app_uart.o(i.IOT_RESOLVE_WIFI_DATA))
+<P><STRONG><a name="[a9]"></a>IOT_RESOLVE_WIFI_DATA</STRONG> (Thumb, 164 bytes, Stack size 16 bytes, app_uart.o(i.IOT_RESOLVE_WIFI_DATA))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = IOT_RESOLVE_WIFI_DATA &rArr; CellOutputCurrentAdjustAPI &rArr; CellCurrentOutput &rArr; PWMStop &rArr; EnableNvic &rArr; __NVIC_SetPriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay1ms
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDALLControl
 <LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CellPolarityControl
 <LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CellOutputCurrentAdjustAPI
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UartSendString
@@ -1096,182 +1095,182 @@ Global Symbols
 <P><STRONG><a name="[f]"></a>IRQ004_Handler</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, interrupts_hc32l136.o(i.IRQ004_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = IRQ004_Handler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dma_IRQHandler (Weak Reference)
+<BR>[Calls]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dma_IRQHandler (Weak Reference)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_hc32l136.o(RESET)
 </UL>
 <P><STRONG><a name="[10]"></a>IRQ005_Handler</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, interrupts_hc32l136.o(i.IRQ005_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = IRQ005_Handler &rArr; Tim3_IRQHandler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim3_IRQHandler
+<BR>[Calls]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim3_IRQHandler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_hc32l136.o(RESET)
 </UL>
 <P><STRONG><a name="[11]"></a>IRQ006_Handler</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, interrupts_hc32l136.o(i.IRQ006_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = IRQ006_Handler &rArr; Uart_IRQHandler &rArr; Uart_ClrStatus &rArr; __ARM_common_switch8
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_IRQHandler
+<BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_IRQHandler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_hc32l136.o(RESET)
 </UL>
 <P><STRONG><a name="[12]"></a>IRQ007_Handler</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, interrupts_hc32l136.o(i.IRQ007_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = IRQ007_Handler &rArr; Uart_IRQHandler &rArr; Uart_ClrStatus &rArr; __ARM_common_switch8
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_IRQHandler
+<BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_IRQHandler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_hc32l136.o(RESET)
 </UL>
 <P><STRONG><a name="[13]"></a>IRQ008_Handler</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, interrupts_hc32l136.o(i.IRQ008_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = IRQ008_Handler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LpUart_IRQHandler (Weak Reference)
+<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LpUart_IRQHandler (Weak Reference)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_hc32l136.o(RESET)
 </UL>
 <P><STRONG><a name="[14]"></a>IRQ009_Handler</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, interrupts_hc32l136.o(i.IRQ009_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = IRQ009_Handler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LpUart_IRQHandler (Weak Reference)
+<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LpUart_IRQHandler (Weak Reference)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_hc32l136.o(RESET)
 </UL>
 <P><STRONG><a name="[15]"></a>IRQ010_Handler</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, interrupts_hc32l136.o(i.IRQ010_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = IRQ010_Handler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Spi_IRQHandler (Weak Reference)
+<BR>[Calls]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Spi_IRQHandler (Weak Reference)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_hc32l136.o(RESET)
 </UL>
 <P><STRONG><a name="[16]"></a>IRQ011_Handler</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, interrupts_hc32l136.o(i.IRQ011_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = IRQ011_Handler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Spi_IRQHandler (Weak Reference)
+<BR>[Calls]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Spi_IRQHandler (Weak Reference)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_hc32l136.o(RESET)
 </UL>
 <P><STRONG><a name="[17]"></a>IRQ012_Handler</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, interrupts_hc32l136.o(i.IRQ012_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = IRQ012_Handler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2c_IRQHandler (Weak Reference)
+<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2c_IRQHandler (Weak Reference)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_hc32l136.o(RESET)
 </UL>
 <P><STRONG><a name="[18]"></a>IRQ013_Handler</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, interrupts_hc32l136.o(i.IRQ013_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = IRQ013_Handler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2c_IRQHandler (Weak Reference)
+<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2c_IRQHandler (Weak Reference)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_hc32l136.o(RESET)
 </UL>
 <P><STRONG><a name="[19]"></a>IRQ014_Handler</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, interrupts_hc32l136.o(i.IRQ014_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = IRQ014_Handler &rArr; Tim_IRQHandler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim_IRQHandler
+<BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim_IRQHandler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_hc32l136.o(RESET)
 </UL>
 <P><STRONG><a name="[1a]"></a>IRQ015_Handler</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, interrupts_hc32l136.o(i.IRQ015_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = IRQ015_Handler &rArr; Tim_IRQHandler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim_IRQHandler
+<BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim_IRQHandler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_hc32l136.o(RESET)
 </UL>
 <P><STRONG><a name="[1b]"></a>IRQ016_Handler</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, interrupts_hc32l136.o(i.IRQ016_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = IRQ016_Handler &rArr; Tim_IRQHandler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim_IRQHandler
+<BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim_IRQHandler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_hc32l136.o(RESET)
 </UL>
 <P><STRONG><a name="[1c]"></a>IRQ017_Handler</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, interrupts_hc32l136.o(i.IRQ017_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = IRQ017_Handler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LpTim_IRQHandler (Weak Reference)
+<BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LpTim_IRQHandler (Weak Reference)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_hc32l136.o(RESET)
 </UL>
 <P><STRONG><a name="[1d]"></a>IRQ018_Handler</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, interrupts_hc32l136.o(i.IRQ018_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = IRQ018_Handler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Adt_IRQHandler (Weak Reference)
+<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Adt_IRQHandler (Weak Reference)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_hc32l136.o(RESET)
 </UL>
 <P><STRONG><a name="[1e]"></a>IRQ019_Handler</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, interrupts_hc32l136.o(i.IRQ019_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = IRQ019_Handler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Adt_IRQHandler (Weak Reference)
+<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Adt_IRQHandler (Weak Reference)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_hc32l136.o(RESET)
 </UL>
 <P><STRONG><a name="[1f]"></a>IRQ020_Handler</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, interrupts_hc32l136.o(i.IRQ020_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = IRQ020_Handler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Adt_IRQHandler (Weak Reference)
+<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Adt_IRQHandler (Weak Reference)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_hc32l136.o(RESET)
 </UL>
 <P><STRONG><a name="[20]"></a>IRQ021_Handler</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, interrupts_hc32l136.o(i.IRQ021_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = IRQ021_Handler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pca_IRQHandler (Weak Reference)
+<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pca_IRQHandler (Weak Reference)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_hc32l136.o(RESET)
 </UL>
 <P><STRONG><a name="[21]"></a>IRQ022_Handler</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, interrupts_hc32l136.o(i.IRQ022_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = IRQ022_Handler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wdt_IRQHandler (Weak Reference)
+<BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wdt_IRQHandler (Weak Reference)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_hc32l136.o(RESET)
 </UL>
 <P><STRONG><a name="[22]"></a>IRQ023_Handler</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, interrupts_hc32l136.o(i.IRQ023_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = IRQ023_Handler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rtc_IRQHandler (Weak Reference)
+<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rtc_IRQHandler (Weak Reference)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_hc32l136.o(RESET)
 </UL>
 <P><STRONG><a name="[23]"></a>IRQ024_Handler</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, interrupts_hc32l136.o(i.IRQ024_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = IRQ024_Handler &rArr; Adc_IRQHandler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Adc_IRQHandler
+<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Adc_IRQHandler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_hc32l136.o(RESET)
 </UL>
 <P><STRONG><a name="[24]"></a>IRQ025_Handler</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, interrupts_hc32l136.o(i.IRQ025_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = IRQ025_Handler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pcnt_IRQHandler (Weak Reference)
+<BR>[Calls]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Pcnt_IRQHandler (Weak Reference)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_hc32l136.o(RESET)
 </UL>
 <P><STRONG><a name="[25]"></a>IRQ026_Handler</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, interrupts_hc32l136.o(i.IRQ026_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = IRQ026_Handler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Vc_IRQHandler (Weak Reference)
+<BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Vc_IRQHandler (Weak Reference)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_hc32l136.o(RESET)
 </UL>
 <P><STRONG><a name="[26]"></a>IRQ027_Handler</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, interrupts_hc32l136.o(i.IRQ027_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = IRQ027_Handler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Vc_IRQHandler (Weak Reference)
+<BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Vc_IRQHandler (Weak Reference)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_hc32l136.o(RESET)
 </UL>
 <P><STRONG><a name="[27]"></a>IRQ028_Handler</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, interrupts_hc32l136.o(i.IRQ028_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = IRQ028_Handler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Lvd_IRQHandler (Weak Reference)
+<BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Lvd_IRQHandler (Weak Reference)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_hc32l136.o(RESET)
 </UL>
 <P><STRONG><a name="[28]"></a>IRQ029_Handler</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, interrupts_hc32l136.o(i.IRQ029_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = IRQ029_Handler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Lcd_IRQHandler (Weak Reference)
+<BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Lcd_IRQHandler (Weak Reference)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_hc32l136.o(RESET)
 </UL>
@@ -1283,25 +1282,25 @@ Global Symbols
 <P><STRONG><a name="[2a]"></a>IRQ031_Handler</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, interrupts_hc32l136.o(i.IRQ031_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = IRQ031_Handler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ClkTrim_IRQHandler (Weak Reference)
+<BR>[Calls]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ClkTrim_IRQHandler (Weak Reference)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_hc32l136.o(RESET)
 </UL>
-<P><STRONG><a name="[bd]"></a>Init_ADC</STRONG> (Thumb, 186 bytes, Stack size 56 bytes, mcu.o(i.Init_ADC))
+<P><STRONG><a name="[bc]"></a>Init_ADC</STRONG> (Thumb, 186 bytes, Stack size 56 bytes, mcu.o(i.Init_ADC))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = Init_ADC &rArr; EnableNvic &rArr; __NVIC_SetPriority
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay100us
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ddl_memclr
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_SetPeripheralGate
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_SetAnalogMode
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_Init
+<BR>[Calls]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay100us
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ddl_memclr
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_SetPeripheralGate
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_SetAnalogMode
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_Init
 <LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EnableNvic
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Adc_Init
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Adc_EnableIrq
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Adc_Enable
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Adc_ConfigSglMode
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Adc_ConfigSglChannel
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Adc_ConfigIrq
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Adc_Init
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Adc_EnableIrq
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Adc_Enable
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Adc_ConfigSglMode
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Adc_ConfigSglChannel
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Adc_ConfigIrq
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCU_Initialize
 </UL>
@@ -1309,74 +1308,74 @@ Global Symbols
 <P><STRONG><a name="[89]"></a>Init_APP_Uart</STRONG> (Thumb, 200 bytes, Stack size 64 bytes, app_uart.o(i.Init_APP_Uart))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = Init_APP_Uart &rArr; Sysctrl_GetPClkFreq &rArr; Sysctrl_GetHClkFreq &rArr; __ARM_common_switch8
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_SetMMDOrCk
-<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_SetClkDiv
-<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_SetBaud
-<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_Init
-<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_EnableIrq
-<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_EnableFunc
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_ClrStatus
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_CalScnt
-<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_GetPClkFreq
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_PortInit
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ddl_memclr
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_SetPeripheralGate
+<BR>[Calls]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_SetMMDOrCk
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_SetClkDiv
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_SetBaud
+<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_Init
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_EnableIrq
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_EnableFunc
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_ClrStatus
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_CalScnt
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_GetPClkFreq
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_PortInit
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ddl_memclr
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_SetPeripheralGate
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCU_Initialize
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EUSART_WIFI_INIT
 </UL>
 
-<P><STRONG><a name="[d3]"></a>Init_IOPorts</STRONG> (Thumb, 382 bytes, Stack size 16 bytes, mcu.o(i.Init_IOPorts))
+<P><STRONG><a name="[d2]"></a>Init_IOPorts</STRONG> (Thumb, 382 bytes, Stack size 16 bytes, mcu.o(i.Init_IOPorts))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = Init_IOPorts &rArr; Gpio_EnableIrq &rArr; _GpioEnableIrq
 </UL>
 <BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_SetIO
 <LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_ClrIO
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ddl_memclr
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_SetPeripheralGate
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_Init
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ddl_memclr
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_SetPeripheralGate
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_Init
 <LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_EnableIrq
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_ClearIrq
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCU_Initialize
 </UL>
 
-<P><STRONG><a name="[d4]"></a>Init_OscFrequency</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, mcu.o(i.Init_OscFrequency))
+<P><STRONG><a name="[d3]"></a>Init_OscFrequency</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, mcu.o(i.Init_OscFrequency))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = Init_OscFrequency &rArr; Sysctrl_ClkInit &rArr; Sysctrl_SysClkSwitch &rArr; SystemCoreClockUpdate &rArr; Sysctrl_GetHClkFreq &rArr; __ARM_common_switch8
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_SetRCHTrim
-<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_ClkInit
-<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Flash_WaitCycle
+<BR>[Calls]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_SetRCHTrim
+<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_ClkInit
+<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Flash_WaitCycle
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCU_Initialize
 </UL>
 
-<P><STRONG><a name="[d8]"></a>Init_Timer</STRONG> (Thumb, 278 bytes, Stack size 64 bytes, mcu.o(i.Init_Timer))
+<P><STRONG><a name="[d7]"></a>Init_Timer</STRONG> (Thumb, 278 bytes, Stack size 64 bytes, mcu.o(i.Init_Timer))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = Init_Timer &rArr; EnableNvic &rArr; __NVIC_SetPriority
 </UL>
-<BR>[Calls]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ddl_memclr
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim3_Mode0_Init
+<BR>[Calls]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ddl_memclr
+<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim3_Mode0_Init
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim3_M0_Cnt16Set
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim3_M0_ARRSet
-<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim3_ClearIntFlag
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_SetPeripheralGate
+<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim3_ClearIntFlag
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_SetPeripheralGate
 <LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EnableNvic
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Bt_Mode0_Init
-<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Bt_Mode0_EnableIrq
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Bt_Mode0_Init
+<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Bt_Mode0_EnableIrq
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Bt_M0_Run
-<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Bt_M0_Cnt16Set
-<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Bt_M0_ARRSet
-<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Bt_ClearIntFlag
+<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Bt_M0_Cnt16Set
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Bt_M0_ARRSet
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Bt_ClearIntFlag
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCU_Initialize
 </UL>
 
-<P><STRONG><a name="[e0]"></a>KeyDetect</STRONG> (Thumb, 274 bytes, Stack size 8 bytes, keypad.o(i.KeyDetect))
+<P><STRONG><a name="[df]"></a>KeyDetect</STRONG> (Thumb, 274 bytes, Stack size 8 bytes, keypad.o(i.KeyDetect))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = KeyDetect &rArr; KeyScanStatus &rArr; ReadKey
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IOT_RESOLVE_KEY
-<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyScanStatus
+<BR>[Calls]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IOT_RESOLVE_KEY
+<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyScanStatus
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyHandler
+<BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyHandler
 <LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PowerupFunctionModeSelect
 </UL>
 
@@ -1384,23 +1383,23 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim0Int
 </UL>
 
-<P><STRONG><a name="[e3]"></a>KeyHandler</STRONG> (Thumb, 130 bytes, Stack size 8 bytes, keypad.o(i.KeyHandler))
+<P><STRONG><a name="[e2]"></a>KeyHandler</STRONG> (Thumb, 130 bytes, Stack size 8 bytes, keypad.o(i.KeyHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = KeyHandler &rArr; CellOutputCurrentAdjust &rArr; SerivceReset &rArr; SaveDataToArea &rArr; ALLStop &rArr; PWMStop &rArr; EnableNvic &rArr; __NVIC_SetPriority
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyDetect
-<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpecialSecretCodeProcess
+<BR>[Calls]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyDetect
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpecialSecretCodeProcess
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ComboKeyProcess
 <LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CellOutputCurrentAdjust
 </UL>
 <BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[e1]"></a>KeyScanStatus</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, keypad.o(i.KeyScanStatus))
+<P><STRONG><a name="[e0]"></a>KeyScanStatus</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, keypad.o(i.KeyScanStatus))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = KeyScanStatus &rArr; ReadKey
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadKey
+<BR>[Calls]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadKey
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyDetect
+<BR>[Called By]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyDetect
 <LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PowerupFunctionModeSelect
 </UL>
 
@@ -1408,19 +1407,18 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PowerOnInitialize
 </UL>
 
-<P><STRONG><a name="[aa]"></a>LEDALLControl</STRONG> (Thumb, 204 bytes, Stack size 8 bytes, ctrl.o(i.LEDALLControl))
+<P><STRONG><a name="[e5]"></a>LEDALLControl</STRONG> (Thumb, 204 bytes, Stack size 8 bytes, ctrl.o(i.LEDALLControl))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LEDALLControl
 </UL>
 <BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_SetIO
 <LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_ClrIO
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpecialSecretCodeProcess
+<BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpecialSecretCodeProcess
 <LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RunningTimeKeyProcess
 <LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RunningLEDDisplay
 <LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PowerupFunctionModeSelect
 <LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PowerOnInitialize
 <LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PowerOffLED
-<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IOT_RESOLVE_WIFI_DATA
 </UL>
 
 <P><STRONG><a name="[62]"></a>LEDControl</STRONG> (Thumb, 420 bytes, Stack size 16 bytes, ctrl.o(i.LEDControl))
@@ -1472,7 +1470,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDControl
 </UL>
 <BR>[Called By]<UL><LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WaterFlowFaultProcess
-<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpecialSecretCodeProcess
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpecialSecretCodeProcess
 <LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PowerupFunctionModeSelect
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ComboKeyProcess
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChlorBoostProcess
@@ -1489,10 +1487,10 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EUSART_WIFI_INIT
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay10us
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_APP_Uart
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Timer
-<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_OscFrequency
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_IOPorts
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_ADC
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Timer
+<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_OscFrequency
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_IOPorts
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_ADC
 </UL>
 <BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -1532,7 +1530,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = PWMStart &rArr; EnableNvic &rArr; __NVIC_SetPriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim3_Mode0_EnableIrq
-<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim3_ClearIntFlag
+<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim3_ClearIntFlag
 <LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EnableNvic
 </UL>
 <BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ALLStart
@@ -1546,7 +1544,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim3_Mode0_DisableIrq
 <LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim3_M0_Stop
-<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim3_ClearIntFlag
+<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim3_ClearIntFlag
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_ClearIrq
 <LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EnableNvic
 </UL>
@@ -1559,7 +1557,7 @@ Global Symbols
 <P><STRONG><a name="[ef]"></a>PowerOffLED</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, ctrl.o(i.PowerOffLED))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = PowerOffLED &rArr; LEDALLControl
 </UL>
-<BR>[Calls]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDALLControl
+<BR>[Calls]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDALLControl
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PowerupFunctionModeSelect
 </UL>
@@ -1569,7 +1567,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyVariableInitial
 <LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PowerupFunctionModeSelect
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDALLControl
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDALLControl
 <LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EepromDataCheck
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay_ms
 <LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CellReverseForPCBTest
@@ -1591,8 +1589,8 @@ Global Symbols
 <P><STRONG><a name="[f2]"></a>PowerupFunctionModeSelect</STRONG> (Thumb, 434 bytes, Stack size 16 bytes, ctrl.o(i.PowerupFunctionModeSelect))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = PowerupFunctionModeSelect &rArr; ReverseTimeSettingKeyProcess &rArr; SaveCellReverseSetting &rArr; SaveDataToArea &rArr; ALLStop &rArr; PWMStop &rArr; EnableNvic &rArr; __NVIC_SetPriority
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyScanStatus
-<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyDetect
+<BR>[Calls]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyScanStatus
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyDetect
 <LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SaveCellReverseSetting
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SWVersionDisplay
 <LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RunningTimeKeyProcess
@@ -1605,7 +1603,7 @@ Global Symbols
 <LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDFlashSetting
 <LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDFlashDisplay
 <LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDControl
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDALLControl
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDALLControl
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay_ms
 <LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CellCurrentLED
 </UL>
@@ -1649,12 +1647,12 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ProcessHandler
 </UL>
 
-<P><STRONG><a name="[e5]"></a>ReadKey</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, keypad.o(i.ReadKey))
+<P><STRONG><a name="[e4]"></a>ReadKey</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, keypad.o(i.ReadKey))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = ReadKey
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_GetInputIO
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyScanStatus
+<BR>[Called By]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyScanStatus
 </UL>
 
 <P><STRONG><a name="[f4]"></a>ReverseLEDDisplay</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, ctrl.o(i.ReverseLEDDisplay))
@@ -1678,7 +1676,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = RunningLEDDisplay &rArr; Delay_ms &rArr; delay1ms
 </UL>
 <BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDControl
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDALLControl
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDALLControl
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay_ms
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PowerupFunctionModeSelect
@@ -1688,7 +1686,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = RunningTimeKeyProcess &rArr; LEDALLControl
 </UL>
 <BR>[Calls]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SaveCellRunningTime
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDALLControl
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDALLControl
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PowerupFunctionModeSelect
 </UL>
@@ -1697,7 +1695,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = RxIntCallback &rArr; Uart_ReceiveData &rArr; UartGetInternDataPtr
 </UL>
 <BR>[Calls]<UL><LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_ReceiveData
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_ClrStatus
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_ClrStatus
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> app_uart.o(i.Init_APP_Uart)
 </UL>
@@ -1796,14 +1794,14 @@ Global Symbols
 <LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EepromDataCheck
 </UL>
 
-<P><STRONG><a name="[e4]"></a>SpecialSecretCodeProcess</STRONG> (Thumb, 194 bytes, Stack size 8 bytes, ctrl.o(i.SpecialSecretCodeProcess))
+<P><STRONG><a name="[e3]"></a>SpecialSecretCodeProcess</STRONG> (Thumb, 194 bytes, Stack size 8 bytes, ctrl.o(i.SpecialSecretCodeProcess))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = SpecialSecretCodeProcess &rArr; CellCurrentOutput &rArr; PWMStop &rArr; EnableNvic &rArr; __NVIC_SetPriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDFlashSetting
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDALLControl
+<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDALLControl
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CellCurrentOutput
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyHandler
+<BR>[Called By]<UL><LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyHandler
 </UL>
 
 <P><STRONG><a name="[a1]"></a>StartTimer1</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, mcu.o(i.StartTimer1))
@@ -1822,7 +1820,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CurrentADCProcess
 </UL>
 
-<P><STRONG><a name="[d7]"></a>Sysctrl_ClkInit</STRONG> (Thumb, 106 bytes, Stack size 16 bytes, sysctrl.o(i.Sysctrl_ClkInit))
+<P><STRONG><a name="[d6]"></a>Sysctrl_ClkInit</STRONG> (Thumb, 106 bytes, Stack size 16 bytes, sysctrl.o(i.Sysctrl_ClkInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = Sysctrl_ClkInit &rArr; Sysctrl_SysClkSwitch &rArr; SystemCoreClockUpdate &rArr; Sysctrl_GetHClkFreq &rArr; __ARM_common_switch8
 </UL>
 <BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
@@ -1837,7 +1835,7 @@ Global Symbols
 <LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_SetHCLKDiv
 <LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_ClkSourceEnable
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_OscFrequency
+<BR>[Called By]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_OscFrequency
 </UL>
 
 <P><STRONG><a name="[10a]"></a>Sysctrl_ClkSourceEnable</STRONG> (Thumb, 312 bytes, Stack size 16 bytes, sysctrl.o(i.Sysctrl_ClkSourceEnable))
@@ -1846,7 +1844,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
 <LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_SysctrlUnlock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_ClkInit
+<BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_ClkInit
 </UL>
 
 <P><STRONG><a name="[10f]"></a>Sysctrl_GetHClkFreq</STRONG> (Thumb, 354 bytes, Stack size 48 bytes, sysctrl.o(i.Sysctrl_GetHClkFreq))
@@ -1856,10 +1854,10 @@ Global Symbols
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemCoreClockUpdate
-<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_GetPClkFreq
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_GetPClkFreq
 </UL>
 
-<P><STRONG><a name="[cd]"></a>Sysctrl_GetPClkFreq</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, sysctrl.o(i.Sysctrl_GetPClkFreq))
+<P><STRONG><a name="[cc]"></a>Sysctrl_GetPClkFreq</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, sysctrl.o(i.Sysctrl_GetPClkFreq))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = Sysctrl_GetPClkFreq &rArr; Sysctrl_GetHClkFreq &rArr; __ARM_common_switch8
 </UL>
 <BR>[Calls]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_GetHClkFreq
@@ -1872,7 +1870,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_SysctrlUnlock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_ClkInit
+<BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_ClkInit
 </UL>
 
 <P><STRONG><a name="[10d]"></a>Sysctrl_SetPCLKDiv</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, sysctrl.o(i.Sysctrl_SetPCLKDiv))
@@ -1880,48 +1878,48 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_SysctrlUnlock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_ClkInit
+<BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_ClkInit
 </UL>
 
 <P><STRONG><a name="[109]"></a>Sysctrl_SetPLLStableTime</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, sysctrl.o(i.Sysctrl_SetPLLStableTime))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Sysctrl_SetPLLStableTime
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_ClkInit
+<BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_ClkInit
 </UL>
 
-<P><STRONG><a name="[c1]"></a>Sysctrl_SetPeripheralGate</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, sysctrl.o(i.Sysctrl_SetPeripheralGate))
+<P><STRONG><a name="[c0]"></a>Sysctrl_SetPeripheralGate</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, sysctrl.o(i.Sysctrl_SetPeripheralGate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Sysctrl_SetPeripheralGate
 </UL>
 <BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_APP_Uart
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Timer
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_IOPorts
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_ADC
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Timer
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_IOPorts
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_ADC
 </UL>
 
-<P><STRONG><a name="[d6]"></a>Sysctrl_SetRCHTrim</STRONG> (Thumb, 148 bytes, Stack size 8 bytes, sysctrl.o(i.Sysctrl_SetRCHTrim))
+<P><STRONG><a name="[d5]"></a>Sysctrl_SetRCHTrim</STRONG> (Thumb, 148 bytes, Stack size 8 bytes, sysctrl.o(i.Sysctrl_SetRCHTrim))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = Sysctrl_SetRCHTrim &rArr; __ARM_common_switch8
 </UL>
 <BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_OscFrequency
+<BR>[Called By]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_OscFrequency
 </UL>
 
 <P><STRONG><a name="[106]"></a>Sysctrl_SetRCLStableTime</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, sysctrl.o(i.Sysctrl_SetRCLStableTime))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Sysctrl_SetRCLStableTime
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_ClkInit
+<BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_ClkInit
 </UL>
 
 <P><STRONG><a name="[105]"></a>Sysctrl_SetXTHStableTime</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, sysctrl.o(i.Sysctrl_SetXTHStableTime))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Sysctrl_SetXTHStableTime
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_ClkInit
+<BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_ClkInit
 </UL>
 
 <P><STRONG><a name="[108]"></a>Sysctrl_SetXTLStableTime</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, sysctrl.o(i.Sysctrl_SetXTLStableTime))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Sysctrl_SetXTLStableTime
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_ClkInit
+<BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_ClkInit
 </UL>
 
 <P><STRONG><a name="[10b]"></a>Sysctrl_SysClkSwitch</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, sysctrl.o(i.Sysctrl_SysClkSwitch))
@@ -1930,17 +1928,17 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemCoreClockUpdate
 <LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_SysctrlUnlock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_ClkInit
+<BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_ClkInit
 </UL>
 
 <P><STRONG><a name="[104]"></a>Sysctrl_XTHDriverConfig</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, sysctrl.o(i.Sysctrl_XTHDriverConfig))
-<BR><BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_ClkInit
+<BR><BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_ClkInit
 </UL>
 
 <P><STRONG><a name="[107]"></a>Sysctrl_XTLDriverConfig</STRONG> (Thumb, 46 bytes, Stack size 12 bytes, sysctrl.o(i.Sysctrl_XTLDriverConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = Sysctrl_XTLDriverConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_ClkInit
+<BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_ClkInit
 </UL>
 
 <P><STRONG><a name="[110]"></a>SystemCoreClockUpdate</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, system_hc32l136.o(i.SystemCoreClockUpdate))
@@ -1965,7 +1963,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyDetectTimer
 <LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MainTimerHandler
 <LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Bt_GetIntFlag
-<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Bt_ClearIntFlag
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Bt_ClearIntFlag
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> mcu.o(i.Init_Timer)
 </UL>
@@ -1973,7 +1971,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Tim1Int &rArr; Bt_GetIntFlag
 </UL>
 <BR>[Calls]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Bt_GetIntFlag
-<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Bt_ClearIntFlag
+<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Bt_ClearIntFlag
 <LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADCStart
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> mcu.o(i.Init_Timer)
@@ -1987,22 +1985,22 @@ Global Symbols
 <LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim3_M0_Cnt16Set
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim3_M0_ARRSet
 <LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim3_GetIntFlag
-<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim3_ClearIntFlag
+<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim3_ClearIntFlag
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> mcu.o(i.Init_Timer)
 </UL>
-<P><STRONG><a name="[df]"></a>Tim3_ClearIntFlag</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, timer3.o(i.Tim3_ClearIntFlag))
+<P><STRONG><a name="[de]"></a>Tim3_ClearIntFlag</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, timer3.o(i.Tim3_ClearIntFlag))
 <BR><BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMStop
 <LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMStart
 <LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim3Int
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Timer
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Timer
 </UL>
 
 <P><STRONG><a name="[113]"></a>Tim3_GetIntFlag</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, timer3.o(i.Tim3_GetIntFlag))
 <BR><BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim3Int
 </UL>
 
-<P><STRONG><a name="[ac]"></a>Tim3_IRQHandler</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, timer3.o(i.Tim3_IRQHandler))
+<P><STRONG><a name="[ab]"></a>Tim3_IRQHandler</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, timer3.o(i.Tim3_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Tim3_IRQHandler
 </UL>
 <BR>[Called By]<UL><LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IRQ005_Handler
@@ -2010,13 +2008,13 @@ Global Symbols
 
 <P><STRONG><a name="[9f]"></a>Tim3_M0_ARRSet</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, timer3.o(i.Tim3_M0_ARRSet))
 <BR><BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim3Int
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Timer
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Timer
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_IRQHandler
 </UL>
 
 <P><STRONG><a name="[9e]"></a>Tim3_M0_Cnt16Set</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, timer3.o(i.Tim3_M0_Cnt16Set))
 <BR><BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tim3Int
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Timer
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Timer
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_IRQHandler
 </UL>
 
@@ -2036,13 +2034,13 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMStart
 </UL>
 
-<P><STRONG><a name="[de]"></a>Tim3_Mode0_Init</STRONG> (Thumb, 174 bytes, Stack size 8 bytes, timer3.o(i.Tim3_Mode0_Init))
+<P><STRONG><a name="[dd]"></a>Tim3_Mode0_Init</STRONG> (Thumb, 174 bytes, Stack size 8 bytes, timer3.o(i.Tim3_Mode0_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Tim3_Mode0_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Timer
+<BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Timer
 </UL>
 
-<P><STRONG><a name="[b1]"></a>Tim_IRQHandler</STRONG> (Thumb, 72 bytes, Stack size 8 bytes, bt.o(i.Tim_IRQHandler))
+<P><STRONG><a name="[b0]"></a>Tim_IRQHandler</STRONG> (Thumb, 72 bytes, Stack size 8 bytes, bt.o(i.Tim_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Tim_IRQHandler
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IRQ016_Handler
@@ -2053,14 +2051,14 @@ Global Symbols
 <P><STRONG><a name="[2f]"></a>TxIntCallback</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, app_uart.o(i.TxIntCallback))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = TxIntCallback &rArr; Uart_ClrStatus &rArr; __ARM_common_switch8
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_ClrStatus
+<BR>[Calls]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_ClrStatus
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> app_uart.o(i.Init_APP_Uart)
 </UL>
 <P><STRONG><a name="[8b]"></a>UartSendString</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, app_uart.o(i.UartSendString))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = UartSendString &rArr; Uart_EnableIrq &rArr; __ARM_common_switch8
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_EnableIrq
+<BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_EnableIrq
 <LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EUSART_SendData
 </UL>
 <BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EUSART_WIFI_INIT
@@ -2068,7 +2066,7 @@ Global Symbols
 <LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IOTEventHandler
 </UL>
 
-<P><STRONG><a name="[ce]"></a>Uart_CalScnt</STRONG> (Thumb, 104 bytes, Stack size 24 bytes, uart.o(i.Uart_CalScnt))
+<P><STRONG><a name="[cd]"></a>Uart_CalScnt</STRONG> (Thumb, 104 bytes, Stack size 24 bytes, uart.o(i.Uart_CalScnt))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = Uart_CalScnt &rArr; UartGetInternDataPtr
 </UL>
 <BR>[Calls]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UartGetInternDataPtr
@@ -2077,7 +2075,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_APP_Uart
 </UL>
 
-<P><STRONG><a name="[d1]"></a>Uart_ClrStatus</STRONG> (Thumb, 116 bytes, Stack size 16 bytes, uart.o(i.Uart_ClrStatus))
+<P><STRONG><a name="[d0]"></a>Uart_ClrStatus</STRONG> (Thumb, 116 bytes, Stack size 16 bytes, uart.o(i.Uart_ClrStatus))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Uart_ClrStatus &rArr; __ARM_common_switch8
 </UL>
 <BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
@@ -2086,10 +2084,10 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TxIntCallback
 <LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RxIntCallback
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_APP_Uart
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_IRQHandler
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_IRQHandler
 </UL>
 
-<P><STRONG><a name="[d2]"></a>Uart_EnableFunc</STRONG> (Thumb, 136 bytes, Stack size 16 bytes, uart.o(i.Uart_EnableFunc))
+<P><STRONG><a name="[d1]"></a>Uart_EnableFunc</STRONG> (Thumb, 136 bytes, Stack size 16 bytes, uart.o(i.Uart_EnableFunc))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Uart_EnableFunc &rArr; __ARM_common_switch8
 </UL>
 <BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
@@ -2098,7 +2096,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_APP_Uart
 </UL>
 
-<P><STRONG><a name="[d0]"></a>Uart_EnableIrq</STRONG> (Thumb, 154 bytes, Stack size 16 bytes, uart.o(i.Uart_EnableIrq))
+<P><STRONG><a name="[cf]"></a>Uart_EnableIrq</STRONG> (Thumb, 154 bytes, Stack size 16 bytes, uart.o(i.Uart_EnableIrq))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Uart_EnableIrq &rArr; __ARM_common_switch8
 </UL>
 <BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
@@ -2108,17 +2106,17 @@ Global Symbols
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_APP_Uart
 </UL>
 
-<P><STRONG><a name="[ad]"></a>Uart_IRQHandler</STRONG> (Thumb, 178 bytes, Stack size 16 bytes, uart.o(i.Uart_IRQHandler))
+<P><STRONG><a name="[ac]"></a>Uart_IRQHandler</STRONG> (Thumb, 178 bytes, Stack size 16 bytes, uart.o(i.Uart_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = Uart_IRQHandler &rArr; Uart_ClrStatus &rArr; __ARM_common_switch8
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_ClrStatus
+<BR>[Calls]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_ClrStatus
 <LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UartGetInternDataPtr
 </UL>
 <BR>[Called By]<UL><LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IRQ007_Handler
 <LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IRQ006_Handler
 </UL>
 
-<P><STRONG><a name="[cb]"></a>Uart_Init</STRONG> (Thumb, 132 bytes, Stack size 24 bytes, uart.o(i.Uart_Init))
+<P><STRONG><a name="[ca]"></a>Uart_Init</STRONG> (Thumb, 132 bytes, Stack size 24 bytes, uart.o(i.Uart_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = Uart_Init &rArr; Uart_SetStopBit &rArr; UartGetInternDataPtr
 </UL>
 <BR>[Calls]<UL><LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_SetStopBit
@@ -2131,12 +2129,12 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_APP_Uart
 </UL>
 
-<P><STRONG><a name="[c9]"></a>Uart_PortInit</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, app_uart.o(i.Uart_PortInit))
+<P><STRONG><a name="[c8]"></a>Uart_PortInit</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, app_uart.o(i.Uart_PortInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = Uart_PortInit &rArr; Gpio_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_SetAfMode
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ddl_memclr
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_Init
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ddl_memclr
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Gpio_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_APP_Uart
 </UL>
@@ -2149,7 +2147,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RxIntCallback
 </UL>
 
-<P><STRONG><a name="[cf]"></a>Uart_SetBaud</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, uart.o(i.Uart_SetBaud))
+<P><STRONG><a name="[ce]"></a>Uart_SetBaud</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, uart.o(i.Uart_SetBaud))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Uart_SetBaud &rArr; UartGetInternDataPtr
 </UL>
 <BR>[Calls]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UartGetInternDataPtr
@@ -2157,7 +2155,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_APP_Uart
 </UL>
 
-<P><STRONG><a name="[cc]"></a>Uart_SetClkDiv</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, uart.o(i.Uart_SetClkDiv))
+<P><STRONG><a name="[cb]"></a>Uart_SetClkDiv</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, uart.o(i.Uart_SetClkDiv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Uart_SetClkDiv &rArr; UartGetInternDataPtr
 </UL>
 <BR>[Calls]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UartGetInternDataPtr
@@ -2165,7 +2163,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_APP_Uart
 </UL>
 
-<P><STRONG><a name="[ca]"></a>Uart_SetMMDOrCk</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, uart.o(i.Uart_SetMMDOrCk))
+<P><STRONG><a name="[c9]"></a>Uart_SetMMDOrCk</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, uart.o(i.Uart_SetMMDOrCk))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Uart_SetMMDOrCk &rArr; UartGetInternDataPtr
 </UL>
 <BR>[Calls]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UartGetInternDataPtr
@@ -2178,7 +2176,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UartGetInternDataPtr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_Init
+<BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_Init
 </UL>
 
 <P><STRONG><a name="[11c]"></a>Uart_SetMultiMode</STRONG> (Thumb, 72 bytes, Stack size 16 bytes, uart.o(i.Uart_SetMultiMode))
@@ -2186,7 +2184,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UartGetInternDataPtr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_Init
+<BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_Init
 </UL>
 
 <P><STRONG><a name="[11b]"></a>Uart_SetStopBit</STRONG> (Thumb, 70 bytes, Stack size 16 bytes, uart.o(i.Uart_SetStopBit))
@@ -2194,7 +2192,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UartGetInternDataPtr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_Init
+<BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_Init
 </UL>
 
 <P><STRONG><a name="[90]"></a>UpdateRunningData</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, ctrl.o(i.UpdateRunningData))
@@ -2222,11 +2220,11 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BoostModeHandler
 <LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_GetHClkFreq
-<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_EnableIrq
-<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_EnableFunc
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_ClrStatus
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_SetRCHTrim
-<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_ClkInit
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_EnableIrq
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_EnableFunc
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_ClrStatus
+<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_SetRCHTrim
+<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_ClkInit
 <LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Sysctrl_ClkSourceEnable
 </UL>
 
@@ -2234,22 +2232,22 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_exit
 </UL>
 
-<P><STRONG><a name="[be]"></a>ddl_memclr</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, ddl.o(i.ddl_memclr))
+<P><STRONG><a name="[bd]"></a>ddl_memclr</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, ddl.o(i.ddl_memclr))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = ddl_memclr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_PortInit
+<BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_PortInit
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_APP_Uart
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Timer
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_IOPorts
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_ADC
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Timer
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_IOPorts
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_ADC
 </UL>
 
-<P><STRONG><a name="[c3]"></a>delay100us</STRONG> (Thumb, 74 bytes, Stack size 16 bytes, ddl.o(i.delay100us))
+<P><STRONG><a name="[c2]"></a>delay100us</STRONG> (Thumb, 74 bytes, Stack size 16 bytes, ddl.o(i.delay100us))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = delay100us
 </UL>
 <BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_ADC
+<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_ADC
 </UL>
 
 <P><STRONG><a name="[87]"></a>delay10us</STRONG> (Thumb, 74 bytes, Stack size 16 bytes, ddl.o(i.delay10us))
@@ -2278,7 +2276,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MCU_Initialize
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IOTHandler
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EUSART_WIFI_INIT
-<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyHandler
+<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KeyHandler
 <LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ProcessHandler
 <LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PowerOnInitialize
 </UL>
@@ -2313,22 +2311,22 @@ Local Symbols
 <BR>[Calls]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_SetPriority
 <LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_ClearPendingIRQ
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_Init
+<BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_Init
 </UL>
 
 <P><STRONG><a name="[119]"></a>UartGetInternDataPtr</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, uart.o(i.UartGetInternDataPtr))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = UartGetInternDataPtr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_SetMMDOrCk
-<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_SetClkDiv
-<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_SetBaud
+<BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_SetMMDOrCk
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_SetClkDiv
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_SetBaud
 <LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_ReceiveData
-<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_Init
-<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_EnableIrq
-<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_EnableFunc
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_ClrStatus
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_CalScnt
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_IRQHandler
+<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_Init
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_EnableIrq
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_EnableFunc
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_ClrStatus
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_CalScnt
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_IRQHandler
 <LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_SetStopBit
 <LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_SetMultiMode
 <LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_SetMode
@@ -2340,7 +2338,7 @@ Local Symbols
 <BR>[Calls]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_SetPriority
 <LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_ClearPendingIRQ
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_Init
+<BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Uart_Init
 </UL>
 
 <P><STRONG><a name="[115]"></a>__NVIC_ClearPendingIRQ</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, uart.o(i.__NVIC_ClearPendingIRQ))
@@ -2358,65 +2356,65 @@ Local Symbols
 <H3>
 Undefined Global Symbols
 </H3>
-<P><STRONG><a name="[b3]"></a>Adt_IRQHandler</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<P><STRONG><a name="[b2]"></a>Adt_IRQHandler</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)
 <BR><BR>[Called By]<UL><LI><a href="#[1f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IRQ020_Handler
 <LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IRQ019_Handler
 <LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IRQ018_Handler
 </UL>
 
-<P><STRONG><a name="[bc]"></a>ClkTrim_IRQHandler</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<P><STRONG><a name="[bb]"></a>ClkTrim_IRQHandler</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)
 <BR><BR>[Called By]<UL><LI><a href="#[2a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IRQ031_Handler
 </UL>
 
-<P><STRONG><a name="[ab]"></a>Dma_IRQHandler</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<P><STRONG><a name="[aa]"></a>Dma_IRQHandler</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)
 <BR><BR>[Called By]<UL><LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IRQ004_Handler
 </UL>
 
-<P><STRONG><a name="[b0]"></a>I2c_IRQHandler</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<P><STRONG><a name="[af]"></a>I2c_IRQHandler</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)
 <BR><BR>[Called By]<UL><LI><a href="#[18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IRQ013_Handler
 <LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IRQ012_Handler
 </UL>
 
-<P><STRONG><a name="[bb]"></a>Lcd_IRQHandler</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<P><STRONG><a name="[ba]"></a>Lcd_IRQHandler</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)
 <BR><BR>[Called By]<UL><LI><a href="#[28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IRQ029_Handler
 </UL>
 
-<P><STRONG><a name="[b2]"></a>LpTim_IRQHandler</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<P><STRONG><a name="[b1]"></a>LpTim_IRQHandler</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)
 <BR><BR>[Called By]<UL><LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IRQ017_Handler
 </UL>
 
-<P><STRONG><a name="[ae]"></a>LpUart_IRQHandler</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<P><STRONG><a name="[ad]"></a>LpUart_IRQHandler</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)
 <BR><BR>[Called By]<UL><LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IRQ009_Handler
 <LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IRQ008_Handler
 </UL>
 
-<P><STRONG><a name="[ba]"></a>Lvd_IRQHandler</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<P><STRONG><a name="[b9]"></a>Lvd_IRQHandler</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)
 <BR><BR>[Called By]<UL><LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IRQ028_Handler
 </UL>
 
-<P><STRONG><a name="[b4]"></a>Pca_IRQHandler</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<P><STRONG><a name="[b3]"></a>Pca_IRQHandler</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)
 <BR><BR>[Called By]<UL><LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IRQ021_Handler
 </UL>
 
-<P><STRONG><a name="[b8]"></a>Pcnt_IRQHandler</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<P><STRONG><a name="[b7]"></a>Pcnt_IRQHandler</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)
 <BR><BR>[Called By]<UL><LI><a href="#[24]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IRQ025_Handler
 </UL>
 
-<P><STRONG><a name="[b6]"></a>Rtc_IRQHandler</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<P><STRONG><a name="[b5]"></a>Rtc_IRQHandler</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)
 <BR><BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IRQ023_Handler
 </UL>
 
-<P><STRONG><a name="[af]"></a>Spi_IRQHandler</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<P><STRONG><a name="[ae]"></a>Spi_IRQHandler</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)
 <BR><BR>[Called By]<UL><LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IRQ011_Handler
 <LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IRQ010_Handler
 </UL>
 
-<P><STRONG><a name="[b9]"></a>Vc_IRQHandler</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<P><STRONG><a name="[b8]"></a>Vc_IRQHandler</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)
 <BR><BR>[Called By]<UL><LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IRQ027_Handler
 <LI><a href="#[25]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IRQ026_Handler
 </UL>
 
-<P><STRONG><a name="[b5]"></a>Wdt_IRQHandler</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)
+<P><STRONG><a name="[b4]"></a>Wdt_IRQHandler</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)
 <BR><BR>[Called By]<UL><LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IRQ022_Handler
 </UL>
 
