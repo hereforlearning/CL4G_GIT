@@ -963,3 +963,84 @@ CellRealCurrentDisplay line 1333 : 		uiIOTEVENTCURRENTCNT=500;
 The following 2 files could not be processed:
 F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\aes.c : File could not be opened.
 F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\aes.h : File could not be opened.
+---- _IOT_EVENT_UPDATE_CURRENT Matches (5 in 3 files) ----
+IOTEventHandler line 1090 : 		if((eIOTEVENT&_IOT_EVENT_UPDATE_CURRENT)==_IOT_EVENT_UPDATE_CURRENT){
+IOTEventHandler line 1104 : 			eIOTEVENT&=~_IOT_EVENT_UPDATE_CURRENT;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 171 : 	_IOT_EVENT_UPDATE_CURRENT=4,
+CellRealCurrentDisplay line 1332 : 		eIOTEVENT|=_IOT_EVENT_UPDATE_CURRENT;
+---- _IOT_EVENT_UPDATE_CURRENT Search Errors Encountered (2) ----
+The following 2 files could not be processed:
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\aes.c : File could not be opened.
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\aes.h : File could not be opened.
+---- ucIOTEVENTMessage Matches (12 in 3 files) ----
+IOT_RESOLVE_WIFI_DATA line 835 : 				ucIOTEVENTMessage=10;
+IOT_RESOLVE_WIFI_DATA line 854 : 				ucIOTEVENTMessage=10;
+IOT_RESOLVE_WIFI_DATA line 874 : 			ucIOTEVENTMessage=10;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 1064 : unsigned char ucIOTEVENTMessage=10;
+IOTEventHandler line 1106 : 				if(ucIOTEVENTMessage==10)
+IOTEventHandler line 1122 : 			str[temp++]=ucIOTEVENTMessage/10+'0';
+IOTEventHandler line 1123 : 			str[temp++]=ucIOTEVENTMessage%10+'0';
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 163 : extern unsigned char ucIOTEVENTMessage;
+WaterFlowFaultProcess line 2367 : 			ucIOTEVENTMessage=21;
+WaterFlowFaultProcess line 2373 : 			ucIOTEVENTMessage=20;
+CheckWaterSaltLevel line 2702 : 			ucIOTEVENTMessage=11;
+CheckWaterSaltLevel line 2715 : 				ucIOTEVENTMessage=10;
+---- ucIOTEVENTMessage Search Errors Encountered (2) ----
+The following 2 files could not be processed:
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\aes.c : File could not be opened.
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\aes.h : File could not be opened.
+---- ucIOTEVENTMessage Matches (12 in 3 files) ----
+IOT_RESOLVE_WIFI_DATA line 835 : 				ucIOTEVENTMessage=10;
+IOT_RESOLVE_WIFI_DATA line 854 : 				ucIOTEVENTMessage=10;
+IOT_RESOLVE_WIFI_DATA line 874 : 			ucIOTEVENTMessage=10;
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\app_uart.c line 1064 : unsigned char ucIOTEVENTMessage=10;
+IOTEventHandler line 1106 : 				if(ucIOTEVENTMessage==10)
+IOTEventHandler line 1122 : 			str[temp++]=ucIOTEVENTMessage/10+'0';
+IOTEventHandler line 1123 : 			str[temp++]=ucIOTEVENTMessage%10+'0';
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\app_uart.h line 163 : extern unsigned char ucIOTEVENTMessage;
+WaterFlowFaultProcess line 2367 : 			ucIOTEVENTMessage=21;
+WaterFlowFaultProcess line 2373 : 			ucIOTEVENTMessage=20;
+CheckWaterSaltLevel line 2702 : 			ucIOTEVENTMessage=11;
+CheckWaterSaltLevel line 2715 : 				ucIOTEVENTMessage=10;
+---- ucIOTEVENTMessage Search Errors Encountered (2) ----
+The following 2 files could not be processed:
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\aes.c : File could not be opened.
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\aes.h : File could not be opened.
+---- ucPCBTestTimerCnt Matches (21 in 1 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 197 : unsigned char ucPCBTestTimerCnt;
+CellOutputCalibration line 1512 : 	if(ucPCBTestTimerCnt <= 11)
+CellReverseForPCBTest line 2263 : 			ucPCBTestTimerCnt = 141;
+CellReverseForPCBTest line 2265 : 			ucPCBTestTimerCnt = 0;		
+CellReverseForPCBTest line 2271 : 		ucPCBTestTimerCnt = 0;
+CellReverseForPCBTest line 2274 : 		ucPCBTestTimerCnt = 15;
+SpecialSecretCodeProcess line 2427 : 			ucPCBTestTimerCnt = 0;
+ProcessHandler line 2773 : 		if(ucPCBTestTimerCnt>0)
+ProcessHandler line 2774 : 			ucPCBTestTimerCnt--;
+ProcessHandler line 2802 : 		if(ucPCBTestTimerCnt == 6)
+ProcessHandler line 2809 : 		else if(ucPCBTestTimerCnt == 5)
+ProcessHandler line 2817 : 		else if(ucPCBTestTimerCnt == 1)	
+ProcessHandler line 2822 : 			ucPCBTestTimerCnt = 15;
+ProcessHandler line 2827 : 		if(ucPCBTestTimerCnt == 111)//Over 30s, clear test mode flags
+ProcessHandler line 2832 : 		else if(ucPCBTestTimerCnt == 21)
+ProcessHandler line 2841 : 		else if(ucPCBTestTimerCnt == 12)
+ProcessHandler line 2851 : 		else if((ucPCBTestTimerCnt>=1)&&(ucPCBTestTimerCnt<=11))
+ProcessHandler line 2864 : 			if(ucPCBTestTimerCnt == 1)//Over 120s, Set back the cell polarity
+ProcessHandler line 2869 : 		if(ucPCBTestTimerCnt == 11)
+ProcessHandler line 2895 : 				ucPCBTestTimerCnt = 71;
+---- ucPCBTestTimerCnt Search Errors Encountered (2) ----
+The following 2 files could not be processed:
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\aes.c : File could not be opened.
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\aes.h : File could not be opened.
+---- bTestModeFlag Matches (8 in 1 files) ----
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\ctrl.c line 203 : unsigned char bTestModeFlag;
+ReadTestModeFlag line 392 : 	bTestModeFlag = Eeprom_ReadBytes(TEST_MODE_FLAG_ADDR);
+SaveTestModeFlag line 443 : 	ucData[8] = bTestModeFlag;	
+UpdateUserData line 806 : 	bTestModeFlag = ucData[8];
+CellReverseForPCBTest line 2255 : 	if(bTestModeFlag)
+CellReverseForPCBTest line 2261 : 		bTestModeFlag = 0;
+CellReverseForPCBTest line 2270 : 		bTestModeFlag = 1;
+ProcessHandler line 2829 : 			bTestModeFlag = 0;
+---- bTestModeFlag Search Errors Encountered (2) ----
+The following 2 files could not be processed:
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\src\aes.c : File could not be opened.
+F:\develop\KlST\SPA\Program\SPA4G_GIT\SW_HyClor_2020\SRC\hyclor\inc\aes.h : File could not be opened.

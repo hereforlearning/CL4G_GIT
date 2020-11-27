@@ -875,6 +875,7 @@ unsigned char IOT_RESOLVE_WIFI_DATA(struct Aura4GRec_t * pparam)
 		}
 		}
 #endif
+	
 		if(pparam->RecString[0]=='Z'){
 			temp=pparam->RecData[1]-'0';
 			temp=temp*10+pparam->RecData[2]-'0';
@@ -1084,16 +1085,34 @@ void IOTEventHandler()
 		}
 	}
 #endif
+//		if((eIOTEVENT&_IOT_EVENT_ERROR)==_IOT_EVENT_ERROR){
+		if((uiIOTEVENTHEARTCNTROUND)&&(uiIOTEVENTHEARTCNT==0)){
+			uiIOTEVENTHEARTCNT=500;
+			uiIOTEVENTHEARTCNTROUND=0;
+	//		if(uiIOTEVENTCURRENTCNT==400){
+	//		unsigned char str[]="AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,91000\x0d\x0a";
+	//		unsigned char temp=0;
+			delay1ms(50);
+	//		UartSendString("AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,92100\x0d\x0a");
+			memcpy(str,"AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,91000\x0d\x0a",sizeof(str));
+			temp=sizeof("AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,91")-1;
+			str[temp++]=ucIOTEVENTMessage/10+'0';
+			str[temp++]=ucIOTEVENTMessage%10+'0';
+			UartSendString(str);
+			eIOTEVENT&=~_IOT_EVENT_ERROR;
+			delay1ms(50);
+		}
 
 #if 1
-		if((eIOTEVENT&_IOT_EVENT_UPDATE_CURRENT)==_IOT_EVENT_UPDATE_CURRENT){
-//		if((!uiIOTEVENTHEARTCNTROUND)&&(uiIOTEVENTHEARTCNT==0)){
-//			uiIOTEVENTHEARTCNT=500;
-//			uiIOTEVENTHEARTCNTROUND=1;
-			
-			if(uiIOTEVENTCURRENTCNT==0){
-		//				eIOTEVENT|=_IOT_EVENT_ERROR;
+//		if((eIOTEVENT&_IOT_EVENT_UPDATE_CURRENT)==_IOT_EVENT_UPDATE_CURRENT){
+		if((!uiIOTEVENTHEARTCNTROUND)&&(uiIOTEVENTHEARTCNT==0)){
+			uiIOTEVENTHEARTCNT=500;
+			uiIOTEVENTHEARTCNTROUND=1;
+
+//			if(uiIOTEVENTCURRENTCNT==0){
+//				eIOTEVENT|=_IOT_EVENT_ERROR;
 				delay1ms(30);
+				//UartSendString("AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,92100\x0d\x0a");
 				memcpy(str,"AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,93000\x0d\x0a",sizeof(str));
 				temp=sizeof("AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,930")-2;
 				uitemp=IOTuiCellRealCurrent*10;
@@ -1102,35 +1121,19 @@ void IOTEventHandler()
 				str[temp++]=uitemp%10+'0';
 				UartSendString(str);
 				eIOTEVENT&=~_IOT_EVENT_UPDATE_CURRENT;
-				delay1ms(30);
-				if(ucIOTEVENTMessage==10)
-					UartSendString("AT+ADA=\"s\"\,\"FD\"\,\"i\"\ ,0\x0d\x0a");
-				else
-					UartSendString("AT+ADA=\"s\"\,\"FD\"\,\"i\"\ ,1\x0d\x0a");
-			}
+			 
 		}
+//		if(IOTuiCellRealCurrent==0||IOTuiCellRealCurrent==10)
+//		{
+//			if(uiIOTEVENTCURRENTCNT==0)
+//			{
+//				uiIOTEVENTCURRENTCNT=500;
+//			}
+//		}
 #endif
-#if 1
-		if((eIOTEVENT&_IOT_EVENT_ERROR)==_IOT_EVENT_ERROR){
-//		if((uiIOTEVENTHEARTCNTROUND)&&(uiIOTEVENTHEARTCNT==0)){
-//			uiIOTEVENTHEARTCNT=500;
-//			uiIOTEVENTHEARTCNTROUND=0;
-	//		if(uiIOTEVENTCURRENTCNT==400){
-//			delay1ms(50);
-//			memcpy(str,"AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,91000\x0d\x0a",sizeof(str));
-//			temp=sizeof("AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,91")-1;
-//			str[temp++]=ucIOTEVENTMessage/10+'0';
-//			str[temp++]=ucIOTEVENTMessage%10+'0';
-//			UartSendString(str);
-			
-			if(ucIOTEVENTMessage==10)
-				UartSendString("AT+ADA=\"s\"\,\"FD\"\,\"i\"\ ,0\x0d\x0a");
-			else
-				UartSendString("AT+ADA=\"s\"\,\"FD\"\,\"i\"\ ,1\x0d\x0a");
-			eIOTEVENT&=~_IOT_EVENT_ERROR;
-			delay1ms(50);
-		}
-#endif
+
+
+
 }
 
 void IOTHandler(void)

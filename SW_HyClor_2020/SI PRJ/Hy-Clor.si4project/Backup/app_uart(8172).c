@@ -875,6 +875,7 @@ unsigned char IOT_RESOLVE_WIFI_DATA(struct Aura4GRec_t * pparam)
 		}
 		}
 #endif
+	
 		if(pparam->RecString[0]=='Z'){
 			temp=pparam->RecData[1]-'0';
 			temp=temp*10+pparam->RecData[2]-'0';
@@ -1090,7 +1091,6 @@ void IOTEventHandler()
 //		if((!uiIOTEVENTHEARTCNTROUND)&&(uiIOTEVENTHEARTCNT==0)){
 //			uiIOTEVENTHEARTCNT=500;
 //			uiIOTEVENTHEARTCNTROUND=1;
-			
 			if(uiIOTEVENTCURRENTCNT==0){
 		//				eIOTEVENT|=_IOT_EVENT_ERROR;
 				delay1ms(30);
@@ -1116,17 +1116,12 @@ void IOTEventHandler()
 //			uiIOTEVENTHEARTCNT=500;
 //			uiIOTEVENTHEARTCNTROUND=0;
 	//		if(uiIOTEVENTCURRENTCNT==400){
-//			delay1ms(50);
-//			memcpy(str,"AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,91000\x0d\x0a",sizeof(str));
-//			temp=sizeof("AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,91")-1;
-//			str[temp++]=ucIOTEVENTMessage/10+'0';
-//			str[temp++]=ucIOTEVENTMessage%10+'0';
-//			UartSendString(str);
-			
-			if(ucIOTEVENTMessage==10)
-				UartSendString("AT+ADA=\"s\"\,\"FD\"\,\"i\"\ ,0\x0d\x0a");
-			else
-				UartSendString("AT+ADA=\"s\"\,\"FD\"\,\"i\"\ ,1\x0d\x0a");
+			delay1ms(50);
+			memcpy(str,"AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,91000\x0d\x0a",sizeof(str));
+			temp=sizeof("AT+ADA=\"s\"\,\"UU\"\,\"i\"\ ,91")-1;
+			str[temp++]=ucIOTEVENTMessage/10+'0';
+			str[temp++]=ucIOTEVENTMessage%10+'0';
+			UartSendString(str);
 			eIOTEVENT&=~_IOT_EVENT_ERROR;
 			delay1ms(50);
 		}

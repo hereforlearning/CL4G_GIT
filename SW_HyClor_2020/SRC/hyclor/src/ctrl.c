@@ -2364,13 +2364,13 @@ void WaterFlowFaultProcess(void)
 //		ucWaterFlowStatus=0;//JIE_DEBUG
 		if(ucWaterFlowStatus)
 	    {
-			ucIOTEVENTMessage=21;
+			ucIOTEVENTMessage=11;
 			LEDFlashSetting(LED_12,_ON);	
 			CellCurrentOutput(0);
 	    }
 		else
 		{
-			ucIOTEVENTMessage=20;
+			ucIOTEVENTMessage=10;
 			LEDFlashSetting(LED_12,_OFF);
 			LEDControl(LED_12,_OFF);
 			CellCurrentOutput(ucCellCurrent);
